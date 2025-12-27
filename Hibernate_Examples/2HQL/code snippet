@@ -1,0 +1,29 @@
+Query query = session
+					.createQuery("UPDATE Student12 SET studentName=:sname WHERE studentNo=:sno");
+			query.setString("sname", "N@IT-UP");
+			query.setString("sno", "1");
+			int num = query.executeUpdate();
+			System.out.println("number of records updated==>" + num);
+=====================================================================================================
+Query query = session
+					.createQuery("UPDATE Student12 SET studentName=? WHERE studentNo=:sno");
+			query.setString(0, "N@IT-UP");
+			query.setString("sno", "2");
+			int num = query.executeUpdate();
+			System.out.println("number of records updated==>" + num);
+=====================================================================================================
+Query query = session
+					.createQuery("UPDATE Student12 SET studentName=? WHERE studentNo=:sname");
+			query.setString(0, "N@IT-UP");
+			query.setString("sname", "3");
+			int num = query.executeUpdate();
+			System.out.println("number of records updated==>" + num);
+=====================================================================================================
+/////////////////////////////////////////////////////////////////////[QuerySyntaxException]///////////////////////////////////////////////////
+Query query = session
+					.createQuery("UPDATE Student12 SET studentName=:sn WHERE studentNo=?");
+			query.setString("sn", "N@IT-UP");
+			query.setString(0, "6");
+			int num = query.executeUpdate();
+			System.out.println("number of records updated==>" + num);
+////////////////////////////////////////////////////////////////////[QuerySyntaxException]///////////////////////////////////////////////////

@@ -1,0 +1,103 @@
+			Query query = session.getNamedQuery("sqlQuery");
+			List studentList = query.list();
+			Iterator iterator = studentList.iterator();
+			while (iterator.hasNext()) {
+				Object[] students = (Object[]) iterator.next();
+				System.out.println("student number==>" + students[0]);
+				System.out.println("student name ==>" + students[1]);
+			}
+			System.out.println("number of records==>" + studentList.size());
+			---------------------------------------------
+			<sql-query name="sqlQuery">
+	<![CDATA[SELECT * FROM STUDENTS]]>
+	</sql-query>
+	=============================================================================================================================
+	<query name="hqlQuery">
+	<![CDATA[FROM Students]]>
+	</query>
+	-----------------------------------------
+	Query query = session.getNamedQuery("hqlQuery");
+			List studentList = query.list();
+			Iterator iterator = studentList.iterator();
+			while (iterator.hasNext()) {
+				Students students = (Students) iterator.next();
+				System.out.println("student number==>"
+						+ students.getStudentNo());
+				System.out.println("student name ==>"
+						+ students.getStudentName());
+			}
+			System.out.println("number of records==>" + studentList.size());
+			===========================================================================================================================
+			<query name="hqlQuery">
+	<![CDATA[SELECT studentNo, studentName FROM Students WHERE studentNo=:sno]]>
+	</query>
+	------------------------------------------------------------------
+	Query query = session.getNamedQuery("hqlQuery");
+			query.setInteger("sno", 1);
+			List studentList = query.list();
+			Iterator iterator = studentList.iterator();
+			while (iterator.hasNext()) {
+				Object[] students = (Object[]) iterator.next();
+				System.out.println("student number==>" + students[0]);
+				System.out.println("student name ==>" + students[1]);
+			}
+			System.out.println("number of records==>" + studentList.size());
+			=========================================================================================================================
+			Query query = session.getNamedQuery("sqlquery");
+			Object avg = query.uniqueResult();
+			System.out.println("average of students numbers is==>" + avg);
+			System.out.println("class name is==>"+avg.getClass().getName());
+			-----------------------------------------------------------------------------------
+			<sql-query name="sqlquery">
+	<![CDATA[SELECT AVG(students.SNO) AS avgstudents FROM STUDENTS students]]>
+	</sql-query>
+	-------------------------------------
+	average of students numbers is==>5.5
+class name is==>java.math.BigDecimal
+	==========================================================================================================================
+	Query query = session.getNamedQuery("sqlquery");
+			Object avg = query.uniqueResult();
+			System.out.println("average of students numbers is==>" + avg);
+			System.out.println("class name is==>" + avg.getClass().getName());
+			----------------------------------------------------------------------------------------------
+			<sql-query name="sqlquery">
+		<return-scalar column="avgstudents" type="java.lang.Double" />
+	<![CDATA[SELECT AVG(students.SNO) AS avgstudents FROM STUDENTS students]]>
+	</sql-query>
+	-------------------------------------------------
+	average of students numbers is==>5.5
+class name is==>java.lang.Double
+=============================================================================================================================
+Query query = session.getNamedQuery("sqlquery");
+			List studentsList = query.list();
+			Iterator iterator = studentsList.iterator();
+			while (iterator.hasNext()) {
+				Students type = (Students) iterator.next();
+				System.out.println("student number==>" + type.getStudentNo());
+				System.out.println("student name==>" + type.getStudentName());
+			}
+			----------------------------------------------------------------------------------------------
+			<sql-query name="sqlquery">
+		<return alias="students" class="edu.mapping.Students">
+			<return-property name="studentNo" column="SNO"></return-property>
+			<return-property name="studentName">
+				<return-column name="SNAME" />
+			</return-property>
+		</return>
+	<![CDATA[SELECT students.SNO, students.SNAME FROM STUDENTS students]]>
+	</sql-query>
+	================================================================================================================================
+	Query query = session.getNamedQuery("sqlquery");
+			List studentsList = query.list();
+			Iterator iterator = studentsList.iterator();
+			while (iterator.hasNext()) {
+				Students object = (Students) iterator.next();
+				System.out.println("student number==>" + object.getStudentNo());
+				System.out.println("student name==>" + object.getStudentName());
+			}
+			----------------------------------------------------------------------------------------------
+			<sql-query name="sqlquery">
+		<return alias="students" class="edu.mapping.Students"></return>
+	<![CDATA[SELECT * FROM STUDENTS students]]>
+	</sql-query>
+	================================================================================================================================
