@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="no-js lt-ie9">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html class="no-js" data-ng-app="iTap">
+
+<!--
+<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Add Roles</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
+<script src="jsITAP/vendor/jquery-1.9.0.min.js"></script>
+<script src="jsITAP/vendor/jquery-ui.js"></script>
+<script src="jsITAP/chosen.jquery.min.js"></script>
+<script src="angular/angular.min.js"></script>
+
+<script src="angular-dragdrop.js"></script>
+<script src="angular-dragdrop.min.js"></script>
+
+<script src="js/spagojs/sbisdk-all-production.js"></script>
+
+<script src="controllersITAP.js"></script>
+<script type="text/javascript" src="jsITAP/adminMain.js"></script>
+<script type="text/javascript" src="jsITAP/addRunner.js"></script>
+
+<link rel="stylesheet" href="cssITAP/jquery-ui.css" />
+<link rel="stylesheet" href="cssITAP/normalize.css" />
+<link rel="stylesheet" href="cssITAP/main.css" />
+<link rel="stylesheet" href="cssITAP/styles.css" />
+<link rel="stylesheet" href="cssITAP/addRunner.css" />
+
+
+<link rel="stylesheet" href="cssITAP/chosen.css" />
+<script src="jsITAP/vendor/jquery.slimscroll.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	var appID;
+	var appIDs;
+</script>
+
+<script>
+	
+</script>
+
+</head>
+<body id="addRunnerPage">
+	<!-- Fixed Top Section -->
+	<div id="fixed_nav">
+		<div id="fixed_wrapper">
+			<div class="floatleft logo_wrapper">
+			<a href="#"><h1><img src="./imgITAP/logo.png" alt="iTap Logo"></h1></a>
+			<span class="heading">Admin Settings - Runner management</span>
+		</div>
+		<div class="floatright">
+			<span class="icons search floatleft"></span>
+			<span class="icons add floatleft addNewRunner " id=""></span>
+			<a href="./index.html"><span class="icons close quitPage floatleft"></span></a>
+		</div>
+		</div>
+	</div>
+	
+	<!--  Scrollable Content -->
+	<div id="runner_info_scrollable" data-ng-controller="getRunnersController">
+		<div id="noRunner" style="display:none;">
+			<div class="message">
+				<p>Currently no Application exist.</p>
+				<p>Click <a class="addNewRunner">here</a> to add new Runner</p>
+			</div>
+		</div>
+		<div id="runners_info_wrapper" >
+			<div>
+				<div class="runner_info" data-ng-repeat="thisrunner in runnerNameLists" data-ng-click="editRunners(thisrunner.runnerID)">
+					<span>{{thisrunner.runnerName}}</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Expanded Version of Div -->
+		<div id="runner_info_up" class="runner_information" style="display:none;">
+			<div class="info_wrapper">
+				<div class="general_info">
+				<form name="updateRunnerForm"  novalidate
+									data-ng-submit="updateRunners()">
+					<div class="input_fields">
+					<input type ="hidden" name="editRunnerID" data-ng-model="editRunnerID" value="{{editRunnerID}}"/>
+						<div class="input_fields_child">
+							<label for="runnerName">Runner Name</label>
+							<input type ="text" name="editRunnerName" class="runnerName" data-ng-model="editRunnerName" value="{{editRunnerName}}" readonly/>
+						</div>
+						<div class="input_fields_child">
+							<label>Runner Description</label>
+							<textarea class="runner_desc" name="runnerdescription" data-ng-model="runnerdescription" value="{{runnerdescription}}" data-ng-minlength=3 data-ng-maxlength=100
+											required/></textarea>
+							<div class="error"
+											data-ng-show="updateRunnerForm.runnerdescription.$dirty && updateRunnerForm.runnerdescription.$invalid">
+											<span class="error"
+												data-ng-show="updateRunnerForm.runnerdescription.$error.required">
+												Runner description is required. </span> <span class="error"
+												data-ng-show="updateRunnerForm.runnerdescription.$error.minlength">
+												Runner description is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="updateRunnerForm.runnerdescription.$error.maxlength">
+												Runner description cannot be longer than 100 characters </span>
+										</div>				
+						</div>
+					</div>
+					
+					<div class="input_fields">
+						<div class="input_fields_child">
+							&nbsp;
+						</div>
+						<div class="input_fields_child">
+							<div class="buttons">
+								<input type="button" value="Cancel" class="greybutton close_runner_info cancel">
+								<input type="button" value="Update Runner" class="update blueButton" data-ng-click="updateRunners()"  data-ng-disabled="updateRunnerForm.$invalid" id="updateRunner">
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>			
+		</div>
+		<!-- END Expanded Version of Div -->
+		
+		<!-- New Runner add Div -->
+		<div id="new_runner_info" class="runner_information" style="display:none;">
+			<div class="new_dotted_div">New Runner</div>
+			<div class="info_wrapper">
+				<div class="general_info">
+				<form name="addRunnerForm" novalidate
+									data-ng-submit="addRunners()">
+					<div class="input_fields">
+						<div class="input_fields_child">
+							<label for="runnerName">Runner Name</label>
+							<input type ="text" name="runnerName"  data-ng-model="runnerName" class="runnerName" placeholder ="Enter Runner Name" data-ng-minlength=3 data-ng-maxlength=50
+											required duplicate= "runnerNameLists" attributename = "{name:'runnerName'}"/>
+								<div class="error"
+											data-ng-show="addRunnerForm.runnerName.$dirty && addRunnerForm.runnerName.$invalid">
+											<span class="error"
+												data-ng-show="addRunnerForm.runnerName.$error.duplicate">
+												Runner name is already in use </span>
+											<span class="error"
+												data-ng-show="addRunnerForm.runnerName.$error.required">
+												Runner name is required. </span> <span class="error"
+												data-ng-show="addRunnerForm.runnerName.$error.minlength">
+												Runner name is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="addRunnerForm.runnerName.$error.maxlength">
+												Runner name cannot be longer than 50 characters </span>
+										</div>			
+						</div>
+						<div class="input_fields_child">
+							<label>Runner Description</label>
+							<textarea class="runner_desc" name="runnerDes"  data-ng-model="runnerDes" data-ng-minlength=3 data-ng-maxlength=100
+											required/></textarea>
+											<div class="error"
+											data-ng-show="addRunnerForm.runnerDes.$dirty && addRunnerForm.runnerName.$invalid">
+											<span class="error"
+												data-ng-show="addRunnerForm.runnerDes.$error.required">
+												Runner description is required. </span> <span class="error"
+												data-ng-show="addRunnerForm.runnerDes.$error.minlength">
+												Runner description is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="addRunnerForm.runnerDes.$error.maxlength">
+												Runner description cannot be longer than 100 characters </span>
+										</div>									
+						</div>
+					</div>
+					
+					<div class="input_fields">
+						<div class="input_fields_child">
+							&nbsp;
+						</div>
+						<div class="input_fields_child">
+							<div class="buttons">
+								<input type="button" value="Cancel" class="greybutton close_runner_info cancel">
+								<input type="button" value="Create Runner" class="blueButton" data-ng-click="addRunners()"  data-ng-disabled="addRunnerForm.$invalid" id="createRunner">
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>			
+		</div>
+		<!-- END New Runner add Div -->
+	</div>
+	<!-- END Scrollable Content -->
+	
+</body>
+
+</html>

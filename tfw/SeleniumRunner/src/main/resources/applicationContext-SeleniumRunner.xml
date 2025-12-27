@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- - Application context definition for Data Module business layer. - Contains 
+	bean references to the transaction manager and to the DAOs in - dataAccessContext-local.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+
+	<!-- Dat module primary business object: default implementation, Note that 
+		this is just a POJO definition in this file: there's no need to use a TransactionFactoryProxyBean 
+		if the class has source-level transaction annotations; the "tx:annotation-driven" 
+		marker will apply transaction advice automatically. -->
+
+	<bean id="seleniumRunner" class="com.exilant.tfw.runner.selenium.SeleniumRunner">
+	</bean>
+
+	<!-- ========================= ASPECT CONFIGURATION ======================== -->
+
+	<!-- This marker creates the full auto-proxy infrastructure that is necessary 
+		for applying Spring's Transactional annotation (as contained in the PetStoreAnnotationImpl 
+		class). By default, it will refer to the transaction manager bean named "transactionManager". -->
+	<tx:annotation-driven />
+
+</beans>

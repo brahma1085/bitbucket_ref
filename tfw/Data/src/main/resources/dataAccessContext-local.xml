@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<!-- - Application context definition for Data module's data access layer. 
+	- Accessed by business layer objects defined in "applicationContext.xml" 
+	- This version of the data access layer works on a combined database, using 
+	a local DataSource with DataSourceTransactionManager. It does not - need 
+	any JTA support in the container: It will run as-is in plain Tomcat. -->
+<beans>
+
+	<!-- ========================= RESOURCE DEFINITIONS ========================= -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${driverClassName}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}"></property>
+	</bean>
+
+	<!-- Transaction manager for a single JDBC DataSource -->
+	<!-- (see dataAccessContext-jta.xml for an alternative) -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- ======== DAO DEFINITIONS: Spring Data IMPLEMENTATIONS ========= -->
+
+	<!-- Beans for Injecting Dependencies for DAO Implementations -->
+
+	<bean id="actionsDao" class="com.exilant.tfw.dao.impl.ActionsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="agentDetailsDao" class="com.exilant.tfw.dao.impl.AgentDetailsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="appFeatureDao" class="com.exilant.tfw.dao.impl.AppFeatureDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="appFunctionalityDao" ref="appFunctionalityDao" />
+	</bean>
+
+	<bean id="appFunctionalityDao" class="com.exilant.tfw.dao.impl.AppFunctionalityDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="applicationDao" class="com.exilant.tfw.dao.impl.ApplicationDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="genericDataDao" class="com.exilant.tfw.dao.impl.GenericDataDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="runnerDao" class="com.exilant.tfw.dao.impl.RunnerDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="schedulerDao" class="com.exilant.tfw.dao.impl.SchedulerDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="testPlanDao" ref="testPlanDao" />
+		<property name="testDataDao" ref="testDataDao" />
+	</bean>
+	
+	<bean id="schedulerBackupDao" class="com.exilant.tfw.dao.impl.SchedulerBackupDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="schedulerLaneDetailsDao" class="com.exilant.tfw.dao.impl.SchedulerLaneDetailsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="schedulerRunDetailsDao" class="com.exilant.tfw.dao.impl.SchedulerRunDetailsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="screenDao" class="com.exilant.tfw.dao.impl.ScreenDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="appFeatureDao" ref="appFeatureDao" />
+	</bean>
+	
+	
+	<bean id="usersDao" class="com.exilant.tfw.dao.impl.UsersDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="userRolesDao" class="com.exilant.tfw.dao.impl.UserRolesDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="usersApplicationMappingDao" class="com.exilant.tfw.dao.impl.UsersApplicationMappingDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="rolesDao" class="com.exilant.tfw.dao.impl.RolesDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Beans for Injecting Dependencies for Input DAO Implementations -->
+
+	<bean id="conditionGroupDao" class="com.exilant.tfw.dao.impl.input.ConditionGroupDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="conditionsDao" class="com.exilant.tfw.dao.impl.input.ConditionsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="identifierTypeDao" class="com.exilant.tfw.dao.impl.input.IdentifierTypeDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="replacement_StringsDao" class="com.exilant.tfw.dao.impl.input.ReplacementStringsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="objectGroupDao" class="com.exilant.tfw.dao.impl.input.ObjectGroupDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="screenDao" ref="screenDao" />
+	</bean>
+
+	<bean id="objectsDao" class="com.exilant.tfw.dao.impl.input.ObjectsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="objectTypeDao" ref="objectTypeDao" />
+		<property name="identifierTypeDao" ref="identifierTypeDao" />
+		<property name="objectGroupDao" ref="objectGroupDao" />
+	</bean>
+
+	<bean id="objectTypeDao" class="com.exilant.tfw.dao.impl.input.ObjectTypeDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="actionsDao" ref="actionsDao" />
+	</bean>
+
+	<bean id="paramDao" class="com.exilant.tfw.dao.impl.input.ParamDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="paramGroupDao" class="com.exilant.tfw.dao.impl.input.ParamGroupDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="taskDao" class="com.exilant.tfw.dao.impl.input.TaskDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testCaseDao" class="com.exilant.tfw.dao.impl.input.TestCaseDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="appFunctionalityDao" ref="appFunctionalityDao" />
+		<property name="appFeatureDao" ref="appFeatureDao" />
+		<property name="scenarioCaseMappingDao" ref="scenarioCaseMappingDao" />
+		<property name="caseStepMappingDao" ref="caseStepMappingDao" />
+	</bean>
+
+	<bean id="testConditionDataDao" class="com.exilant.tfw.dao.impl.input.TestConditionDataDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testDataDao" class="com.exilant.tfw.dao.impl.input.TestDataDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testParamDataDao" class="com.exilant.tfw.dao.impl.input.TestParamDataDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testPlanDao" class="com.exilant.tfw.dao.impl.input.TestPlanDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testScenarioDao" class="com.exilant.tfw.dao.impl.input.TestScenarioDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="testSuiteDao" ref="testSuiteDao" />
+		<property name="scenarioCaseMappingDao" ref="scenarioCaseMappingDao" />
+		<property name="suiteScenarioMappingDao" ref="suiteScenarioMappingDao" />
+	</bean>
+
+	<bean id="testStepDao" class="com.exilant.tfw.dao.impl.input.TestStepDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="caseStepMappingDao" ref="caseStepMappingDao" />
+	</bean>
+
+	<bean id="testSuiteDao" class="com.exilant.tfw.dao.impl.input.TestSuiteDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="suiteScenarioMappingDao"
+		class="com.exilant.tfw.dao.impl.input.SuiteScenarioMappingDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="scenarioCaseMappingDao"
+		class="com.exilant.tfw.dao.impl.input.ScenarioCaseMappingDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="caseStepMappingDao" class="com.exilant.tfw.dao.impl.input.CaseStepMappingDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="planSuiteMappingDao" class="com.exilant.tfw.dao.impl.input.PlanSuiteMappingDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+
+
+
+
+
+	<!-- Beans for Injecting Dependencies for Output DAO Implementations -->
+
+	<bean id="laneResultsDao" class="com.exilant.tfw.dao.impl.output.LaneResultsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="taskResultDao" class="com.exilant.tfw.dao.impl.output.TaskResultDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testCaseResultDao" class="com.exilant.tfw.dao.impl.output.TestCaseResultDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testPlanResultDao" class="com.exilant.tfw.dao.impl.output.TestPlanResultDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testStepResultDao" class="com.exilant.tfw.dao.impl.output.TestStepResultDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testSuiteResultDao" class="com.exilant.tfw.dao.impl.output.TestSuiteResultDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="testScenarioResultDao"
+		class="com.exilant.tfw.dao.impl.output.TestScenarioResultDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+</beans>

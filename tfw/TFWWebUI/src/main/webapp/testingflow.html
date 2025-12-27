@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>Testing Flow of Application under test</title>
+		<style>
+			.applicationClass {
+				min-height: 180px;
+				border:1px solid black;
+				border-radius:25px;
+				text-align: center;
+				float: left;
+				background-color: Silver;
+			}
+			.testPlanClass {
+				min-height: 160px;
+				border:1px solid black;
+				border-radius:25px;
+				text-align: center;
+				float: left;
+				background-color: Green;
+			}
+			.testSuiteClass {
+				min-height: 140px;
+				border:1px solid black;
+				border-radius:25px;
+				text-align: center;
+				float: left;
+				background-color: Aqua;
+			}
+			.testScenarioClass {
+				min-height: 120px;
+				border:1px solid black;
+				border-radius:25px;
+				text-align: center;
+				float: left;
+				background-color: Teal;
+			}
+			.testCaseClass {
+				min-height: 100px;
+				min-width: 200px;
+				border:1px solid black;
+				border-radius:25px;
+				text-align: center;
+				float: left;
+				background-color: White;
+				width: 200px;
+			}
+			.arrowClass {
+				width: 0;
+				height: 0;
+				border-top: 50px solid transparent;
+				border-left: 100px solid red;
+				border-bottom: 50px solid transparent;
+				float: left;
+			}
+		</style>
+		<script type="text/javascript" language="javascript" src="app1.json"></script> 
+		<script type="text/javascript" language="javascript">
+			function showTree() {
+				var spanElement = document.createElement('span');
+				spanElement.innerHTML = result.name;
+				var brElement = document.createElement('br');
+				var divElement = document.createElement('div');
+				divElement.id = "node_" + result.id;
+				divElement.className = "applicationClass";
+				divElement.appendChild(spanElement);
+				divElement.appendChild(brElement);
+				document.body.appendChild(divElement);
+
+				for(var i = 0; i < result.flow.length; i++) {
+					var item = result.flow[i];
+					var cspanElement = document.createElement('span');
+					cspanElement.innerHTML = item.name;
+					var cbrElement = document.createElement('br');
+					var cdivElement = document.createElement('div');
+					cdivElement.id = "node_" + item.id;
+					cdivElement.appendChild(cspanElement);
+					switch(item.type) {
+						case "TestPlan":
+							cdivElement.className = "testPlanClass";
+							cdivElement.appendChild(cbrElement);
+							document.getElementById("node_" + item.parentId).appendChild(cdivElement);
+							break;
+						case "TestSuite":
+							cdivElement.className = "testSuiteClass";
+							cdivElement.appendChild(cbrElement);
+							document.getElementById("node_" + item.parentId).appendChild(cdivElement);
+							break;
+						case "TestScenario":
+							cdivElement.className = "testScenarioClass";
+							cdivElement.appendChild(cbrElement);
+							document.getElementById("node_" + item.parentId).appendChild(cdivElement);
+							break;
+						case "TestCase":
+							cdivElement.className = "testCaseClass";
+							document.getElementById("node_" + item.parentId).appendChild(cdivElement);
+							if(i < result.flow.length - 1) {
+								var adivElement = document.createElement('div');
+								adivElement.className = "arrowClass";
+								document.getElementById("node_" + item.parentId).appendChild(adivElement);
+							}
+							break;
+					}
+					console.log("Adding " + item.id + " to " + item.parentId);
+				}
+			}
+		</script>
+	</head>
+	<body onload="showTree()">
+		<p>Hello World!</p>
+	</body>
+</html>

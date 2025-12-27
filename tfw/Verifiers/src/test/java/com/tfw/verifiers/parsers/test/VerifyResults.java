@@ -1,0 +1,212 @@
+package com.tfw.verifiers.parsers.test;
+
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * The Class VerifyResults.
+ */
+public class VerifyResults implements Serializable {
+
+	/** Default Serial version id. */
+	private static final long serialVersionUID = 1L;
+	
+	/** The comment. */
+	private String comment;
+	
+	/** The result. */
+	private boolean result;
+	
+	/** The detail msgs. */
+	private String detailMsgs;
+	
+	/** The root array count. */
+	private int rootArrayCount;
+	
+	/** The child most array count. */
+	private int childMostArrayCount;
+	
+	/** The array instance count. */
+	private int arrayInstanceCount;
+	
+	/** The is format. */
+	private boolean isFormat;
+	
+	/** The is key present. */
+	private boolean isKeyPresent;
+	
+	/** The required results. */
+	private List<String> requiredResults;
+
+	/**
+	 * Gets the comment.
+	 *
+	 * @return the comment
+	 */
+	public String getComment() {
+		return comment;
+	}
+
+	/**
+	 * Sets the comment.
+	 *
+	 * @param comment the new comment
+	 */
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	/**
+	 * Checks if is result.
+	 *
+	 * @return true, if is result
+	 */
+	public boolean isResult() {
+		return result;
+	}
+
+	/**
+	 * Sets the result.
+	 *
+	 * @param result the new result
+	 */
+	public void setResult(boolean result) {
+		this.result = result;
+	}
+
+	/**
+	 * Gets the detail msgs.
+	 *
+	 * @return the detail msgs
+	 */
+	public String getDetailMsgs() {
+		return detailMsgs;
+	}
+
+	/**
+	 * Sets the detail msgs.
+	 *
+	 * @param detailMsgs the new detail msgs
+	 */
+	public void setDetailMsgs(String detailMsgs) {
+		this.detailMsgs = detailMsgs;
+	}
+
+	/**
+	 * Gets the root array count.
+	 *
+	 * @return the root array count
+	 */
+	public int getRootArrayCount() {
+		return rootArrayCount;
+	}
+
+	/**
+	 * Sets the root array count.
+	 *
+	 * @param rootArrayCount the new root array count
+	 */
+	public void setRootArrayCount(int rootArrayCount) {
+		this.rootArrayCount = rootArrayCount;
+	}
+
+	/**
+	 * Gets the child most array count.
+	 *
+	 * @return the child most array count
+	 */
+	public int getChildMostArrayCount() {
+		return childMostArrayCount;
+	}
+
+	/**
+	 * Sets the child most array count.
+	 *
+	 * @param childMostArrayCount the new child most array count
+	 */
+	public void setChildMostArrayCount(int childMostArrayCount) {
+		this.childMostArrayCount = childMostArrayCount;
+	}
+
+	/**
+	 * Gets the array instance count.
+	 *
+	 * @return the array instance count
+	 */
+	public int getArrayInstanceCount() {
+		return arrayInstanceCount;
+	}
+
+	/**
+	 * Sets the array instance count.
+	 *
+	 * @param arrayInstanceCount the new array instance count
+	 */
+	public void setArrayInstanceCount(int arrayInstanceCount) {
+		this.arrayInstanceCount = arrayInstanceCount;
+	}
+
+	/**
+	 * Checks if is format.
+	 *
+	 * @return true, if is format
+	 */
+	public boolean isFormat() {
+		return isFormat;
+	}
+
+	/**
+	 * Sets the format.
+	 *
+	 * @param isFormat the new format
+	 */
+	public void setFormat(boolean isFormat) {
+		this.isFormat = isFormat;
+	}
+
+	/**
+	 * Checks if is key present.
+	 *
+	 * @return true, if is key present
+	 */
+	public boolean isKeyPresent() {
+		return isKeyPresent;
+	}
+
+	/**
+	 * Sets the key present.
+	 *
+	 * @param isKeyPresent the new key present
+	 */
+	public void setKeyPresent(boolean isKeyPresent) {
+		this.isKeyPresent = isKeyPresent;
+	}
+
+	/**
+	 * Gets the required results.
+	 *
+	 * @return the required results
+	 */
+	public List<String> getRequiredResults() {
+		return requiredResults;
+	}
+
+	/**
+	 * Sets the required results.
+	 *
+	 * @param requiredResults the new required results
+	 */
+	public void setRequiredResults(List<String> requiredResults) {
+		this.requiredResults = requiredResults;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "VerifyResults [result=" + result + ", rootArrayCount=" + rootArrayCount + ", childMostArrCnt=" + childMostArrayCount + ", arrayInsCnt="
+				+ arrayInstanceCount + ", isKeyPresent=" + isKeyPresent + ", requiredResults=" + requiredResults + "]";
+	}
+
+}

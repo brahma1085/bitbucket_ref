@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+ http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<mvc:annotation-driven />
+
+	<import resource="classpath*:applicationContext.xml" />
+	<import resource="classpath*:dataAccessContext-local.xml" />
+	<import resource="classpath*:spring-service.xml" />
+	<import resource="classpath*:spring-database.xml" />
+
+	<context:component-scan base-package="com.tfw.exilant" />
+	<context:annotation-config />
+
+	<bean
+		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="order" value="1" />
+		<!-- <property name="ignoreAcceptHeader" value="true" /> -->
+		<property name="mediaTypes">
+			<map>
+				<entry key="html" value="text/html" />
+				<entry key="json" value="application/json" />
+			</map>
+		</property>
+		<property name="viewResolvers">
+			<list>
+				<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+				<bean
+					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+					<property name="prefix" value="/views/*" />
+					<property name="suffix" value=".html" />
+				</bean>
+			</list>
+		</property>
+		<property name="defaultViews">
+			<list>
+				<bean
+					class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+					<property name="prefixJson" value="true" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>mymessages</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+
+
+	<bean id="addScenarioController" class="com.tfw.exilant.AddScenarioController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestCaseController" class="com.tfw.exilant.AddTestCaseController">
+		<property name="inputService" ref="inputService" />
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addTestPlanController" class="com.tfw.exilant.AddTestPlanController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestSuiteController" class="com.tfw.exilant.AddTestSuiteController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addApplicationController" class="com.tfw.exilant.AddApplicationController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addDataDefinitionController" class="com.tfw.exilant.AddDataDefinitionController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addFunctionController" class="com.tfw.exilant.AddFunctionController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addRunnersControllerITAP" class="com.tfw.exilant.ITAP.AddRunnersControllerITAP">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="conditionGroupController" class="com.tfw.exilant.ConditionGroupController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestStepController" class="com.tfw.exilant.AddTestStepController">
+		<property name="mainService" ref="mainService" />
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="objectController" class="com.tfw.exilant.ObjectController">
+		<property name="inputService" ref="inputService" />
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="paramGroupController" class="com.tfw.exilant.ParamGroupController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addIdentifierTypeController" class="com.tfw.exilant.AddIdentifierTypeController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addReplacementStringsController" class="com.tfw.exilant.AddReplacementStringsController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="reportsController" class="com.tfw.exilant.ReportsController">
+		<property name="outputService" ref="outputService" />
+	</bean>
+
+	<bean id="importExcelController" class="com.tfw.exilant.ImportExcelController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+
+	<bean id="addScenarioControllerITAP" class="com.tfw.exilant.ITAP.AddScenarioControllerITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestCaseControllerITAP" class="com.tfw.exilant.ITAP.AddTestCaseControllerITAP">
+		<property name="inputService" ref="inputService" />
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addTestPlanControllerITAP" class="com.tfw.exilant.ITAP.AddTestPlanControllerITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestSuiteControllerITAP" class="com.tfw.exilant.ITAP.AddTestSuiteControllerITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addConditionGroupControllerITAP" class="com.tfw.exilant.ITAP.AddConditionGroupControllerITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addFunctionControllerITAP" class="com.tfw.exilant.ITAP.AddFunctionControllerITAP">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addFeatureControllerITAP" class="com.tfw.exilant.ITAP.AddFeatureControllerITAP">
+		<property name="mainService" ref="mainService" />
+	</bean>
+	<bean id="addScreenControllerITAP" class="com.tfw.exilant.ITAP.AddScreenControllerITAP">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addTestStepsControllerITAP" class="com.tfw.exilant.ITAP.AddTestStepsControllerITAP">
+		<property name="inputService" ref="inputService" />
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addParamGroupControllerITAP" class="com.tfw.exilant.ITAP.AddParamGroupControllerITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addIdentifierTypeControllerITAP" class="com.tfw.exilant.ITAP.AddIdentifierTypeControllerITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addObjectGroupControllerITAP" class="com.tfw.exilant.ITAP.AddObjectGroupControllerITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestDataControllerITAP" class="com.tfw.exilant.ITAP.AddTestDataControllerITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addApplicationControllerITAP" class="com.tfw.exilant.ITAP.AddApplicationControllerITAP">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="forgotPasswordControllerITAP" class="com.tfw.exilant.ITAP.ForgotPasswordControllerITAP">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<!-- <bean id="resetPasswordController" class="com.tfw.exilant.ITAP.ResetPasswordControllerITAP"> 
+		<property name="mainService" ref="mainService" /> </bean> -->
+
+	<bean id="resetControllerITAP" class="com.tfw.exilant.ITAP.ResetControllerITAP">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="testExecutionController" class="com.tfw.exilant.ITAP.TestExecutionController">
+		<property name="mainService" ref="mainService" />
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addConditionsITAP" class="com.tfw.exilant.ITAP.AddConditionsITAP">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="rolesController" class="com.tfw.exilant.RolesController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="rolesControllerITAP" class="com.tfw.exilant.ITAP.RolesControllerITAP">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="loginController" class="com.tfw.exilant.controllers.LoginController"></bean>
+
+	<bean id="testingFlowController" class="com.tfw.exilant.ITAP.TestingFlowController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+</beans>

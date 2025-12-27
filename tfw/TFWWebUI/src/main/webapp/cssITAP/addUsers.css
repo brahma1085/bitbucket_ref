@@ -1,0 +1,245 @@
+body#user_management{
+	background: #F7F7F7;
+}
+/* Images */
+.search{
+	background: url(../imgITAP/icons_search.png) no-repeat transparent;
+}
+.add{
+	background: url(../imgITAP/icons_add.png) no-repeat transparent;
+}
+.remove{
+	background: url(../imgITAP/icons_Remove.png) no-repeat;
+}
+.quitPage{
+	background: url(../imgITAP/icons_Close.png) no-repeat;
+}
+.icons{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+/* Fixed Nav */
+#fixed_nav{
+	position: fixed;
+	width: 100%;
+	background: #F7F7F7;
+}
+#fixed_wrapper{
+	height: 40px;
+	border-bottom: 1px solid rgb(222, 222, 222);
+}
+#fixed_wrapper h1{
+	margin :0;
+	display: inline-block;
+}
+#fixed_wrapper .logo_wrapper{
+	padding: 0 20px;
+}
+.heading{
+	color: #808080;
+	font-weight: normal;
+	font-size: 18px;
+	margin: 0;
+	vertical-align: middle;
+}
+/* Scrollable Content */
+#users_info_scrollable{
+	padding-top: 41px;
+}
+#users_info_wrapper{
+	padding: 20px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.user_info .uName, .gName, .aName{
+	margin: 10px;
+	background: #F2F2F2;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid rgb(191,191,191);
+	cursor:pointer;
+}
+.typeContent{
+    padding: 30px;
+}
+.user_info{
+    width: 20%;
+	display: inline-block;	
+}
+#groupType .user_info{
+	width: 100%;
+}
+.user_info span{
+    padding-left: 10px;
+}
+.new_dotted_div{
+	border: 2px dashed rgb(191,191,191);
+	width: 15%;
+	height: 40px;
+	margin: 10px;
+	padding-left: 10px;
+	line-height: 40px;
+	display: inline-block;
+	color: rgb(191,191,191);
+}
+#new_user_info .new_dotted_div{
+	margin-left: 30px;
+	margin-top: 20px;
+}
+/* Expanded/Update user info Section */
+ #user_info_up, #new_user_info{
+	width: 100%;
+	position: absolute;
+	border: 2px solid #dadada;
+	background: #EBEBEB;
+}
+#new_user_info{
+	background: none;
+}
+#general_info, .emptyDiv{
+	width: 25%;
+}
+#group_application_info{
+	width: 75%;
+}
+.input_fields{
+	padding: 30px;	
+}
+.input_fields label {
+	font-size: 14px;
+}
+.username, .password, .emailText{
+	height: 30px;
+	width: 100%;
+	padding-left: 5px;
+}
+#groupType{
+    width: 30%;
+}
+#applicationType{
+	width: 70%;
+}
+.header span{
+	display: inline-block;
+	font-size: 14px;
+	vertical-align: middle;
+	font-weight: bold;
+	margin-left: 10px;
+}
+.header{
+	margin-bottom: 6px;
+}
+#groupType .typeWrapper, #applicationType .typeWrapper{
+	padding: 10px;
+	background: #DADADA;
+	min-height: 225px;
+	overflow-y: auto;
+	max-height: 250px;
+	overflow-x: hidden;
+}
+#group_application_info #applicationType .typeWrapper{
+	overflow: auto;
+}
+#applicationType .user_info{
+	width: 50%;
+	display: block;
+}
+.user_info .chosen-container{
+	clear:both;
+} 
+.typeWrapper .user_info:first-child .gName{
+	/* border-bottom: 3px solid #1184DB; */
+}
+.buttons{
+	padding-right: 30px;
+	padding-bottom: 20px;
+}
+.buttons .greybutton.cancel{
+	margin-right: 25px;
+}
+.pointing_here .uName{
+	border-bottom: 5px solid #1184DB;
+}
+.pointing_here .gName{
+	border-bottom: 3px solid #1184DB;
+}
+.arrowPointingUp{
+	border-bottom: 15px solid #dadada;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: -15px;
+	left: 1627px;
+}
+.groupText{
+	margin-right: 45%;
+}
+.applicationText{
+	margin-right: 60%;
+}
+/* Chosen Customized as required */
+.user_info .chosen-container{
+	margin: 10px;
+	width: auto !important;
+}
+#groupType .chosen-container-single .chosen-single span{
+	margin-right: 25px;
+}
+#groupType .chosen-container-active.chosen-with-drop .chosen-single div b{
+	margin-left: -2px;
+}
+#groupType .chosen-container-single .chosen-single div b{
+	margin: 12px 0 0 -1px;	
+}
+/* Close and Tick Mark CSS */
+.saveAddGroupType:before, .saveAddApplicationType:before{
+	content:"\2713\0020";
+	color: green;
+	font-size: 22px;
+	vertical-align: -50%;
+	text-align: center;
+}
+.closeAddGroupType:before, .closeAddApplicationType:before{
+	content: "X";
+	color: red;
+	font-size: 22px;
+	vertical-align: -50%;
+}
+.saveAddGroupType, .closeAddGroupType, .saveAddApplicationType, .closeAddApplicationType{
+	width: 50%;
+	vertical-align: middle;
+	height: 30px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+}
+.closeUpdatebuttons{
+	background: #F2F2F2;
+	margin: 10px;
+	border: 1px solid rgb(191,191,191);
+}
+.closeUpdatebuttons span{
+	padding-left: 0px !important;
+}
+
+/* 	Static Text Styles */
+.addAppText{
+	font-size: 32px;
+    color: rgb(126, 122, 122);
+    line-height: 225px;
+	text-align: center;
+	box-shadow: 1px 1px 1px #ccc;
+	border: 1px solid rgb(252, 252, 252);
+}
+
+/* New Styles */
+div.gName.groupTypeRoles{
+	padding-left: 10px;
+}

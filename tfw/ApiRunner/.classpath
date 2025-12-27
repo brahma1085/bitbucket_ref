@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry including="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/bcprov-jdk15-144.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/engine-gecko-3.3.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/engine-ie-3.3.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/engine-webkit-3.3.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/flex-messaging-common-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/flex-messaging-core-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/flex-messaging-opt-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/flex-messaging-proxy-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/flex-messaging-remoting-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/jms-1.1.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/jtidy-r872-jdk15.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/MozillaInterfaces-3.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/rsyntaxtextarea-2.0.1.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/saxon-9.1.0.8j.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/saxon-dom-9.1.0.8j.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/swingx-soapui.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/xbean_xpath-2.4.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/xbean-fixed-2.4.0.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/xml-apis-2.9.1.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/xmlParserAPIs-2.6.2.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/bin/soapui-4.5.2.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/xulrunner15-windows-3.3.jar"/>
+	<classpathentry kind="lib" path="E:/Java Material/Java/soapui-4.5.2-windows-bin/soapui-4.5.2/lib/xulrunner-windows-3.3.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

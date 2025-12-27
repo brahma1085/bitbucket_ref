@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="no-js lt-ie9">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html class="no-js" data-ng-app="iTap">
+
+<!--
+<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Admin Settings</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
+<script src="jsITAP/vendor/jquery-1.9.0.min.js"></script>
+<script src="jsITAP/vendor/jquery-ui.js"></script>
+<script src="jsITAP/chosen.jquery.min.js"></script>
+<script src="angular/angular.min.js"></script>
+
+<script src="angular-dragdrop.js"></script>
+<script src="angular-dragdrop.min.js"></script>
+
+<script src="js/spagojs/sbisdk-all-production.js"></script>
+
+<script src="controllersITAP.js"></script>
+<script type="text/javascript" src="jsITAP/adminMain.js"></script>
+<script type="text/javascript" src="jsITAP/addUsers.js"></script>
+
+<link rel="stylesheet" href="cssITAP/jquery-ui.css" />
+<link rel="stylesheet" href="cssITAP/normalize.css" />
+<link rel="stylesheet" href="cssITAP/main.css" />
+<link rel="stylesheet" href="cssITAP/styles.css" />
+<link rel="stylesheet" href="cssITAP/addUsers.css" />
+
+
+<link rel="stylesheet" href="cssITAP/chosen.css" />
+<script src="jsITAP/vendor/jquery.slimscroll.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	var appID;
+	var appIDs;
+</script>
+
+<script>
+	
+</script>
+
+</head>
+<body id="user_management">
+	<!-- Fixed Top Section -->
+	<div id="fixed_nav">
+		<div id="fixed_wrapper">
+			<div class="floatleft logo_wrapper">
+			<a href="#"><h1><img src="./imgITAP/logo.png" alt="iTap Logo"></h1></a>
+			<span class="heading">Admin Settings - User Management</span>
+		</div>
+		<div class="floatright">
+			<span class="icons search floatleft"></span>
+			<span class="icons add addNewUser floatleft"></span>
+			<a href="./index.html"><span class="icons close quitPage floatleft"></span></a>
+		</div>
+		</div>
+	</div>
+	
+	<!--  Scrollable Content -->
+	<div id="users_info_scrollable" data-ng-controller="usersController">
+		<div id="users_info_wrapper">
+			<div style="font-size:0;">
+				<div class="user_info" data-ng-repeat="user in AllUsers" data-ng-click = "editUsers(user.userID)">
+					<div class="uName" >
+						<span>{{user.username}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Expanded Version of Div -->
+		<div id="user_info_up" class="user_information" style="display:none;">
+			<div class="info_wrapper">
+			<form name="updateUserForm">
+				<div id="general_info" class="floatleft">
+					<div class="input_fields">
+						<input type="hidden" name="editUserID" data-ng-model="editUserID" value="{{editUserID}}" />
+						<label for="username">Username</label><br />
+						<input type ="text" name="updateusername" class="username" data-ng-model="updateusername" value="{{updateusername}}" data-ng-minlength=3 data-ng-maxlength=50
+											required/><br />
+						<div class="error"
+											data-ng-show="updateUserForm.username.$dirty && updateUserForm.username.$invalid">
+											<span class="error"
+												data-ng-show="updateUserForm.username.$error.required">
+												User name is required. </span> <span class="error"
+												data-ng-show="updateUserForm.username.$error.minlength">
+												User name is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="updateUserForm.username.$error.maxlength">
+												User name cannot be longer than 50 characters </span>
+										</div>			
+						<label>Password</label><br />
+						<input type ="password" class="password" name="updatepassword" data-ng-model="updatepassword" value="{{updatepassword}}" data-ng-minlength=5 data-ng-maxlength=50
+											required/><br />
+						<div class="error"
+											data-ng-show="updateUserForm.password.$dirty && updateUserForm.password.$invalid">
+											<span class="error"
+												data-ng-show="updateUserForm.password.$error.required">
+												User password is required. </span> <span class="error"
+												data-ng-show="updateUserForm.password.$error.minlength">
+												User password is required to be at least 5 characters </span> <span
+												class="error"
+												data-ng-show="updateUserForm.password.$error.maxlength">
+												User password cannot be longer than 20 characters </span>
+										</div>		
+						<label>Email</label><br />
+						<input type="email" class="emailText"  name="emailID" data-ng-model = "emailID" value="{{emailID}}" required/><br />
+						<div class="error" data-ng-show="updateUserForm.emailID.$dirty && updateUserForm.emailID.$invalid"> 
+											<span class="error" data-ng-show="updateUserForm.emailID.$error.required">Email ID is Required</span> 
+											<span class="error"	data-ng-show="updateUserForm.emailID.$error.email"> Not a valid email!</span>
+										</div>
+					</div>
+					
+				</div>-
+				
+				<div id="group_application_info" class="floatleft">
+					<div id="groupType" class="floatleft">
+						<div class="typeContent">
+							<div class="header"><span class="groupText">Group(s)</span><span class="icons add addNewUserGroup"></span></div>
+							<div class="typeWrapper">
+					          <div class="user_info" data-ng-repeat="role in UserRoles" data-ng-click = "getApps(role,user.userID)">
+					               <div class="gName">
+					                	<span>{{role}}</span>
+					                </div>
+					            </div>
+					         
+					            <!-- <div class="user_info">
+					            	<div class="gName">
+					            		<span>Technical Architect</span>
+					            	</div>
+					            </div>
+					            <div class="user_info">
+					            	<div class="gName">
+					            		<span>Developer</span>
+					            	</div>
+					            </div>
+					            <div class="user_info">
+					            	<div class="gName">
+					            		<span>Tester</span>
+					            	</div>
+					            </div> -->
+					 	 	</div>
+						</div>   
+					</div>
+					
+					<div id="applicationType" class="floatleft">
+						<div class="typeContent">
+							<div class="header"><span class="applicationText">Application(s)</span><span class="icons add addNewUserApplication"></span></div>
+							<div class="typeWrapper">
+								 <div class="user_info floatleft" data-ng-repeat="apps in UserApplicationRoles">
+									<div class="aName">
+										<span>{{apps.appName}}</span>
+									</div>
+								</div>
+								<!--<div class="user_info floatleft">
+									<div class="aName">
+										<span>WebGDV 2.0</span>
+									</div>
+								</div>
+								<div class="user_info floatleft">
+									<div class="aName">
+										<span>Barista</span>
+									</div>
+								</div>
+								<div class="user_info floatleft">
+									<div class="aName">
+										<span>AOS</span>
+									</div>
+								</div>
+								<div class="user_info floatleft">
+									<div class="aName">
+										<span>Odyssey</span>
+									</div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="floatleft emptyDiv">
+					&nbsp;
+				</div>
+				<div id="group_application_info" class="floatleft">
+					<div class="buttons floatright">
+						<input type="button" value="Cancel" class="greybutton close_user_info cancel">
+						<input type="button" value="Update User" class="update blueButton" id="updateUser" data-ng-click = "updateUsers()">
+					</div>
+				</div>
+				</form>
+			</div>			
+		</div>
+		<!-- END Expanded Version of Div -->
+		
+		<!-- New Users add Div -->
+		<div id="new_user_info" class="user_information" style="display:none;">
+			<div class="new_dotted_div">New User</div>
+			<div class="info_wrapper">
+				<div id="general_info" class="floatleft">
+				<form name="addUserForm" novalidate
+									data-ng-submit="addUsers()">
+					<div class="input_fields">
+						<label for="username">Username</label><br />
+						<input type ="text" name="username" class="username" placeholder ="Enter Username" data-ng-model = "username" data-ng-minlength=3 data-ng-maxlength=50
+											required duplicate= "AllUsers" attributename = "{name:'username'}"/><br />
+											<div class="error"
+											data-ng-show="addUserForm.username.$dirty && addUserForm.username.$invalid">
+											<span class="error"
+												data-ng-show="addUserForm.username.$error.duplicate">
+												User name is already in use </span>
+											<span class="error"
+												data-ng-show="addUserForm.username.$error.required">
+												User name is required. </span> <span class="error"
+												data-ng-show="addUserForm.username.$error.minlength">
+												User name is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="addUserForm.username.$error.maxlength">
+												User name cannot be longer than 50 characters </span>
+										</div>			
+						<label>Password</label><br />
+						<input type ="password" class="password" name="password" data-ng-model = "password" data-ng-minlength=5 data-ng-maxlength=20
+											required/><br />
+											<div class="error"
+											data-ng-show="addUserForm.password.$dirty && addUserForm.password.$invalid">
+											<span class="error"
+												data-ng-show="addUserForm.password.$error.required">
+												User password is required. </span> <span class="error"
+												data-ng-show="addUserForm.password.$error.minlength">
+												User password is required to be at least 5 characters </span> <span
+												class="error"
+												data-ng-show="addUserForm.password.$error.maxlength">
+												User password cannot be longer than 20 characters </span>
+										</div>			
+						<label>Email</label><br />
+						<input type="email" class="emailText" placeholder="Enter Email" name="emailID" data-ng-model = "emailID" required/><br />
+						<div class="error" data-ng-show="addUserForm.emailID.$dirty && addUserForm.emailID.$invalid"> 
+											<span class="error" data-ng-show="addUserForm.emailID.$error.required">Email ID is Required</span> 
+											<span class="error"	data-ng-show="addUserForm.emailID.$error.email"> Not a valid email!</span>
+										</div>
+					</div>
+					</form>
+				</div>
+				
+				<div id="group_application_info" class="floatleft">
+					<div id="groupType" class="floatleft">
+						<div class="typeContent">
+							<div class="header"><span class="groupText">Group(s)</span><span class="icons add addNewUserGroup"></span></div>
+							<div class="typeWrapper">
+								<!--  
+									Here Project Manager Div should be attached
+									<div class="gName groupTypeRoles">Project Manager</div> 
+								-->
+								<div class="gName groupTypeRoles">Project Manager</div> 
+								
+								<div id="groupTypeDivContainer" style="display:none;">
+					            	<select class="filterchosen">
+					            		<option value="project manager">project manager</option>
+					            		<option value="project delivery manager">delivery manager</option>
+					            		<option value="lead">lead</option>
+					            		<option value="developer">developer</option>
+					            		<option value="tester">tester</option>
+					            		<option value="designer">designer</option>
+					            	</select>
+					            	<div><span><a href="#" id="cancelAddToGrouplist">close</a></span> &nbsp; &nbsp; <span><a href="#" id="addToGrouplist">add</a></span></div>
+					         	 </div>
+					           <!--  <div class="user_info">
+					                <div class="gName">
+					                	<span>Project Lead</span>
+					                </div>
+					            </div>
+					            <div class="user_info">
+					            	<div class="gName">
+					            		<span>Technical Architect</span>
+					            	</div>
+					            </div>
+					            <div class="user_info">
+					            	<div class="gName">
+					            		<span>Developer</span>
+					            	</div>
+					            </div>
+					            <div class="user_info">
+					            	<div class="gName">
+					            		<span>Tester</span>
+					            	</div>
+					            </div> -->
+					 	 	</div>
+						</div>   
+					</div>
+					
+					<div id="applicationType" class="floatleft">
+						<div class="typeContent">
+							<div class="header"><span class="applicationText">Application(s)</span><span class="icons add addNewUserApplication"></span></div>
+							<div class="typeWrapper">
+								<div id="applicationTypeDivContainer" style="display:none;">
+					            	<select class="filterchosen">
+					            		<option value="application 1">application 1</option>
+					            		<option value="application 2">application 2</option>
+					            		<option value="application 3">application 3</option>
+					            		<option value="application 4">application 4</option>
+					            		<option value="application 5">application 5</option>
+					            		<option value="application 6">application 6</option>
+					            	</select>
+					            	<div><span><a href="#" id="cancelAddToApplicationList">close</a></span> &nbsp; &nbsp; <span><a href="#" id="addToApplicationlist">add</a></span></div>
+					          </div>
+								<!-- <div class="user_info floatleft">
+									<div class="aName">
+										<span>GSX 1.3</span>
+									</div>
+								</div>
+								<div class="user_info floatleft">
+									<div class="aName">
+										<span>WebGDV 2.0</span>
+									</div>
+								</div>
+								<div class="user_info floatleft">
+									<div class="aName">
+										<span>Barista</span>
+									</div>
+								</div>
+								<div class="user_info floatleft">
+									<div class="aName">
+										<span>AOS</span>
+									</div>
+								</div>
+								<div class="user_info floatleft">
+									<div class="aName">
+										<span>Odyssey</span>
+									</div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="floatleft emptyDiv">
+					&nbsp;
+				</div>
+				<div id="group_application_info" class="floatleft">
+					<div class="buttons floatright">
+						<input type="button" value="Cancel" class="greybutton close_user_info cancel">
+						<input type="button" value="Create User" class="blueButton" id="createUser" data-ng-disabled="addUserForm.$invalid" data-ng-click = "addUsers()">
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!-- END New Users add Div -->
+	</div>
+	<!-- END Scrollable Content -->
+	
+</body>
+
+</html>

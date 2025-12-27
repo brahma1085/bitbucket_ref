@@ -1,0 +1,13 @@
+--- for simple slide show --- #30052015
+
+<script type="text/javascript">
+						$("#aboutus_slideshow > div:gt(0)").hide();
+						setInterval(function() { 
+						  $('#aboutus_slideshow > div:first')
+						    .fadeOut(1000)
+						    .next()
+						    .fadeIn(1000)
+						    .end()
+						    .appendTo('#aboutus_slideshow');
+						},  3000);
+						</script>
