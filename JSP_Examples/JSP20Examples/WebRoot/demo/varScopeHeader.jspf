@@ -1,0 +1,22 @@
+<table border="1">
+
+<tr>
+    <th width="25%">
+        &nbsp;
+    </th>
+    <th align="center" width="15%">
+        GV<br>Global Var<br>in Request<br>Scope
+    </th>
+    <th align="center" width="15%">
+        LV<br>Local Var<br>Not<br>Declared
+    </th>
+    <th align="center" width="15%">
+        BV<br>Tag Var<br>Scope:<br>AT_BEGIN
+    </th>
+    <th align="center" width="15%">
+        NV<br>Tag Var<br>Scope:<br>NESTED
+    </th>
+    <th align="center" width="15%">
+        EV<br>Tag Var<br>Scope:<br>AT_END
+    </th>
+</tr>

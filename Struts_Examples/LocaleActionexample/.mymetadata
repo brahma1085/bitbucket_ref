@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="LocaleActionexample"
+  id="myeclipse.1291886019420"
+  context-root="/LocaleActionexample"
+  j2ee-spec="5.0"
+  archive="LocaleActionexample.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="thirdappaccount"
+  id="myeclipse.1290798315502"
+  context-root="/thirdappaccount"
+  j2ee-spec="5.0"
+  archive="thirdappaccount.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

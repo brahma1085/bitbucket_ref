@@ -1,0 +1,13 @@
+<taglib version="2.1">
+	<tlib-version>1.0</tlib-version>
+	<uri>www.nit.com</uri>
+	<tag>
+		<name>owntag</name>
+		<tag-class>edu.MyCustomTag</tag-class>
+		<attribute>
+			<name>count</name>
+			<required>true</required>
+			<rtexpr-value>true</rtexpr-value>
+		</attribute>
+	</tag>
+</taglib>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="accountdbapplication"
+  id="myeclipse.1291140036469"
+  context-root="/accountdbapplication"
+  j2ee-spec="5.0"
+  archive="accountdbapplication.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,6 @@
+#Wed Oct 17 15:44:33 MST 2007
+eclipse.preferences.version=1
+instance/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
+validator.Checked=WebRoot/jsp/jsp2/jspx/basic.jspx,WebRoot/demo/varScopeRow.jspf,WebRoot/demo/dynamicAttr.jsp,WebRoot/demo/varScopeHeader.jspf
+validator.Revalidate=true
+validator.Unchecked=

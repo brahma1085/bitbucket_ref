@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="accountForm" type="edu.nit.struts.form.AccountForm" />
+	</form-beans>
+	<action-mappings>
+		<action input="/account1.jsp" name="accountForm" path="/account"
+			scope="request" type="edu.nit.struts.action.AccountAction">
+			<exception key="error.dboperation.failed" path="/error.jsp"
+				type="com.nit.struts.DBException" />
+			<exception key="error.search.failed" path="/noaccount.jsp"
+				type="com.nit.struts.AccountNotFoundException" />
+			<forward name="success" path="/results.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="edu.nit.struts.ApplicationResources" />
+</struts-config>

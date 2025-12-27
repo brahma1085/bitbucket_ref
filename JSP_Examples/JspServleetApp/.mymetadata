@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="JspServleetApp"
+  id="myeclipse.1287756929676"
+  context-root="/JspServleetApp"
+  j2ee-spec="5.0"
+  archive="JspServleetApp.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

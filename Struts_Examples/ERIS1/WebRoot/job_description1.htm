@@ -1,0 +1,85 @@
+
+<%@ page import="javax.servlet.http.*,java.sql.*,javax.servlet.*,dbconnection.DBConnection" %>
+<head>
+<title>Enterprise Resource Information System</title>
+</head>
+<body>
+<form  action="">
+<div style="background-color: #C0C0C0">
+ <p align="center"><b>Enterprise Resource Information System</b></p></div>
+<p align="center">JOB DISCREPTION</p>
+
+<%
+DBConnection  db= new DBConnection();
+ResultSet rs=db.executeQuery("select jobid  from joborder");
+%>
+<p align=center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee ID <select size="1" name="empid"><br>
+<option>Select JoB ID</option></p>
+<%      
+      	while(rs.next())
+	{
+           
+%>
+<br><br>
+
+<option> <%=rs.getInt(1)%> </option></p>
+<%
+	}
+  %>    
+
+</select>
+  <input type="submit" value="VIEW" name="B3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+<br><br>
+<table border="1" cellspacing="2" style="border-collapse: collapse" bordercolor="#brown" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="16%">CLIENTID</td>
+    <td width="16%">OPENDATE</td>
+    <td><p align="center">ENDDATE</td>
+    <td width="17%">
+    <p align="center">EDUCATION</td>
+    <td width="17%">
+    <p align="center">EXPERIENCS</td>
+    <td width="17%">
+    <p align="center">EXPERIENCEINFIELD</td>
+    
+      <td width="17%">JOBCATEGORY </td>
+ <td width="17%">NUMBEROFVACANCIES </td>
+
+
+  </tr>
+<%
+	String s=request.getParameter("empid");
+	if (s!=null)
+	{
+ResultSet rs1=db.executeQuery("select * from joborder where jobid=' "+ s +" ' "); 
+	if(rs1.next())
+	{
+%>
+  <tr>
+    <td width="16%"><%=rs1.getString(2)%>&nbsp;</td>
+    <td width="16%"><%=rs1.getString(3)%>&nbsp;</td>
+    <td width="17%"><%=rs1.getString(4)%>&nbsp;</td>
+    <td width="17%"><%=rs1.getString(5)%>&nbsp;</td>
+    <td width="17%"><%=rs1.getString(6)%>&nbsp;</td>
+    <td width="17%"><%=rs1.getString(7)%>&nbsp;</td>
+	
+	<td width="17%"><%=rs1.getString(9)%>&nbsp;</td>
+	<td width="17%"><%=rs1.getString(10)%>&nbsp;</td>
+	
+	
+
+  </tr>
+<%
+	}
+	} 
+%>
+</table>
+
+  <p align="center"><a href="recurit.htm">BACK</a></p>
+</form>
+</body>
+
+</html>
