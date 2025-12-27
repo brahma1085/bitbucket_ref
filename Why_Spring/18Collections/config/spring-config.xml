@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--
+		<bean id="student" class="edu.list.pojo.Student"> <property
+		name="list"> <list> <value>12312</value> <value>asdfsd</value>
+		<value>234d</value> <value>3242.32d</value> </list> </property>
+		<property name="strings"> <list> <value>skdfj</value>
+		<value>sdiuytu</value> <value>sdkfjhksjds</value>
+		<value>sdkjhfiueykdsd</value> </list> </property> </bean>
+	-->
+	<!--
+		<bean id="student1" class="edu.map.pojo.Student"> <property
+		name="map"> <map> <entry key="sno"> <value>837764</value> </entry>
+		<entry key="sname"> <value>anand</value> </entry> </map> </property>
+		</bean>
+	-->
+	<!--
+		<bean id="student2" class="edu.props.pojo.Student"> <property
+		name="properties"> <props> <prop key="sno">6546587 </prop> <prop
+		key="sname">hhghgfyhg</prop> </props> </property> </bean>
+	-->
+	<bean id="student3" class="edu.set.pojo.Student">
+		<property name="set">
+			<set>
+				<value>234232</value>
+				<value>sdfsdfwe</value>
+				<value>546456</value>
+				<value>345345</value>
+			</set>
+		</property>
+		<property name="strings">
+			<set>
+				<value>sajdhfgsdj</value>
+				<value>sdjhfsweu</value>
+				<value>weuirweiu</value>
+				<value>sdkjfskjdhu</value>
+			</set>
+		</property>
+	</bean>
+</beans>

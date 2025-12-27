@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="b1" class="edu.test.B">
+		<property name="a">
+			<bean id="a1" class="edu.test.A"></bean>
+		</property>
+	</bean>
+
+	<!-- 2nd way -->
+
+	<bean id="a2" class="edu.test.A"></bean>
+	<bean id="b2" class="edu.test.B">
+		<property name="a">
+			<ref bean="a2" />
+		</property>
+	</bean>
+</beans>
