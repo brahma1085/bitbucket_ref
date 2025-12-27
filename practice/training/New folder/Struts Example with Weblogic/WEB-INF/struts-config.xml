@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://struts.apache.org/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    
+  <data-sources>
+         <data-source type="org.apache.commons.dbcp.BasicDataSource">
+            <set-property property="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+            <set-property property="url" value="jdbc:oracle:thin:@3.212.228.224:1526:ITDEVLDB"/>
+            <set-property property="username" value="eMentoring"/>
+            <set-property property="password" value="eMent123"/>            
+	    <set-property property="minCount" value="1"/>
+            <set-property property="maxActive" value="10"/>
+            <set-property property="defaultAutoCommit" value="true"/>
+            <set-property property="defaultReadOnly" value="false"/>
+            <set-property property="removeAbandoned" value="true"/>
+            <set-property property="logAbandoned" value="true"/>
+        </data-source>
+  </data-sources>
+
+	<global-forwards>
+		<forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		<forward name="Failure" path="/jsp/apperror.jsp" />
+		<forward name="NoSession" path="/jsp/nosession.jsp" />
+	</global-forwards>
+
+    <action-mappings>
+
+    <action path="/LandingPage"
+        type="com.ge.crd.ementoring.action.ActionLandingPage"        
+		scope="request">
+        <forward name="Success" path="/jsp/landingPage.jsp"></forward>	
+        <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+        <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+        <forward name="NoSession" path="/jsp/nosession.jsp"/>
+     </action>
+  
+     <action path="/home"
+        type="com.ge.crd.ementoring.action.ActionHomePage"        
+		scope="request">
+        <forward name="Success" path="/jsp/HomePage.jsp"></forward>	
+        <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+        <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+        <forward name="NoSession" path="/jsp/nosession.jsp"/>
+     </action>        
+  
+     <action path="/logout"
+               type="com.ge.crd.ementoring.action.ActionLogOut"        
+			   scope="request">
+           <forward name="Success" path="/jsp/logout.jsp"/>
+     </action> 
+     
+     <action path="/homepage"
+               type="com.ge.crd.ementoring.action.ActionHomePageLink"        
+			   scope="request">
+           <forward name="Success" path="/jsp/content.jsp"/>
+     </action> 
+    
+  
+  </action-mappings>		
+  <message-resources parameter="ApplicationResources" null="false"/>
+ 	
+</struts-config>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Samshing HTML5!</title>
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.nav.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#login").click(function() {
+		var user = new Object();
+		user.name = $('#name').val();
+		user.password = $('#password').val();
+		
+		$.ajax({
+			url : "/Html5Prac/insertUser",
+			type : 'POST',
+			dataType : 'json',
+			contentType : 'application/json',
+			mimeType : 'application/json',
+			data : JSON.stringify(user),
+			success : function() {
+				alert(user.name + " inserted successfully.");
+			},
+			error : function() {
+				alert("error while inserting data for : " + user.name);
+			}
+		});
+	});
+});
+</script>
+</head>
+<body id="index" class="home">
+	<header id="banner" class="body">
+		<h1>
+			<a href="#">Smashing HTML5! <strong>HTML5 in the year <del>2022</del>
+					<ins>2009</ins></strong></a>
+		</h1>
+		<nav>
+			<ul>
+				<li class="active"><a href="#">home</a></li>
+				<li><a href="#content">portfolio</a></li>
+				<li><a href="#extras">blog</a></li>
+				<li><a href="#contact">contact</a></li>
+				<li class="user_login"><a href="#users">user login</a></li>
+			</ul>
+		</nav>
+	</header>
+	<aside id="featured" class="body">
+		<article>
+			<figure>
+				<img alt="Smashing Magazine" src="img/sm-logo.gif" />
+			</figure>
+			<hgroup>
+				<h2>Featured Article</h2>
+				<h3>
+					<a href="#" style='color: inherit;'>HTML5 in Smashing Magazine!</a>
+				</h3>
+			</hgroup>
+			<p>
+				Discover how to use Graceful Degradation and Progressive Enhancement
+				techniques to achieve an outstanding, cross-browser <a
+					href="http://dev.w3.org/html5/spec/Overview.html" rel="external">HTML5</a>
+				and <a href="http://www.w3.org/TR/css3-roadmap/" rel="external">CSS3</a>
+				website today!
+			</p>
+		</article>
+	</aside>
+	<section id="content" class="body">
+		<ol id="posts-list" class="hfeed">
+			<li>
+				<article class="hentry">
+					<header>
+						<h2 class="entry-title">
+							<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This
+								be the title1</a>
+						</h2>
+					</header>
+					<footer class="post-info">
+						<abbr class="published" title="2005-09-10T14:07:00-07:00">10th
+							September 2005</abbr>
+						<address class="vcard-author">
+							By <a class="url-fn" href="#">Thomson Ramírez</a>
+						</address>
+					</footer>
+					<div class="entry-content">
+						<p>
+							Sample information is given, Minneapolis ecological competition.
+							Everyone sterilized now targeted element of freedom. Immigration
+							and justice <a href="#">no wisdom</a> blandit and vegetarian
+							dishes or to that malesuada region. Its the most wonder of the
+							city of lights in the fashion of passionate people around your
+							languages and so that even every one attracting the world of
+							design in the advantageous values.
+						</p>
+					</div>
+				</article>
+			</li>
+			<li>
+				<article class="hentry">
+					<header>
+						<h2 class="entry-title">
+							<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This
+								be the title2</a>
+						</h2>
+					</header>
+					<footer class="post-info">
+						<abbr class="published" title="2005-10-10T14:07:00-07:00">10th
+							October 2005</abbr>
+						<address class="vcard-author">
+							By <a class="url-fn" href="#">Enrique Iglisieaz</a>
+						</address>
+					</footer>
+					<div class="entry-content">
+						<p>
+							Sample information is given, Minneapolis ecological competition.
+							Everyone sterilized now targeted element of freedom. Immigration
+							and justice <a href="#">no wisdom</a> blandit and vegetarian
+							dishes or to that malesuada region. Its the most wonder of the
+							city of lights in the fashion of passionate people around your
+							languages and so that even every one attracting the world of
+							design in the advantageous values.
+						</p>
+					</div>
+				</article>
+			</li>
+			<li>
+				<article class="hentry">
+					<header>
+						<h2 class="entry-title">
+							<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This
+								be the title3</a>
+						</h2>
+					</header>
+					<footer class="post-info">
+						<abbr class="published" title="2005-11-10T14:07:00-07:00">10th
+							November 2005</abbr>
+						<address class="vcard-author">
+							By <a class="url-fn" href="#">Enrique Ramírez</a>
+						</address>
+					</footer>
+					<div class="entry-content">
+						<p>
+							Sample information is given, Minneapolis ecological competition.
+							Everyone sterilized now targeted element of freedom. Immigration
+							and justice <a href="#">no wisdom</a> blandit and vegetarian
+							dishes or to that malesuada region. Its the most wonder of the
+							city of lights in the fashion of passionate people around your
+							languages and so that even every one attracting the world of
+							design in the advantageous values.
+						</p>
+					</div>
+				</article>
+			</li>
+		</ol>
+	</section>
+	<section id="extras" class="body">
+		<div class="blogroll">
+			<h2>blogroll</h2>
+			<ul>
+				<li><a href="#" rel="external">HTML5 Doctor</a></li>
+				<li><a href="#" rel="external">HTML5 Spec (working draft)</a></li>
+				<li><a href="#" rel="external">Smashing Magazine</a></li>
+
+				<li><a href="#" rel="external">W3C</a></li>
+				<li><a href="#" rel="external">Wordpress</a></li>
+				<li><a href="#" rel="external">Wikipedia</a></li>
+
+				<li><a href="#" rel="external">HTML5 Doctor</a></li>
+				<li><a href="#" rel="external">HTML5 Spec (working draft)</a></li>
+				<li><a href="#" rel="external">Smashing Magazine</a></li>
+
+				<li><a href="#" rel="external">W3C</a></li>
+				<li><a href="#" rel="external">Wordpress</a></li>
+				<li><a href="#" rel="external">Wikipedia</a></li>
+
+				<li><a href="#" rel="external">HTML5 Doctor</a></li>
+				<li><a href="#" rel="external">HTML5 Spec (working draft)</a></li>
+				<li><a href="#" rel="external">Smashing Magazine</a></li>
+
+				<li><a href="#" rel="external">W3C</a></li>
+				<li><a href="#" rel="external">Wordpress</a></li>
+				<li><a href="#" rel="external">Wikipedia</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<h2>social</h2>
+			<ul>
+				<li><a href="http://delicious.com" rel="me">delicious</a></li>
+				<li><a href="http://digg.com" rel="me">digg</a></li>
+				<li><a href="http://facebook.com" rel="me">facebook</a></li>
+				<li><a href="http://www.lastfm.in" rel="me">last.fm</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/RSS" rel="alternate">rss</a></li>
+				<li><a href="http://twitter.com" rel="me">twitter</a></li>
+			</ul>
+		</div>
+	</section>
+	<section id="users" class="body">
+		<article>
+			<h2>Users Login Form</h2>
+			<div class="info">
+				<p>
+					Discover how to use Graceful Degradation and Progressive
+					Enhancement techniques to achieve an outstanding, cross-browser <a
+						href="http://dev.w3.org/html5/spec/Overview.html" rel="external">HTML5</a>
+					and <a href="http://www.w3.org/TR/css3-roadmap/" rel="external">CSS3</a>
+					website today!
+				</p>
+			</div>
+		</article>
+		<div class="loginform">
+			<form id="login-form" name="login-form" class="login-form"
+				method="post">
+				<div class="header">
+					<h1>Login Form</h1>
+					<span>Fill out the form below to singnup to have access to
+						our free website creating POCs.</span>
+				</div>
+				<div class="content">
+					<input id="name" name="name" type="text" class="input username"
+						placeholder="Username" />
+					<div class="user-icon"></div>
+					<input id="password" name="password" type="password"
+						class="input password" placeholder="Password" />
+					<div class="pass-icon"></div>
+				</div>
+				<div class="footer"
+					style="box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15) inset; padding: 25px 30px 40px; overflow: auto; background: none repeat scroll 0% 0% rgb(212, 222, 223); border-top: 1px solid rgb(255, 255, 255);">
+					<input id="login" type="submit" name="submit" value="Login"
+						class="button"
+						style='float: right; padding: 11px 25px; font-family: "Bree Serif", serif; font-weight: 300; font-size: 18px; color: rgb(255, 255, 255); text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); background: none repeat scroll 0% 0% rgb(86, 194, 225); border: 1px solid rgb(70, 179, 211); border-radius: 5px; cursor: pointer; box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75) inset;' />
+					<input id="register" type="submit" name="submit" value="Register"
+						class="register"
+						style='float: right; padding: 11px 25px; font-family: "Bree Serif", serif; font-weight: 300; font-size: 18px; color: rgb(255, 255, 255); text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); background: none repeat scroll 0% 0% rgb(86, 194, 225); border: 1px solid rgb(70, 179, 211); border-radius: 5px; cursor: pointer; box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75) inset;' />
+				</div>
+			</form>
+		</div>
+	</section>
+	<section id="contact" class="body">
+		<article>
+			<h2>Contact Us</h2>
+			<div class="info">
+				<div>
+					<div>
+						<h4>UNIQUE Infoway</h4>
+						<p>104, Some street, NewYork, USA</p>
+					</div>
+					<div>
+						<h4>call us</h4>
+						<p>+1 234 567890</p>
+					</div>
+					<div>
+						<h4>Email us</h4>
+						<p>support@sitename.com</p>
+					</div>
+				</div>
+				<div class="social_links">
+					<ul>
+						<li><a href="http://delicious.com/enrique_ramirez" rel="me">delicious</a></li>
+						<li><a href="http://digg.com/users/enriqueramirez" rel="me">digg</a></li>
+						<li><a href="http://facebook.com/enrique.ramirez.velez"
+							rel="me">facebook</a></li>
+						<li><a href="http://www.lastfm.es/user/enrique-ramirez"
+							rel="me">last.fm</a></li>
+						<li><a href="http://website.com/feed/" rel="alternate">rss</a></li>
+						<li><a href="http://twitter.com/enrique_ramirez" rel="me">twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</article>
+		<div class="loginform">
+			<form name="login-form" class="login-form"
+				action="/Html5Prac/insertContact" method="post">
+				<div class="header">
+					<h1>Feedback Form</h1>
+					<span>Fill out the form below to provide your valuable
+						feedback on this sample browser link.</span>
+				</div>
+				<div class="content">
+					<input name="name" type="text" class="input username"
+						placeholder="Username" />
+					<div class="user-icon"></div>
+					<input name="designation" type="text" class="input password"
+						placeholder="Designation" />
+					<div class="user-icon"></div>
+					<input name="description" type="text" class="input password"
+						placeholder="Description" />
+					<div class="user-icon"></div>
+					<textarea name="info" class="input password" cols="0" rows="0"
+						placeholder="Information"></textarea>
+					<div class="user-icon"></div>
+				</div>
+				<div class="footer"
+					style="box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15) inset; padding: 25px 30px 40px; overflow: auto; background: none repeat scroll 0% 0% rgb(212, 222, 223); border-top: 1px solid rgb(255, 255, 255);">
+					<input type="submit" name="submit" value="Submit" class="button"
+						style='float: right; padding: 11px 25px; font-family: "Bree Serif", serif; font-weight: 300; font-size: 18px; color: rgb(255, 255, 255); text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); background: none repeat scroll 0% 0% rgb(86, 194, 225); border: 1px solid rgb(70, 179, 211); border-radius: 5px; cursor: pointer; box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75) inset;' />
+					<input type="submit" name="submit" value="Cancel" class="register"
+						style='float: right; padding: 11px 25px; font-family: "Bree Serif", serif; font-weight: 300; font-size: 18px; color: rgb(255, 255, 255); text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); background: none repeat scroll 0% 0% rgb(86, 194, 225); border: 1px solid rgb(70, 179, 211); border-radius: 5px; cursor: pointer; box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75) inset;' />
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer id="contentinfo" class="body">
+		<address id="about" class="vcard body">
+			<span class="primary"> <strong><a href="#"
+					class="fn url">Smashing Magazine</a></strong> <span class="role">Amazing
+					Magazine</span>
+			</span> <img src="img/avatar.gif" alt="Smashing Magazine Logo" class="photo" />
+			<span class="bio">Smashing Magazine is a website and blog that
+				offers resources and advice to web developers and web designers. It
+				was founded by Sven Lennartz and Vitaly Friedman.</span>
+		</address>
+		<p>
+			2005-2009 <a href="http://smashingmagazine.com">Smashing Magazine</a>.
+		</p>
+	</footer>
+</body>
+</html>

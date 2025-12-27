@@ -1,0 +1,11 @@
+<dbdetails>
+	<dev1>
+		<env>
+			<db-class>edu.nit.utils.N@Driver</db-class>
+		</env>
+		<student1 details="Dev1Details">HelloDriver</student1>
+	</dev1>
+	<dev2>
+		<student1 details="Dev2Details" />
+	</dev2>
+</dbdetails>

@@ -1,0 +1,44 @@
+package edu.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class EmployeeDao {
+	public void insertEmployee(String employeeNo, String employeeName) {
+		String query = "insert into employee values(?,?)";
+		Connection connection = null;
+		PreparedStatement ps = null;
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "satya");
+			ps = connection.prepareStatement(query);
+			ps.setString(1, employeeNo);
+			ps.setString(2, employeeName);
+			ps.executeUpdate();
+			System.out.println("SUCCESS");
+		} catch (ClassNotFoundException e) {
+			System.err.println("ClassNotFoundException" + e.getMessage());
+		} catch (SQLException e) {
+			System.err.println("SQLException" + e.getMessage());
+		} catch (Exception e) {
+			System.err.println("Exception" + e.getMessage());
+		} finally {
+			if (connection != null) {
+				try {
+					connection.close();
+				} catch (SQLException e) {
+					System.err.println("SQLException" + e.getMessage());
+				}
+			}
+			if (ps != null) {
+				try {
+					ps.close();
+				} catch (SQLException e) {
+					System.err.println("SQLException" + e.getMessage());
+				}
+			}
+		}
+	}
+}

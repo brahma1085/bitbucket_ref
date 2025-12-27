@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="edu.model.Student" table="STUDENTDISC"
+		discriminator-value="Student">
+		<id name="sno" type="long" column="SNO">
+			<generator class="sequence">
+				<param name="sequence">STUDENTDISC_SEQ</param>
+			</generator>
+		</id>
+		<discriminator column="STUDENT_DISC" type="string"
+			length="20"></discriminator>
+		<property name="sname" column="SNAME" length="20"></property>
+		<subclass name="edu.model.MBAStream" discriminator-value="MBAStream">
+			<property name="mbastream" length="20" column="MBASTREAM"></property>
+		</subclass>
+		<subclass name="edu.model.MCAStream" discriminator-value="MCAStream">
+			<property name="mcastream" column="MCASTREAM" length="20"></property>
+		</subclass>
+	</class>
+</hibernate-mapping>

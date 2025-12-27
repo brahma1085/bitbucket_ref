@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	
+	<servlet>
+        <servlet-name>HelloWorldExample</servlet-name>
+        <servlet-class>com.myeclipseide.examples.servlet.HelloWorldExample</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>RequestInfoExample</servlet-name>
+        <servlet-class>com.myeclipseide.examples.servlet.RequestInfoExample</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>RequestHeaderExample</servlet-name>
+        <servlet-class>com.myeclipseide.examples.servlet.RequestHeaderExample</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>RequestParamExample</servlet-name>
+        <servlet-class>com.myeclipseide.examples.servlet.RequestParamExample</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>CookieExample</servlet-name>
+        <servlet-class>com.myeclipseide.examples.servlet.CookieExample</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>SessionExample</servlet-name>
+        <servlet-class>com.myeclipseide.examples.servlet.SessionExample</servlet-class>
+    </servlet>
+    
+	<servlet-mapping>
+        <servlet-name>HelloWorldExample</servlet-name>
+        <url-pattern>/servlet/HelloWorldExample</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>RequestInfoExample</servlet-name>
+        <url-pattern>/servlet/RequestInfoExample/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>RequestHeaderExample</servlet-name>
+        <url-pattern>/servlet/RequestHeaderExample</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>RequestParamExample</servlet-name>
+        <url-pattern>/servlet/RequestParamExample</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CookieExample</servlet-name>
+        <url-pattern>/servlet/CookieExample</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SessionExample</servlet-name>
+        <url-pattern>/servlet/SessionExample</url-pattern>
+    </servlet-mapping>
+	
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

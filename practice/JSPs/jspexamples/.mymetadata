@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="jspexamples"
+  id="myeclipse.1288505845115"
+  context-root="/jspexamples"
+  j2ee-spec="5.0"
+  archive="jspexamples.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

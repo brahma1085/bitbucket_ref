@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+  "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+      
+		<form-bean name="LoanPassBook"   type="com.scb.loans.forms.LoanPassBookForm"></form-bean>
+		
+		<form-bean name="NPAReport" type="com.scb.loans.forms.NPAReportForm"></form-bean>
+  		
+  		<form-bean name="LoanQuarterlyInterest" type="com.scb.loans.forms.LoansQuarterlyInterestForm"></form-bean>
+  		
+  		
+  		<form-bean name="LoanAppln" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  
+  		<form-bean name="Appln" type="com.scb.loans.forms.ApplicationForm"></form-bean>
+  
+  		<!--<form-bean name="SelfEmployed" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Service" type="com.scb.loans.forms.ServiceActionForm"></form-bean>
+  		
+  		<form-bean name="Business" type="com.scb.loans.forms.BusinessActionForm"></form-bean>
+  		
+  		<form-bean name="Pension" type="com.scb.loans.forms.PensionActionForm"></form-bean>
+  		
+  		<form-bean name="Rent" type="com.scb.loans.forms.RentActionFrom"></form-bean>
+  
+  		
+  		--><form-bean name="SelfEmployed" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Service" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Business" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Pension" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Rent" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="IndivCoBorrower" type="com.scb.loans.forms.IndiviualCoborrower"></form-bean>
+  
+  		<form-bean name="LoanandShare" type="com.scb.loans.forms.LoanandShareDetailsForm"></form-bean>
+    
+  		<form-bean name="Vehicle" type="com.scb.loans.forms.VehicleApplnForm"></form-bean>
+  		
+  		<form-bean name="Property" type="com.scb.loans.forms.PropertyForm"></form-bean>
+  
+  		<form-bean name="CoBorrower" type="com.scb.loans.forms.CoBorrowerActionForm"></form-bean>
+  
+  		<form-bean name="LoanPosting" type="com.scb.loans.forms.LoanDailyPostingForm"></form-bean>
+  		
+  		<form-bean name="RevRecov" type="com.scb.loans.forms.ReverseRecoveryForm"></form-bean>
+  		
+  		<form-bean name="OtherCharges" type="com.scb.loans.forms.OtherChargesDEForm"></form-bean>
+  		
+  		<form-bean name="Reschedule" type="com.scb.loans.forms.Reschedulingform"></form-bean>
+  		
+  		<form-bean name="AccuredReport" type="com.scb.loans.forms.InterestAccuredReportForm"></form-bean>
+  		
+  		<form-bean name="OpenClosedReport" type="com.scb.loans.forms.OpenClosedStat"></form-bean>   
+  		
+  		<form-bean name="LoanRecovery" type="com.scb.loans.forms.RecoveryForm"></form-bean>     
+  
+  		<form-bean name="LoansStatus" type="com.scb.loans.forms.LoanStatusForm"></form-bean>
+  		
+  		<form-bean name="LoansHistory" type="com.scb.loans.forms.LoanHistForm"></form-bean>
+  		
+  		<form-bean name="RecoveryByTransfer" type="com.scb.loans.forms.RecoveryByTransfer"></form-bean>
+  		
+  		<form-bean name="LoanTran" type="com.scb.loans.forms.LastLoanTranForm"></form-bean>
+  		
+  		<form-bean name="SurityCoBorr" type="com.scb.loans.forms.SurityCoBorrower"></form-bean>
+  		
+  		<form-bean name="OCReport" type="com.scb.loans.forms.OtherChargesReport"></form-bean>
+  		
+  		<form-bean name="ODReport" type="com.scb.loans.forms.ODReport"></form-bean>
+  		
+  		<form-bean name="NPALoanSummary" type="com.scb.loans.forms.NPASummaryForm"></form-bean>
+  		
+  		<form-bean name="PenalIntFix" type="com.scb.loans.forms.PenalActionForm"></form-bean>
+  		
+  		<form-bean name="ActionDueReport" type="com.scb.loans.forms.ActionDueReport"></form-bean>
+  
+  		<form-bean name="LoanDocsUpdation" type="com.scb.loans.forms.LoanDocsUpdationForm"></form-bean>
+  		
+  		<form-bean name="LoanLeadger" type="com.scb.loans.forms.LoanLeadgerForm"></form-bean>
+  		
+  		<form-bean name="LoanMeetingAgenda" type="com.scb.loans.forms.LoanMeethingAgendaForm"></form-bean>
+  		
+  		<form-bean name="LoanSplIntRateUpdn" type="com.scb.loans.forms.LoanSplIntRateUpdnForm"></form-bean>
+   		
+   		<form-bean name="PSWSProcessing" type="com.scb.loans.forms.PSWSProcessingForm"></form-bean>
+  		
+  		<form-bean name="PSWSSchedule" type="com.scb.loans.forms.PSWSScheduleForm"></form-bean>
+  		
+  		<form-bean name="JewelReport" type="com.scb.loans.forms.JewelReportForm"></form-bean>
+  		
+  		<form-bean name="DCBScheduling" type="com.scb.loans.forms.DCBSchedulingForm"></form-bean>
+  		
+  		<form-bean name="DCBMaintenance" type="com.scb.loans.forms.DCBSchedulingForm"></form-bean>
+  		
+  		<form-bean name="DCBProcess" type="com.scb.loans.forms.DCBSchedulingForm"></form-bean>
+  
+  		<form-bean name="NPAProcess" type="com.scb.loans.forms.NPAProcessForm"></form-bean>
+  		
+  		<form-bean name="LoanDefaulter" type="com.scb.loans.forms.LoanDefaulterForm"></form-bean>
+  		
+  		<form-bean name="NPAAdmin" type="com.scb.loans.forms.LoanNpaAdminForm"></form-bean>
+   		
+   		<form-bean name="LoanAdmin" type="com.scb.loans.forms.LoanAdminForm"></form-bean>
+  		
+  		<form-bean name="NPAReport" type="com.scb.loans.forms.NPAReportForm"></form-bean>
+  		
+  		<form-bean name="Sanction" type="com.scb.loans.forms.SanctionForm"></form-bean>
+  		
+		<form-bean name="SanctionNDis" type="com.scb.loans.forms.SanctionForm"></form-bean>
+		
+		<form-bean name="DisbursementForm" type="com.scb.loans.forms.DisbursementForm"></form-bean>
+		
+		<form-bean name="loansign" type="com.scb.fc.forms.SignatureInstForm"></form-bean>
+	</form-beans>
+
+	
+ 
+  	<action-mappings>
+  	
+		<action path="/Loans/LoanPassBookMenu" 	type="com.scb.loans.action2.LoanAction2" name="LoanPassBook" input="/LoansWebPages/LoanPassBook.jsp"></action>
+  		
+  		<action path="/Loans/LoanPassBook" type="com.scb.loans.action2.LoanAction2" name="LoanPassBook" input="/LoansWebPages/LoanPassBook.jsp"></action>
+  		
+  		<action path="/Loans/NPAReportMenu" type="com.scb.loans.action2.LoanAction2" name="NPAReport" input="/LoansWebPages/NPAReports.jsp"></action>
+  
+  		<action path="/Loans/NPAReport" type="com.scb.loans.action2.LoanAction2" name="NPAReport" input="/LoansWebPages/NPAReports.jsp"></action>
+  		
+  		<action path="/Loans/LoanApplicationDE" type="com.scb.loans.actions.LoanAction" name="LoanAppln" scope="session" input="/LoansWebPages/LoanApplicationDE.jsp"></action>
+  
+  		<action path="/Loans/LoanApplicationMenu" type="com.scb.loans.actions.LoanAction" name="LoanAppln" input="/CommonWebPages/Menu.jsp" scope="session"></action>
+  
+  		<action path="	/Loans/LoansApplicationDEVerifyMenu" type="com.scb.loans.actions.LoanAction" name="LoanAppln" scope="session" input="/LoansWebPages/LoanApplicationDEVerify.jsp">  </action>
+  
+ 		<action path="/Loans/LoansApplicationDEVerify" type="com.scb.loans.actions.LoanAction" name="LoanAppln" input="/LoansWebPages/LoanApplicationDEVerify.jsp" scope="session"></action>
+  
+  		<action path="/Loans/Application" type="com.scb.loans.actions.LoanAction" name="Appln" input="/LoansWebPages/Application1.jsp" ></action>
+  		
+  		<action path="/Loans/SignatureInst" name="loansign" type="com.scb.loans.actions.LoanAction" scope="request" input="/SignatureInst1.jsp"></action>
+  
+  		<action path="/Loans/SelfEmployed" type="com.scb.loans.actions.LoanAction" name="SelfEmployed" input="/LoansWebPages/SelfEmployed.jsp"></action>
+  
+  		<action path="/Loans/Service" type="com.scb.loans.actions.LoanAction" name="Service" input="/LoansWebPages/Service.jsp" ></action>
+  
+ 		<action path="/Loans/QuarterlyInterestCalc" type="com.scb.loans.action2.LoanAction2" name="LoanQuarterlyInterest" input="/Layout.jsp"></action>
+  
+  		<action path="/Loans/QuarterlyInterestCalcMenu" type="com.scb.loans.action2.LoanAction2" name="LoanQuarterlyInterest" input="/LoansWebPages/CBSMenu.jsp" ></action>
+ 
+  		<action path="/Loans/Business" type="com.scb.loans.actions.LoanAction" name="Business" input="/LoansWebPages/Business.jsp" ></action>
+  
+  		<action path="/Loans/Pension" type="com.scb.loans.actions.LoanAction" name="Pension" input="/LoansWebPages/Pension.jsp" ></action>
+  
+  		<action path="/Loans/Rent" type="com.scb.loans.actions.LoanAction" name="Rent" input="/LoansWebPages/Rent.jsp" ></action>
+  		
+  		<action path="/Loans/LoanandShareDetails" type="com.scb.loans.actions.LoanAction" name="LoanandShare" input="/LoansWebPages/LoanAndShareDetails1.jsp" ></action>
+
+  		<action path="/Loans/IndividualCoBorrower" type="com.scb.loans.actions.LoanAction" name="IndivCoBorrower" input="/LoansWebPages/Coborrower.jsp" ></action>
+  		
+  		<action path="/Loans/IndividualCoBorrower1" type="com.scb.loans.actions.LoanAction" name="IndivCoBorrower" input="/LoansWebPages/IndividualCoborrower2.jsp" ></action>
+  
+  		<action path="/Loans/VehicleDet" type="com.scb.loans.actions.LoanAction" name="Vehicle" input="/LoansWebPages/VehicleDet.jsp"></action>
+  
+  		<action path="/Loans/PropertyDet" type="com.scb.loans.actions.LoanAction" name="Property"></action>
+  
+  		<action path="/Loans/CoBorrower" type="com.scb.loans.actions.LoanAction" name="CoBorrower"></action>
+  
+  		<action path="/Loans/LoanDailyPostingMenu" type="com.scb.loans.actions.LoanAction" name="LoanPosting" input="/LoansWebPages/LoanDailyPosting.jsp"></action>
+  
+  		<action path="/Loans/LoanDailyPosting" type="com.scb.loans.actions.LoanAction" name="LoanPosting" input="/LoansWebPages/LoanDailyPosting.jsp"></action>
+  
+  		<action path="/Loans/ReverseRecoveryMenu" type="com.scb.loans.actions.LoanAction" name="RevRecov" input="/LoansWebPages/ReverseRecovery.jsp"></action>
+  		
+  		<action path="/Loans/ReverseRecovery"  type="com.scb.loans.actions.LoanAction" name="RevRecov" input="/LoansWebPages/ReverseRecovery.jsp"></action>  
+
+		<!-- 20-10-2011 -->
+  <action path="/Loans/ReverseRecoveryVerifyMenu" type="com.scb.loans.action2.LoanAction2" name="RevRecov" input="/LoansWebPages/ReverseRecoveryVerify.jsp"></action>
+  <action path="/Loans/ReverseRecoveryVerify"  type="com.scb.loans.action2.LoanAction2" name="RevRecov" input="/LoansWebPages/ReverseRecoveryVerify.jsp"></action>
+  		
+  		<action path="/Loans/OtherChargesMenu" type="com.scb.loans.actions.LoanAction" name="OtherCharges" input="/LoansWebPages/OtherCharges.jsp"></action>
+  		
+  		<action path="/Loans/OtherCharges" type="com.scb.loans.actions.LoanAction" name="OtherCharges" input="/LoansWebPages/OtherCharges.jsp"></action>
+  		
+  		<!-- 20-10-2011 -->
+  		<action path="/Loans/OtherChargesVerifyMenu" type="com.scb.loans.actions.LoanAction" name="OtherCharges" input="/LoansWebPages/OtherCharges.jsp"></action>
+  		
+  		<action path="/Loans/OtherChargesVerify" type="com.scb.loans.actions.LoanAction" name="OtherCharges" input="/LoansWebPages/OtherCharges.jsp"></action>
+  		
+  		<action path="/Loans/ReschedulingMenu" type="com.scb.loans.actions.LoanAction" name="Reschedule" input="/LoansWebPages/Rescheduling.jsp"></action>  
+  
+  		<action path="/Loans/Rescheduling" type="com.scb.loans.actions.LoanAction" name="Reschedule" input="/LoansWebPages/Rescheduling.jsp"></action>
+  
+  		<action path="/Loans/InterestAccuredReportMenu" type="com.scb.loans.actions.LoanAction" name="AccuredReport" input="/LoansWebPages/InterestAccuredReport.jsp"></action>
+  
+  		<action path="/Loans/InterestAccuredReport" type="com.scb.loans.actions.LoanAction" name="AccuredReport" input="/LoansWebPages/InterestAccuredReport.jsp"></action>
+  
+  		<action path="/Loans/OpenClosedStatMenu" type="com.scb.loans.actions.LoanAction" name="OpenClosedReport" input="/LoansWebPages/InterestAccuredReport.jsp"></action>
+  	
+  		<action path="/Loans/OpenClosedStat" type="com.scb.loans.actions.LoanAction" name="OpenClosedReport" input="/LoansWebPages/InterestAccuredReport.jsp"></action>
+  
+ 		<action path="/Loans/LoanRecoveryMenu" type="com.scb.loans.actions.LoanAction" name="LoanRecovery" input="/LoansWebPages/LoanRecovery.jsp"></action>
+  
+  		<action path="/Loans/LoanRecovery" type="com.scb.loans.actions.LoanAction" name="LoanRecovery" input="/LoansWebPages/LoanRecovery.jsp"></action>
+  		
+  		<!-- 19/10/2011 -->
+  		<action path="/Loans/RecoveryVerifyMenu" type="com.scb.loans.actions.LoanAction" name="LoanRecovery" input="/LoansWebPages/LoanRecoveryVerify.jsp"></action>
+  		
+  		<action path="/Loans/RecoveryVerify" type="com.scb.loans.actions.LoanAction" name="LoanRecovery" input="/LoansWebPages/LoanRecoveryVerify.jsp"></action>
+  
+  		<action path="/Loans/LoanStaus" type="com.scb.loans.actions.LoanAction" name="LoansStatus" input="/LoansWebPages/LoanStatus.jsp"></action>
+  
+  		<action path="/Loans/LoanHist" type="com.scb.loans.actions.LoanAction" name="LoansHistory" input="/LoansWebPages/LoanHistory.jsp"></action>
+  
+  		<action path="/Loans/ByTransfer" type="com.scb.loans.actions.LoanAction" name="RecoveryByTransfer" input="/LoansWebPages/RecoveryByTransfer.jsp"></action> 
+  
+  		<action path="/Loans/LoanTran" type="com.scb.loans.actions.LoanAction" name="LoanTran" input="/LoansWebPages/LastLoanTran.jsp"></action>
+  
+  		<action path="/Loans/SurityCoBorrower" type="com.scb.loans.actions.LoanAction" name="SurityCoBorr" input="/LoansWebPages/SurityCoborrower.jsp"></action>
+  
+ 	    <action path="/Loans/OCReportMenu" type="com.scb.loans.actions.LoanAction" name="OCReport" input="/LoansWebPages/OtherChargesReport.jsp"></action>
+  
+  		<action path="/Loans/OCReport" type="com.scb.loans.actions.LoanAction" name="OCReport" input="/LoansWebPages/OtherChargesReport.jsp"></action>
+  
+  		<action path="/Loans/ODReportMenu" type="com.scb.loans.actions.LoanAction" name="ODReport" input="/LoansWebPages/ODReport.jsp"></action>
+  
+  		<action path="/Loans/ODReport" type="com.scb.loans.actions.LoanAction" name="ODReport" input="/LoansWebPages/ODReport.jsp"></action>
+  
+  		<action path="/Loans/NPALoanSummaryMenu" type="com.scb.loans.action2.LoanAction2" name="NPALoanSummary" input="/LoansWebPages/NPASummary.jsp"></action>
+  
+  		<action path="/Loans/NPALoanSummary" type="com.scb.loans.action2.LoanAction2" name="NPALoanSummary" input="/LoansWebPages/NPASummary.jsp"></action>
+  
+  		<action path="/Loans/PenalIntFixMenu" type="com.scb.loans.actions.LoanAction" name="PenalIntFix" input="/LoansWebPages/PenalIntFix.jsp"></action>
+  
+  		<action path="/Loans/PenalIntFix" type="com.scb.loans.actions.LoanAction" name="PenalIntFix" input="/LoansWebPages/PenalIntFix.jsp"></action>
+  
+  		<action path="/Loans/ActionDueReportMenu" type="com.scb.loans.actions.LoanAction" name="ActionDueReport" input="/LoansWebPages/ActionDueReport.jsp"></action>
+  
+  		<action path="/Loans/ActionDueReport" type="com.scb.loans.actions.LoanAction" name="ActionDueReport" input="/LoansWebPages/ActionDueReport.jsp"></action>
+  
+  		<action path="/Loans/LoanDefaultProcessingMenu" type="com.scb.loans.actions.LoanAction" name="LoanDefaulter" input="/LoansWebPages/LoanDefaulterProcessing.jsp"></action>
+  
+  		<action path="/Loans/LoanDefaultProcessing" type="com.scb.loans.actions.LoanAction" name="LoanDefaulter" input="/LoansWebPages/LoanDefaulterProcessing.jsp"></action>
+  
+  		<action path="/Loans/LoanDocsUpdation" type="com.scb.loans.action2.LoanAction2" name="LoanDocsUpdation" input="/LoansWebPages/LoanDocsUpdation.jsp"></action>
+  
+  		<action path="/Loans/LoanDocsUpdationMenu" type="com.scb.loans.action2.LoanAction2" name="LoanDocsUpdation" input="/LoansWebPages/LoanDocsUpdation.jsp"></action>
+  
+  		<action path="/Loans/LoanLeadgerMenu" type="com.scb.loans.action2.LoanAction2" name="LoanLeadger" input="/LoansWebPages/LoanLeadger.jsp"></action>
+   
+   		<action path="/Loans/LoanLeadger" type="com.scb.loans.action2.LoanAction2" name="LoanLeadger" input="/LoansWebPages/LoanLeadger.jsp"></action>
+  
+  		<action path="/Loans/LoanMeetingAgenda" type="com.scb.loans.action2.LoanAction2" name="LoanMeetingAgenda" input="/LoansWebPages/LoanMeetingAgenda.jsp"></action>
+  
+  		<action path="/Loans/LoanMeetingAgendaMenu" type="com.scb.loans.action2.LoanAction2" name="LoanMeetingAgenda" input="/LoansWebPages/LoanMeetingAgenda.jsp"></action>
+  
+  		<action path="/Loans/LoanSplIntRateUpdn" type="com.scb.loans.action2.LoanAction2" name="LoanSplIntRateUpdn" input="/LoansWebPages/LoanSplIntRateUpdn.jsp"></action>
+  
+  		<action path="/Loans/LoanSplIntRateUpdnMenu" type="com.scb.loans.action2.LoanAction2" name="LoanSplIntRateUpdn" input="/LoansWebPages/LoanSplIntRateUpdn.jsp"></action>
+  
+		<action path="/Loans/PSWSProcessingMenu" type="com.scb.loans.action2.LoanAction2" name="PSWSProcessing" input="/LoansWebPages/PSWSProcessing.jsp"></action>
+
+	  	<action path="/Loans/PSWSProcessing" type="com.scb.loans.action2.LoanAction2" name="PSWSProcessing" input="/LoansWebPages/PSWSProcessing.jsp"></action>
+          
+  		<action path="/Loans/PSWSSchedule" type="com.scb.loans.action2.LoanAction2" name="PSWSSchedule" input="/LoansWebPages/PSWSSchedule.jsp"></action>        
+  
+  		<action path="/Loans/PSWSScheduleMenu" type="com.scb.loans.action2.LoanAction2" name="PSWSSchedule" input="/LoansWebPages/PSWSSchedule.jsp"></action>
+      
+  		<action path="/Loans/JewelReportMenu" type="com.scb.loans.action2.LoanAction2" name="JewelReport" input="/LoansWebPages/JewelReport.jsp"></action>
+  
+  		<action path="/Loans/JewelReport" type="com.scb.loans.action2.LoanAction2" name="JewelReport" input="/LoansWebPages/JewelReport.jsp"></action>
+  	   
+  		<action path="/Loans/DCBScheduling" type="com.scb.loans.action2.LoanAction2" name="DCBScheduling" input="/LoansWebPages/DCBScheduling.jsp"></action>
+  
+  		<action path="/Loans/DCBSchedulingMenu" type="com.scb.loans.action2.LoanAction2" name="DCBScheduling" input="/LoansWebPages/DCBScheduling.jsp"></action>
+  
+  		<action path="/Loans/DCBSummaryMenu" type="com.scb.loans.action2.LoanAction2" name="DCBScheduling" input="/LoansWebPages/DCBSummary.jsp"></action>
+  
+  		<action path="/Loans/DCBSummary" type="com.scb.loans.action2.LoanAction2" name="DCBScheduling" input="/LoansWebPages/DCBSummary.jsp"></action>
+  
+  		<action path="/Loans/DCBMaintenanceMenu" type="com.scb.loans.action2.LoanAction2" name="DCBMaintenance" input="/LoansWebPages/DCBMaintenance.jsp"></action>
+  
+  		<action path="/Loans/DCBMaintenance" type="com.scb.loans.action2.LoanAction2" name="DCBMaintenance" input="/LoansWebPages/DCBMaintenance.jsp"></action>
+  
+  		<action path="/Loans/DCBProcessMenu" type="com.scb.loans.action2.LoanAction2" name="DCBProcess" input="/LoansWebPages/DCBProcess.jsp"></action>
+  
+  		<action path="/Loans/DCBProcess" type="com.scb.loans.action2.LoanAction2" name="DCBProcess" input="/LoansWebPages/DCBProcess.jsp"></action>
+  
+  		<action path="/Loans/NPAProcessMenu" type="com.scb.loans.action2.LoanAction2" name="NPAProcess" input="/LoansWebPages/NPAProcessing.jsp"></action>
+  
+  		<action path="/Loans/NPAProcess" type="com.scb.loans.action2.LoanAction2" name="NPAProcess" input="/LoansWebPages/NPAProcessing.jsp"></action>
+  
+  		<action path="/Loans/NPAAdminMenu" type="com.scb.loans.action2.LoanAction2" name="NPAAdmin" input="/LoansWebPages/NPAAdminTryPage.jsp"></action>
+  
+  		<action path="/Loans/NPAAdmin" type="com.scb.loans.action2.LoanAction2" name="NPAAdmin" input="/LoansWebPages/NPAAdminTryPage.jsp"></action>
+  
+  <action path="/Loans/LoanAdminMenu" type="com.scb.loans.actions.LoanAction" name="LoanAdmin" input="/LoansWebPages/LoanAdmin.jsp"></action>
+  <action path="/Loans/LoanAdmin" type="com.scb.loans.actions.LoanAction" name="LoanAdmin" input="/LoansWebPages/LoanAdmin.jsp"></action>
+  
+  
+  <action path="/Loans/SanctioningMenu" type="com.scb.loans.actions.LoanAction" name="Sanction" input="/LoansWebPages/Sanctioning.jsp"></action>
+  <action path="/Loans/Sanctioning" type="com.scb.loans.actions.LoanAction" name="Sanction" input="/LoansWebPages/Sanctioning.jsp"></action>
+  
+  <!-- Changes in Suma -->
+   <action path="/Loans/SanctionNDisbursement" type="com.scb.loans.actions.LoanAction" name="SanctionNDis" input="/LoansWebPages/SanctionNDis.jsp"></action>
+  	
+   <action path="/Loans/DisbursementMenu" 
+   		   type="com.scb.loans.action2.LoanAction2" 
+   		   name="DisbursementForm" 
+   		   input="/LoansWebPages/Disbursement.jsp">
+   </action>
+   <action path="/Loans/Disbursement" 
+   		   type="com.scb.loans.action2.LoanAction2" 
+   		   name="DisbursementForm" 
+   		   input="/LoansWebPages/Disbursement.jsp">
+   </action>
+  
+  
+  <action path="/Loans/DisbursementVerifyMenu" 
+   		   type="com.scb.loans.action2.LoanAction2" 
+   		   name="DisbursementForm" 
+   		   input="/LoansWebPages/DisbursementVerify.jsp">
+   </action>
+   
+   <action path="/Loans/DisbursementVerify" 
+   		   type="com.scb.loans.action2.LoanAction2" 
+   		   name="DisbursementForm" 
+   		   input="/LoansWebPages/DisbursementVerify.jsp">
+   </action>
+  	<action path="/Loans/LoanAdminNewMenu"
+  			type="com.scb.loans.actions.LoanAction"
+  			name="LoanAdmin"
+  			input="/LoansWebPages/LoanAdminNew.jsp">
+  	
+  	</action>
+  
+  	<action path="/Loans/LoanAdminNew"
+  			type="com.scb.loans.actions.LoanAction"
+  			name="LoanAdmin"
+  			input="/LoansWebPages/LoanAdminNew.jsp">
+  	</action>
+  	<action path="/Loans/RelativeDetails"
+  			type="com.scb.loans.actions.LoanAction"
+  			name="LoanAppln"
+  			input="/LoansWebPages/LoanApplicationDE.jsp">
+  	</action>
+  
+   	</action-mappings>
+  	
+  	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+    	<message-resources parameter="MessageResources"/>
+        <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        	<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+        </plug-in>
+
+</struts-config>

@@ -1,0 +1,27 @@
+
+    create table "SYSTEM"."EMPLOYEEDETAILS"(
+        "EMPLOYEEID" NUMBER(10) not null,
+       "STATE" VARCHAR2(25),
+       "DATEOFBIRTH" VARCHAR2(25),
+       "PASSWORD" VARCHAR2(25),
+       "FIRSTNAME" VARCHAR2(25),
+       "LASTNAME" VARCHAR2(25),
+       "MIDDLENAME" VARCHAR2(25),
+       "DESIGNATION" VARCHAR2(25),
+       "DAYPHONE" VARCHAR2(25),
+       "TELEPHONE" VARCHAR2(25),
+       "EXTENTION" VARCHAR2(25),
+       "ROLE" VARCHAR2(25),
+       "MARITALSTATUS" VARCHAR2(25),
+       "COUNTRYNAME" VARCHAR2(25),
+       "GENDER" VARCHAR2(10),
+       "MOBILEPHONE" VARCHAR2(25),
+       "ADDRESS" VARCHAR2(40),
+       "EMAIL" VARCHAR2(40),
+       "CITY" VARCHAR2(25),
+       "ZIP" VARCHAR2(25),
+       "CLIENTID" NUMBER(10),
+        constraint "EID1" primary key ("EMPLOYEEID")
+    );
+
+    create unique index "SYSTEM"."EID1" on "SYSTEM"."EMPLOYEEDETAILS"("EMPLOYEEID");

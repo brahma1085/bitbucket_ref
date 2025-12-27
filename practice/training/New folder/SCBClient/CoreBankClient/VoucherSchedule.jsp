@@ -1,0 +1,507 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="html" uri="http://struts.apache.org/tags-html"%>
+<%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean"%>
+<%@ taglib prefix="core" uri="/WEB-INF/c-rt.tld" %>
+<%@ taglib prefix="display" uri="http://displaytag.sf.net/el" %>
+<%@page import="masterObject.backOffice.SIEntryObject"%>
+
+<%@page import="masterObject.backOffice.VoucherDataObject"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css" media="all">
+            @import url("../css/alternative.css");
+            @import url("../css/maven-theme.css");
+            @import url("../css/site.css");
+            @import url("../css/screen.css");
+    </style>
+    <link rel="stylesheet" href="../css/print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="Images/DMTStyle.css" type="text/css" media="print" />
+	
+      
+<script language="javascript">
+     
+ var dtCh= "/";
+ var minYear=1900;
+ var maxYear=9999;
+
+function isInteger(s){
+	var i;
+    for (i = 0; i < s.length; i++){   
+        // Check that current character is number.
+        var c = s.charAt(i);
+        if (((c < "0") || (c > "9"))) return false;
+    }
+    // All characters are numbers.
+    return true;
+};
+
+function stripCharsInBag(s, bag){
+	var i;
+    var returnString = "";
+    // Search through string's characters one by one.
+    // If character is not in bag, append to returnString.
+    for (i = 0; i < s.length; i++){   
+        var c = s.charAt(i);
+        if (bag.indexOf(c) == -1) returnString += c;
+    }
+    return returnString;
+};
+
+function daysInFebruary (year){
+	// February has 29 days in any year evenly divisible by four,
+    // EXCEPT for centurial years which are not also divisible by 400.
+    return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
+};
+function DaysArray(n) {
+	for (var i = 1; i <= n; i++) {
+		this[i] = 31
+		if (i==4 || i==6 || i==9 || i==11) {this[i] = 30}
+		if (i==2) {this[i] = 29}
+   } 
+   return this
+};
+
+function isDate(dtStr){
+	var daysInMonth = DaysArray(12)
+	var pos1=dtStr.indexOf(dtCh)
+	var pos2=dtStr.indexOf(dtCh,pos1+1)
+	var strMonth=dtStr.substring(pos1+1,pos2)
+     
+	var strDay=dtStr.substring(0,pos1)
+     
+	var strYear=dtStr.substring(pos2+1)
+     
+
+	strYr=strYear
+	if (strDay.charAt(0)=="0" && strDay.length>1) strDay=strDay.substring(1)
+	if (strMonth.charAt(0)=="0" && strMonth.length>1) strMonth=strMonth.substring(1)
+	for (var i = 1; i <= 3; i++) {
+		if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)
+	}
+	month=parseInt(strMonth)
+	day=parseInt(strDay)
+	year=parseInt(strYr)
+	
+	if (pos1==-1 || pos2==-1){
+		alert("The date format should be : dd/mm/yyyy")
+		return false
+	}
+	if (strMonth.length<1 || month<1 || month>12){
+		alert("Please enter a valid month")
+		return false
+	}
+	if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month]){
+		alert("Please enter a valid day as this year is not a leap year")
+		return false
+	}
+	if (strYear.length != 4 || year==0 || year<minYear || year>maxYear){
+		alert("Please enter a valid 4 digit year between "+minYear+" and "+maxYear)
+		return false
+	}
+	if (dtStr.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(dtStr, dtCh))==false){
+		alert("Please enter a valid date")
+		return false
+	}
+return true
+};
+
+function ValidateForm(){
+   
+	var dt=document[0].fromdate;
+	var dt1=document[0].todate;
+	if (isDate(dt.value)==false){
+	       	
+		return false
+	}
+	if (isDate(dt1.value)==false){
+	       	
+		return false
+	}
+	
+    return true
+ };
+ 
+function properdate(fromdate,todate){
+  
+  
+  var dtCh="/";
+   
+  var pos1=fromdate.indexOf(dtCh)
+  var pos2=fromdate.indexOf(dtCh,pos1+1)
+  var frmMonth=fromdate.substring(pos1+1,pos2)
+  var frmDay=fromdate.substring(0,pos1)
+  var frmYear=fromdate.substring(pos2+1)
+  
+  
+  var pos3=todate.indexOf(dtCh)
+  
+  var pos4=todate.indexOf(dtCh,pos3+1)
+  
+  var ToMonth=todate.substring(pos3+1,pos4)
+  
+  var ToDay=todate.substring(0,pos3)
+  
+  var ToYear=todate.substring(pos4+1)
+  
+  
+  
+  if(frmYear>ToYear){
+    alert("From Year is greater than To Year!!!! Enter valid date")
+  }
+  else if(frmMonth>ToMonth && frmYear<=ToYear ){
+    alert("From Month is greater than To Month !!!! Enter valid date")
+  }
+ else if(frmDay>ToDay && frmMonth<=ToMonth && frmYear<=ToYear){
+  alert("From day is greater than To day !!!! Enter valid date")
+  }
+ };
+  
+ 
+ 
+ 
+ 
+    //submitting   
+     function set(target){
+         
+         
+         if(document.getElementById("valid").value!=null)
+           {
+       	if(document.getElementById("valid").value=="RecordsNotFound")
+       	    {
+         	alert("Records Not Found");
+            } 
+              else
+           {
+          
+           document.forms[0].forward.value=target;
+           document.forms[0].submit();
+         	
+           } 
+           } 
+           
+         
+         };
+         
+         
+    function datevalidation(ids){
+    	var format = true;
+        var allow=true;
+    	var ff=ids.value;
+    	var dd=ff.split('/');
+    	
+    	var ss=document.forms[0].sysdate.value;
+    	var dds=ss.split('/');
+    	
+    	if ( dd.length == 3){
+
+             for ( var i =0; i< dd.length; i++ ){
+
+                      if ( i != 2 && dd[i].length != 2 ){
+
+                          alert (  " Date format should be:DD/MM/YYYY" );
+                         ids.value="";
+                          format = false ;
+                          allow=false;
+                          
+
+                      } else if (  i==2 && dd[i].length != 4 ){
+
+                           alert (  " Date format should be:DD/MM/YYYY " );
+                          ids.value="";
+                           format = false ;
+                           allow=false;
+                      }
+
+            	 }
+             } else{
+                    allow=false;
+             		format = false ;
+             		alert (  " Date format should be:DD/MM/YYYY " );
+             		document.forms[0].fdate.value="";
+             }
+            if(allow){
+            	
+            	var day=dd[0];
+            	var month=dd[1];
+            	var year=dd[2];
+            	var fdays;
+            	if(month==2)
+            	{
+            	if((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0)))
+            	{
+            		if(day>29)
+            		{
+            			alert("Days should be less than 29 only");
+            			ids.value="";
+                           format = false ;
+                           allow=false;
+            		}
+            	}
+            	else
+            	{
+            		if(day>28)
+            		{
+            			alert("Days should be less than 28 only");
+            			ids.value="";
+                           format = false ;
+                           allow=false;
+            		}
+            	}
+            	}
+            	
+            	if(month>1 || month<12){
+            	if(month == 4 || month==6||month==9||month==11)
+            	{
+            		if(day>30)
+            		{
+            			alert("Days should be less than 31 only");
+            			ids.value="";
+                           format = false ;
+                           allow=false;
+            		}
+            	}
+            	else
+            	{
+            		if(day>31)
+            		{
+            			alert("Days should be less than 32 only");
+            			ids.value="";
+                           format = false ;
+                           allow=false;
+            		}
+            		
+            	}
+            	}
+            	if(month>12)
+            	{
+            		alert("Month should  be greater than 0 and lesser than 13");
+            		ids.value="";
+                           format = false ;
+                           allow=false;
+            	}
+            	
+            	if(year<1900 || year>9999)
+            	{
+            		alert("Year should be in between 1900 to 9999 ");
+            		ids.value="";
+                           format = false ;
+                           allow=false;
+            	}
+            	if(dd[0].length==2||dd[1].length==2||dd[2].length==4)
+            	{
+            		if(dd[2]>dds[2])
+            		{
+            			alert(" year should be less than or equal to"+dds[2]+" !");
+            			ids.value="";
+                           format = false ;
+                           allow=false;
+            		}	
+            		else{
+            			if(dd[2]==dds[2]){
+            				if(dd[1]>dds[1]){
+	            				alert(" Month should be less than or equal to"+dds[1]+" !");
+	            				ids.value="";
+	                           	format = false ;
+	                          	 allow=false;		
+            						
+            				}else{
+            					if(dd[1]==dds[1]){
+            						if(dd[0]>dds[0]){
+											alert(" Day should be less than or equal to"+dds[0]+" !");
+				            				ids.value="";
+				                           	format = false ;
+				                          	allow=false;           							
+            						}else{
+            								format = true ;
+				                          	allow=true; 
+            						}
+            					
+            					}
+            				}
+            			}
+            		}
+            	}            	          	
+             }
+        }  
+    
+ function numbersonly_date(eve){
+         var cha = event.keyCode
+
+            if (  ( cha  >= 47 && cha < 58  ) ) {
+              
+                return true ;
+                            }
+            else{
+              alert("Please enter numbers only");
+              return false ;
+            }
+         
+        
+      };  
+    //clearing form
+        function clears(){
+        alert("clearing form");
+         	    } ;  
+</script> 
+</head>
+<body class="Mainbody" style="overflow: scroll;">
+
+<% String displaymsg=(String)request.getAttribute("displaymsg");%>
+<%if(displaymsg!=null){ %>
+<font style="font-style:normal;font-size:12px" color="red"><%=displaymsg %></font>
+<%} %>
+
+<% String date=(String)request.getAttribute("date");
+   String[] vchtype=(String[])request.getAttribute("VchTypes");
+   String flag=(String)request.getAttribute("flag");
+   VoucherDataObject[] array_vchdataobject=(VoucherDataObject[])request.getAttribute("VoucherData");
+%>
+<center><h2 class="h2">Voucher Schedule</h2></center>
+<html:form action="/BackOffice/VoucherSchedule?pageId=11009">
+<center>
+<table class="txtTable">
+ 	<tr>
+		<td><bean:message key="label.vchtype"></bean:message>
+			<html:select property="voucher_type">
+			<%for(int i=0;i<vchtype.length;i++){ %>
+			 <html:option value="<%=vchtype[i]%>"></html:option>
+			<%} %> 
+			 
+			</html:select>
+	    </td>
+	    <td></td><td></td><td></td>
+	    <td><bean:message key="label.frm_dt"></bean:message><html:text property="fromdate" size="10" onblur="return datevalidation(this)"  onkeypress="return numbersonly_date(this)" styleClass="formTextFieldWithoutTransparent"></html:text></td>
+		<td></td><td></td><td></td><td>
+		<td><bean:message key="label.to_dt"></bean:message><html:text property="todate" size="10" onblur="return datevalidation(this)" onkeypress="return numbersonly_date(this)"   styleClass="formTextFieldWithoutTransparent"></html:text></td>
+	</tr>
+</table>
+<br><br>
+ <table class="txtTable">  
+   <tr>
+		<html:hidden property="forward" value="error"></html:hidden>
+	    <html:hidden property="valid" styleId="valid"></html:hidden>
+	<html:hidden property="sysdate" />    
+		<td> 
+		  <html:button  property ="view" onclick="set('view')" styleClass="ButtonBackgroundImage"><bean:message key="label.view1"></bean:message> </html:button>
+
+           <!--<html:button onclick="window.print()" property ="printFile"  styleClass="ButtonBackgroundImage"><bean:message key="label.print"></bean:message> </html:button>-->
+		  <html:submit onclick="set('clear')" styleClass="ButtonBackgroundImage"><bean:message key="label.clear"></bean:message></html:submit>
+		   <html:submit onclick="set('save')" styleClass="ButtonBackgroundImage">DownLoad</html:submit>
+		
+		
+		</td>
+	</tr>
+</table>
+</center>
+<br>
+<center>
+	
+  	<%if(flag!=null){
+	if(flag.equalsIgnoreCase("Sch of Misc Rec")){
+	System.out.println("'m inside display");	%>
+
+
+   		<div  id = "table1" style="display: block;width: 750px;height: 300px">
+   			<display:table name="VoucherData" export="true" id="currentRowObject" class="its" sort="list" pagesize="10" requestURI="/BackOffice/VoucherSchedule.do">
+   			<display:setProperty name="export.rtf.filename" value="example.rtf"/>
+   			<display:column media="csv excel" title="URL" property="url" />
+    		<display:setProperty name="export.pdf" value="true" /> 
+
+   		
+   		<display:column title="Trans Date"       property="transactionDate"   		style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Voucher No"       property="voucherNo"   			style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Debit Code"       property="glCode"              	style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Credit Code"       value="201001"  				style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Credit Name"       value="Cash on hand"   			style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Amount"           property="transactionAmount"          		style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Narration"    	 property="narration"           	style="background-color:#F2F0D2"></display:column>  
+   		<display:column title="Entered By"    	 property="obj_userverifier.userId" 		    style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Verified By "     property="obj_userverifier.verId" 		        style="background-color:#F2F0D2"></display:column>
+  
+	</display:table>
+	</div>
+	<%}%>
+ <%if(flag.equalsIgnoreCase("Sch of Pay Vch")){ 
+	 System.out.println("'m inside display  payment"); 
+ %>
+
+   		<div  id = "table1" style="display: block;width: 750px;height: 300px">
+   			<display:table name="VoucherData" export="true" id="currentRowObject" class="its" sort="list" pagesize="10" requestURI="/BackOffice/VoucherSchedule.do">
+   			<display:setProperty name="export.rtf.filename" value="example.rtf"/>
+   			<display:column media="csv excel" title="URL" property="url" />
+    		<display:setProperty name="export.pdf" value="true" /> 
+
+   		
+   		<display:column title="Trans Date"        property="transactionDate"    		style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Voucher No"        property="voucherNo"    				style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Debit Code"        property="glCode"   					style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Debit Name"        property="glname"   					style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Amount"            property="transactionAmount"       	style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Narration"         property="narration"           		style="background-color:#F2F0D2"></display:column>  
+   		<display:column title="Entered By"    	  property="obj_userverifier.userId" 	style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Verified By "      property="obj_userverifier.verId" 	style="background-color:#F2F0D2"></display:column>
+   		
+   
+	</display:table>
+	</div>
+	<%}%>	
+
+<%if(flag.equalsIgnoreCase("Sch of Trf Vch")){ %>
+
+        <div  id = "table1" style="display: block;width: 750px;height: 300px">
+   			<display:table name="VoucherData" export="true" id="currentRowObject" class="its" sort="list" pagesize="10" requestURI="/BackOffice/VoucherSchedule.do">
+   			<display:setProperty name="export.rtf.filename" value="example.rtf"/>
+   			<display:column media="csv excel" title="URL" property="url" />
+    		<display:setProperty name="export.pdf" value="true" /> 
+
+        
+        <display:column title="Trans Date"       property="transactionDate"   		style="background-color:#F2F0D2"></display:column> 
+   		<display:column title="Voucher No"       property="voucherNo"   			style="background-color:#f5dfc9"></display:column>
+   		<display:column title="GL Type"        	 property="modAbbr"   				style="background-color:#f5dfc9"></display:column>
+   		<display:column title="Account No"       property="moduleAccountNo"   			style="background-color:#f5dfc9"></display:column>
+   		<display:column title="GL Code"          property="glCode"   				style="background-color:#f5dfc9"></display:column>
+   		<display:column title="GL Name"    	     property="glname" 		    		style="background-color:#f5dfc9"></display:column>
+   		<display:column title="Debit Amt "       property="transactionAmount" 		style="background-color:#f5dfc9"></display:column>
+   		<display:column title="Credit Amt"       property="transactionAmount"   	style="background-color:#f5dfc9"></display:column>
+   		<display:column title="Narration"        property="narration"           	style="background-color:#F2F0D2"></display:column>  
+   		<display:column title="Entered By"    	 property="obj_userverifier.userId" style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Verified By "     property="obj_userverifier.verId" style="background-color:#F2F0D2"></display:column>
+   		
+   
+	</display:table>
+	</div>
+	<%}%>	
+	<%if(flag.equalsIgnoreCase("Sch of Csh Pay Vch")){ %>
+
+   		<div  id = "table1" style="display: block;width: 750px;height: 300px">
+   			<display:table name="VoucherData" export="true" id="currentRowObject" class="its" sort="list" pagesize="10" requestURI="/BackOffice/VoucherSchedule.do">
+   			<display:setProperty name="export.rtf.filename" value="example.rtf"/>
+   			<display:column media="csv excel" title="URL" property="url" />
+    		<display:setProperty name="export.pdf" value="true" /> 
+
+   		
+   		<display:column title="Trans Date"        property="transactionDate"   			style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Voucher No"        property="voucherNo"   				style="background-color:#f5dfc9"></display:column>
+   		<display:column title="A/c Type"          property="modAbbr"   		        	style="background-color:#f5dfc9"></display:column>
+   		<display:column title="A/c No"            property="moduleAccountNo"   				style="background-color:#f5dfc9"></display:column>
+   		<display:column title="Amount"            property="transactionAmount"      	style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Narration"         property="narration"           		style="background-color:#F2F0D2"></display:column>  
+   		<display:column title="Entered By"    	  property="obj_userverifier.userId" 	style="background-color:#F2F0D2"></display:column>
+   		<display:column title="Verified By "      property="obj_userverifier.verId" 	style="background-color:#F2F0D2"></display:column>
+   		
+	</display:table>
+	</div>
+	<%}}%>	
+	
+
+	
+</center>
+
+
+</html:form>
+</body>
+</html>

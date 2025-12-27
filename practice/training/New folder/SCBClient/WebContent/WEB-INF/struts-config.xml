@@ -1,0 +1,2562 @@
+
+<!DOCTYPE struts-config PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+  "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+    
+    <form-bean name="pupdateRef" type="com.scb.pd.forms.PUpdateForm"></form-bean>
+      
+    <form-bean name="LoansOnDeposit" type="com.scb.ld.forms.LoansApplicationForm">
+    </form-bean> 
+    
+    <form-bean name="ApplicationDE" type="com.scb.ld.forms.LoanApplicationDE">
+    </form-bean>
+    
+    <form-bean name="DepositDetail" type="com.scb.ld.forms.DepositdetailForm">
+    </form-bean>
+    
+    <form-bean name="LDsucess" type="com.scb.ld.forms.LDSucessform">
+    </form-bean>
+    
+    <form-bean name="LDRecovery" type="com.scb.ld.forms.LDRecoveryForm">
+    </form-bean>
+    
+    <form-bean name="LDRecoveryMenu" type="com.scb.ld.forms.LDRecoveryMenuForm">
+    </form-bean>
+    
+    <form-bean name="LDStatus" type="com.scb.ld.forms.LDStatusForm">
+    </form-bean>
+    
+    <form-bean name="LDCash" type="com.scb.ld.forms.LDCashForm">
+    </form-bean>
+    
+    
+    <form-bean name="LDTransfer" type="com.scb.ld.forms.LDTransferForm">
+    </form-bean>
+  
+   <form-bean name="LDPassbook" type="com.scb.ld.forms.LDPassbookForm">
+    </form-bean>
+
+    <form-bean name="LDPassbookMenu" type="com.scb.ld.forms.LDPassbookMenuForm">
+    </form-bean>
+    
+     
+    <form-bean name="LDOpenClosedAccounts" type="com.scb.ld.forms.LDOpenClosedForm">
+    </form-bean>
+    
+    <form-bean name="LDOpenClosedMenu" type="com.scb.ld.forms.LDOpenClosedMenuForm">
+    </form-bean>
+    
+    <form-bean name="LDIntrestAccruedReportMenu" type="com.scb.ld.forms.IntrestAccruedReportForm">
+    </form-bean>
+
+	<form-bean name="LDIntrestAccruedReport" type="com.scb.ld.forms.IntrestAccruedReportForm">
+    </form-bean>
+        
+	<form-bean name="LDMaturityListMenu" type="com.scb.ld.forms.LDMaturityListForm">
+    </form-bean>       	    	
+
+	<form-bean name="LDMaturityList" type="com.scb.ld.forms.LDMaturityListForm">
+    </form-bean>  
+    
+    <form-bean name="LDMaturityExcedingMatList" type="com.scb.ld.forms.LDExcedingMatListForm">
+    </form-bean>  
+    
+          
+	<form-bean name="AdditionalLoanVer" type="com.scb.ld.forms.LoanApplicationDE">
+    </form-bean>
+    
+      <!--##############Tags added FOR LOCKERS###############-->
+      
+     <form-bean name="manumenuref"       	   type="com.scb.lk.forms.manu"></form-bean>
+     <form-bean name="manu"                	   type="com.scb.lk.forms.manu"></form-bean>
+     
+    
+     <form-bean name="LKAutoExtensionRef"      type="com.scb.lk.forms.LockerAutoExtensionForm"></form-bean>
+     <form-bean name="LKMenuRef"         	   type="com.scb.lk.forms.LockerSurrenderForm"></form-bean>
+     <form-bean name="LockerSurrenderRef" 	   type="com.scb.lk.forms.LockerSurrenderForm"></form-bean>
+     <form-bean name="LockerTypesRef"    	   type="com.scb.lk.forms.LockerTypesForm"></form-bean>
+     <form-bean name="LockerTypesRef1"   	   type="com.scb.lk.forms.LockerTypesForm"></form-bean>
+     <form-bean name="LockerOperationRef"	   type="com.scb.lk.forms.LockerOperationForm"></form-bean>
+ 	 <form-bean name="LKopRef"        	       type="com.scb.lk.forms.LockerOperationForm"></form-bean>
+ 	 
+ 	 <form-bean name="LKExtensionRef" 	       type="com.scb.lk.forms.LockerExtensionForm"></form-bean>
+ 	 <form-bean name="LKExtensionRef1"	       type="com.scb.lk.forms.LockerExtensionForm"></form-bean>
+ 	 
+ 	 <form-bean name="LKIssueRef"    	       type="com.scb.lk.forms.LockerIssueForm"></form-bean>
+ 	 <form-bean name="LKIssueRef1"   	       type="com.scb.lk.forms.LockerIssueForm"></form-bean>
+ 	
+ 	 <form-bean name="LockerDEMenuRef" 	       type="com.scb.lk.forms.LockerDE"></form-bean>
+ 	 <form-bean name="LockerDERef"     	       type="com.scb.lk.forms.LockerDE"></form-bean>
+ 	
+ 	 <form-bean name="LockerDataEntryMenuRef"  type="com.scb.lk.forms.LockerDataEntry"></form-bean>
+ 	 
+ 	
+ 	
+ 	 <form-bean name="LKTableMRef"     		   type="com.scb.lk.forms.LockerTableForm"></form-bean>
+ 	 <form-bean name="LKTableRef"      		   type="com.scb.lk.forms.LockerTableForm"></form-bean>
+    
+ 	 <form-bean name="LockerOwnerReportRef"         type="com.scb.lk.forms.LockerOwnerReportForm"></form-bean>
+ 	 <form-bean name="LockerOperationReportRef"     type="com.scb.lk.forms.LockerOpearationReportForm"></form-bean>
+ 	 <form-bean name="OpenClosedReportRef"          type="com.scb.lk.forms.LockerOpenClosedReportForm"></form-bean>
+ 	 <form-bean name="LockerRentDueReportRef"       type="com.scb.lk.forms.LockerRentDueReport"></form-bean>
+ 	 <form-bean name="LockerRentCollectedReportRef" type="com.scb.lk.forms.LockerRentCollected"></form-bean>
+     <form-bean name="LKPassBookRef"                 type="com.scb.lk.forms.LockerPassBookForm"></form-bean>
+     <form-bean name="RateAdminRef"                 type="com.scb.lk.forms.RateAdmin"></form-bean>
+  
+     <form-bean name="remainderNoticeRef"        type="com.scb.lk.forms.LockerRemainderNoticeForm"></form-bean>
+     <form-bean name="notsurrendedRef"           type="com.scb.lk.forms.NotSurrendered"></form-bean>
+       
+     
+     <!-- Verification forms -->
+     
+     <!-- End of Verification forms -->
+      
+     <!--#########Tags Ended by MANU(lockers)#################-->
+
+
+
+
+	 <!--************************** Start of Clearing form beans******************************** -->
+	
+	
+	<form-bean name="ClearingPostRef"         type = "com.scb.clr.forms.ClearingPostForm"> </form-bean>
+	<form-bean name="ReceivedECSRef"     	  type = "com.scb.clr.forms.RecievedECSForm"> </form-bean>
+	 <form-bean name="RecievedchequeEntry"	  type="com.scb.clr.forms.RecievedChequeEntryForm"></form-bean>
+	<form-bean name="CombinedChequeRef" 	  type = "com.scb.clr.forms.CombinedChequeForm"></form-bean>
+    <form-bean name="chequemenudeposition"    type = "com.scb.clr.forms.ClearingDepositionForm"> </form-bean>
+    <form-bean name="chequedeposition"     	  type = "com.scb.clr.forms.ClearingDepositionForm"> </form-bean>
+    <form-bean name="chequediscounting"       type = "com.scb.clr.forms.ChequeDiscountingForm"> </form-bean>
+    <form-bean name="outstationcheque"     	  type = "com.scb.clr.forms.OutStationForm"> </form-bean>
+    <form-bean name="clgidentification"       type="com.scb.clr.forms.ClearingIdentificationForm"></form-bean>
+    <form-bean name="bounceReason" 			  type = "com.scb.clr.forms.BounceReasonForm"> </form-bean>
+    <form-bean name="Inwardstmt" 			  type = "com.scb.clr.forms.InwardstmtForm"></form-bean>
+    <form-bean name="Outwardstmt" 			  type = "com.scb.clr.forms.OutwardstmtForm"></form-bean>
+    <form-bean name="bounced" 			  	  type = "com.scb.clr.forms.BouncedregForm"></form-bean>
+    <form-bean name="ControlNumbersQueryRef"  type = "com.scb.clr.forms.ControlNumbersQuery"> </form-bean>
+   	<form-bean name="BundledDataEntryRef"     type="com.scb.clr.forms.BundledDataEntry"></form-bean> 
+   	<form-bean name="ControlNo"     		  type="com.scb.clr.forms.ControlNoForm"></form-bean>
+   	<form-bean name="unIdentifyRef"      	  type="com.scb.clr.forms.UnIdentify"></form-bean>
+   	<form-bean name="bncletter"      	  	  type="com.scb.clr.forms.BouncedLetterForm"></form-bean>
+   	<form-bean name="AckReconciliationRef"    type="com.scb.clr.forms.AckReconciliationForm"></form-bean>
+    <form-bean name="LateReturnsRef"          type="com.scb.clr.forms.LateReturnsForm"></form-bean>
+    <form-bean name="MailingChargesRef"       type="com.scb.clr.forms.MailingChargesForm"></form-bean>
+    <form-bean name="ackDataEntryRef"         type="com.scb.clr.forms.AcknowledgementDataEntryForm"></form-bean>
+    <form-bean name="AdminRef"                type="com.scb.clr.forms.AdminForm"></form-bean>
+  	
+    <form-bean name="SelectivePostRef"		  type="com.scb.clr.forms.SelectiveForm"></form-bean>
+	
+	<form-bean name="OutStationLetterRef"                type="com.scb.clr.forms.OutStationLetterForm"></form-bean>
+  	
+	
+    <form-bean name="BouncedChequePostRef"	  type="com.scb.clr.forms.BouncedChequePostForm"></form-bean>
+    <form-bean name="ClearingDispatchRef"     type="com.scb.clr.forms.ClearingDispatchForm"></form-bean>
+
+    <form-bean name="ChequeWithdrawalRef"  	  type="com.scb.clr.forms.ChequeWithdrawalForm"></form-bean>
+   
+  <!--**************************end of Clearing form beans******************************** -->
+
+
+	<form-bean name="Common/Deposit" type="com.scb.common.forms.PersonnelForm"></form-bean>
+	
+
+	<form-bean name="Common/ClgSignature" type="com.scb.common.forms.SignatureInstructionComboForm"></form-bean>
+
+	<form-bean name="Common/Personal" type="com.scb.common.forms.PersonnelForm"></form-bean>
+	<form-bean name="Common/sign" type="com.scb.common.forms.SignatureInstructionForm"></form-bean>
+	<form-bean name="Common/signCombo" type="com.scb.common.forms.SignatureInstructionComboForm"></form-bean>
+    
+     <!--Formbean tags added by renu(BackOffice)-->
+
+      <form-bean name="SIEntryMenu" type="com.scb.bk.forms.SIEntryForm"></form-bean>
+    <form-bean name="SIEntry" type="com.scb.bk.forms.SIEntryForm"></form-bean>
+     
+    <form-bean name="SIDeleteMenu" type="com.scb.bk.forms.SIDeleteForm"></form-bean>
+    <form-bean name="SIDelete" type="com.scb.bk.forms.SIDeleteForm"></form-bean>
+    
+    <form-bean name="UnPresentedChequesMenu" type="com.scb.bk.forms.UnPresentedChequeForm"></form-bean>
+    <form-bean name="UnPresentedChequesForm" type="com.scb.bk.forms.UnPresentedChequeForm"></form-bean>
+    
+    <form-bean name="ChequeRegisterPrintingReportMenu" type="com.scb.bk.forms.ChequeRegisterPrintingForm"></form-bean>
+    <form-bean name="ChequeRegisterPrintingReportForm" type="com.scb.bk.forms.ChequeRegisterPrintingForm"></form-bean>
+     
+    <form-bean name="OpenedClosedAccountsPrintingReportMenu" type="com.scb.bk.forms.OpenedClosedAccountsPrintingReportForm"></form-bean>
+    <form-bean name="OpenedClosedAccountsPrintingReportForm" type="com.scb.bk.forms.OpenedClosedAccountsPrintingReportForm"></form-bean>
+     
+    <form-bean name="SIQueryMenu" type="com.scb.bk.forms.SIQueryForm"></form-bean>
+    <form-bean name="SIQueryForm" type="com.scb.bk.forms.SIQueryForm"></form-bean>  
+    
+    <form-bean name="SIRegisterMenu" type="com.scb.bk.forms.SIRegisterForm"></form-bean>
+    <form-bean name="SIRegisterForm" type="com.scb.bk.forms.SIRegisterForm"></form-bean>  
+    
+    <form-bean name="SIDueDoneMenu" type="com.scb.bk.forms.SIDueDoneForm"></form-bean>
+    <form-bean name="SIDueDoneForm" type="com.scb.bk.forms.SIDueDoneForm"></form-bean>  
+    
+    <form-bean name="VoucherScheduleMenu" type="com.scb.bk.forms.VoucherScheduleForm"></form-bean>
+    <form-bean name="VoucherScheduleForm" type="com.scb.bk.forms.VoucherScheduleForm"></form-bean>  
+    
+    <form-bean name="TransactionSummaryMenu" type="com.scb.bk.forms.TransactionSummaryForm"></form-bean>
+    <form-bean name="TransactionSummaryForm" type="com.scb.bk.forms.TransactionSummaryForm"></form-bean> 
+    
+    <form-bean name="SBCALedgerMenu" type="com.scb.bk.forms.SBCALedgerForm"></form-bean>
+    <form-bean name="SBCALedgerForm" type="com.scb.bk.forms.SBCALedgerForm"></form-bean>   
+    
+    <form-bean name="ClosingBalanceReportMenu" type="com.scb.bk.forms.ClosingBalanceReportForm"></form-bean>
+    <form-bean name="ClosingBalanceReportForm" type="com.scb.bk.forms.ClosingBalanceReportForm"></form-bean>   
+  
+    <form-bean name="ClosingBalanceSummaryMenu" type="com.scb.bk.forms.ClosingBalanceSummaryForm"></form-bean>
+    <form-bean name="ClosingBalanceSummaryForm" type="com.scb.bk.forms.ClosingBalanceSummaryForm"></form-bean>
+       
+    <form-bean name="SIParametersMenu" type="com.scb.bk.forms.SIParametersForm"></form-bean>
+    <form-bean name="SIParametersForm" type="com.scb.bk.forms.SIParametersForm"></form-bean>
+           
+    <form-bean name="SIExecutionMenu" type="com.scb.bk.forms.SIExecutionForm"></form-bean>
+    <form-bean name="SIExecutionForm" type="com.scb.bk.forms.SIExecutionForm"></form-bean>
+        
+    <form-bean name="PaymentVoucherMenu" type="com.scb.bk.forms.PaymentVoucherForm"></form-bean>
+    <form-bean name="PaymentVoucherForm" type="com.scb.bk.forms.PaymentVoucherForm"></form-bean>
+   
+        
+    <form-bean name="OdccbalMenu" type="com.scb.bk.forms.OdccbalForm"></form-bean>
+    <form-bean name="OdccbalForm" type="com.scb.bk.forms.OdccbalForm"></form-bean>
+    
+    <form-bean name="TransferVoucherMenu" type="com.scb.bk.forms.TransferVoucherForm"></form-bean>
+    <form-bean name="TransferVoucherForm" type="com.scb.bk.forms.TransferVoucherForm"></form-bean>
+   
+     <!--Formbean tags ended by renu(BackOffice) -->
+
+
+    <form-bean name="MenuDynaActionFoam" type="org.apache.struts.action.DynaActionForm">
+    <form-property name="pageId" type="java.lang.String"></form-property>
+    </form-bean>
+
+    <form-bean name="LoginDynaAction" type="com.scb.common.forms.LoginForm">
+    
+    </form-bean>
+
+    <form-bean name="param" type="com.scb.cm.actions.ParameterForm">
+    </form-bean>
+
+    <form-bean name="CustomForm" type="com.scb.cm.forms.Customerform">
+    </form-bean>
+
+    <form-bean name="MenuForm" type="com.scb.cm.actions.CustomerInformationForm">
+    </form-bean>  
+      
+    <form-bean name="MenuForm" type="com.scb.cm.actions.CustomerInformationForm">
+    </form-bean> 
+    
+     
+  
+     <!--added by swetha
+     tags used for customer tags--> 
+        
+        
+        
+        
+      <form-bean name="Queryoncustomer" type="org.apache.struts.action.DynaActionForm">
+       <form-property name="pageId" type="java.lang.String"></form-property> 
+       </form-bean>  
+       <form-bean name="viewlogDyna" type="org.apache.struts.action.DynaActionForm">
+       <form-property name="pageId" type="java.lang.String"></form-property> 
+       </form-bean>
+       <form-bean name="ViewLog" type="com.scb.cm.forms.CustomerViewLogForm"></form-bean>
+	   <form-bean name="CustDetails" type="com.scb.cm.actions.CustomerInformationForm"></form-bean> 
+       <form-bean name="CustPanel" type="com.scb.cm.actions.CustomerInformationForm"></form-bean>      
+	   <form-bean name="CustomerInstitute" type="com.scb.cm.actions.CustomerInstituteForm"></form-bean>
+       <form-bean name="Costomization" type="com.scb.cm.forms.Customizationform"></form-bean>
+       <form-bean name="CostomizationDynaform" type="org.apache.struts.action.DynaActionForm">
+       <form-property name="pageId" type="java.lang.String"></form-property></form-bean>
+       <form-bean name="QueryoncustomerDynaform" type="com.scb.cm.forms.QueryOnCustomerForm"></form-bean>
+       <form-bean name="photo" type="com.scb.cm.actions.PhotoForm"></form-bean>
+       <form-bean name="photo" type="com.scb.cm.actions.PhotoForm"></form-bean>
+       <form-bean name="SucessPage" type="com.scb.cm.forms.SucessForm"></form-bean>
+        <form-bean name="addramnd" type="com.scb.cm.forms.AddressForm"></form-bean>
+  <!--*************** tags endded by swetha************************************* -->
+  
+  <!-- ***************tags added by vinny**************************************** -->
+  
+ 
+  <!-- ***************tags added by vinny**************************************** -->
+  
+  
+ <form-bean name="LoanPassBook" 
+				   type="com.scb.loans.forms.LoanPassBookForm">
+		</form-bean>
+		
+		<form-bean name="NPAReport" type="com.scb.loans.forms.NPAReportForm"></form-bean>
+  		
+  		<form-bean name="LoanAppln" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  
+  		<form-bean name="Appln" type="com.scb.loans.forms.ApplicationForm"></form-bean>
+  
+  		<!--<form-bean name="SelfEmployed" type="com.scb.loans.forms.SelfEmployedForm"></form-bean>
+  		
+  		<form-bean name="Service" type="com.scb.loans.forms.ServiceActionForm"></form-bean>
+  		
+  		<form-bean name="Business" type="com.scb.loans.forms.BusinessActionForm"></form-bean>
+  		
+  		<form-bean name="Pension" type="com.scb.loans.forms.PensionActionForm"></form-bean>
+  		
+  		<form-bean name="Rent" type="com.scb.loans.forms.RentActionFrom"></form-bean>
+  
+  		
+  		--><form-bean name="SelfEmployed" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Service" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Business" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Pension" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  		
+  		<form-bean name="Rent" type="com.scb.loans.forms.LoanApplicationForm"></form-bean>
+  
+  		<form-bean name="IndivCoBorrower" type="com.scb.loans.forms.IndiviualCoborrower"></form-bean>
+  
+  		<form-bean name="LoanandShare" type="com.scb.loans.forms.LoanandShareDetailsForm"></form-bean>
+    
+  		<form-bean name="Vehicle" type="com.scb.loans.forms.VehicleApplnForm"></form-bean>
+  		
+  		<form-bean name="Property" type="com.scb.loans.forms.PropertyForm"></form-bean>
+  
+  		<form-bean name="CoBorrower" type="com.scb.loans.forms.CoBorrowerActionForm"></form-bean>
+  
+  		<form-bean name="LoanPosting" type="com.scb.loans.forms.LoanDailyPostingForm"></form-bean>
+  		
+  		<form-bean name="RevRecov" type="com.scb.loans.forms.ReverseRecoveryForm"></form-bean>
+  		
+  		<form-bean name="OtherCharges" type="com.scb.loans.forms.OtherChargesDEForm"></form-bean>
+  		
+  		<form-bean name="Reschedule" type="com.scb.loans.forms.Reschedulingform"></form-bean>
+  		
+  		<form-bean name="AccuredReport" type="com.scb.loans.forms.InterestAccuredReportForm"></form-bean>
+  		
+  		<form-bean name="OpenClosedReport" type="com.scb.loans.forms.OpenClosedStat"></form-bean>   
+  		
+  		<form-bean name="LoanRecovery" type="com.scb.loans.forms.RecoveryForm"></form-bean>     
+  
+  		<form-bean name="LoansStatus" type="com.scb.loans.forms.LoanStatusForm"></form-bean>
+  		
+  		<form-bean name="LoansHistory" type="com.scb.loans.forms.LoanHistForm"></form-bean>
+  		
+  		<form-bean name="RecoveryByTransfer" type="com.scb.loans.forms.RecoveryByTransfer"></form-bean>
+  		
+  		<form-bean name="LoanTran" type="com.scb.loans.forms.LastLoanTranForm"></form-bean>
+  		
+  		<form-bean name="SurityCoBorr" type="com.scb.loans.forms.SurityCoBorrower"></form-bean>
+  		
+  		<form-bean name="OCReport" type="com.scb.loans.forms.OtherChargesReport"></form-bean>
+  		
+  		<form-bean name="ODReport" type="com.scb.loans.forms.ODReport"></form-bean>
+  		
+  		<form-bean name="NPALoanSummary" type="com.scb.loans.forms.NPASummaryForm"></form-bean>
+  		
+  		<form-bean name="PenalIntFix" type="com.scb.loans.forms.PenalActionForm"></form-bean>
+  		
+  		<form-bean name="ActionDueReport" type="com.scb.loans.forms.ActionDueReport"></form-bean>
+  
+  		<form-bean name="LoanDocsUpdation" type="com.scb.loans.forms.LoanDocsUpdationForm"></form-bean>
+  		
+  		<form-bean name="LoanLeadger" type="com.scb.loans.forms.LoanLeadgerForm"></form-bean>
+  		
+  		<form-bean name="LoanMeetingAgenda" type="com.scb.loans.forms.LoanMeethingAgendaForm"></form-bean>
+  		
+  		<form-bean name="LoanSplIntRateUpdn" type="com.scb.loans.forms.LoanSplIntRateUpdnForm"></form-bean>
+   		
+   		<form-bean name="PSWSProcessing" type="com.scb.loans.forms.PSWSProcessingForm"></form-bean>
+  		
+  		<form-bean name="PSWSSchedule" type="com.scb.loans.forms.PSWSScheduleForm"></form-bean>
+  		
+  		<form-bean name="JewelReport" type="com.scb.loans.forms.JewelReportForm"></form-bean>
+  		
+  		<form-bean name="DCBScheduling" type="com.scb.loans.forms.DCBSchedulingForm"></form-bean>
+  		
+  		<form-bean name="DCBMaintenance" type="com.scb.loans.forms.DCBSchedulingForm"></form-bean>
+  		
+  		<form-bean name="DCBProcess" type="com.scb.loans.forms.DCBSchedulingForm"></form-bean>
+  
+  		<form-bean name="NPAProcess" type="com.scb.loans.forms.NPAProcessForm"></form-bean>
+  		
+  		<form-bean name="LoanDefaulter" type="com.scb.loans.forms.LoanDefaulterForm"></form-bean>
+  		
+  		<form-bean name="NPAAdmin" type="com.scb.loans.forms.LoanNpaAdminForm"></form-bean>
+   		
+   		<form-bean name="LoanAdmin" type="com.scb.loans.forms.LoanAdminForm"></form-bean>
+  		<form-bean name="AutomaticRecovery" type="com.scb.loans.forms.AutomaticRecoveryForm"></form-bean>
+  		<form-bean name="NPAReport" type="com.scb.loans.forms.NPAReportForm"></form-bean>
+  		
+  		<form-bean name="Sanction" type="com.scb.loans.forms.SanctionForm"></form-bean>
+		<form-bean name="SanctionNDis" type="com.scb.loans.forms.SanctionForm"></form-bean>
+		<form-bean name="DisbursementForm" type="com.scb.loans.forms.DisbursementForm"></form-bean>
+		<form-bean name="loansign" type="com.scb.fc.forms.SignatureInstForm"></form-bean>
+		
+	
+  
+  <!-- tags endded by vinay -->
+  
+ 
+
+      
+       <!-- Tags added by sangeetha-->
+
+<form-bean name="AgentOpeningForm" type="com.scb.pd.forms.AgentOpeningForm"></form-bean>
+         <form-bean name="PersonalForm" type="com.scb.pd.forms.PersonalForm"></form-bean>
+		 <form-bean name="PygmyOpeningForm" type="com.scb.pd.forms.PygmyOpeningForm"></form-bean>
+		 <form-bean name="PygmyWithdrawalForm" type="com.scb.pd.forms.PygmyWithdrawalForm"></form-bean>
+		 <form-bean name="OpenCloseForm" type="com.scb.pd.forms.OpenCloseForm"></form-bean>
+		 <form-bean name="AgentRemittanceForm" type="com.scb.pd.forms.AgentRemittanceForm"></form-bean>
+		 <form-bean name="InterestRegiForm" type="com.scb.pd.forms.InterestRegiForm"></form-bean>
+		 <form-bean name="MonthlyRemittanceForm" type="com.scb.pd.forms.MonthlyRemittanceForm"></form-bean>
+		 <form-bean name="PassBookForm" type="com.scb.pd.forms.PassBookForm"></form-bean>
+		 <form-bean name="RegisterPrintForm" type="com.scb.pd.forms.RegisterPrintForm"></form-bean>
+		 <form-bean name="AgentClosingForm" type="com.scb.pd.forms.AgentClosingForm"></form-bean>
+		 <form-bean name="PygmyInterestCalForm" type="com.scb.pd.forms.PygmyInterestCalForm"></form-bean>
+		 <form-bean name="LedgerPrintingForm" type="com.scb.pd.forms.LedgerPrintingForm"></form-bean>
+		 <form-bean name="AcknowledgementForm" type="com.scb.pd.forms.AcknowledgementForm"></form-bean>
+		 <form-bean name="AgentCommissionForm" type="com.scb.pd.forms.AgentCommissionForm"></form-bean>
+		 <form-bean name="DailyRemittanceForm" type="com.scb.pd.forms.DailyRemittanceForm"></form-bean>
+		 <form-bean name="AgentUpdateForm" type="com.scb.pd.forms.AgentUpdateForm"></form-bean>
+		 
+		 <form-bean name="PygmyUpdateForm" type="com.scb.pd.forms.PygmyUpdateForm"></form-bean>
+		 <form-bean name="PygmyIntForm" type="com.scb.pd.forms.PygmyIntForm"></form-bean>
+		 <form-bean name="PUpdateRef" type="com.scb.pd.forms.PUpdateForm"></form-bean>
+		 <form-bean name="AgentChangeForm" type="com.scb.pd.forms.AgentChangeForm"></form-bean>
+		 
+       <!-- Sangeetha Tags End-->
+       <form-bean name="PygmyCheckForm" type="com.scb.pd.forms.PygmyCheckForm"></form-bean>
+    <!--**************************start of Common form beans******************************** -->
+        <form-bean name="JointHolderForm" type="com.scb.common.forms.JointHoldersActionForm"></form-bean>
+        <form-bean name="NomineeForm" type="com.scb.common.forms.NomineeActionForm"></form-bean>
+
+    <!--**************************End of Common form beans******************************** -->
+    <!--**************************start of Front counter form beans******************************** -->
+
+         <form-bean name="ODCCUpdation" type="com.scb.fc.forms.ODCCUpdationFB"></form-bean>
+        <form-bean name="EmpDetails" type="com.scb.fc.forms.EmpDetailsFB"></form-bean>
+        <form-bean name="SignInstruction" type="com.scb.fc.forms.SignInstructionFB"></form-bean>
+        <form-bean name="JointHoldersUpdation" type="com.scb.fc.forms.JointHoldersUpdationFB"></form-bean>
+        <form-bean name="JointHolders" type="com.scb.fc.forms.JointHoldersFormBean"></form-bean>
+        <form-bean name="SBUpdation" type="com.scb.fc.forms.SBUpdationFormBean"></form-bean>
+        <form-bean name="unverifiedtokens" type="com.scb.fc.forms.Unverifiedtokensform"></form-bean>
+        <form-bean name="TrayList" type="com.scb.fc.forms.TrayListForm"></form-bean>
+        	
+		<form-bean name="fcsign" type="com.scb.fc.forms.SignatureInstForm"></form-bean>
+        <form-bean name="SBOpeningForm" type="com.scb.fc.forms.SBOpeningActionForm"></form-bean>
+        <form-bean name="ReceiptDetailForm" type="com.scb.fc.forms.ReceiptDetailsAForm"></form-bean>
+        <form-bean name="odccSanction" type="com.scb.fc.forms.ODCCSanctionForm"></form-bean>
+         <form-bean name="odccApplicationEntry" type="com.scb.fc.forms.ODCCApplnForm"></form-bean>
+        <form-bean name="fcCcForm" type="com.scb.fc.forms.CCPeriodical"></form-bean>
+        <form-bean name="InOpForm" type="com.scb.fc.forms.InoperativeProcess"></form-bean>
+        <form-bean name="chqForm" type="com.scb.fc.forms.ChqWithdrawalForm"></form-bean>
+        <form-bean name="chqInstForm" type="com.scb.fc.forms.ChqInstructionForm"></form-bean>
+        <form-bean name="chqissue" type="com.scb.fc.forms.ChqIssueForm"></form-bean>
+        <form-bean name="chqqueryForm" type="com.scb.fc.forms.ChqQueryForm"></form-bean>
+        <form-bean name="fcPassBookForm" type="com.scb.fc.forms.FCPassbookForm"></form-bean>     
+        <form-bean name="ViewLogForm" type="com.scb.fc.forms.ViewLogActionForm"></form-bean>
+        <form-bean name="unCashPo" type="com.scb.fc.forms.UnCashPoForm"></form-bean>
+        <form-bean name="poPrint"  type="com.scb.fc.forms.POPrintForm"></form-bean>
+        <form-bean name="crtdPO" type="com.scb.fc.forms.CreatedPOForm"></form-bean>
+        <form-bean name="consolPO" type="com.scb.fc.forms.ConsolPOForm"></form-bean>
+        <form-bean name="passSheetForm" type="com.scb.fc.forms.PassSheetForm"></form-bean>
+        <form-bean name="fcInterestCalc" type="com.scb.fc.forms.InterestCalcActionForm"></form-bean>
+        <form-bean name="fcintposting" type="com.scb.fc.forms.FCIntPostForm"></form-bean>
+        <form-bean name="fcintregister" type="com.scb.fc.forms.FCInterestregForm"></form-bean>
+        <form-bean name="podeForm" type="com.scb.fc.forms.PODataEntryForm"></form-bean>
+         <form-bean name="poInstForm" type="com.scb.fc.forms.POInstructionForm"></form-bean>
+        <form-bean name="AccountClosing" type="com.scb.fc.forms.AccountCloseActionForm"></form-bean>
+        <form-bean name="sbCaAdminForm" type="com.scb.fc.forms.SbCaAdminForm"></form-bean>
+        <form-bean name="odCcAdminForm" type="com.scb.fc.forms.OdCcActionForm"></form-bean>
+        <form-bean name="PayOrderForm" type="com.scb.fc.forms.POActionForm"></form-bean>
+        <form-bean name="odccApplicationDetails" type="com.scb.fc.forms.odccApplicationDetailsform"></form-bean>
+        <form-bean name="odccReceiptDetails" type="com.scb.fc.forms.ReceiptDetailsForm"></form-bean>
+        <form-bean name="odccLoanAndShareDetails" type="com.scb.fc.forms.LoanAndShareDetailsForm"></form-bean>
+        <form-bean name="odccEmploymentDetails" type="com.scb.fc.forms.EmploymentDetailsForm"></form-bean>
+        <form-bean name="fcPersonal" type="com.scb.fc.forms.PersonalDetailsForm"></form-bean>
+        <form-bean name="verifychq" type="com.scb.fc.forms.VerifyChqWithdrawForm"></form-bean>
+        <form-bean name="verifySbopen" type="com.scb.fc.forms.SBVerifyform"></form-bean>
+        <form-bean name="verifyPOConsol" type="com.scb.fc.forms.VerifyPOConsolidationForm"></form-bean>
+        <form-bean name="fcuncashedpo" type="com.scb.fc.forms.UncashedPOReportForm"></form-bean>
+        <form-bean name="fcpomake" type="com.scb.fc.forms.FCPOMakeForm"></form-bean>
+        <form-bean name="fcpoconsolreport" type="com.scb.fc.forms.FCPOConsolidatedReportForm"></form-bean>
+        <form-bean name="fcpocashedreport" type="com.scb.fc.forms.FCCashedPOReportForm"></form-bean>
+        <form-bean name="fcverifyodcc" type="com.scb.fc.forms.VerifyODCCForm"></form-bean>
+        <form-bean name="fcverifyCheque" type="com.scb.fc.forms.VerifyFCChqWithdrawalForm"></form-bean>
+        <form-bean name="updateodccsbca" type="com.scb.fc.forms.ODCCSBCAUpdationForm"></form-bean>
+       
+        <!--**************************end of Front counter form beans******************************** -->
+    
+  <!--**************************start of Shares form beans******************************** -->
+    
+   
+       
+    <form-bean name="AllotmentForm" type="com.scb.sh.forms.AllotmentForm"></form-bean>
+    
+    <form-bean name="shsign" type="com.scb.sh.forms.AllotmentForm"></form-bean>
+    
+    <form-bean name="AddAllotmentForm" type="com.scb.sh.forms.AddAllotmentForm"></form-bean>
+    
+    <form-bean name="DividendCalc" type="com.scb.sh.forms.DividendCalc"></form-bean>
+    
+    <form-bean name="DividendRegistry" type="com.scb.sh.forms.DividendRegistryForm"></form-bean>
+    
+    <form-bean name="PassBook" type="com.scb.sh.forms.PassBookForm"></form-bean>
+    
+    <form-bean name="Withdrawal" type="com.scb.sh.forms.WithdrawalForm"></form-bean>
+    
+    <form-bean name="Openreport" type="com.scb.sh.forms.OpenReportForm"></form-bean>
+    
+    <form-bean name="Closereport" type="com.scb.sh.forms.OpenReportForm" ></form-bean>
+    
+    <form-bean name="Tempreport" type="com.scb.sh.forms.OpenReportForm"></form-bean>
+    
+    <form-bean name="Permreport" type="com.scb.sh.forms.OpenReportForm"></form-bean>
+    
+    <form-bean name="Voterreport" type="com.scb.sh.forms.OpenReportForm"></form-bean>
+    
+    <form-bean name="ShareRegistry" type="com.scb.sh.forms.OpenReportForm"></form-bean>
+    
+    <form-bean name="ShareAllotWith" type="com.scb.sh.forms.OpenReportForm"></form-bean>
+    
+    <form-bean name="Branchreg" type="com.scb.sh.forms.OpenReportForm"></form-bean>
+    
+    <form-bean name="Shareledger" type="com.scb.sh.forms.ShareLedgerform"></form-bean>
+    
+    <form-bean name="DividendEntry" type="com.scb.sh.forms.DividendDataForm"></form-bean>
+    
+    <form-bean name="TempPerm" type="com.scb.sh.forms.TempPermForm"></form-bean>
+    
+    <form-bean name="RegularizationForm" type="com.scb.sh.forms.RegularizationForm"></form-bean>
+    
+    <form-bean name="MasterUpdation" type="com.scb.sh.forms.MasterUpdationForm"></form-bean>
+    
+    <form-bean name="Viewlog" type="com.scb.sh.forms.ViewlogForm"></form-bean>
+    
+    <form-bean name="DividendReport" type="com.scb.sh.forms.DividendReportForm"></form-bean>
+    
+    <form-bean name="ShareAdmin" type="com.scb.sh.forms.ShareAdminForm"></form-bean>
+    
+    <form-bean name="ShareDivrate" type="com.scb.sh.forms.ShareDivrateForm"></form-bean>
+    
+    <form-bean name="Certificate" type="com.scb.sh.forms.CertificateForm"></form-bean>
+    
+    <form-bean name="DivNotice" type="com.scb.sh.forms.UnclaimedNoticeForm"></form-bean>
+   
+    <form-bean name="ChangeofModules" type="com.scb.sh.forms.ChangeofModulesForm"></form-bean>
+     
+    <form-bean name="UnclaimedDiv" type="com.scb.sh.forms.UnclaimedDivForm"></form-bean>
+    
+    <form-bean name="DivPayment" type="com.scb.sh.forms.DividendPaymentForm"></form-bean>
+    
+    <form-bean name="Nominee" type="com.scb.sh.forms.NomineeForm"></form-bean>
+
+
+             
+    <!--**************************end of Shares form beans******************************** -->
+
+
+
+
+<!-- *************************TermDeposit(Geetha)***************************-->
+       
+    <form-bean name="LoanSancDibus" type="com.scb.td.forms.LoanSactionDisburse"></form-bean>
+    
+    <form-bean name="TDmailing" type="com.scb.td.forms.MailSys"></form-bean>
+       
+       <form-bean name="New_rewnal" type="com.scb.td.forms.ApplnDE"></form-bean>
+       
+     <form-bean name="NomineeFourm1" type="com.scb.td.forms.TDnominee"></form-bean>
+     <form-bean name="LoanDetail" type="com.scb.td.forms.TDClosure"></form-bean>    
+   
+    <form-bean name="ApplnDE" type="com.scb.td.forms.ApplnDE"></form-bean>
+    
+    <form-bean name="tdsign" type="com.scb.td.forms.SignatureInstForm"></form-bean>
+    
+    <form-bean name="InterestCalc" type="com.scb.td.forms.InterestCalc"></form-bean>
+    
+    <form-bean name="TDClosure" type="com.scb.td.forms.TDClosure"></form-bean>
+    
+    <form-bean name="DepViewLog" type="com.scb.td.forms.DepositViewLog"></form-bean>
+    
+    <form-bean name="QueryOnReceiptNo" type="com.scb.td.forms.QueryOnReceipt"></form-bean>
+    
+    <form-bean name="ReceiptPrinting" type="com.scb.td.forms.ReceiptUpdation"></form-bean>
+    
+    <form-bean name="AutoRenewal" type="com.scb.td.forms.AutoRenewal"></form-bean>
+    
+    <form-bean name="ReceiptUpdation" type="com.scb.td.forms.ReceiptUpdation"></form-bean>
+    
+    <form-bean name="QuarterlyInterest" type="com.scb.td.forms.QuarterlyInterest"></form-bean>
+    
+    <form-bean name="Ammendments" type="com.scb.td.forms.ApplnDE"></form-bean>
+    
+    <form-bean name="AccountRenewal" type="com.scb.td.forms.DepositRenewal"></form-bean>
+    
+    <form-bean name="VoucherPayment" type="com.scb.td.forms.VoucherPayment"></form-bean>
+    
+    <form-bean name="TermDepositRenewalNotice" type="com.scb.td.forms.RenewalNoticeForm"></form-bean>
+    
+    <form-bean name="PeriodwiseReport" type="com.scb.td.forms.PeriodwiseReport"></form-bean>
+    
+    <form-bean name="QuantumwiseReport" type="com.scb.td.forms.QuantumwiseReport"></form-bean>
+    
+    <form-bean name="OpenClosedAccounts" type="com.scb.td.forms.OpenClosedAccounts"></form-bean>
+    
+    <form-bean name="AutoRenewalList" type="com.scb.td.forms.AutoRenewalList"></form-bean>
+    
+    <form-bean name="TDPassbook" type="com.scb.td.forms.TDPassbook"></form-bean>
+    
+    <form-bean name="MISReport" type="com.scb.td.forms.MISReport"></form-bean>
+    
+    <form-bean name="MaturityLedgerReport" type="com.scb.td.forms.MaturityLedgerReport"></form-bean>
+    
+     <form-bean name="InterestAccruedReport" type="com.scb.td.forms.InterestAccruedReport"></form-bean>
+     
+      <form-bean name="Ledger" type="com.scb.td.forms.Ledger"></form-bean>
+     
+     <form-bean name="DepositAdmin" type="com.scb.td.forms.DepositAdmin"></form-bean>
+     
+     <form-bean name="Sumanthdif" type="com.scb.td.forms.Exampleform"></form-bean>
+    
+   
+    
+             <!--*************end of TermDeposit**********-->
+
+
+       <!-- -Tags added by sowmya -->
+	  <form-bean name="receipt" type = "com.scb.csh.forms.Recieiptsform"> </form-bean>
+      
+      <form-bean name="miscell" type = "com.scb.csh.forms.MiscellaneousForm"> </form-bean>
+      
+      <form-bean name="payment" type = "com.scb.csh.forms.PaymentForm"> </form-bean>
+       
+      <form-bean name="transfer" type = "com.scb.csh.forms.TransferForm"> </form-bean>
+        
+      <form-bean name="exchange" type = "com.scb.csh.forms.ExchangeForm"> </form-bean>
+      
+      <form-bean name="scroll" type = "com.scb.csh.forms.ConsolidateScrollform"> </form-bean>
+	  
+	  <form-bean name="closed" type = "com.scb.csh.forms.ClosingForm"> </form-bean>
+	  
+	  <form-bean name="currency" type = "com.scb.csh.forms.CurrencyStockForm"> </form-bean>
+	  
+	  <form-bean name="rebalance" type = "com.scb.csh.forms.RebalanceForm"> </form-bean>
+	  
+	  <form-bean name="cash/loanst" type = "com.scb.csh.forms.LoanStatusForm"> </form-bean>
+	  
+	  
+	 <!-- ************ Start of Administrator FormBean************* -->
+    	
+    	 <form-bean name="LoginForm" type="com.scb.login.forms.LoginFB"></form-bean>
+    	 <form-bean name="CreateUserForm" type="com.scb.adm.forms.CreateUsersFormBean"></form-bean>
+         <form-bean name="ChangePasswordForm" type="com.scb.adm.forms.ChangePwdFormBean"></form-bean>
+         <form-bean name="TerminalsDetailsFBForm" type="com.scb.adm.forms.TerminalsDetailsFB"></form-bean>
+         <form-bean name="UserActivityFormBeanForm" type="com.scb.adm.forms.UserActivityFormBean"></form-bean>
+         <form-bean name="ViewUserFormBean" type="com.scb.adm.forms.ViewUsersFormBean"></form-bean>
+         <form-bean name="IPconfigFormBean" type="com.scb.adm.forms.IpConfFormBean"></form-bean>
+         <form-bean name="AccesstoTerminalFormBean" type="com.scb.adm.forms.AccessToTmlFormBean"></form-bean>
+         <form-bean name="HolidayMasterFormBean" type="com.scb.adm.forms.HolidayMasterFormBean"></form-bean>
+         <form-bean name="ShareModuleFormBean" type="com.scb.adm.forms.AdmShareModuleForm"></form-bean>
+    	 <form-bean name="SBModuleFormBean" type="com.scb.adm.forms.AdmSBModuleForm"></form-bean>
+    	 <form-bean name="FDModuleFormBean" type="com.scb.adm.forms.AdmFDModuleForm"></form-bean>
+    	 <form-bean name="RDModuleFormBean" type="com.scb.adm.forms.AdmRDModuleForm"></form-bean>
+    	 <form-bean name="PygmyModuleFormBean" type="com.scb.adm.forms.AdmPygmyModuleForm"></form-bean>
+    	 <form-bean name="CAModuleFormBean" type="com.scb.adm.forms.AdmCAModuleForm"></form-bean>
+    	 <form-bean name="ClearingModuleFormBean" type="com.scb.adm.forms.AdmClearingModuleForm"></form-bean>
+    	 <form-bean name="ODModuleFormBean" type="com.scb.adm.forms.AdmODModuleForm"></form-bean>
+     	 <form-bean name="POModuleFormBean" type="com.scb.adm.forms.AdmPOModuleForm"></form-bean>
+    	 <form-bean name="CCModuleFormBean" type="com.scb.adm.forms.AdmCCModuleForm"></form-bean>
+    	 <form-bean name="newAccessright" type="com.scb.adm.forms.NewAccessRightsForm"></form-bean>
+    	 
+    	 <form-bean name="AccessrightMods" type="com.scb.adm.forms.AccessRightsformodulesForm"></form-bean>
+    	 <form-bean name="tdAccessrightMods" type="com.scb.adm.forms.TDAccessBean"></form-bean>
+   		 <form-bean name="newadminsecurity" type="com.scb.adm.forms.NewSecurityandAdminForm"></form-bean>
+   		 <form-bean name="roleassignment" type="com.scb.adm.forms.UserRoleAssignmentForm"></form-bean>
+   		 <form-bean name="formsdetail" type="com.scb.adm.forms.FormsDetailForm"></form-bean>
+    
+    
+    
+    <!-- ************ End of Admin FormBean************* -->  
+	  
+	  
+    <!-- *************GL Forms -->
+    
+    <form-bean name="dailyposting" type="com.scb.gl.forms.DailyPosting"></form-bean>
+    <form-bean name="DayClose" type="com.scb.gl.forms.DayClose"></form-bean>
+    <form-bean name="MonthlyPosting" type="com.scb.gl.forms.MonthlyPosting"></form-bean>
+    <form-bean name="MonthClose" type="com.scb.gl.forms.MonthClose"></form-bean>
+    <form-bean name="YearClose" type="com.scb.gl.forms.YearClose"></form-bean>
+    <form-bean name="YearClosingCF" type="com.scb.gl.forms.YearClose"></form-bean>
+    <form-bean name="BranchPLPosting" type="com.scb.gl.forms.YearClose"></form-bean>
+    <form-bean name="DayBook" type="com.scb.gl.forms.DayBook"></form-bean>
+    <form-bean name="GLSchedule" type="com.scb.gl.forms.GLSchedule"></form-bean>
+    <form-bean name="TrfScrollPrinting" type="com.scb.gl.forms.TrfScrollPrinting"></form-bean>
+    <form-bean name="VoucherSlipPrinting" type="com.scb.gl.forms.VoucherSlipPrinting"></form-bean>
+    <form-bean name="MonthlyGlSchedule" type="com.scb.gl.forms.MonthlyGlSchedule"></form-bean>
+    <form-bean name="MonthlyBalanceSheet" type="com.scb.gl.forms.MonthlyBalanceSheet"></form-bean>
+    <form-bean name="MonthlyProfitLoss" type="com.scb.gl.forms.MonthlyProfitLoss"></form-bean>
+    <form-bean name="MonthlyTrailBalance" type="com.scb.gl.forms.MonthlyTrailBalance"></form-bean>
+    <form-bean name="MonthlyRecieptsPayments" type="com.scb.gl.forms.MonthlyRecieptsPayments"></form-bean>
+    <form-bean name="ConsolidatedDayBook" type="com.scb.gl.forms.ConsolidatedDayBook"></form-bean>
+    <form-bean name="MonthlyConsolidatedGlSchedule" type="com.scb.gl.forms.MonthlyConsolidatedGlSchedule"></form-bean>
+    <form-bean name="MonthlyConsolidatedTrialBalance" type="com.scb.gl.forms.MonthlyConsolidatedTrailBalance"></form-bean>
+    <form-bean name="MonthlyConsolidatedRP" type="com.scb.gl.forms.MonthlyConsolidatedRP"></form-bean>
+    <form-bean name="MonthlyConsolidatedPL" type="com.scb.gl.forms.MonthlyConsolidatedPL"></form-bean>
+    <form-bean name="MonthlyConsolidatedBalanceSheet" type="com.scb.gl.forms.MonthlyConsolidatedBalanceSheet"></form-bean>
+    <form-bean name="Admin" type="com.scb.gl.forms.Admin"></form-bean>
+    <form-bean name="GLAdmin" type="com.scb.gl.forms.GLAdmin"></form-bean>
+    <form-bean name="RBIForm9InputUpdation" type="com.scb.gl.forms.RBIForm9InputUpdation"></form-bean>
+    <form-bean name="RBIForm9Reports" type="com.scb.gl.forms.RBIForm9Reports"></form-bean>
+    <form-bean name="RBICRRSLRReports" type="com.scb.gl.forms.RBICRRSLRReports"></form-bean>
+    <form-bean name="RBICRRSLRSubSchedule" type="com.scb.gl.forms.RBICRRSLRSubSchedule"></form-bean>
+    <form-bean name="RBIForm1Reports" type="com.scb.gl.forms.RBIForm1Reports"></form-bean>
+    <form-bean name="RBIForm1LinkUpdation" type="com.scb.gl.forms.RBIForm1LinkUpdation"></form-bean>
+    <form-bean name="RBIForm1Master" type="com.scb.gl.forms.RBIForm1Master"></form-bean>
+    <form-bean name="RBIMarkingDateEntry" type="com.scb.gl.forms.RBIMarkingDateEntry"></form-bean>
+    <form-bean name="form1posting" type="com.scb.gl.forms.Form1Posting"></form-bean>
+    <form-bean name="RBIForm9Posting" type="com.scb.gl.forms.RBIForm9Posting"></form-bean>
+    
+    
+    <!-- *************GL Forms end -->
+	  
+	<!-- *************ALM Forms -->
+	  
+	  <form-bean name="SLSOutlowDataEntry" type="com.scb.alm.forms.ALMOutFlowForm"></form-bean>
+	<!-- <form-bean name="SLSInflowSheet" type="com.scb.alm.forms.SlsInflowSheet"></form-bean> --> 
+	  
+	  <!-- *************ALM Forms end-->  
+
+       </form-beans>
+
+
+        <global-exceptions></global-exceptions>
+        <global-forwards>
+        	<forward name="success" path="/Layout.jsp"></forward>
+        	<forward name="error" path="/Layout.jsp"></forward>
+        </global-forwards> 
+ 
+        <action-mappings>
+       <!-- tags added by sowmya -->
+       <action path="/ReceiptMenu" type="com.scb.csh.actions.CashAction" name="receipt" input="/CBSMenu.jsp">
+				
+        	</action>
+        	
+        	<action path="/Receipt" type="com.scb.csh.actions.CashAction" name="receipt" input="/CashWebPages/Receipts.jsp">
+				
+        	</action>
+        
+        <action path="/MiscellaneousMenu" type="com.scb.csh.actions.CashAction" name="miscell" input="/CBSMenu.jsp">
+				
+        	</action>
+        	
+        	<action path="/Miscellaneous" type="com.scb.csh.actions.CashAction" name="miscell" input="/CashWebPages/Misellaneous.jsp">
+				
+        	</action>
+       
+       <action path="/PaymentMenu" type="com.scb.csh.actions.CashAction" name="payment" input="/CBSMenu.jsp">
+				
+        </action>
+        	
+        <action path="/Payment" type="com.scb.csh.actions.CashAction" name="payment" input="/CashWebPages/Payment.jsp">
+				
+        </action>
+        
+        <action path="/TransferMenu" type="com.scb.csh.actions.CashAction" name="transfer" input="/CBSMenu.jsp">
+			
+        </action>
+        	
+        <action path="/Transfer" type="com.scb.csh.actions.CashAction" name="transfer" input="/CashWebPages/Intcounertrasfer.jsp">
+				
+        </action>
+        
+        <action path="/ExchangeMenu" type="com.scb.csh.actions.CashAction" name="exchange" input="/CBSMenu.jsp">
+				
+        </action>
+        	
+        <action path="/Exchange" type="com.scb.csh.actions.CashAction" name="exchange" input="/CashWebPages/Currexchange.jsp">
+				
+        </action>
+        
+        <action path="/ConsolidatedMenu" type="com.scb.csh.actions.CashAction" name="scroll" input="/CBSMenu.jsp">
+				
+        	</action>
+        	
+        <action path="/Scroll" type="com.scb.csh.actions.CashAction" name="scroll" input="/CashWebPages/ConsolidatedScroll.jsp">
+				
+        	</action>
+            
+        <action path="/Terminalclosemenu" type="com.scb.csh.actions.CashAction" name="exchange" input="/CBSMenu.jsp">
+				
+        	</action>
+        	
+        <action path="/Terminalclose" type="com.scb.csh.actions.CashAction" name="exchange" input="/CashWebPages/TerminalClosing.jsp">
+				
+        	</action>
+               
+        <action path="/CurrencyStockMenu" type="com.scb.csh.actions.CashAction" name="currency" input="/CBSMenu.jsp">
+				
+        	</action>
+        	
+        <action path="/Currency" type="com.scb.csh.actions.CashAction" name="currency" input="/CashWebPages/Currencystock.jsp">
+				
+        	</action>
+        
+        
+        <action path="/RebalancingMenu" type="com.scb.csh.actions.CashAction" name="rebalance" input="/CBSMenu.jsp">
+				
+				</action>
+        
+        <action path="/Rebalance" type="com.scb.csh.actions.CashAction" name="rebalance" input="/CashWebPages/Rebalancing.jsp">
+				
+        	</action>
+        	
+        <action path="/cash/loanstatus" type="com.scb.fc.actions.PersonalAction" name="cash/loanst" input="/CashWebPages/Loanstatus.jsp">
+			
+        	</action>
+		
+		   <!--**************tags used in LoansOnDeposit added by swetha************-->
+		
+			<action path="/LoansOnDepositMenuLink" type="com.scb.ld.actions.LoansOnDepositAction" name="ApplicationDE" input="/CommonWebPages/Menu.jsp">
+		   	</action> 
+		   	
+		   	<action path="/LoansOnDeposit/ApplicationDE" type="com.scb.ld.actions.LoansOnDepositAction" name="ApplicationDE" input="/LoansOnDepositWebPages/LoansApplicationDE.jsp">
+		   	</action>
+		   	
+		   	
+		   	<action path="/LoansOnDeposit/DepositDetail" type="com.scb.ld.actions.LoansOnDepositAction" name="DepositDetail" input="/LoansOnDepositWebPages/DepositDetail.jsp">
+		   	</action>
+		   
+		   	
+		   	<action path="/LoansOnDeposit/LDsucess" type="com.scb.ld.actions.LoansOnDepositAction" name="LDsucess" input="/LoansOnDepositWebPages/LDSucess.jsp">
+		   	</action> 
+		    
+		    <action path="/LDRecovery" type="com.scb.ld.actions.LoansOnDepositAction" name="LDRecovery" input="/LoansOnDepositWebPages/LDRecovery.jsp">
+		   	</action>
+		  
+		     
+		    <action path="/LDRecoveryMenuLink" type="com.scb.ld.actions.LoansOnDepositAction" name="LDRecoveryMenu" input="/CommonWebPages/Menu.jsp">
+		   	</action>
+		   
+		    <action path="/LDStatus" type="com.scb.ld.actions.LoansOnDepositAction" name="LDStatus" input="/LoansOnDepositWebPages/LDStatus.jsp">
+		   	</action>
+            
+            <action path="/LDCash" type="com.scb.ld.actions.LoansOnDepositAction" name="LDCash" input="/LoansOnDepositWebPages/LDCash.jsp">
+		   	</action>
+		    
+		    
+		    <action path="/LDTransfer" type="com.scb.ld.actions.LoansOnDepositAction" name="LDTransfer" input="/LoansOnDepositWebPages/LDTransfer.jsp">
+		   	</action>
+		    
+		    <action path="/LDPassbook" type="com.scb.ld.actions.LoansOnDepositAction" name="LDPassbook" input="/LoansOnDepositWebPages/LDPassBook.jsp">
+		   	</action>
+
+			<action path="/LDPassbookMenuLink" type="com.scb.ld.actions.LoansOnDepositAction" name="LDPassbookMenu" input="/CommonWebPages/Menu.jsp">
+		   	</action>
+		   	
+		   	<action path="/LDOpenClosedReports" type="com.scb.ld.actions.LoansOnDepositAction" name="LDOpenClosedAccounts" input="/LoansOnDepositWebPages/LDOpenClosedAccounts.jsp">
+		   	</action>
+		     
+		     <action path="/LDOpenClosedMenuLink" type="com.scb.ld.actions.LoansOnDepositAction" name="LDOpenClosedMenu" input="/CommonWebPages/Menu.jsp">
+		   	</action>		   
+		    
+		   
+		   
+		   <action path="/LDIntrestAccruedReportMenuLink" type="com.scb.ld.actions.LoansOnDepositAction" name="LDIntrestAccruedReportMenu" input="/CommonWebPages/Menu.jsp">
+		   	</action>		   
+		    
+		    
+		    <action path="/LDIntrestAccrued" type="com.scb.ld.actions.LoansOnDepositAction" name="LDIntrestAccruedReport" input="/LoansOnDepositWebPages/LDIntrestAccruedReport.jsp">
+		   	</action>
+		   
+		   <action path="/LDMaturityListMenuLink" type="com.scb.ld.actions.LoansOnDepositAction" name="LDMaturityListMenu" input="/CommonWebPages/Menu.jsp">
+		   	</action>
+		   
+		   <action path="/LDMaturityList" type="com.scb.ld.actions.LoansOnDepositAction" name="LDMaturityList" input="/LoansOnDepositWebPages/LDMaturityList.jsp">
+		   	</action>
+		   	
+		   	
+		   	<action path="/LDMaturityExcedingMatListMenuLink" type="com.scb.ld.actions.LoansOnDepositAction" name="LDMaturityExcedingMatList" input="/CommonWebPages/Menu.jsp">
+		   	</action> 
+		   
+		   <action path="/LDExceedMaturityList" type="com.scb.ld.actions.LoansOnDepositAction" name="LDMaturityExcedingMatList" input="/LoansOnDepositWebPages/LDExceedingMaturityList.jsp">
+	    	</action>
+		 
+		 	
+	    	<action path="/AddLoanVerification" type="com.scb.ld.actions.LoansOnDepositAction" name="AdditionalLoanVer" input="/LoansOnDepositWebPages/LoansApplicationDE.jsp">
+		   	</action>
+		   	
+	    	<action path="/AdditionalVerMenuLink" type="com.scb.ld.actions.LoansOnDepositAction" name="AdditionalLoanVer" input="/CommonWebPages/Menu.jsp">
+		   	</action> 
+					    
+           <!--**************tags used in LoansOnDeposit added by swetha************-->
+        
+
+			<!--*********************Common Path *************************** -->
+			<action path="/Common/Personal" type="com.scb.fc.actions.PersonalAction" name="Common/Personal" input="/CommonWebPages/Personnel.jsp">
+				<forward name="success" path="/CommonWebPages/Layout.jsp"></forward>
+        	</action>
+        	
+        	<action path="/Common/ClgSignature" type="com.scb.fc.actions.PersonalAction" name="Common/ClgSignature" input="/Common/ClearingSignature.jsp">
+        		<forward name="success" path="/CommonWebPages/Layout.jsp"></forward>
+        	</action>
+        	
+        	<action path="/Common/sign" type="com.scb.pd.actions.AgentOpeningAction" name="Common/sign" input="/CommonWebPages/SignatureInstructionCombo.jsp">
+				<forward name="success" path="/CommonWebPages/Layout.jsp"></forward>
+        	</action>
+        	
+        	<action path="/Common/signCombo" type="com.scb.common.actions.SignatureInstructionClass" name="Common/signCombo" input="/CommonWebPages/SignatureInstructionCombo.jsp">
+        	</action>
+        	
+        	<action path="/Common/Deposit" type="com.scb.common.actions.SignatureInstructionClass" name="Common/Deposit" input="/CommonWebPages/Deposit.jsp">
+        	</action>
+        	
+        	
+        	
+			<!--*********************Common Path *************************** -->	
+
+        <!--tags added by swetha for login and menu-->
+
+        <action path="/corelink"  type="com.scb.common.actions.LoginAction" name="LoginDynaAction" input="/Login.jsp">
+        	<forward name="done" path="/Layout.jsp"></forward>
+        		<forward name="Invalid" path="/index.jsp"></forward>
+        </action>
+         
+         
+       <action path="/AddressAmmendmentsMenu" type="com.scb.cm.actions.CustomerAction" name="addramnd" input="/CommonWebPages/Menu.jsp">
+        </action>
+         
+         <action path="/adderss" type="com.scb.cm.actions.CustomerAction" name="addramnd" input="/CustomerWebPages/AddressAmmendments.jsp">
+        </action>
+                 
+        <action path="/MenuLink" type="com.scb.cm.actions.CustomerAction" name="MenuForm" input="/CommonWebPages/Menu.jsp">
+        </action>
+
+        <action path="/CustomizationMenuLink" type="com.scb.cm.actions.CustomerAction" name="CostomizationDynaform" input="/CommonWebPages/Menu.jsp">
+        </action>  
+
+        <action path="/photo" type="com.scb.cm.actions.PhotoAction" name="photo" input="/CustomerWebPages/Photo.jsp">
+        </action>
+        
+        <action path="/CustomerViewLogMenuLink" type="com.scb.cm.actions.CustomerAction" name="viewlogDyna" input="/CommonWebPages/Menu.jsp">
+        </action> 
+         
+         <action path="/QueryOnCustomerMenuLink" type="com.scb.cm.actions.CustomerAction" name="Queryoncustomer" input="/CommonWebPages/Menu.jsp">
+        </action>
+ 
+         <!-- end of tags used for login and menu-->
+
+        <!--added by swe
+        tags used in customer form-->
+
+        <action path="/custlink" type="com.scb.cm.actions.CustomerAction" name="CustomForm" input="/CustomerWebPages/NewCustomer.jsp">
+        </action>
+       
+       <action path="/custdetails" type="com.scb.cm.actions.CustomerAction" name="CustDetails" input="/CustomerWebPages/CustomerDetails.jsp">
+       </action>
+         
+       <action path="/Customer/Sucess" type="com.scb.cm.actions.CustomerAction" name="SucessPage" input="/CustomerWebPages/CustomerDetails.jsp">
+       </action>
+         
+
+        <action  path="/custinst" type="com.scb.cm.actions.CustomerAction" name="CustomerInstitute" input="/CustomerWebPages/CustomerIntitute.jsp">
+        </action>
+
+        <action name="param" path="/param" type="com.scb.common.actions.MenuAction" input="/CommonWebPages/Menu.jsp">
+        </action>
+
+        <action path="/Customer/Customization" type="com.scb.cm.actions.CustomerAction" name="Costomization" input="/CustomerWebPages/Customization.jsp">
+        </action>
+
+        <action path="/customer/queryoncustomer" type="com.scb.cm.actions.CustomerAction" name="QueryoncustomerDynaform" input="/CustomerWebPages/QueryOnCustomer.jsp">
+        </action>
+        
+        <action path="/Customer/CustomerViewLog" type="com.scb.cm.actions.CustomerAction" name="ViewLog" input="/CustomerWebPages/CustomerViewLog.jsp">
+        </action>
+        
+        <action path="/CustomerPanel" type="com.scb.cm.actions.CustomerAction" name="CustPanel" input="/CustomerWebPages/CustomerPanel.jsp">
+        </action>  
+         
+        <!--added by swe
+         tags used in customer form-->
+
+<!--************************tags added by vinay for Loan module************************-->
+
+ <action path="/Loans/LoanPassBookMenu" 
+				type="com.scb.loans.action2.LoanAction2" 
+				name="LoanPassBook" 
+				input="/LoansWebPages/LoanPassBook.jsp">
+		</action>
+  		
+  		<action path="/Loans/LoanPassBook" type="com.scb.loans.action2.LoanAction2" name="LoanPassBook" input="/LoansWebPages/LoanPassBook.jsp"></action>
+  		
+  		<action path="/Loans/NPAReportMenu" type="com.scb.loans.action2.LoanAction2" name="NPAReport" input="/LoansWebPages/NPAReports.jsp"></action>
+  
+  		<action path="/Loans/NPAReport" type="com.scb.loans.action2.LoanAction2" name="NPAReport" input="/LoansWebPages/NPAReports.jsp"></action>
+  		
+  		<action path="/Loans/LoanApplicationDE" type="com.scb.loans.actions.LoanAction" name="LoanAppln" scope="session" input="/LoansWebPages/LoanApplicationDE.jsp">
+  </action>
+  
+  <action path="/Loans/LoanApplicationMenu" type="com.scb.loans.actions.LoanAction" name="LoanAppln" input="/CommonWebPages/Menu.jsp" scope="session">
+  </action>
+  	<action path="/Loans/LoansApplicationDEVerifyMenu" type="com.scb.loans.actions.LoanAction" name="LoanAppln" scope="session" input="/LoansWebPages/LoanApplicationDEVerify.jsp">
+  </action>
+  
+  <action path="/Loans/LoansApplicationDEVerify" type="com.scb.loans.actions.LoanAction" name="LoanAppln" input="/LoansWebPages/LoanApplicationDEVerify.jsp" scope="session">
+  </action>
+  <action path="/Loans/Application" type="com.scb.loans.actions.LoanAction" name="Appln" input="/LoansWebPages/Application.jsp" ></action>
+  
+  <action path="/Loans/SignatureInst" name="loansign" type="com.scb.loans.actions.LoanAction" scope="request" input="/SignatureInst1.jsp">
+          </action>
+  
+  <action path="/Loans/SelfEmployed" type="com.scb.loans.actions.LoanAction" name="SelfEmployed" input="/LoansWebPages/SelfEmployed.jsp"></action>
+  
+  <action path="/Loans/Service" type="com.scb.loans.actions.LoanAction" name="Service" input="/LoansWebPages/Service.jsp" ></action>
+  
+  <action path="/Loans/Business" type="com.scb.loans.actions.LoanAction" name="Business" input="/LoansWebPages/Business.jsp" ></action>
+  
+  <action path="/Loans/Pension" type="com.scb.loans.actions.LoanAction" name="Pension" input="/LoansWebPages/Pension.jsp" ></action>
+  
+  <action path="/Loans/Rent" type="com.scb.loans.actions.LoanAction" name="Rent" input="/LoansWebPages/Rent.jsp" ></action>
+  
+  <action path="/Loans/LoanandShareDetails" type="com.scb.loans.actions.LoanAction" name="LoanandShare" input="/LoansWebPages/LoanandShareDetails.jsp" ></action>
+
+  <action path="/Loans/IndividualCoBorrower" type="com.scb.loans.actions.LoanAction" name="IndivCoBorrower" input="/LoansWebPages/Coborrower.jsp" ></action>
+  
+  <action path="/Loans/IndividualCoBorrower1" type="com.scb.loans.actions.LoanAction" name="IndivCoBorrower" input="/LoansWebPages/IndividualCoborrower2.jsp" ></action>
+  
+  <action path="/Loans/VehicleDet" type="com.scb.loans.actions.LoanAction" name="Vehicle" input="/LoansWebPages/VehicleDet.jsp"></action>
+  
+  <action path="/Loans/PropertyDet" type="com.scb.loans.actions.LoanAction" name="Property"></action>
+  
+  <action path="/Loans/CoBorrower" type="com.scb.loans.actions.LoanAction" name="CoBorrower"></action>
+  
+  
+  <action path="/Loans/LoanDailyPostingMenu" type="com.scb.loans.actions.LoanAction" name="LoanPosting" input="/LoansWebPages/LoanDailyPosting.jsp"></action>
+  <action path="/Loans/LoanDailyPosting" type="com.scb.loans.actions.LoanAction" name="LoanPosting" input="/LoansWebPages/LoanDailyPosting.jsp"></action>
+  
+  <action path="/Loans/ReverseRecoveryMenu" type="com.scb.loans.actions.LoanAction" name="RevRecov" input="/LoansWebPages/ReverseRecovery.jsp"></action>
+  <action path="/Loans/ReverseRecovery"  type="com.scb.loans.actions.LoanAction" name="RevRecov" input="/LoansWebPages/ReverseRecovery.jsp"></action>  
+	
+  <action path="/Loans/ReverseRecoveryVerifyMenu" type="com.scb.loans.action2.LoanAction2" name="RevRecov" input="/LoansWebPages/ReverseRecoveryVerify.jsp"></action>
+  <action path="/Loans/ReverseRecoveryVerify"  type="com.scb.loans.action2.LoanAction2" name="RevRecov" input="/LoansWebPages/ReverseRecoveryVerify.jsp"></action>
+	
+  <action path="/Loans/OtherChargesMenu" type="com.scb.loans.actions.LoanAction" name="OtherCharges" input="/LoansWebPages/OtherCharges.jsp"></action>
+  <action path="/Loans/OtherCharges" type="com.scb.loans.actions.LoanAction" name="OtherCharges" input="/LoansWebPages/OtherCharges.jsp"></action>
+  
+  <action path="/Loans/OtherChargesVerifyMenu" type="com.scb.loans.actions.LoanAction" name="OtherCharges" input="/LoansWebPages/OtherCharges.jsp"></action>
+  <action path="/Loans/OtherChargesVerify" type="com.scb.loans.actions.LoanAction" name="OtherCharges" input="/LoansWebPages/OtherCharges.jsp"></action>
+  
+  <action path="/Loans/ReschedulingMenu" type="com.scb.loans.actions.LoanAction" name="Reschedule" input="/LoansWebPages/Rescheduling.jsp"></action>  
+  <action path="/Loans/Rescheduling" type="com.scb.loans.actions.LoanAction" name="Reschedule" input="/LoansWebPages/Rescheduling.jsp"></action>
+  
+  
+  <action path="/Loans/InterestAccuredReportMenu" type="com.scb.loans.actions.LoanAction" name="AccuredReport" input="/LoansWebPages/InterestAccuredReport.jsp"></action>
+  <action path="/Loans/InterestAccuredReport" type="com.scb.loans.actions.LoanAction" name="AccuredReport" input="/LoansWebPages/InterestAccuredReport.jsp"></action>
+  
+  <action path="/Loans/OpenClosedStatMenu" type="com.scb.loans.actions.LoanAction" name="OpenClosedReport" input="/LoansWebPages/InterestAccuredReport.jsp"></action>
+  <action path="/Loans/OpenClosedStat" type="com.scb.loans.actions.LoanAction" name="OpenClosedReport" input="/LoansWebPages/InterestAccuredReport.jsp"></action>
+  
+ 
+  <action path="/Loans/LoanRecoveryMenu" type="com.scb.loans.actions.LoanAction" name="LoanRecovery" input="/LoansWebPages/LoanRecovery.jsp"></action>
+  <action path="/Loans/LoanRecovery" type="com.scb.loans.actions.LoanAction" name="LoanRecovery" input="/LoansWebPages/LoanRecovery.jsp"></action>
+  
+  <action path="/Loans/RecoveryVerifyMenu" type="com.scb.loans.actions.LoanAction" name="LoanRecovery" input="/LoansWebPages/LoanRecoveryVerify.jsp"></action>
+  <action path="/Loans/RecoveryVerify" type="com.scb.loans.actions.LoanAction" name="LoanRecovery" input="/LoansWebPages/LoanRecoveryVerify.jsp"></action>
+  
+  
+  <action path="/Loans/LoanStaus" type="com.scb.loans.actions.LoanAction" name="LoansStatus" input="/LoansWebPages/LoanStatus.jsp"></action>
+  <action path="/Loans/LoanHist" type="com.scb.loans.actions.LoanAction" name="LoansHistory" input="/LoansWebPages/LoanHistory.jsp"></action>
+  <action path="/Loans/ByTransfer" type="com.scb.loans.actions.LoanAction" name="RecoveryByTransfer" input="/LoansWebPages/RecoveryByTransfer.jsp"></action> 
+  <action path="/Loans/LoanTran" type="com.scb.loans.actions.LoanAction" name="LoanTran" input="/LoansWebPages/LastLoanTran.jsp"></action>
+  <action path="/Loans/SurityCoBorrower" type="com.scb.loans.actions.LoanAction" name="SurityCoBorr" input="/LoansWebPages/SurityCoborrower.jsp"></action>
+  
+  <action path="/Loans/OCReportMenu" type="com.scb.loans.actions.LoanAction" name="OCReport" input="/LoansWebPages/OtherChargesReport.jsp"></action>
+  <action path="/Loans/OCReport" type="com.scb.loans.actions.LoanAction" name="OCReport" input="/LoansWebPages/OtherChargesReport.jsp"></action>
+  
+  <action path="/Loans/ODReportMenu" type="com.scb.loans.actions.LoanAction" name="ODReport" input="/LoansWebPages/ODReport.jsp"></action>
+  <action path="/Loans/ODReport" type="com.scb.loans.actions.LoanAction" name="ODReport" input="/LoansWebPages/ODReport.jsp"></action>
+  
+  <action path="/Loans/NPALoanSummaryMenu" type="com.scb.loans.action2.LoanAction2" name="NPALoanSummary" input="/LoansWebPages/NPASummary.jsp"></action>
+  <action path="/Loans/NPALoanSummary" type="com.scb.loans.action2.LoanAction2" name="NPALoanSummary" input="/LoansWebPages/NPASummary.jsp"></action>
+  
+  <action path="/Loans/PenalIntFixMenu" type="com.scb.loans.actions.LoanAction" name="PenalIntFix" input="/LoansWebPages/PenalIntFix.jsp"></action>
+  <action path="/Loans/PenalIntFix" type="com.scb.loans.actions.LoanAction" name="PenalIntFix" input="/LoansWebPages/PenalIntFix.jsp"></action>
+  
+  
+  <action path="/Loans/ActionDueReportMenu" type="com.scb.loans.actions.LoanAction" name="ActionDueReport" input="/LoansWebPages/ActionDueReport.jsp"></action>
+  <action path="/Loans/ActionDueReport" type="com.scb.loans.actions.LoanAction" name="ActionDueReport" input="/LoansWebPages/ActionDueReport.jsp"></action>
+  
+  <action path="/Loans/LoanDefaultProcessingMenu" type="com.scb.loans.actions.LoanAction" name="LoanDefaulter" input="/LoansWebPages/LoanDefaulterProcessing.jsp"></action>
+  <action path="/Loans/LoanDefaultProcessing" type="com.scb.loans.actions.LoanAction" name="LoanDefaulter" input="/LoansWebPages/LoanDefaulterProcessing.jsp"></action>
+  
+  <action path="/Loans/LoanDocsUpdation" type="com.scb.loans.action2.LoanAction2" name="LoanDocsUpdation" input="/LoansWebPages/LoanDocsUpdation.jsp"></action>
+  <action path="/Loans/LoanDocsUpdationMenu" type="com.scb.loans.action2.LoanAction2" name="LoanDocsUpdation" input="/LoansWebPages/LoanDocsUpdation.jsp"></action>
+  
+  
+  <action path="/Loans/LoanLeadgerMenu" type="com.scb.loans.action2.LoanAction2" name="LoanLeadger" input="/LoansWebPages/LoanLeadger.jsp"></action>
+   <action path="/Loans/LoanLeadger" type="com.scb.loans.action2.LoanAction2" name="LoanLeadger" input="/LoansWebPages/LoanLeadger.jsp"></action>
+  
+  <action path="/Loans/LoanMeetingAgenda" type="com.scb.loans.action2.LoanAction2" name="LoanMeetingAgenda" input="/LoansWebPages/LoanMeetingAgenda.jsp"></action>
+  <action path="/Loans/LoanMeetingAgendaMenu" type="com.scb.loans.action2.LoanAction2" name="LoanMeetingAgenda" input="/LoansWebPages/LoanMeetingAgenda.jsp"></action>
+  
+  <action path="/Loans/LoanSplIntRateUpdn" type="com.scb.loans.action2.LoanAction2" name="LoanSplIntRateUpdn" input="/LoansWebPages/LoanSplIntRateUpdn.jsp"></action>
+  <action path="/Loans/LoanSplIntRateUpdnMenu" type="com.scb.loans.action2.LoanAction2" name="LoanSplIntRateUpdn" input="/LoansWebPages/LoanSplIntRateUpdn.jsp"></action>
+  
+	
+  <action path="/Loans/PSWSProcessingMenu" type="com.scb.loans.action2.LoanAction2" name="PSWSProcessing" input="/LoansWebPages/PSWSProcessing.jsp"></action>
+  <action path="/Loans/PSWSProcessing" type="com.scb.loans.action2.LoanAction2" name="PSWSProcessing" input="/LoansWebPages/PSWSProcessing.jsp"></action>
+          
+  <action path="/Loans/PSWSSchedule" type="com.scb.loans.action2.LoanAction2" name="PSWSSchedule" input="/LoansWebPages/PSWSSchedule.jsp"></action>        
+  <action path="/Loans/PSWSScheduleMenu" type="com.scb.loans.action2.LoanAction2" name="PSWSSchedule" input="/LoansWebPages/PSWSSchedule.jsp"></action>
+      
+  <action path="/Loans/JewelReportMenu" type="com.scb.loans.action2.LoanAction2" name="JewelReport" input="/LoansWebPages/JewelReport.jsp"></action>
+  <action path="/Loans/JewelReport" type="com.scb.loans.action2.LoanAction2" name="JewelReport" input="/LoansWebPages/JewelReport.jsp"></action>
+  	   
+  <action path="/Loans/DCBScheduling" type="com.scb.loans.action2.LoanAction2" name="DCBScheduling" input="/LoansWebPages/DCBScheduling.jsp"></action>
+  <action path="/Loans/DCBSchedulingMenu" type="com.scb.loans.action2.LoanAction2" name="DCBScheduling" input="/LoansWebPages/DCBScheduling.jsp"></action>
+  
+  <action path="/Loans/DCBSummaryMenu" type="com.scb.loans.action2.LoanAction2" name="DCBScheduling" input="/LoansWebPages/DCBSummary.jsp"></action>
+  <action path="/Loans/DCBSummary" type="com.scb.loans.action2.LoanAction2" name="DCBScheduling" input="/LoansWebPages/DCBSummary.jsp"></action>
+  
+  <action path="/Loans/DCBMaintenanceMenu" type="com.scb.loans.action2.LoanAction2" name="DCBMaintenance" input="/LoansWebPages/DCBMaintenance.jsp"></action>
+  <action path="/Loans/DCBMaintenance" type="com.scb.loans.action2.LoanAction2" name="DCBMaintenance" input="/LoansWebPages/DCBMaintenance.jsp"></action>
+  
+  <action path="/Loans/DCBProcessMenu" type="com.scb.loans.action2.LoanAction2" name="DCBProcess" input="/LoansWebPages/DCBProcess.jsp">
+  </action>
+  <action path="/Loans/DCBProcess" type="com.scb.loans.action2.LoanAction2" name="DCBProcess" input="/LoansWebPages/DCBProcess.jsp"></action>
+  
+  
+  <action path="/Loans/NPAProcessMenu" type="com.scb.loans.action2.LoanAction2" name="NPAProcess" input="/LoansWebPages/NPAProcessing.jsp"></action>
+  <action path="/Loans/NPAProcess" type="com.scb.loans.action2.LoanAction2" name="NPAProcess" input="/LoansWebPages/NPAProcessing.jsp"></action>
+  
+  <action path="/Loans/NPAAdminMenu" type="com.scb.loans.action2.LoanAction2" name="NPAAdmin" input="/LoansWebPages/NPAAdminTryPage.jsp"></action>
+  <action path="/Loans/NPAAdmin" type="com.scb.loans.action2.LoanAction2" name="NPAAdmin" input="/LoansWebPages/NPAAdminTryPage.jsp"></action>
+  <action path="/Loans/AutomaticRecoveryMenu" type="com.scb.loans.action2.LoanAction2" name="AutomaticRecovery" input="/LoansWebPages/AutomaticRecovery.jsp"></action>
+  <action path="/Loans/AutomaticRecovery" type="com.scb.loans.action2.LoanAction2" name="AutomaticRecovery" input="/LoansWebPages/AutomaticRecovery.jsp"></action>
+  <action path="/Loans/LoanAdminMenu" type="com.scb.loans.actions.LoanAction" name="LoanAdmin" input="/LoansWebPages/LoanAdmin.jsp"></action>
+  <action path="/Loans/LoanAdmin" type="com.scb.loans.actions.LoanAction" name="LoanAdmin" input="/LoansWebPages/LoanAdmin.jsp"></action>
+  
+  
+  <action path="/Loans/SanctioningMenu" type="com.scb.loans.actions.LoanAction" name="Sanction" input="/LoansWebPages/Sanctioning.jsp"></action>
+  <action path="/Loans/Sanctioning" type="com.scb.loans.actions.LoanAction" name="Sanction" input="/LoansWebPages/Sanctioning.jsp"></action>
+  
+  <action path="/Loans/SanctionVerifyMenu" type="com.scb.loans.actions.LoanAction" name="Sanction" input="/LoansWebPages/LoanSanctionVerify.jsp"></action>
+  <action path="/Loans/SanctionVerify" type="com.scb.loans.actions.LoanAction" name="Sanction" input="/LoansWebPages/LoanSanctionVerify.jsp"></action>
+  
+  <!-- Changes in Suma -->
+   <action path="/Loans/SanctionNDisbursement" type="com.scb.loans.actions.LoanAction" name="SanctionNDis" input="/LoansWebPages/SanctionNDis.jsp"></action>
+  	
+   <action path="/Loans/DisbursementMenu" 
+   		   type="com.scb.loans.action2.LoanAction2" 
+   		   name="DisbursementForm" 
+   		   input="/LoansWebPages/Disbursement.jsp">
+   </action>
+   <action path="/Loans/Disbursement" 
+   		   type="com.scb.loans.action2.LoanAction2" 
+   		   name="DisbursementForm" 
+   		   input="/LoansWebPages/Disbursement.jsp">
+   </action>
+  
+  
+  <action path="/Loans/DisbursementVerifyMenu" 
+   		   type="com.scb.loans.action2.LoanAction2" 
+   		   name="DisbursementForm" 
+   		   input="/LoansWebPages/DisbursementVerify.jsp">
+   </action>
+   
+   <action path="/Loans/DisbursementVerify" 
+   		   type="com.scb.loans.action2.LoanAction2" 
+   		   name="DisbursementForm" 
+   		   input="/LoansWebPages/DisbursementVerify.jsp">
+   </action>
+  	<action path="/Loans/LoanAdminNewMenu"
+  			type="com.scb.loans.actions.LoanAction"
+  			name="LoanAdmin"
+  			input="/LoansWebPages/LoanAdminNew.jsp">
+  	
+  	</action>
+  
+  	<action path="/Loans/LoanAdminNew"
+  			type="com.scb.loans.actions.LoanAction"
+  			name="LoanAdmin"
+  			input="/LoansWebPages/LoanAdminNew.jsp">
+  	</action>
+  	<action path="/Loans/RelativeDetails"
+  			type="com.scb.loans.actions.LoanAction"
+  			name="LoanAppln"
+  			input="/LoansWebPages/LoanApplicationDE.jsp">
+  	</action>
+  
+  
+  <!--************************tags ended by vinay for Loan module************************-->
+  
+      
+  
+  
+           <!--Tags added by sangeeta  -->
+
+<action path="/Pygmy/AgentOpeningMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AgentOpeningForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+            <action path="/Pygmy/AgentOpening" name="AgentOpeningForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/AgentOpening.jsp">
+            </action>
+
+            <action path="/pygmy/person" name="PersonalForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/AgentOpening.jsp">
+            <forward name="done" path="/CommonWebPages/Layout.jsp"></forward>
+            </action>
+			
+			<action path="/Pygmy/PygmyOpeningMenu" type="com.scb.pd.actions.AgentOpeningAction" name="PygmyOpeningForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+            <action path="/Pygmy/PygmyOpening" name="PygmyOpeningForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/PygmyOpening.jsp">
+            </action>
+			
+			<action path="/Pygmy/PygmyWithdrawalMenu" type="com.scb.pd.actions.AgentOpeningAction" name="PygmyWithdrawalForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+        	<action path="/Pygmy/PygmyWithdrawal" name="PygmyWithdrawalForm" type="com.scb.pd.actions.AgentOpeningAction" input="/PygmyDepositWebPages/PygmyWithdrawal.jsp">
+			</action>
+			
+			<action path="/Pygmy/OpenCloseMenu" type="com.scb.pd.actions.AgentOpeningAction" name="OpenCloseForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/OpenCloseReport" name="OpenCloseForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/OpenClose.jsp">
+			</action>	
+			
+            <action path="/Pygmy/AgentRemittanceMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AgentRemittanceForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/AgentRemittanceReport" name="AgentRemittanceForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/AgentRemittanceReport.jsp">
+			</action>	
+			
+			
+			
+                   
+            <action path="/Pygmy/InterestRegisteredMenu" type="com.scb.pd.actions.AgentOpeningAction" name="InterestRegiForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/InterestRegistered" name="InterestRegiForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/InterestRegisteredReport.jsp">
+			</action>
+
+        	<action path="/Pygmy/MonthlyRemittanceMenu" type="com.scb.pd.actions.AgentOpeningAction" name="MonthlyRemittanceForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/MonthlyRemittance" name="MonthlyRemittanceForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/MonthlyRemittanceReport.jsp">
+			</action>
+			
+			<action path="/Pygmy/PassBookMenu" type="com.scb.pd.actions.AgentOpeningAction" name="PassBookForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/PassBook" name="PassBookForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/PygmyPassBook.jsp">
+			</action>
+			
+			<action path="/Pygmy/RegisterPrintingMenu" type="com.scb.pd.actions.AgentOpeningAction" name="RegisterPrintForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/RegisterPrint" name="RegisterPrintForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/RegisteredPrinting.jsp">
+			</action>
+			
+				
+			<action path="/Pygmy/AgentClosingMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AgentClosingForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/AgentClosing" name="AgentClosingForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/AgentClosing.jsp">
+			</action>
+			
+			<action path="/Pygmy/AgentClosingVerMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AgentClosingForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/AgentClosing" name="AgentClosingForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/AgentCloseVerification.jsp">
+			</action>
+			
+			<action path="/Pygmy/PygmyInterestCalculationMenu" type="com.scb.pd.actions.AgentOpeningAction" name="PygmyInterestCalForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/PygmyInterestCal" name="PygmyInterestCalForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/PygmyInterestCalculation.jsp">
+			</action>
+			
+			<action path="/Pygmy/LedgerPrintingMenu" type="com.scb.pd.actions.AgentOpeningAction" name="LedgerPrintingForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/LedgerPrinting" name="LedgerPrintingForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/LedgerPrinting.jsp">
+			</action>
+			
+			<action path="/Pygmy/AcknowledgementMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AcknowledgementForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/Acknowledgement" name="AcknowledgementForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/Acknowledgement.jsp">
+			</action>
+			
+			<action path="/Pygmy/AgentCommissionMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AgentCommissionForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/AgentCommission" name="AgentCommissionForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/AgentCommissionRate.jsp">
+			</action>
+			
+			<action path="/Pygmy/DailyRemittanceMenu" type="com.scb.pd.actions.AgentOpeningAction" name="DailyRemittanceForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/DailyRemittance" name="DailyRemittanceForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyDepositWebPages/DailyRemittance.jsp">
+			</action>
+			
+			
+			
+			<action path="/Pygmy/AgentUpdateMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AgentUpdateForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/AgentUpdate" name="AgentUpdateForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/AgentMasterUpdate.jsp">
+			</action>
+			
+			
+			
+			<action path="/Pygmy/PygmyUpdateMenu" type="com.scb.pd.actions.AgentOpeningAction" name="PygmyUpdateForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/PygmyUpdate" name="PygmyUpdateForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyMasterUpdate.jsp">
+			</action>
+			
+			<action path="/Pygmy/PygmyIntMenu" type="com.scb.pd.actions.AgentOpeningAction" name="PygmyIntForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			
+			<action path="/Pygmy/PygmyInt" name="PygmyIntForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/PygmyIntRate.jsp">
+			</action>
+			
+			<action path="/Pygmy/PUpdateMenu" type="com.scb.pd.actions.AgentOpeningAction" name="PUpdateRef" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/PUpdate" name="PUpdateRef" type="com.scb.pd.actions.AgentOpeningAction"  input="/PUpdate.jsp">
+			</action>
+			
+			<action path="/Pygmy/AgentChangeMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AgentChangeForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/AgChange" name="AgentChangeForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/AgChange.jsp">
+			</action>
+			
+			<action path="/Pygmy/AgentChangeVerMenu" type="com.scb.pd.actions.AgentOpeningAction" name="AgentChangeForm" input="/CommonWebPages/Menu.jsp">
+            </action>
+			<action path="/Pygmy/AgChange" name="AgentChangeForm" type="com.scb.pd.actions.AgentOpeningAction"  input="/AgChangeVer.jsp">
+			</action>
+			
+             <!-- Pygmy tags end-->
+
+
+
+            <!--Action tags added by renu(BackOffice)-->
+
+        
+   
+        <action path="/BackOffice/SIEntryMenu" type="com.scb.bk.actions.BackOfficeAction" name="SIEntryMenu" input="/CommonWebPages/Menu.jsp">
+           
+        </action>
+        
+        <action path="/BackOffice/SIEntry" type="com.scb.bk.actions.BackOfficeAction" name="SIEntry" input="/BackOfficeWebPages/SIEntry.jsp">
+            
+        </action>
+
+        <action path="/BackOffice/SIDeleteMenu" type="com.scb.bk.actions.BackOfficeAction" name="SIDeleteMenu" input="/CommonWebPages/Menu.jsp">
+             
+        </action>
+        
+        <action path="/BackOffice/SIDelete" type="com.scb.bk.actions.BackOfficeAction" name="SIDelete" input="/BackOfficeWebPages/SIDeletion.jsp">
+             
+         </action>
+
+        
+        
+        <action path="/BackOffice/UnPresentedChequesMenu" type="com.scb.bk.actions.BackOfficeAction" name="UnPresentedChequesMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/UnPresentedCheques" type="com.scb.bk.actions.BackOfficeAction" name="UnPresentedChequesForm" input="/BackOfficeWebPages/UnPresentedCheques.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/ChequeRegisterPrintingReportMenu" type="com.scb.bk.actions.BackOfficeAction" name="ChequeRegisterPrintingReportMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/ChequeRegisterPrintingReport" type="com.scb.bk.actions.BackOfficeAction" name="ChequeRegisterPrintingReportForm" input="/BackOfficeWebPages/ChequeRegisterPrintingReport.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/OpenedClosedAccountsPrintingReportMenu" type="com.scb.bk.actions.BackOfficeAction" name="OpenedClosedAccountsPrintingReportMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/OpenedClosedAccountsPrintingReport" type="com.scb.bk.actions.BackOfficeAction" name="OpenedClosedAccountsPrintingReportForm" input="/BackOfficeWebPages/OpenedClosedAccountsPrintingReport.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIQueryMenu" type="com.scb.bk.actions.BackOfficeAction" name="SIQueryMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIQuery" type="com.scb.bk.actions.BackOfficeAction" name="SIQueryForm" input="/BackOfficeWebPages/SIQuery.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIRegisterMenu" type="com.scb.bk.actions.BackOfficeAction" name="SIRegisterMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIRegister" type="com.scb.bk.actions.BackOfficeAction" name="SIRegisterForm" input="/BackOfficeWebPages/SIRegister.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIDueDoneMenu" type="com.scb.bk.actions.BackOfficeAction" name="SIDueDoneMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIDueDone" type="com.scb.bk.actions.BackOfficeAction" name="SIDueDoneForm" input="/BackOfficeWebPages/SIDueDone.jsp">
+            
+        </action>
+        
+ 
+        
+        <action path="/BackOffice/VoucherScheduleMenu" type="com.scb.bk.actions.BackOfficeAction" name="VoucherScheduleMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/VoucherSchedule" type="com.scb.bk.actions.BackOfficeAction" name="VoucherScheduleForm" input="/BackOfficeWebPages/VoucherSchedule.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/TransactionSummaryMenu" type="com.scb.bk.actions.BackOfficeAction" name="TransactionSummaryMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/TransactionSummary" type="com.scb.bk.actions.BackOfficeAction" name="TransactionSummaryForm" input="/BackOfficeWebPages/TransactionSummary.jsp">
+            
+        </action>
+        
+         <action path="/BackOffice/SBCALedgerMenu" type="com.scb.bk.actions.BackOfficeAction" name="SBCALedgerMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SBCALedger" type="com.scb.bk.actions.BackOfficeAction" name="SBCALedgerForm" input="/BackOfficeWebPages/SBCALedger.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/ClosingBalanceReportMenu" type="com.scb.bk.actions.BackOfficeAction" name="ClosingBalanceReportMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/ClosingBalanceReport" type="com.scb.bk.actions.BackOfficeAction" name="ClosingBalanceReportForm" input="/BackOfficeWebPages/ClosingBalanceReport.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/ClosingBalanceSummaryMenu" type="com.scb.bk.actions.BackOfficeAction" name="ClosingBalanceSummaryMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/ClosingBalanceSummary" type="com.scb.bk.actions.BackOfficeAction" name="ClosingBalanceSummaryForm" input="/BackOfficeWebPages/ClosingBalanceSummary.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIParametersMenu" type="com.scb.bk.actions.BackOfficeAction" name="SIParametersMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIParameters" type="com.scb.bk.actions.BackOfficeAction" name="SIParametersForm" input="/BackOfficeWebPages/SIParameters.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIExecutionMenu" type="com.scb.bk.actions.BackOfficeAction" name="SIExecutionMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+        <action path="/BackOffice/SIExecution" type="com.scb.bk.actions.BackOfficeAction" name="SIExecutionForm" input="/BackOfficeWebPages/SIExecution.jsp">
+            
+        </action>
+        
+        
+        
+     <action path="/BackOffice/PaymentVoucherMenu" type="com.scb.bk.actions.BackOfficeAction" name="PaymentVoucherMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+     <action path="/BackOffice/PaymentVoucher" type="com.scb.bk.actions.BackOfficeAction" name="PaymentVoucherForm" input="/BackOfficeWebPages/PaymentVoucher.jsp">
+            
+        </action>   
+        
+        
+     <action path="/BackOffice/OdccbalMenu" type="com.scb.bk.actions.BackOfficeAction" name="OdccbalMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+     <action path="/BackOffice/Odccbal" type="com.scb.bk.actions.BackOfficeAction" name="OdccbalForm" input="/BackOfficeWebPages/Odccbal.jsp">
+            
+        </action>      
+        
+      
+      
+      <action path="/BackOffice/TransferVoucherMenu" type="com.scb.bk.actions.BackOfficeAction" name="TransferVoucherMenu" input="/CommonWebPages/Menu.jsp">
+            
+        </action>
+        
+     <action path="/BackOffice/TransferVoucher" type="com.scb.bk.actions.BackOfficeAction" name="TransferVoucherForm" input="/BackOfficeWebPages/TransferVoucher.jsp">
+            
+        </action>    
+        
+        
+        
+        
+
+         
+         <!--Action tags ended by renu(BackOffice)-->
+
+
+       
+        <!--###################Action Tags Added By MANU(for lockers)#################-->
+		<action path="/manumenulink" type="com.scb.lk.actions.LockerAction" name="manumenuref" input="/CommonWebPages/Menu.jsp">
+		</action>
+		
+		<action path="/manulink" type="com.scb.lk.actions.LockerAction" name="manuref" input="/LockerWebPages/LockerSurrender.jsp">
+		</action>
+		
+
+
+        <action path="/LKSurrenderMenuLink" type="com.scb.lk.actions.LockerAction" name="LKMenuRef" input="/CommonWebPages/CBSMenu.jsp">
+        </action>
+		
+		
+        <action path="/LockerSurrenderLink" type="com.scb.lk.actions.LockerAction" name="LockerSurrenderRef" input="/LockerWebPages/LockerSurrender.jsp">
+        </action>
+
+            <!--LockerTypes-->
+           <action path="/LKTypesMenuLink" name="LockerTypesRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+            </action>
+
+           <action path="/LKTypesLink" name="LockerTypesRef1" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+           </action>
+           
+         <action path="/LKOperationMenuLink" name="LockerOperationRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerOperation.jsp">
+            <forward name="layout" path="/CommonWebPages/Layout.jsp"></forward>
+            <forward name="Success" path="/LockerWebPages/Success.jsp"></forward>
+          </action>
+        
+          <action path="/LKopLink" name="LKopRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerOperation.jsp">
+             <forward name="layout" path="/CommonWebPages/Layout.jsp"></forward>
+          </action>
+          
+    	   
+        
+        
+          <action path="/LKExtensionMenuLink" name="LKExtensionRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerExtension.jsp">
+             <forward name="layout" path="/CommonWebPages/Layout.jsp"></forward>
+          </action> 
+        
+        <action path="/LKExtensionLink" name="LKExtensionRef1" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerExtension.jsp">
+             <forward name="layout" path="/CommonWebPages/Layout.jsp"></forward>
+          </action> 
+          
+         
+         
+          <action path="/LKIssueMenuLink" name="LKIssueRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+          </action>
+          
+          <action path="/LKIssueLink" name="LKIssueRef1" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+             <!-- <forward name="layout" path="/CommonWebPages/Layout.jsp"></forward> -->
+          </action>
+          
+          
+          
+ 		<action path="/LockerDEMenuLink" name="LockerDEMenuRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+        <action path="/LockerDELink"   name="LockerDEMenuRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerDE.jsp">
+        </action>
+         
+        
+        <action path="/LockerDataEntryMenuLink" name="LockerDataEntryMenuRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+        <action path="/LockerDataEntryLink"   name="LockerDataEntryMenuRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerDataEntry.jsp">
+        </action>
+        
+        
+        
+         <action path="/LKTableMenuLink" name="LKTableMRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+         <action path="/LKTableLink"   name="LKTableRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerTable.jsp">
+         </action>
+         
+        
+        <action path="/LockerOwnerReportMLink" name="LockerOwnerReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+         <action path="/LockerOwnerReportLink"   name="LockerOwnerReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerOwnerReport.jsp">
+         </action>
+         
+         <action path="/LockerOperationReportMLink" name="LockerOperationReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+         <action path="/LockerOperationReportLink"   name="LockerOperationReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerOpearationReport.jsp">
+         </action>
+         
+         
+         <action path="/LockerOpenClosedReportMLink" name="OpenClosedReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+         <action path="/LockerOpenClosedReportLink"   name="OpenClosedReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerOpenClosedReport.jsp">
+         </action>
+
+          
+        <action path="/LKTableMenuLink" name="LKTableMRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+         <action path="/LKTableLink"   name="LKTableRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerTable.jsp">
+         </action>
+
+		<action path="/LKAutoExtensionMenuLink" name="LKAutoExtensionRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+         <action path="/LKAutoExtensionLink"   name="LKAutoExtensionRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerAutoExtension.jsp">
+         </action>
+
+           <action path="/LockerRentDueReportMLink" name="LockerRentDueReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+        	 <action path="/LockerRentDueReportLink"   name="LockerRentDueReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerRentDueReport.jsp">
+   			 </action>
+         
+          <action path="/LockerRentCollectedReportMLink" name="LockerRentCollectedReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+        </action>
+         <action path="/LockerRentCollectedReportLink"   name="LockerRentCollectedReportRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerRentCollectedReport.jsp">
+         </action>
+         
+          <action path="/LKPassBookMLink"   name="LKPassBookRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+         </action>
+          <action path="/LKPassBookLink"   name="LKPassBookRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerPassBook.jsp">
+         </action>
+         
+          <action path="/RateAdminMLink"   name="RateAdminRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+         </action>
+          <action path="/RateAdminLink"   name="RateAdminRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/RateAdmin.jsp">
+         </action>
+         
+          <action path="/LKRemainderNoticeMLink"   name="remainderNoticeRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+         </action>
+          <action path="/LKRemainderNoticeLink"   name="remainderNoticeRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerRemainderNotice.jsp">
+         </action>
+         
+         
+         <action path="/NotSurrenderedReportMLink"   name="notsurrendedRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/CBSMenu.jsp">
+         </action>
+         <action path="/NotSurrenderedReportLink"   name="notsurrendedRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/NotSurrenderedReport.jsp">
+         </action>
+         
+       
+       
+         <action path="/LKMaserUpdateMLink" name="LKIssueRef" type="com.scb.lk.actions.LockerAction" scope="request" input="CommonWebPages/Menu.jsp">
+          </action>
+          <action path="/LKMaserUpdateLink" name="LKIssueRef" type="com.scb.lk.actions.LockerAction" scope="request" input="LockerWebPages/LockerMasterUpdate.jsp">
+         </action>
+		<!-- Verification forms -->
+     
+     	<action path="/lockers/LockerSurrenderVerificationMLink" name="LockerSurrenderRef"     type="com.scb.lk.actions.LockerAction" scope="request" input="CBSMenu.jsp"></action>
+     	<action path="/lockers/LockerSurrenderVerificationLink"  name="LockerSurrenderRef"     type="com.scb.lk.actions.LockerAction" scope="request" input="LockerSurrenderVerification.jsp"></action>
+		
+        <action path="/lockers/LockerExtensionVerificationMLink" name="LKExtensionRef"     type="com.scb.lk.actions.LockerAction" scope="request" input="CBSMenu.jsp"></action>
+     	<action path="/lockers/LockerExtensionVerificationLink"  name="LKExtensionRef"     type="com.scb.lk.actions.LockerAction" scope="request" input="LockerExtensionNew.jsp"></action>
+      
+      
+        <action path="/lockers/LockerOperationVerificationMLink" name="LKopRef"     type="com.scb.lk.actions.LockerAction" scope="request" input="CBSMenu.jsp"></action>
+     	<action path="/lockers/LockerOperationVerificationLink"  name="LKopRef"     type="com.scb.lk.actions.LockerAction" scope="request" input="LockerOperationVerification.jsp"></action>
+		
+		
+		<action path="/lockers/LockerIssueVerificationMLink" name="LKIssueRef"     type="com.scb.lk.actions.LockerAction" scope="request" input="CBSMenu.jsp"></action>
+     	<action path="/lockers/LockerIssueVerificationLink"  name="LKIssueRef"     type="com.scb.lk.actions.LockerAction" scope="request" input="LockerIssueVerification.jsp"></action>
+		
+      
+        <!-- End of Verification forms -->
+      
+
+          <!--########################Action Tags Ended By MANU(for lockers)##########-->
+
+
+<!--********************* start of Common Action Mappings *******************************-->
+        <action path="/Common/JointHolder" name="JointHolderForm" type="com.scb.common.actions.JointHoldersAction" scope="request" input="/CommonWebPages/JointHolders.jsp">
+              <forward name="success" path="/CommonWebPages/Layout.jsp"></forward>
+              <forward name="error" path="/CommonWebPages/Layout.jsp"></forward>
+        </action>
+        <action path="/Common/Nominee" name="NomineeForm" type="com.scb.common.actions.NomineeAction" scope="request" input="/CommonWebPages/Nominee.jsp">
+              <forward name="success" path="/CommonWebPages/Layout.jsp"></forward>
+              <forward name="error" path="/CommonWebPages/Layout.jsp"></forward>
+        </action>
+
+<!--********************* start of Common Action Mappings *******************************-->
+
+<!--********************* start of FrontCounet Action Mappings *******************************-->
+          <action path="/GL/GLTrayListMenu" name="TrayList" type="com.scb.gl.actions.GLAction" scope="request" input="/Menu.jsp">
+          </action>
+          
+          <action path="/GL/GLTrayList" name="TrayList" type="com.scb.gl.actions.GLAction" scope="request" input="/Menu.jsp">
+          </action>
+          
+          
+          <action path="/FrontCounter/unverifiedtokens" name="unverifiedtokens" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          
+          <action path="/FrontCounter/SBUpdationMenu" name="SBUpdation" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          <action path="/FrontCounter/SBUpdation" name="SBUpdation" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          <action path="/FrontCounter/OdccUpdationMenu" name="ODCCUpdation" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          <action path="/FrontCounter/OdccUpdation" name="ODCCUpdation" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          
+          <action path="/FrontCounter/TestMenu" name="Test" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          <action path="/FrontCounter/Test" name="Test" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          
+          
+          <action path="/FrontCounter/EmpDetailsMenu" name="EmpDetails" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          <action path="/FrontCounter/EmpDetails" name="EmpDetails" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+                   
+          <action path="/FrontCounter/JointHolders" name="JointHolders" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          <action path="/FrontCounter/Sign" name="SignInstruction" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+ 
+          <action path="/FrontCounter/JointHoldersUpdationMenu" name="JointHoldersUpdation" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+          <action path="/FrontCounter/JointHoldersUpdation" name="JointHoldersUpdation" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          </action>
+         
+         
+         
+          <action path="/FrontCounter/SBOpeningMenu" name="SBOpeningForm" type="com.scb.fc.actions.FrontCounterAction2" scope="request" input="/Menu.jsp">
+          </action>
+          <action path="/FrontCounter/SBOpening" name="SBOpeningForm" type="com.scb.fc.actions.FrontCounterAction2" scope="request" input="/Menu.jsp">
+          </action>
+          
+          <action path="/FrontCounter/ReceiptDetails" name="ReceiptDetailForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/ReceiptDetails.jsp">
+          </action>
+          <action path="/FrontCounter/Signature" name="fcsign" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/SignatureInst.jsp">
+          </action>
+          
+          <action path="/FrontCounter/SignCombo" name="Common/signCombo" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/SignatureInstructionCombo.jsp">
+          </action> 
+          <action path="/FrontCounter/ODCCApplicationEntryMenu" name="odccApplicationEntry" type="com.scb.fc.actions.FrontCounterAction2" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdccApplication" name="odccApplicationEntry" type="com.scb.fc.actions.FrontCounterAction2" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdccSanctionMenu" name="odccSanction" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdccSanction" name="odccSanction" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/ViewLogMenu" name="ViewLogForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp" ></action>
+          <action path="/FrontCounter/ViewLogfc" name="ViewLogForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/CCPeriodMenu" name="fcCcForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/CCPeriod" name="fcCcForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action> 
+          <action path="/FrontCounter/InOpProcessMenu" name="InOpForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/InOpProcess" name="InOpForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/ChqWithdrawMenu" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/ChqWithdraw" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp">
+          	<forward name="AcountBal" path="/FCAccntBal.jsp"></forward>
+          </action>
+          <action path="/FrontCounter/ChqIssueMenu" name="chqissue" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/ChequeIssue" name="chqissue" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/ChqQueryMenu" name="chqqueryForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/ChqQuery" name="chqqueryForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/ChequeInstructionMenu" name="chqInstForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/ChequeInstruction" name="chqInstForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PoDeMenu" name="podeForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PoDe" name="podeForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PoCoMenu" name="consolPO" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PoCo" name="consolPO" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PoInsMenu" name="poInstForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PoIns" name="poInstForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PassbookMenu" name="fcPassBookForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/Passbook" name="fcPassBookForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PassSheetMenu" name="passSheetForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PassSheet" name="passSheetForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/InterestCalcMenu" name="fcInterestCalc" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/InterestCalc" name="fcInterestCalc" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/IntRegMenu" name="intRegForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/IntReg" name="intRegForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/InterestPostingMenu" name="fcintposting" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/IntPost" name="fcintposting" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/SBCAUpdtMenu" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/SBCAUpdt" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action><action path="/FrontCounter/IntPostMenu" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdCcMastUpdtMenu" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action><action path="/FrontCounter/IntPostMenu" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdCcMastUpdt" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action><action path="/FrontCounter/IntPostMenu" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdCcTabUpdtMenu" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdCcTabUpdt" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/JntHoldUpdtMenu" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/JntHoldUpdt" name="chqForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/SbCaAdminMenu" name="sbCaAdminForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/SbCaAdmin" name="sbCaAdminForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdCcAdminMenu" name="odCcAdminForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdCcAdmin" name="odCcAdminForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PayOrdAdminMenu" name="PayOrderForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/PayOrdAdmin" name="PayOrderForm" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/AccountCloseMenu" name="AccountClosing" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/AccountClosing" name="AccountClosing" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/odccApplicationDetails" name="odccApplicationDetails" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/odccApplicationDetails.jsp"></action>
+          <action path="/FrontCounter/EmploymentDetails" name="odccEmploymentDetails" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/employmentDetails.jsp"></action>
+          <action path="/FrontCounter/LoanAndShareDetails" name="odccLoanAndShareDetails" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/loanAndShareDetails.jsp"></action>
+          <action path="/FrontCounter/OdccReceiptDetails" name="odccReceiptDetails" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/receiptDet.jsp">
+          <forward name="receipt" path="/receiptDet.jsp"/>
+          </action>
+          
+          <action path="/FrontCounter/PersonalDetails" name="fcPersonal" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/PersonalDetails.jsp"></action>
+          <action path="/FrontCounter/VerifyChqWithdraw" name="verifychq" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/VerifyChqWithdrawMenu" name="verifychq" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         
+         <action path="/FrontCounter/InterestRegisterMenu" name="fcintregister" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/InterestRegister" name="fcintregister" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/VerifySBopenMenu" name="verifySbopen" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/VerifySBopen" name="verifySbopen" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         
+         <action path="/FrontCounter/VerifyPOConsolMenu" name="verifyPOConsol" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/VerifyPOConsol" name="verifyPOConsol" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/ListPOUncashMenu" name="fcuncashedpo" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/ListPOUncash" name="fcuncashedpo" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/ListPOCrMenu" name="fcpomake" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/ListPOMake" name="fcpomake" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         
+         <action path="/FrontCounter/ListPOConsolReportMenu" name="fcpoconsolreport" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/ListPOConsol" name="fcpoconsolreport" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         
+         <action path="/FrontCounter/ListPOCashedMenu" name="fcpocashedreport" type="com.scb.fc.actions.FrontCounterAction2" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/ListPOCashed" name="fcpocashedreport" type="com.scb.fc.actions.FrontCounterAction2" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/VerifyODCCOpenMenu" name="fcverifyodcc" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/VerifyODCCOpen" name="fcverifyodcc" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/VerifyFCChqwithdrawalMenu" name="fcverifyCheque" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/VerifyFCChqwithdrawal" name="fcverifyCheque" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+          <action path="/FrontCounter/OdccSbcaUpdationMenu" name="updateodccsbca" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         <action path="/FrontCounter/OdccSbcaUpdation" name="updateodccsbca" type="com.scb.fc.actions.FrontCounterAction" scope="request" input="/Menu.jsp"></action>
+         
+         
+          <!--********************* End of FrontCounet Action Mappings *******************************-->
+
+
+<!--********************* start of Shares Action Mappings *******************************-->
+            <action path="/Share/AllotmentMenu" name="AllotmentForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/Share/Allotment" name="AllotmentForm"  type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareAllotment.jsp">
+        </action>
+   
+         <action path="/Share/ShareAllotmentVerificationMenu" name="AllotmentForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp">
+        </action>
+        
+	    <action path="/Share/ShareAllotmentVerification" name="AllotmentForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/VerificationWebPages/ShareAllotmentVerification.jsp">
+        </action>
+
+
+        <!--<action path="/Share/Signature" name="Common/sign" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareAllotment.jsp">
+        </action>-->
+        <action path="/Share/Signature" name="shsign" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/Signature1.jsp">
+        </action>
+        
+        <action path="/Share/ReportMenu" name="AllotmentForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/Menu.jsp">
+        </action>  
+
+          
+        <action path="/Share/Report" name="AllotmentForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/Report.jsp">
+        </action>  
+
+        <action path="/Share/AdditionalAllotmentMenu" name="AddAllotmentForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+          
+        <action path="/Share/AdditionalAllotment" name="AddAllotmentForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/AddAllotment.jsp">
+        </action>
+        
+        <action path="/Share/DividendCalMenu" name="DividendCalc" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/DividendCal" name="DividendCalc" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/DividendCalculation.jsp"></action>
+        
+        <action path="/Share/DividendRegistryMenu" name="DividendRegistry" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/DividendRegistry" name="DividendRegistry" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/DividendRegistry.jsp"></action>
+        
+        
+        <action path="/Share/PassBookMenu" name="PassBook" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/PassBook" name="PassBook" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/SharePassBook.jsp"></action>
+        
+        <action path="/Share/WithdrawalMenu" name="Withdrawal" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/Withdrawal" name="Withdrawal" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareWithdrawal.jsp"></action>
+        
+        <action path="/Share/ShareOpenReportMenu" name="Openreport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/ShareOpenReport" name="Openreport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareOpenReport.jsp"></action>
+        
+        <action path="/Share/ShareCloseReportMenu" name="Closereport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/ShareCloseReport" name="Closereport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareCloseReport.jsp"></action>
+        
+        <action path="/Share/TempShareMenu" name="Tempreport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/TempShare" name="Tempreport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/TempShareReport.jsp"></action>
+        
+        <action path="/Share/PermShareMenu" name="Permreport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/PermShare" name="Permreport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/PermenantShare.jsp"></action>
+        
+        <action path="/Share/Votermenu" name="Voterreport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/Voter" name="Voterreport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/VoterList.jsp"></action>
+        
+        <action path="/Share/ShareRegistryMenu" name="ShareRegistry" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/ShareRegistry" name="ShareRegistry" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareRegistry.jsp"></action>
+
+        <action path="/Share/ShareAllotwithMenu" name="ShareAllotWith" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/ShareAllotwith" name="ShareAllotWith" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareAllotWith.jsp"></action>
+        
+        <action path="/Share/ShareRegistrySumMenu" name="Branchreg" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+        
+        <action path="/Share/ShareRegistrySum" name="Branchreg" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/BranchWiseRegistry.jsp"></action>        
+        
+        <action path="/Share/ShareLedgerMenu" name="Shareledger" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/ShareLedger" name="Shareledger" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareLedger.jsp"></action>
+        
+        <action path="/Share/DividendEntryMenu" name="DividendEntry" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/DividendEntry" name="DividendEntry" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/DividendDataEntry.jsp"></action>
+        
+        <action path="/Share/ConvertTempMenu" name="TempPerm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/ConvertTemp" name="TempPerm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ConvertTemptoPerm.jsp"></action>
+        
+        <action path="/Share/ConvertTempAddMenu" name="TempPerm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/ConvertTempAdd" name="TempPerm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ConvertTemptoPermAdd.jsp"></action>
+        
+        <action path="/Share/ShareDispatchMenu" name="TempPerm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/ShareDispatch" name="TempPerm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareDispatch.jsp"></action>
+        
+        <action path="/Share/RegularizationMenu" name="RegularizationForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/Regularization" name="RegularizationForm" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/Regularization.jsp"></action>
+        
+        <action path="/Share/MasterUpdationMenu" name="MasterUpdation" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/MasterUpdation" name="MasterUpdation" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/MasterUpdation.jsp"></action>
+        
+        <action path="/Share/ViewLogMenu" name="Viewlog" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/ViewLog" name="Viewlog" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ViewLog.jsp"></action>
+        
+        <action path="/Share/DividendReportMenu" name="DividendReport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/DividendReport" name="DividendReport" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/DividendReport.jsp"></action>
+    
+        <action path="/Share/ShareAdminMenu" name="ShareAdmin" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/ShareAdmin" name="ShareAdmin" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareAdmin.jsp"></action>
+        
+        <action path="/Share/ShareDivRateMenu" name="ShareDivrate" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/ShareDivRate" name="ShareDivrate" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/ShareDivrate.jsp"></action>
+          
+        <action path="/Share/CertificateMenu" name="Certificate" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/Certificate" name="Certificate" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/Certificate.jsp"></action>
+        
+        <action path="/Share/UnClaimedDividendNoticeMenu" name="DivNotice" type="com.scb.sh.actions.Allotmentaction" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/UnClaimedDividendNotice" name="DivNotice" type="com.scb.sh.actions.Allotmentaction" input="/ShareWebPages/UnclaimedDivNotice.jsp"></action>
+         
+        <action path="/Share/ChangeofModulesMenu" name="ChangeofModules" type="com.scb.sh.actions.Allotmentaction" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/ChangeofModules" name="ChangeofModules" type="com.scb.sh.actions.Allotmentaction" input="/ShareWebPages/ChangeofModules.jsp"></action> 
+         
+        <action path="/Share/DividendPaymentMenu" name="DivPayment" type="com.scb.sh.actions.Allotmentaction" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/DividendPayment" name="DivPayment" type="com.scb.sh.actions.Allotmentaction" input="/ShareWebPages/DividendPayment.jsp"></action> 
+          
+        <action path="/Share/UnClaimedDividendMenu" name="UnclaimedDiv" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/UnClaimedDividend" name="UnclaimedDiv" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/UnclaimedDivList.jsp"></action>
+        
+        <action path="/Share/NomineeMenu" name="Nominee" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/CommonWebPages/CBSMenu.jsp"></action>
+        
+        <action path="/Share/Nominee" name="Nominee" type="com.scb.sh.actions.Allotmentaction" scope="request" input="/ShareWebPages/Nominee.jsp"></action>
+
+
+<!--********************* End of Shares Action Mappings *******************************-->
+
+<!-- ********tags added  by Geetha -->
+
+     
+
+   <action path="/TermDeposit/LoansSanctionDibursementMenu" name="LoanSancDibus" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+
+    <action path="/TermDeposit/LoansSanctionDibursement" name="LoanSancDibus" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/TermDepositWebPages/LoansSanctionDibursement.jsp"></action>
+   
+
+
+
+
+    <action path="/TermDeposit/TDMailMenu" name="TDmailing" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+
+    <action path="/TermDeposit/EmailSystem" name="TDmailing" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/TermDepositWebPages/LoansSanctionDibursement.jsp"></action>
+
+  	<action path="/Term/Nominee" name="NomineeFourm1" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request"  input="/CommonWebPages/Menu.jsp">
+               	
+ 	</action>
+ 	
+ 	<action path="/TermDeposit/DepositAccountRenewal" name="New_rewnal" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request"></action>
+ 	
+ 	<action path="/TermDeposit/AccountOpeningMenu" name="ApplnDE" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+  	<action path="/TermDeposit/AccountOpening" name="ApplnDE" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/ApplnDataEntry.jsp"></action>
+ 	
+ 	
+ 	
+ 	<action path="/TermDeposit/InterestCalculationMenu" name="InterestCalc" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/InterestCalculation" name="InterestCalc" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/TdInterestCalc.jsp"></action>
+ 	
+ 	<action path="/TermDeposit/TDClosureMenu" name="TDClosure" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/TDClosure" name="TDClosure" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/TDClosure.jsp"></action>
+ 	
+ 	<action path="/TermDeposite/Signature" name="tdsign" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/SignatureInst2.jsp"></action>
+ 	
+ 	
+ 	<action path="/TermDeposit/DepositViewLogMenu" name="DepViewLog" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/DepositViewLog" name="DepViewLog" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/DepositViewLog.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/QueryOnReceiptNoMenu" name="QueryOnReceiptNo" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/QueryOnReceiptNo" name="QueryOnReceiptNo" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/QueryOnReceiptNo.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/AutoRenewalMenu" name="AutoRenewal" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/AutoRenewal" name="AutoRenewal" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/AutoRenewal.jsp"></action>
+ 	
+ 	
+ 	<action path="/TermDeposit/ReceiptPrintingMenu" name="ReceiptPrinting" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/ReceiptPrinting" name="ReceiptPrinting" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/ReceiptPrinting.jsp"></action>
+ 	
+ 	
+ 	
+ 	
+ 		<action path="/TermDeposit/ReceiptUpdationMenu" name="ReceiptUpdation" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/ReceiptUpdation" name="ReceiptUpdation" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/ReceiptUpdation.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/QuarterlyInterestMenu" name="QuarterlyInterest" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/QuarterlyInterest" name="QuarterlyInterest" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/QuarterlyInterest.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/AmmendmentsMenu" name="Ammendments" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/Ammendments" name="Ammendments" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/TdAmmendments.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/AccountRenewalMenu" name="AccountRenewal" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/AccountRenewal" name="AccountRenewal" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/AccountRenewal.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/VoucherPaymentMenu" name="VoucherPayment" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/VoucherPayment" name="VoucherPayment" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/VoucherPayment.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/TDPassbookMenu" name="TDPassbook" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/TDPassbook" name="TDPassbook" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/TDPassbook.jsp"></action>
+ 	
+ 	
+ 		<action path="/TermDeposit/TermDepositRenewalNoticeMenu" name="TermDepositRenewalNotice" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/TermDepositRenewalNotice" name="TermDepositRenewalNotice" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/TermDepositWebPages/TermDepositRenewalNotice.jsp"></action>
+ 	
+ 	
+ 	<action path="/TermDeposit/PeriodwiseReportMenu" name="PeriodwiseReport" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/PeriodwiseReport" name="PeriodwiseReport" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="TermDepositWebPages/PeriodwiseReport.jsp"></action>
+ 	
+ 	<action path="/TermDeposit/QuantumwiseReportMenu" name="QuantumwiseReport" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/QuantumwiseReport" name="QuantumwiseReport" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="TermDepositWebPages/QuantumwiseReport.jsp"></action>
+ 	
+ 	<action path="/TermDeposit/OpenClosedAccountsMenu" name="OpenClosedAccounts" type="com.scb.td.actions.AccountOpeningAction" scope="session" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/OpenClosedAccounts" name="OpenClosedAccounts" type="com.scb.td.actions.AccountOpeningAction" scope="session" input="TermDepositWebPages/OpenClosedAccounts.jsp"></action>
+ 	
+ 	
+ 	<action path="/TermDeposit/AutoRenewalListMenu" name="AutoRenewalList" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/AutoRenewalList" name="AutoRenewalList" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/AutoRenewalList.jsp"></action>
+ 	
+ 	<action path="/TermDeposit/LedgerMenu" name="Ledger" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/Ledger" name="Ledger" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/TdLedger.jsp"></action>
+ 	 		 	
+ 	 	
+ 	<action path="/TermDeposit/MISReportMenu" name="MISReport" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/MISReport" name="MISReport" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/TermDepositWebPages/MISReport.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/MaturityLedgerReportMenu" name="MaturityLedgerReport" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/MaturityLedgerReport" name="MaturityLedgerReport" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/MaturityLedgerReport.jsp"></action>
+ 	
+ 		<action path="/TermDeposit/InterestAccruedReportMenu" name="InterestAccruedReport" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/InterestAccruedReport" name="InterestAccruedReport" type="com.scb.td.actions.AccountOpeningAction" scope="request" input="/TermDepositWebPages/TdInterestAccruedReport.jsp"></action>
+ 	
+ 	<action path="/TermDeposit/AdminMenu" name="DepositAdmin" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input="/CommonWebPages/Menu.jsp"></action>
+ 	<action path="/TermDeposit/Admin" name="DepositAdmin" type="com.scb.td.actions.AccountOpeningActionTwo" scope="request" input=":/TermDepositWebPages/DepositAdmin.jsp"></action>
+ 	
+ 	
+ 	<action path="/TermDeposit/Example1" name="Sumanthdif" type="com.scb.td.actions.ExampleAction" scope="request" >
+ 	<forward name="examexam" path="/TermDepositWebPages/Example1.jsp"></forward>
+ 	</action>
+    
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	 		
+<!--*********TermDeposit ended**************-->
+
+
+ 
+       <!--********************* start of Clearing Action Mappings *******************************-->
+       	
+       	
+       	 <action path="/Clearing/OutStationLetterMLink" name="OutStationLetterRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+       
+         <action path="/Clearing/OutStationLetterLink" name="OutStationLetterRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/OutStationLetter.jsp">
+        </action>
+        
+       	
+       	
+       	
+       	<action path="/Clearing/CombinedChequeMLink" name="CombinedChequeRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CommonWebPages/CBSMenu.jsp">
+       	</action>      
+       	<action path="/Clearing/CombinedChequeLink" name="CombinedChequeRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="CombinedCheque.jsp">
+       	</action>
+       	
+       	<action path="/Clearing/ChequeMenuDeposition" name="chequemenudeposition" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+       
+        <action path="/Clearing/ChequeDeposition" name="chequedeposition" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/ChequeDeposition.jsp">
+        </action>
+        <action path="/Clearing/OutStationChequeMLink" name="outstationcheque" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+       
+         <action path="/Clearing/OutStationChequeLink" name="outstationcheque" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/OutStationCheque.jsp">
+        </action>
+        
+        <action path="/Clearing/BounceReason" name="bounceReason" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/BounceReason.jsp">
+        </action>
+        
+        <action path="/Clearing/InwardstmtMlink" name="Inwardstmt" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+        <action path="/Clearing/Inwardstmt" name="Inwardstmt" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/Inwardstmt.jsp">
+        </action>
+        
+        <action path="/Clearing/Outwardstmtlink" name="Outwardstmt" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+        <action path="/Clearing/Outwardstmt" name="Outwardstmt" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/Outwardstmt.jsp">
+        </action>
+        
+        <action path="/Clearing/RecievedChequeEntryMLink" name="RecievedchequeEntry" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CommonWebPages/CBSMenu.jsp">
+        </action>
+       
+         <action path="/Clearing/RecievedChequeEntryLink" name="RecievedchequeEntry" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/RecievedChequeEntryForm.jsp">
+        </action>
+        
+        <action path="/Clearing/ControlnoDetail" name="ControlNo" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+        <action path="/Clearing/Controlno" name="ControlNo" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/Controlno.jsp">
+        </action>
+        
+        <action path="/Clearing/Bouncedreglink" name="bounced" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+        <action path="/Clearing/Bouncedreg" name="bounced" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/Bouncedreg.jsp">
+        </action>
+        
+        <action path="/Clearing/BouncedletterLink" name="bncletter" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+        <action path="/Clearing/Bouncedletter" name="bncletter" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/Bouncedletter.jsp">
+        </action>
+        
+        <action path="/Clearing/ControlNumbersQueryMlink" name="ControlNumbersQueryRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+        <action path="/Clearing/ControlNumbersQuerylink" name="ControlNumbersQueryRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/ControlNumbersQuery.jsp">
+        </action>
+        
+        <action path="/Clearing/BundledDataEntryMlink" name="BundledDataEntryRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+        
+        <action path="/Clearing/BundledDataEntrylink" name="BundledDataEntryRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/BundledDataEntry.jsp">
+        </action>
+        
+      
+        <action path="/Clearing/unIdentifyMlink" name="unIdentifyRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+                                 
+        <action path="/Clearing/unIdentifylink" name="unIdentifyRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/Unidentify.jsp">
+        </action>
+        <action path="/Clearing/ClearingPostMLink" name="ClearingPostRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+         </action>
+                                 
+         <action path="/Clearing/ClearingPostLink" name="ClearingPostRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/ClearingPost.jsp">
+         </action>
+        
+        
+        <action path="/Clearing/AckReconciliationMlink" name="AckReconciliationRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+                                 
+        <action path="/Clearing/AckReconciliationlink" name="AckReconciliationRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/AckReconciliation.jsp">
+        </action>
+        
+        <action path="/Clearing/ClearingIdentificationM" name="clgidentification" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+                                 
+        <action path="/Clearing/ClearingIdentification" name="clgidentification" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingIdentification.jsp">
+        </action>
+        
+        <action path="/Clearing/ChequeDiscountingMLink" name="chequediscounting" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+        
+        <action path="/Clearing/ChequeDiscountingLink" name="chequediscounting" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ChequeDiscounting.jsp">
+        </action>
+        
+         <action path="/Clearing/MailingChargesMLink" name="MailingChargesRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+                                 
+        <action path="/Clearing/MailingChargesLink" name="MailingChargesRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/MailingCharges.jsp">
+        </action>
+        
+           
+         <action path="/Clearing/LateReturnsMLink" name="LateReturnsRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+         </action>
+                                 
+         <action path="/Clearing/LateReturnsLink" name="LateReturnsRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/LateReturns.jsp">
+         </action>
+         
+       
+         <action path="/Clearing/ackDataEntryMLink" name="ackDataEntryRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+         </action>
+         
+         <action path="/Clearing/ackDataEntryLink" name="ackDataEntryRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/AcknowledgementDataEntry.jsp">
+         </action>
+         
+           <action path="/Clearing/ReceivedECSMLink" name="ReceivedECSRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+         </action>
+        
+          <action path="/Clearing/ReceivedECSLink" name="ReceivedECSRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/ReceivedECS.jsp">
+         </action>
+         
+         <action path="/Clearing/SelectivePostMLink" name="SelectivePostRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp" ></action>
+        
+        <action path="/Clearing/SelectivePostLink"  name="SelectivePostRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/SelectivePost.jsp"></action>
+        
+        <action path="/Clearing/BouncedChequePostMLink"  name="BouncedChequePostRef"  type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp"></action>
+        <action path="/Clearing/BouncedChequePostLink"   name="BouncedChequePostRef"  type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/BouncedChequePost.jsp"></action>
+      
+        <action path="/Clearing/ClearingDispatchMLink"  name="ClearingDispatchRef"  type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp"></action>
+        <action path="/Clearing/ClearingDispathcLink"   name="ClearingDispatchRef"  type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/ClearingDispatch.jsp"></action>
+      
+        <action path="/Clearing/ChequeWithdrawalMlink" name="ChequeWithdrawalRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp" ></action>
+        <action path="/Clearing/ChequeWithdrawalLink"  name="ChequeWithdrawalRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ChequeWithdrawal.jsp"></action>
+      
+      	<action path="/Clearing/AdminMlink" name="AdminRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/CBSMenu.jsp">
+        </action>
+                                 
+        <action path="/Clearing/Admin" name="AdminRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/ClearingWebPages/Admin.jsp">
+        </action>
+      
+       
+       
+        <action path="/DummyLink" name="DummyRef" type="com.scb.clr.actions.ClearingAction" scope="request" input="/Dummy.jsp"></action>
+      
+   
+       <!--********************* end of clearing Action Mappings *******************************-->
+       
+       <!-- ************Start of Admin Action Mappings **************** -->
+
+<action path="/loginnew"  type="com.scb.login.actions.LoginAction" name="LoginForm" input="/Loginnew.jsp">
+        	<forward name="yes" path="/Layout.jsp"></forward>
+        		<forward name="no" path="/Loginnew.jsp"></forward>
+        </action>
+
+<action path="/logout"  type="com.scb.login.actions.LogoutAction">
+ <forward name="thanks" path="/Loginnew.jsp"></forward>
+</action>
+
+
+
+ <action path="/Administrator/CreateUsersMenu" name="CreateUserForm" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/CreateUsers" name="CreateUserForm" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/ChangePwdMenu" name="ChangePasswordForm" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/ChangePwd" name="ChangePasswordForm" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/TerminalsDetailsMenu" name="TerminalsDetailsFBForm" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/TerminalsDetails" name="TerminalsDetailsFBForm" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/UserActivityMenu" name="UserActivityFormBeanForm" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/UserActivity" name="UserActivityFormBeanForm" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/ViewUsersMenu" name="ViewUserFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/ViewUsers" name="ViewUserFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/IpConfMenu" name="IPconfigFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/IpConf" name="IPconfigFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AccessToTerminalsMenu" name="AccesstoTerminalFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AccessToTerminals" name="AccesstoTerminalFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/HolidayMasterMenu" name="HolidayMasterFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/HolidayMaster" name="HolidayMasterFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+
+<action path="/Administrator/AdmShareModuleMenu" name="ShareModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmShareModule" name="ShareModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+    	 
+<action path="/Administrator/AdmSBModuleMenu" name="SBModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmSBModule" name="SBModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmFDModuleMenu" name="FDModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmFDModule" name="FDModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmRDModuleMenu" name="RDModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmRDModule" name="RDModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmPygmyModuleMenu" name="PygmyModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmPygmyModule" name="PygmyModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmCAModuleMenu" name="CAModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmCAModule" name="CAModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmClearingModuleMenu" name="ClearingModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmClearingModule" name="ClearingModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmODModuleMenu" name="ODModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmODModule" name="ODModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmPOModuleMenu" name="POModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmPOModule" name="POModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmCCModuleMenu" name="CCModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmCCModule" name="CCModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AdmRIModuleMenu" name="RDModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AdmRIModule" name="RDModuleFormBean" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/NewAccessRightsMenu" name="newAccessright" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/NewAccessRights" name="newAccessright" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+<action path="/Administrator/AccessRightsforModulesMenu" name="AccessrightMods" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/AccessRightsforModules" name="AccessrightMods" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/TDAccessRightsAction" name="tdAccessrightMods" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/customerAccessRightsAction" name="tdAccessrightMods" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/NewSecurityandAdminMenu" name="newadminsecurity" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/NewSecurityandAdmin" name="newadminsecurity" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/UserRoleAssignmentMenu" name="roleassignment" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/UserRoleAssignment" name="roleassignment" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/FormsDetailMenu" name="formsdetail" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+<action path="/Administrator/FormsDetail" name="formsdetail" type="com.scb.adm.actions.AdministratorAction" scope="request" input="/Menu.jsp"></action>
+
+
+<!-- ************End of Admin Action Mappings **************** -->
+
+       
+       
+        <!--********************* start of GL Action Mappings *******************************-->
+       
+       <action path="/GL/GLDailyPostingMenu" name="dailyposting" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLDailyPosting" name="dailyposting" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLDayCloseMenu" name="DayClose" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLDayClose" name="DayClose" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+         <action path="/GL/GLMonthlyPostingMenu" name="MonthlyPosting" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyPosting" name="MonthlyPosting" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLMonthlyCloseMenu" name="MonthClose" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyClose" name="MonthClose" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLYearCloseMenu" name="YearClose" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLYearClose" name="YearClose" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLYearClosingCFMenu" name="YearClosingCF" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLYearClosingCF" name="YearClosingCF" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLBranchPLPostingMenu" name="BranchPLPosting" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLBranchPLPosting" name="BranchPLPosting" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLDayBookMenu" name="DayBook" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLDayBook" name="DayBook" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLScheduleMenu" name="GLSchedule" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLSchedule" name="GLSchedule" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLTrfScrollPrintingMenu" name="TrfScrollPrinting" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLTrfScrollPrinting" name="TrfScrollPrinting" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        
+         <action path="/GL/GLVoucherSlipPrintingMenu" name="VoucherSlipPrinting" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLVoucherSlipPrinting" name="VoucherSlipPrinting" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        
+        <action path="/GL/GLMonthlyGlScheduleMenu" name="MonthlyGlSchedule" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyGlSchedule" name="MonthlyGlSchedule" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLMonthlyBalanceSheetMenu" name="MonthlyBalanceSheet" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyBalanceSheet" name="MonthlyBalanceSheet" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        
+         <action path="/GL/GLMonthlyProfitLossMenu" name="MonthlyProfitLoss" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyProfitLoss" name="MonthlyProfitLoss" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLMonthlyTrialBalanceMenu" name="MonthlyTrailBalance" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyTrialBalance" name="MonthlyTrailBalance" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLMonthlyRecieptsPaymentsMenu" name="MonthlyRecieptsPayments" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyRecieptsPayments" name="MonthlyRecieptsPayments" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        
+        <action path="/GL/GLConsolidatedDayBookMenu" name="ConsolidatedDayBook" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLConsolidatedDayBook" name="ConsolidatedDayBook" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLMonthlyConsolidatedGlScheduleMenu" name="MonthlyConsolidatedGlSchedule" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyConsolidatedGlSchedule" name="MonthlyConsolidatedGlSchedule" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+         <action path="/GL/GLMonthlyConsolidatedTrialBalanceMenu" name="MonthlyConsolidatedTrialBalance" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyConsolidatedTrialBalance" name="MonthlyConsolidatedTrialBalance" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLMonthlyConsolidatedRPMenu" name="MonthlyConsolidatedRP" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyConsolidatedRP" name="MonthlyConsolidatedRP" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+         <action path="/GL/GLMonthlyConsolidatedPLMenu" name="MonthlyConsolidatedPL" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyConsolidatedPL" name="MonthlyConsolidatedPL" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+         <action path="/GL/GLMonthlyConsolidatedBalanceSheetMenu" name="MonthlyConsolidatedBalanceSheet" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLMonthlyConsolidatedBalanceSheet" name="MonthlyConsolidatedBalanceSheet" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLAdminMenu" name="Admin" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLAdmin" name="Admin" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/AdminMenu" name="GLAdmin" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/Admin" name="GLAdmin" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        
+        <action path="/GL/GLRBIForm9InputUpdationMenu" name="RBIForm9InputUpdation" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLRBIForm9InputUpdation" name="RBIForm9InputUpdation" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        
+         <action path="/GL/GLRBIForm9ReportMenu" name="RBIForm9Reports" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLRBIForm9Report" name="RBIForm9Reports" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLRBICRRSLRReportMenu" name="RBICRRSLRReports" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLRBICRRSLRReport" name="RBICRRSLRReports" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLRBICRRSLRSubScheduleMenu" name="RBICRRSLRSubSchedule" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLRBICRRSLRSubSchedule" name="RBICRRSLRSubSchedule" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLRBIForm1ReportsMenu" name="RBIForm1Reports" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLRBIForm1Reports" name="RBIForm1Reports" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLRBIForm1LinkUpdationMenu" name="RBIForm1LinkUpdation" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLRBIForm1LinkUpdation" name="RBIForm1LinkUpdation" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLRBIForm1MasterMenu" name="RBIForm1Master" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLRBIForm1Master" name="RBIForm1Master" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLRBIMarkingDateEntryMenu" name="RBIMarkingDateEntry" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLRBIMarkingDateEntry" name="RBIMarkingDateEntry" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLForm1PostingMenu" name="form1posting" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+	    <action path="/GL/GLForm1Posting" name="form1posting" type="com.scb.gl.actions.GLAction" scope="request">
+        </action>
+        
+        <action path="/GL/GLRBIForm9PostingMenu" name="RBIForm9Posting" type="com.scb.gl.actions.GLAction" scope="request" input="/CommonWebPages/Menu.jsp">
+        </action>
+        
+        <action path="/GL/GLRBIForm9Posting" name="RBIForm9Posting" type="com.scb.gl.actions.GLAction" scope="request">
+		</action>
+        
+      <!--********************* end of GL Action Mappings *******************************--> 
+       
+       <!-- ********************* Statrt of ALM Action Mappings ******************************* -->
+       <!-- Added by RaghunathaReddy.P -->
+       <action path="/ALM/SlsInflowsMenu" name="SLSOutlowDataEntry" type="com.scb.alm.actions.AlmAction" scope="request">
+        </action>
+        
+       <action path="/ALM/SlsInflows" name="SLSInflowSheet" type="com.scb.alm.actions.AlmAction" scope="request">
+        </action>
+        
+       <!--********************* end of ALM Action Mappings *******************************-->
+       
+       
+       </action-mappings>
+
+        <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+        <message-resources parameter="MessageResources"/>
+        <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+        </plug-in>
+
+
+       <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        	<set-property property="pathnames"  value="/org/apache/struts/validator/validator-rules.xml,/WEB-INF/validation.xml" />
+        </plug-in>
+         
+         
+</struts-config>

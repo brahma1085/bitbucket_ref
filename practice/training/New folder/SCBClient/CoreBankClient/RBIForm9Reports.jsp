@@ -1,0 +1,184 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
+<%@taglib prefix="bean" uri="http://struts.apache.org/tags-bean" %>
+<%@taglib prefix="c" uri="/WEB-INF/c.tld" %>
+
+<%@page import="java.util.Map"%>
+<%--
+  User: Amzad
+  Date: Feb 17, 2009
+  
+  To change this template use File | Settings | File Templates.
+--%>   
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><title>RBI Form IX Report</title>
+      <link href="../Images/DMTStyle.css" rel="stylesheet" type="text/css" /> 
+      <h2 class="h2">
+      <center>RBI Form IX Report</center></h2>
+      <hr>
+      
+    
+    <script type="text/javascript">
+     function set(target){
+       document.forms[0].forward.value=target
+      };
+     
+      function check_acnt(){
+      
+        if(document.getElementById("ac").value=='T'){
+          alert("Account not found")
+           document.forms[0].acno.value="";
+        }
+      };
+        
+   function clear_fun()
+    {
+    	
+    	var ele=document.forms[0].elements;
+    	document.getElementById("forward").style.display='none';  
+    	for(var i=0;i<ele.length;i++)
+    	{
+    		if(ele[i].type=="text")
+    		{ 
+    			ele[i].value="";
+    		}
+    	}
+    
+    };
+    
+    function numbersonly(eve){
+         var cha = event.keyCode
+            if (  ( cha  > 47 && cha < 58  ) ) {
+                return true ;
+                
+            }
+            else{
+              alert("Please enter numbers only");
+              return false ;
+            }
+      };
+     
+     
+     function validate(){
+      var val=document.forms[0].validations.value;
+      if(val!=0 || val!=""){
+         alert(val);
+       } 
+       
+       else{
+         return false;
+       }
+     }; 
+     
+     function setFlag(flagValue){
+     document.forms[0].flag.value=flagValue;
+     document.forms[0].submit();
+     
+     
+     }
+    </script>
+
+ </head>
+  
+<body class="Mainbody" onload="return validate()">
+<%String result=(String)request.getAttribute("result");
+String[][] tabledata=(String[][])request.getAttribute("rbiForm9ReportData");
+%>
+<%!
+String access;
+String  accesspageId;
+ Map user_role;
+
+%>
+
+<%
+
+  accesspageId=(String)request.getAttribute("accesspageId");
+    user_role=(Map)request.getAttribute("user_role");
+
+if(user_role!=null&&accesspageId!=null){
+			if(user_role.get(accesspageId)!=null){
+				access=(String)user_role.get(accesspageId);
+				System.out.println("access-----In SBOpening------>"+access);
+			}
+
+			
+			}
+
+// Note:access=1111==>read,insert,delete,update
+%>
+<%if(access!=null&&accesspageId!=null&&access.toCharArray()[0]=='1'){%>
+<html:form action="/GL/GLRBIForm9Report?pageId=12032">
+<%if(result!=null){ %>
+<font color="blue"><%=result%></font>
+<%} %>
+ <table class="txtTable">
+ <html:hidden property="forward"></html:hidden>
+ <html:hidden property="validations"></html:hidden>
+ <html:hidden property="flag"/>
+   <tr>
+    <td><b>Year</b>    
+      <html:select property="year" styleClass="formTextFieldWithoutTransparent">
+      <%
+      for(int i=1980;i<=2030;i++){
+      
+      %>
+      <html:option value="<%=""+i %>"><%=i %></html:option>
+      <%}%>
+      </html:select>
+      <b>Month</b>    
+      <html:select property="month" styleClass="formTextFieldWithoutTransparent">
+      <%
+      for(int i=01;i<=12;i++){
+		   
+		   %>	
+		    <html:option value="<%=""+i %>"> <%=i%></html:option>
+		
+		<%
+		    }
+		%>
+      </html:select>
+      
+    </td>
+    
+   </tr>
+      
+   <tr>
+     <td>
+        <html:button property="view"  onclick="setFlag('view') " styleClass="ButtonBackgroundImage"><bean:message key="gl.label.view"></bean:message> </html:button>
+       <!--<html:button property="file"  onclick="set('file')" styleClass="ButtonBackgroundImage"><bean:message key="gl.label.file"></bean:message> </html:button>
+        --><html:button property="printPage"  onclick="window.print() " styleClass="ButtonBackgroundImage"><bean:message key="gl.label.print"></bean:message></html:button>
+       <html:button property="clearForm"  onclick="setFlag('view') " styleClass="ButtonBackgroundImage"><bean:message key="gl.label.clear"></bean:message></html:button>
+     </td>
+   </tr>
+   
+ </table>
+ <div id="rbi_form9" style="display:block;overflow:scroll;width:500px;height:100px">
+
+ <table border="1" bordercolor="blue">
+ <tr><td  align="center" width="40%"><b>Code</b></td><td align="center" width="40%"><b>Name</b></td><td  align="center" width="40%"><b>Rs in Lakhs</b></td></tr>
+ <%if(tabledata!=null){ 
+ for(int i=0;i<tabledata.length;i++){
+ %>
+ <tr bordercolor="none">
+ <td bordercolor="none" ><%=tabledata[i][0]%>
+ </td>
+ <td bordercolor="none" ><%=tabledata[i][1]%>
+ </td>
+ <td bordercolor="none" ><input type="text" name="txtFld">
+ </td>
+ </tr>
+ <%
+ }
+ }
+ %>
+ </table>
+ </div>
+</html:form>
+<%}else{ %>
+        <font color="red"><bean:message key="label.accessdenied"></bean:message></font>
+        <%} %>
+</body>
+</html>

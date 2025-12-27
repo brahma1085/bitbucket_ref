@@ -1,0 +1,167 @@
+String query = "SELECT studentNo,studentName FROM Student";
+			List studentList = session.createQuery(query).list();
+			System.out
+					.println("break point and check the list in variables window");
+			Iterator iterator = studentList.iterator();
+			Object[] studentObj = null;
+			while (iterator.hasNext()) {
+				studentObj = (Object[]) iterator.next();
+				System.out.println("student number==>" + studentObj[0]);
+				System.out.println("student name==>" + studentObj[1]);
+===================================================================================================
+					String query = "FROM Student";
+			List studentList = session.createQuery(query).list();
+			System.out.println("Break point and check the console");
+			Iterator iterator = studentList.iterator();
+			while (iterator.hasNext()) {
+				Student student = (Student) iterator.next();
+				System.out.println("StudentNo==>" + student.getStudentNo());
+				System.out.println("StudentName==>" + student.getStudentName());
+				System.out
+						.println("Break point and check the console==in loop");
+			}
+==================================================================================================
+String hqlQuery = "DELETE Student  WHERE studentNo=:sno and studentName=:sname";
+			Query query = session.createQuery(hqlQuery);
+			query.setString("sname", "N@IT-U");
+			query.setString("sno", "1");
+			int noOfQueries = query.executeUpdate();
+			System.out.println("number of queries updated==>" + noOfQueries);
+==================================================================================================
+	String hqlQuery = "UPDATE Student SET studentName=:sname WHERE studentNo=:sno";
+			Query query = session.createQuery(hqlQuery);
+			query.setString("sname", "N@IT-U");
+			query.setString("sno", "1");
+			int noOfQueries = query.executeUpdate();
+			System.out.println("number of queries updated==>" + noOfQueries);
+==================================================================================================
+String query = "SELECT studentNo,studentName FROM Student";
+			Iterator studentList = session.createQuery(query).iterate();
+			System.out
+					.println("break point and check the list in variables window");
+			Object[] studentObj = null;
+			while (studentList.hasNext()) {
+				studentObj = (Object[]) studentList.next();
+				System.out.println("student number==>" + studentObj[0]);
+				System.out.println("student name==>" + studentObj[1]);
+				System.out
+						.println("break point and check the variables window");
+			}
+===================================================================================================
+	String hqlQuery = "FROM Student ORDER BY studentNo ASC";
+			List studentList = session.createQuery(hqlQuery).list();
+			System.out.println("no of rows effected ==>" + studentList.size());
+			Iterator iterator = studentList.iterator();
+			while (iterator.hasNext()) {
+				Student student = (Student) iterator.next();
+				System.out
+						.println("Student Number==>" + student.getStudentNo());
+				System.out
+						.println("Student Name==>" + student.getStudentName());
+			}
+===================================================================================================
+	String hqlQuery = "FROM Student ORDER BY studentNo DESC";
+			List studentList = session.createQuery(hqlQuery).list();
+			System.out.println("no of rows effected ==>" + studentList.size());
+			Iterator iterator = studentList.iterator();
+			while (iterator.hasNext()) {
+				Student student = (Student) iterator.next();
+				System.out
+						.println("Student Number==>" + student.getStudentNo());
+				System.out
+						.println("Student Name==>" + student.getStudentName());
+			}
+===================================================================================================
+String hqlQuery = "SELECT MIN(studentNo), MAX(studentNo), AVG(studentNo) FROM Student";
+			Query query = session.createQuery(hqlQuery);
+			Object[] studentObjects = null;
+			Iterator iterator = query.iterate();
+			if (iterator.hasNext()) {
+				studentObjects = (Object[]) iterator.next();
+				System.out.println("minimum value of Student==>"
+						+ studentObjects[0]);
+				System.out.println("maximum value of Student==>"
+						+ studentObjects[1]);
+				System.out.println("average value of Student==>"
+						+ studentObjects[2]);
+				System.out
+						.println("the Object array contains the following types of objects");
+				System.out.println("MIN-type==>"
+						+ studentObjects[0].getClass().getName());
+				System.out.println("MAX-type==>"
+						+ studentObjects[1].getClass().getName());
+				System.out.println("AVG-type==>"
+						+ studentObjects[2].getClass().getName());
+			}
+===================================================================================================
+String hqlQuery = "SELECT MIN(studentNo), MAX(studentNo), AVG(studentNo) FROM Student";
+			Query query = session.createQuery(hqlQuery);
+			List studentList = query.list();
+			System.out.println("number of records==>" + studentList.size());
+			System.out.println("break point");
+			Iterator iterator = studentList.iterator();
+			Object[] studentObjects = null;
+			while (iterator.hasNext()) {
+				studentObjects = (Object[]) iterator.next();
+				System.out.println("minimum value of Student==>"
+						+ studentObjects[0]);
+				System.out.println("maximum value of Student==>"
+						+ studentObjects[1]);
+				System.out.println("average value of Student==>"
+						+ studentObjects[2]);
+				System.out
+						.println("the Object array contains the following types of objects");
+				System.out.println("MIN-type==>"
+						+ studentObjects[0].getClass().getName());
+				System.out.println("MAX-type==>"
+						+ studentObjects[1].getClass().getName());
+				System.out.println("AVG-type==>"
+						+ studentObjects[2].getClass().getName());
+			}
+==================================================================================================
+String hqlQuery = "SELECT MIN(studentNo), MAX(studentNo), AVG(studentNo) FROM Student";
+			Query query = session.createQuery(hqlQuery);
+			Object[] studentObjects = (Object[]) query.uniqueResult();
+			System.out.println("break point");
+			System.out.println("minimum value of Student==>"
+					+ studentObjects[0]);
+			System.out.println("maximum value of Student==>"
+					+ studentObjects[1]);
+			System.out.println("average value of Student==>"
+					+ studentObjects[2]);
+			System.out
+					.println("the Object array contains the following types of objects");
+			System.out.println("MIN-type==>"
+					+ studentObjects[0].getClass().getName());
+			System.out.println("MAX-type==>"
+					+ studentObjects[1].getClass().getName());
+			System.out.println("AVG-type==>"
+					+ studentObjects[2].getClass().getName());
+===================================================================================================
+	String hqlQuery = "FROM Student ORDER BY studentNo ASC";
+			Query query = session.createQuery(hqlQuery);
+			query.setFirstResult(5);
+			query.setMaxResults(4);
+			List studentList = query.list();
+			System.out.println("number of records==>" + studentList.size());
+			Iterator iterator = studentList.iterator();
+			while (iterator.hasNext()) {
+				Student student = (Student) iterator.next();
+				System.out.println("student number ==>"
+						+ student.getStudentNo());
+				System.out.println("student name ==>"
+						+ student.getStudentName());
+			}
+===================================================================================================
+String hqlQuery = "SELECT COUNT(studentNo), studentName FROM Student GROUP BY studentName";
+			List studentList = session.createQuery(hqlQuery).list();
+			System.out.println("number of records ==>" + studentList.size());
+			Iterator iterator = studentList.iterator();
+			Object[] studentObjects = null;
+			if (iterator.hasNext()) {
+				studentObjects = (Object[]) iterator.next();
+				System.out.println("number of records in same group==>"
+						+ studentObjects[0]);
+				System.out.println("grouped name==>" + studentObjects[1]);
+			}
+==================================================================================================

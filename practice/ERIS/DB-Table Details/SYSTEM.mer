@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="XE" database="SYSTEM" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="APPLICANTDETAILS">
+      <Drawing expanded="true" location="0,174" dimensions="270,641" />
+      <Columns>
+        <Column name="APPLICANTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="STATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="DATEOFBIRTH" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="TITLE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="FIRSTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="LASTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="MIDDLENAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="APPLICATIONDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="DAYPHONE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="AVAILABILITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="EXTENSION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="IMMIGRATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="MARITALSTATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="EVENINGPHONE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="MOBILEPHONE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+        <Column name="EMAIL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="CITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="ZIP" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="QUALIFICATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="SPECIALIZATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="EXPERIENCE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="REFERENCE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="PRESENTSALARY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="20" />
+        </Column>
+        <Column name="EXPECTEDSALARY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="20" />
+        </Column>
+        <Column name="SECURITYNUMBER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="20" />
+        </Column>
+        <Column name="COMMENTS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+        <Column name="EMPID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="APPLICANTINTERVIEW">
+      <Drawing expanded="true" location="945,0" dimensions="254,179" />
+      <Columns>
+        <Column name="INTERVIEWID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="INTERVIEWTYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="INTERVIEWBY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="INTERVIEWDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="SKILLRATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="20" />
+        </Column>
+        <Column name="COMMRATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="20" />
+        </Column>
+        <Column name="COMMENTS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="60" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="APPLICANTSKILLS">
+      <Drawing expanded="true" location="658,174" dimensions="242,116" />
+      <Columns>
+        <Column name="APPLICANTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="20" />
+        </Column>
+        <Column name="SKILLS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="EXPERIENCE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="20" />
+        </Column>
+        <Column name="LASTUSED" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="CLIENTDETAILS">
+      <Drawing expanded="true" location="336,405" dimensions="256,326" />
+      <Columns>
+        <Column name="CLIENTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="COMPANYNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="CONTACTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+        <Column name="CITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="STATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="ZIP" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="TITLE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="EXTENSION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="TELEPHONE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="FAX" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="COUNTRY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="EMAIL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+        <Column name="DEPARTMENT" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="EMPLOYEEDETAILS">
+      <Drawing expanded="true" location="7,915" dimensions="256,473" />
+      <Columns>
+        <Column name="EMPLOYEEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="STATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="DATEOFBIRTH" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="PASSWORD" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="FIRSTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="LASTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="MIDDLENAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="DESIGNATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="DAYPHONE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="TELEPHONE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="EXTENTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="ROLE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="MARITALSTATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="COUNTRYNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="MOBILEPHONE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+        <Column name="EMAIL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+        <Column name="CITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="ZIP" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="CLIENTID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="INTERVIEWDETAILS">
+      <Drawing expanded="true" location="666,0" dimensions="225,74" />
+      <Columns>
+        <Column name="INTERVIEWID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="APPLICANTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="INTERVIEWDETAILS1">
+      <Drawing expanded="true" location="22,0" dimensions="225,74" />
+      <Columns>
+        <Column name="INTERVIEWID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="APPLICANTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="JOBORDER">
+      <Drawing expanded="true" location="315,0" dimensions="298,305" />
+      <Columns>
+        <Column name="JOBID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="CLIENTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="OPENDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="ENDDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="EDUCATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="EXPERIENCE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="EXPERIENCEINFIELD" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="STATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="15" />
+        </Column>
+        <Column name="JOBCATEGORY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="NUMBEROFVACANCIES" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="RATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="ASSIGNED" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="JOBDESCRIPTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="LOGIN">
+      <Drawing expanded="true" location="1244,0" dimensions="225,95" />
+      <Columns>
+        <Column name="USERNAME" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="PASSWORD" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="STATUS" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="FEID1">
+      <Details primary_table="EMPLOYEEDETAILS" foreign_table="APPLICANTDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="EMPLOYEEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="EMPID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FAID1">
+      <Details primary_table="APPLICANTSKILLS" foreign_table="INTERVIEWDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="APPLICANTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="APPLICANTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FAID2">
+      <Details primary_table="APPLICANTDETAILS" foreign_table="INTERVIEWDETAILS1">
+        <PrimaryKeys>
+          <ColumnName name="APPLICANTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="APPLICANTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FCID1">
+      <Details primary_table="CLIENTDETAILS" foreign_table="JOBORDER">
+        <PrimaryKeys>
+          <ColumnName name="CLIENTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CLIENTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

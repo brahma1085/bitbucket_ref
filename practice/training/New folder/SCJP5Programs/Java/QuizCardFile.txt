@@ -1,0 +1,3 @@
+What is OpenGL?/The premier environment for developing portable, interactive 2D and 3D graphics applications.
+What is GLUT?/The OpenGL Utility Toolkit (GLUT) is a library used to simplify the process of creating an OpenGL window as well as the process of capturing keyboard and mouse input. A great advantage of the library is that it is cross-platform.
+

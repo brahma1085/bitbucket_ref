@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ERIS"
+  id="myeclipse.1295889982046"
+  context-root="/ERIS"
+  j2ee-spec="5.0"
+  archive="ERIS.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

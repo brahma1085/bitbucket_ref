@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="EJB"
+  name="AdministratorEJB"
+  id="myeclipse.1329765583565"
+  j2ee-spec="1.4"
+  archive="AdministratorEJB.jar" />
+

@@ -1,0 +1,160 @@
+package com.banking.data.pojo;
+// default package
+
+
+
+/**
+ * LoanPeriodRateId entity. @author MyEclipse Persistence Tools
+ */
+
+public class LoanPeriodRateId  implements java.io.Serializable {
+
+
+    // Fields    
+
+     private String lnType;
+     private String dateFr;
+     private String dateTo;
+     private Integer frMon;
+     private Integer toMon;
+     private Double rate;
+     private String deTml;
+     private String deUser;
+     private String deDtTime;
+
+
+    // Constructors
+
+    /** default constructor */
+    public LoanPeriodRateId() {
+    }
+
+    
+    /** full constructor */
+    public LoanPeriodRateId(String lnType, String dateFr, String dateTo, Integer frMon, Integer toMon, Double rate, String deTml, String deUser, String deDtTime) {
+        this.lnType = lnType;
+        this.dateFr = dateFr;
+        this.dateTo = dateTo;
+        this.frMon = frMon;
+        this.toMon = toMon;
+        this.rate = rate;
+        this.deTml = deTml;
+        this.deUser = deUser;
+        this.deDtTime = deDtTime;
+    }
+
+   
+    // Property accessors
+
+    public String getLnType() {
+        return this.lnType;
+    }
+    
+    public void setLnType(String lnType) {
+        this.lnType = lnType;
+    }
+
+    public String getDateFr() {
+        return this.dateFr;
+    }
+    
+    public void setDateFr(String dateFr) {
+        this.dateFr = dateFr;
+    }
+
+    public String getDateTo() {
+        return this.dateTo;
+    }
+    
+    public void setDateTo(String dateTo) {
+        this.dateTo = dateTo;
+    }
+
+    public Integer getFrMon() {
+        return this.frMon;
+    }
+    
+    public void setFrMon(Integer frMon) {
+        this.frMon = frMon;
+    }
+
+    public Integer getToMon() {
+        return this.toMon;
+    }
+    
+    public void setToMon(Integer toMon) {
+        this.toMon = toMon;
+    }
+
+    public Double getRate() {
+        return this.rate;
+    }
+    
+    public void setRate(Double rate) {
+        this.rate = rate;
+    }
+
+    public String getDeTml() {
+        return this.deTml;
+    }
+    
+    public void setDeTml(String deTml) {
+        this.deTml = deTml;
+    }
+
+    public String getDeUser() {
+        return this.deUser;
+    }
+    
+    public void setDeUser(String deUser) {
+        this.deUser = deUser;
+    }
+
+    public String getDeDtTime() {
+        return this.deDtTime;
+    }
+    
+    public void setDeDtTime(String deDtTime) {
+        this.deDtTime = deDtTime;
+    }
+   
+
+
+
+   public boolean equals(Object other) {
+         if ( (this == other ) ) return true;
+		 if ( (other == null ) ) return false;
+		 if ( !(other instanceof LoanPeriodRateId) ) return false;
+		 LoanPeriodRateId castOther = ( LoanPeriodRateId ) other; 
+         
+		 return ( (this.getLnType()==castOther.getLnType()) || ( this.getLnType()!=null && castOther.getLnType()!=null && this.getLnType().equals(castOther.getLnType()) ) )
+ && ( (this.getDateFr()==castOther.getDateFr()) || ( this.getDateFr()!=null && castOther.getDateFr()!=null && this.getDateFr().equals(castOther.getDateFr()) ) )
+ && ( (this.getDateTo()==castOther.getDateTo()) || ( this.getDateTo()!=null && castOther.getDateTo()!=null && this.getDateTo().equals(castOther.getDateTo()) ) )
+ && ( (this.getFrMon()==castOther.getFrMon()) || ( this.getFrMon()!=null && castOther.getFrMon()!=null && this.getFrMon().equals(castOther.getFrMon()) ) )
+ && ( (this.getToMon()==castOther.getToMon()) || ( this.getToMon()!=null && castOther.getToMon()!=null && this.getToMon().equals(castOther.getToMon()) ) )
+ && ( (this.getRate()==castOther.getRate()) || ( this.getRate()!=null && castOther.getRate()!=null && this.getRate().equals(castOther.getRate()) ) )
+ && ( (this.getDeTml()==castOther.getDeTml()) || ( this.getDeTml()!=null && castOther.getDeTml()!=null && this.getDeTml().equals(castOther.getDeTml()) ) )
+ && ( (this.getDeUser()==castOther.getDeUser()) || ( this.getDeUser()!=null && castOther.getDeUser()!=null && this.getDeUser().equals(castOther.getDeUser()) ) )
+ && ( (this.getDeDtTime()==castOther.getDeDtTime()) || ( this.getDeDtTime()!=null && castOther.getDeDtTime()!=null && this.getDeDtTime().equals(castOther.getDeDtTime()) ) );
+   }
+   
+   public int hashCode() {
+         int result = 17;
+         
+         result = 37 * result + ( getLnType() == null ? 0 : this.getLnType().hashCode() );
+         result = 37 * result + ( getDateFr() == null ? 0 : this.getDateFr().hashCode() );
+         result = 37 * result + ( getDateTo() == null ? 0 : this.getDateTo().hashCode() );
+         result = 37 * result + ( getFrMon() == null ? 0 : this.getFrMon().hashCode() );
+         result = 37 * result + ( getToMon() == null ? 0 : this.getToMon().hashCode() );
+         result = 37 * result + ( getRate() == null ? 0 : this.getRate().hashCode() );
+         result = 37 * result + ( getDeTml() == null ? 0 : this.getDeTml().hashCode() );
+         result = 37 * result + ( getDeUser() == null ? 0 : this.getDeUser().hashCode() );
+         result = 37 * result + ( getDeDtTime() == null ? 0 : this.getDeDtTime().hashCode() );
+         return result;
+   }   
+
+
+
+
+
+}

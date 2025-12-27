@@ -1,0 +1,48 @@
+<html>
+
+<head>
+</head>
+
+<body>
+<form action="./addSkillServlet">
+<div style="background-color: #C0C0C0">
+  <p align="center"><b>Enterprise Resource Information System</b></div>
+  <p align="center"> <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <u>Applicant Skills Details</u></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <p align="center">&nbsp;
+  <p align="center">&nbsp; 
+  <table border="1" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="25%" align="center">Applicant ID</td>
+    <td width="25%" align="center">Skills</td>
+    <td width="25%" align="center">Experience</td>
+    <td width="25%" align="center">Last Used</td>
+  </tr>
+  <tr>
+      <td width="25%"> 
+        <div align="center">
+          <%=session.getAttribute("appid")%>
+        </div>
+      </td>
+      <td width="25%"> 
+        <div align="center">
+          <input type="text" name="skills">
+        </div>
+      </td>
+      <td width="25%"> 
+        <div align="center">
+          <input type="text" name="exprience">
+        </div>
+      </td>
+      <td width="25%"> 
+        <div align="center">
+          <input type="text" name="lastused">
+        </div>
+      </td>
+  </tr>
+</table>
+<p align="center">
+<input type="submit" value="Add Skills" name="B3" style="border-style: solid; border-width: 1"></p>
+</form>
+</body>
+</html>

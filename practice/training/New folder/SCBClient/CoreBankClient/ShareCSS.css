@@ -1,0 +1,44 @@
+@CHARSET "ISO-8859-1";
+.Mainbody 
+{	
+background-image:url(FrontDivBack1.jpg);
+width:100%;
+margin-top:1px;
+margin-bottom:2px;
+margin-left:0px;
+margin-right:0px;
+overflow:hidden;
+}
+
+.PageHeader
+{
+background-image:url(menuback1.gif);
+background-repeat:repeat;
+vertical-align:middle;
+font-size : 10px; 
+color:#666666; 
+font-family : Verdana;
+font-weight : bold;
+line-height : 11px;
+padding-left : 5px;
+height:20px;
+}
+
+.HeaderText 
+{ 
+font-weight : bold;
+font-size : 11px;
+color : #ffffff;
+font-family : Verdana;
+line-height : 11px;
+}
+
+.borderMainTable 
+{ 
+border-bottom : 1px solid #cccccc;
+border-left : 1px solid #cccccc;
+border-right : 1px solid #cccccc;
+border-top : 1px solid #cccccc;
+margin-left:0px;
+margin-top:10px;
+} 

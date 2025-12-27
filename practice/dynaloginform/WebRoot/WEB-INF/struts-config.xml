@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="loginform" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="username" type="java.lang.String"></form-property>
+			<form-property name="password" type="java.lang.String"></form-property>
+		</form-bean>
+	</form-beans>
+	<action-mappings>
+		<action name="loginform" type="com.nit.struts.LoginAction"
+			path="/login">
+			<forward name="success" path="/welcome.jsp"></forward>
+			<forward name="failed" path="/failure.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

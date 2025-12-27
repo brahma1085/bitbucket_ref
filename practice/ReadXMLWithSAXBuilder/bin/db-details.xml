@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-details>
+	<dev1>
+		<env1 details="DEV1details">
+			<db-class>edu.nit.driver.N@itDriver</db-class>
+		</env1>
+		<student details="student-I-details">MyDivision</student>
+	</dev1>
+	<dev2>
+		<env1 details="DEV2details">
+			<db-class>com.nit.driver.NITDriver</db-class>
+		</env1>
+		<student details="student-II-details"></student>
+	</dev2>
+</db-details>

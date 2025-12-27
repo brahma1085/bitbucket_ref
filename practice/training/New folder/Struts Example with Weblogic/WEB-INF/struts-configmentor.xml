@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://struts.apache.org/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <form-beans>   	 
+ 	 <form-bean name="mentorForm" type="com.ge.crd.ementoring.formbean.mentor.MentorFormBean" />
+ 	 <form-bean name="mentorProfile" type="com.ge.crd.ementoring.formbean.mentor.mentorRegistrationFormBean" /> 	 
+ 	 
+ 	 <form-bean name="sunsetRelationship" type="com.ge.crd.ementoring.formbean.mentor.sunsetRelationshipFormBean" /> 	 
+ 	  	 
+  	 <form-bean name="nominatedMentorsform" type="com.ge.crd.ementoring.formbean.mentor.NominateMentorsFormBean" /> 	 
+ 	 
+  </form-beans>
+    
+  <action-mappings>   
+
+	 <action path="/nominatedMentorsPage" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominatedMentorsList" 
+  	 		scope="session"
+  	        name="nominatedMentorsform"  	        
+ 	        validate="false">
+ 	      <forward name="Success" path="/jsp/mentor/NominatedMentailsPage.jsp"/>
+	      <forward name="NoAccess" path="/jsp/UserIsNotHR.jsp"/>
+          <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>
+          <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>  	 
+
+  	 
+	 <action path="/getBusinessList" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominatedMentorsList" 
+  	 		scope="session"
+  	        name="nominatedMentorsform"  	        
+ 	        validate="false">
+ 	      <forward name="Success" path="/jsp/mentor/NominatedMentorsList.jsp"/>
+	      <forward name="NoAccess" path="/jsp/UserIsNotHR.jsp"/>
+          <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>
+          <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>  
+  	   	 
+	 <action path="/nominatedMentorsList" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominatedMentorsList" 
+  	 		scope="session"
+  	        name="nominatedMentorsform"  	        
+ 	        validate="false">
+ 	      <forward name="Success" path="/jsp/mentor/NominatedMentorsList.jsp" />
+	      <forward name="NoAccess" path="/jsp/UserIsNotHR.jsp"/>
+          <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>
+          <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>
+  	 
+ 	 <action path="/SearchResult" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominatedMentorsList" 
+  	 		scope="session"
+  	        name="nominatedMentorsform"  	        
+ 	        validate="false">
+ 	      <forward name="Success" path="/jsp/mentor/NominatedMentorsList.jsp" />
+	      <forward name="NoAccess" path="/jsp/UserIsNotHR.jsp"/>
+          <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>
+          <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>
+  	 
+	 <action path="/NominatedMentorFullDetails" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominatedMentorsList" 
+  	 		scope="session"
+  	        name="nominatedMentorsform"  	        
+ 	        validate="false">
+ 	      <forward name="Success" path="/jsp/mentor/NominatedMentorFullDetails.jsp"/>
+	      <forward name="NoAccess" path="/jsp/UserIsNotHR.jsp"/>
+          <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>
+          <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>
+  	   	 
+  	 
+  	 <action path="/SunsetRelationshipForm" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionSunsetRelationship" 
+  	 		scope="session"
+  	        name="sunsetRelationship"  	        
+ 	        validate="false">
+ 	      <forward name="Success" path="/jsp/mentor/SunsetRelationShip.jsp" />  	          	        
+	      <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+          <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+          <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>
+
+
+  	 <action path="/SunsetRelationshipForm" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionSunsetRelationship" 
+  	 		scope="session"
+  	        name="sunsetRelationship"  	        
+ 	        validate="false">
+ 	      <forward name="Success" path="/jsp/mentor/SunsetRelationShip.jsp" />  	          	        
+	      <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+          <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+          <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>
+
+  	 <action path="/InitiateSunsetRelationship" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionSunsetRelationship" 
+  	 		scope="session"
+  	        name="sunsetRelationship"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/SunsetRelationShipConfirmMsg.jsp" />  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>
+	   	 
+  	 <action path="/SearchMenteeRelatonshipStatus" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/CurrentMenteeList.jsp" />  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>   	   
+  	   	   	   
+  	 <action path="/currentMenteeList" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/CurrentMenteeList.jsp" />  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>   	   
+
+  	 <action path="/menteeDetailsPage" 
+  	 		 type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		 scope="session"
+  	         name="mentorProfile"  	        
+ 	         validate="false">
+  	      <forward name="Success" path="/jsp/mentor/CurrentMenteeDetailsPage.jsp"/>  	          	        
+	      <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+          <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+          <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>   
+
+  	 <action path="/menteeFullDetail" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/MenteeFullDetails.jsp" />  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action> 
+  	 
+  	 
+   	 <action path="/pedingMentoringReqLst" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/PendingMentoringRequestList.jsp"/>  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action> 
+
+   	 <action path="/approveMenteeRequest" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/ApproveRejectPendingRequest.jsp"/>  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>   	   	 	 
+
+   	 <action path="/saveMenteeApproval" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/PendingRequestConfirmMessage.jsp"/>  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action> 
+
+   	 <action path="/approveSunsetRelationshipRequest" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/PendingSunsetRelationshipMenteeFullDetails.jsp"/>  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>
+  	   	 	 
+   	 <action path="/saveSunsetRelationshipApproval" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/PendingSunsetConfirmMessage.jsp"/>  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>
+
+  	   
+  	 <action path="/mentorRegistration" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/MentorRegistration.jsp"/>  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action> 
+
+  	 <action path="/saveMentorProfile" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/MentorProfileMessage.jsp"/>  	          	        
+	        <forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action> 
+  
+  	 <action path="/mentorEditProfile" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/EditMentorProfile.jsp" />  	          	        
+			<forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>   	 
+  	
+  	 <action path="/updateMentorProfile" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"
+  	        name="mentorProfile"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/EditUpdateConfirmMessage.jsp"/>  	        
+			<forward name="NoAccess" path="/jsp/mentor/UserIsNotMentor.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>   	  	 
+  	 
+  	 
+  	 <action path="/NominatedMentorList" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMentor" 
+  	 		scope="session"     
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/NominationRequestStatus.jsp" />  	          	        
+  	 </action> 
+  	   	 
+  	   	 
+  	 <action path="/nominateMentorPage" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominateMentor" 
+  	 		scope="session"
+  	        name="mentorForm"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/MentorNominate.jsp" />  	          	        
+	        <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>
+  	 </action>  
+
+ 	 <action path="/searchMentorPage" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominateMentor" 
+  	 		scope="session"
+  	        name="mentorForm"  	        
+ 	        validate="false">
+  	        <forward name="Success" path="/jsp/mentor/MentorSearch.jsp" />  	        
+	        <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>  	        
+  	 </action>   
+
+  	 <action path="/displaySearchResult" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominateMentor"  
+  	 		scope="session"
+  	        name="mentorForm"  	        
+ 	        validate="false">
+			<forward name="Success" path="/jsp/mentor/MentorSearch.jsp" />  	        
+	        <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>  	        
+  	 </action>    	   	     	   
+  
+  	 <action path="/saveSelectedMentor" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionNominateMentor"  
+  	 		scope="session"
+  	        name="mentorForm"  	        
+ 	        validate="false">
+			<forward name="Success" path="/jsp/mentor/NominateConfirmMsg.jsp" />  	        
+	        <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>  	        
+  	 </action> 
+  	 
+  	 <action path="/menteeList" 
+  	 		type="com.ge.crd.ementoring.action.mentor.actionMenteeList"  
+  	 		scope="session"
+  	        name="nominatedMentorsform"  	        
+ 	        validate="false">
+			<forward name="Success" path="/jsp/mentor/MenteesList.jsp" />  	        
+	        <forward name="NoAccess" path="/jsp/noaccess.jsp"/>        
+            <forward name="notAbleToProcess" path="/jsp/NotAbleToProcessRequest.jsp"/>                
+            <forward name="NoSession" path="/jsp/nosession.jsp"/>  	        
+  	 </action> 
+  	 
+  	 
+  	   
+  </action-mappings>
+ 	
+</struts-config>
+

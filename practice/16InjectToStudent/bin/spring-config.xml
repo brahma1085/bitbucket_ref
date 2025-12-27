@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="student" class="edu.pojo.Student" name="student1,student2">
+		<property name="sno">
+			<value>3487</value>
+		</property>
+		<property name="sname">
+			<value>jfhajsdh</value>
+		</property>
+	</bean>
+</beans>

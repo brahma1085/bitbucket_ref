@@ -1,0 +1,717 @@
+
+
+
+
+
+  
+ 
+
+
+
+
+
+<html>
+  <head>
+  <link href="Images/DMTStyle.css" rel="stylesheet" type="text/css" />
+  
+  <title>Sun Core Bank</title>
+      
+  </head>
+  <body class="Mainbody">
+     <table>
+           <tr>
+              <td>
+
+
+
+
+
+
+
+
+<html>
+  <head><title>Header jsp page</title>
+  
+   <!--<script type="text/javascript" src="/SCBClient/js/prototype.js"></script>
+  <script type="text/javascript" src="/SCBClient/js/scriptaculous/scriptaculous.js"></script>
+  <script type="text/javascript" src="/SCBClient/js/overlibmws/overlibmws.js"></script>
+  <script type="text/javascript" src="/SCBClient/js/overlibmws/overlibmws_crossframe.js"></script>
+  <script type="text/javascript" src="/SCBClient/js/overlibmws/overlibmws_iframe.js"></script>
+  <script type="text/javascript" src="/SCBClient/js/overlibmws/overlibmws_hide.js"></script>
+  <script type="text/javascript" src="/SCBClient/js/overlibmws/overlibmws_shadow.js"></script>
+  <script type="text/javascript" src="/SCBClient/js/ajax/ajaxtags.js"></script>
+  <script type="text/javascript" src="/SCBClient/js/ajax/ajaxtags_controls.js"></script>
+  --><!--<script type="text/javascript" src="/SCBClient/js/ajax/ajaxtags_parser.js"></script>
+ 
+  --><link href="/SCBClient/Images/DMTStyle.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript">
+ 	function updateDate(){
+	for (i=0; i < this.list.length; i++)
+	{
+		if (this.list[i][0] === "datum") {
+				$('datum').innerHTML = this.list[i][1];
+				alert($('datum').innerHTML);
+		}
+		if (this.list[i][0] === "count") {
+				$('count').innerHTML = this.list[i][1];
+		}
+	}
+};
+ function clear(){
+ 	
+ };	
+ </script>
+  </head>
+  <body class="Headingbody">
+		   	<table width="120%" border="1" cellpadding="0"  class="txtTableHeader">
+			<tr style="border:0px">
+            	<td  width="100%"   align="left" style="border:0px"><font color="white">Sunrise IT Solutions Pvt Ltd &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  <font color="white" >&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Name:1044&nbsp;&nbsp;&nbsp;&nbsp;Tml :1044  </td>
+            		
+            </tr>
+   			<tr style="border:0px">
+				<td style="border:0px" class="tdWithoutBorder"><marquee behavior="scroll" direction="right"  >Enjoy core banking with us !!</marquee></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td align="center" style="border:0px"><!--<font color="white">&nbsp;&nbsp; <ajax:callback url="/callback.view" postFunction="updateDate" /><span id="count" style="visibility: hidden">0</span>  <span id="datum"> Fri Oct 24 15:04:50 IST 2008</span>  </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;--><a href="/SCBClient/Login.jsp">Logout</a> </td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+        </table>
+        	<table width="120%" border="1" cellpadding="0" class="txtTableFooter" >
+		    	<tr style="border:0px">
+                	<td style="border:0px">
+                	<font color="black"  face="Verdana, Arial, Helvetica,sans-serif" >Copyright@Sunrise IT Solutions Pvt Ltd. Malleswaram
+					</font></td>
+   				</tr>
+        </table>
+</body>
+</html>
+
+
+</td>
+          </tr>
+		 <tr>
+           <td><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+
+<html>
+<head><title>SunBank Menu</title><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"> 
+
+
+
+
+
+
+<!--%%%%%%%%%%%% Quick Menu Script %%%%%%%%%%%*-->
+
+	<!-- Core Menu Code -->
+	<!--<script type="text/JavaScript" src="qm.js"></script>
+
+	--><!-- Add-On Core Code (Remove when not using any add-on's) -->
+	<style type="text/css">.qmfv{visibility:visible !important;}.qmfh{visibility:hidden !important;}</style><script type="text/JavaScript">var qmad = new Object();qmad.bvis="";qmad.bhide="";qmad.bhover="";</script>
+
+		<!-- Add-On Settings -->
+		<script type="text/JavaScript">
+		
+		function lkOperationWindow(){
+		window.open("http://localhost:8080/SCBClient/LKOperationMenuLink.do?pageId=9003","Popup");
+		}
+
+              var qm_si,qm_li,qm_lo,qm_tt,qm_th,qm_ts,qm_la,qm_ic,qm_ib;var qp="parentNode";var qc="className";var qm_t=navigator.userAgent;var qm_o=qm_t.indexOf("Opera")+1;var qm_s=qm_t.indexOf("afari")+1;var qm_s2=qm_s&&qm_t.indexOf("ersion/2")+1;var qm_s3=qm_s&&qm_t.indexOf("ersion/3")+1;var qm_n=qm_t.indexOf("Netscape")+1;var qm_v=parseFloat(navigator.vendorSub);;function qm_create(sd,v,ts,th,oc,rl,sh,fl,ft,aux,l){var w="onmouseover";var ww=w;var e="onclick";if(oc){if(oc=="all"||(oc=="lev2"&&l>=2)){w=e;ts=0;}if(oc=="all"||oc=="main"){ww=e;th=0;}}if(!l){l=1;qm_th=th;sd=document.getElementById("qm"+sd);if(window.qm_pure)sd=qm_pure(sd);sd[w]=function(e){qm_kille(e)};document[ww]=qm_bo;if(oc=="main"){qm_ib=true;sd[e]=function(event){qm_ic=true;qm_oo(new Object(),qm_la,1);qm_kille(event)};document.onmouseover=function(){qm_la=null;clearTimeout(qm_tt);qm_tt=null;};}sd.style.zoom=1;if(sh)x2("qmsh",sd,1);if(!v)sd.ch=1;}else  if(sh)sd.ch=1;if(oc)sd.oc=oc;if(sh)sd.sh=1;if(fl)sd.fl=1;if(ft)sd.ft=1;if(rl)sd.rl=1;sd.style.zIndex=l+""+1;var lsp;var sp=sd.childNodes;for(var i=0;i<sp.length;i++){var b=sp[i];if(b.tagName=="A"){lsp=b;b[w]=qm_oo;if(w==e)b.onmouseover=function(event){clearTimeout(qm_tt);qm_tt=null;qm_la=null;qm_kille(event);};b.qmts=ts;if(l==1&&v){b.style.styleFloat="none";b.style.cssFloat="none";}}else  if(b.tagName=="DIV"){if(window.showHelp&&!window.XMLHttpRequest)sp[i].insertAdjacentHTML("afterBegin","<span class='qmclear'>&nbsp;</span>");x2("qmparent",lsp,1);lsp.cdiv=b;b.idiv=lsp;if(qm_n&&qm_v<8&&!b.style.width)b.style.width=b.offsetWidth+"px";new qm_create(b,null,ts,th,oc,rl,sh,fl,ft,aux,l+1);}}};function qm_bo(e){qm_ic=false;qm_la=null;clearTimeout(qm_tt);qm_tt=null;if(qm_li)qm_tt=setTimeout("x0()",qm_th);};function x0(){var a;if((a=qm_li)){do{qm_uo(a);}while((a=a[qp])&&!qm_a(a))}qm_li=null;};function qm_a(a){if(a[qc].indexOf("qmmc")+1)return 1;};function qm_uo(a,go){if(!go&&a.qmtree)return;if(window.qmad&&qmad.bhide)eval(qmad.bhide);a.style.visibility="";x2("qmactive",a.idiv);};;function qa(a,b){return String.fromCharCode(a.charCodeAt(0)-(b-(parseInt(b/2)*2)));};function qm_oo(e,o,nt){if(!o)o=this;if(qm_la==o&&!nt)return;if(window.qmv_a&&!nt)qmv_a(o);if(window.qmwait){qm_kille(e);return;}clearTimeout(qm_tt);qm_tt=null;qm_la=o;if(!nt&&o.qmts){qm_si=o;qm_tt=setTimeout("qm_oo(new Object(),qm_si,1)",o.qmts);return;}var a=o;if(a[qp].isrun){qm_kille(e);return;}if(qm_ib&&!qm_ic)return;var go=true;while((a=a[qp])&&!qm_a(a)){if(a==qm_li)go=false;}if(qm_li&&go){a=o;if((!a.cdiv)||(a.cdiv&&a.cdiv!=qm_li))qm_uo(qm_li);a=qm_li;while((a=a[qp])&&!qm_a(a)){if(a!=o[qp]&&a!=o.cdiv)qm_uo(a);else break;}}var b=o;var c=o.cdiv;if(b.cdiv){var aw=b.offsetWidth;var ah=b.offsetHeight;var ax=b.offsetLeft;var ay=b.offsetTop;if(c[qp].ch){aw=0;if(c.fl)ax=0;}else {if(c.ft)ay=0;if(c.rl){ax=ax-c.offsetWidth;aw=0;}ah=0;}if(qm_o){ax-=b[qp].clientLeft;ay-=b[qp].clientTop;}if(qm_s2&&!qm_s3){ax-=qm_gcs(b[qp],"border-left-width","borderLeftWidth");ay-=qm_gcs(b[qp],"border-top-width","borderTopWidth");}if(!c.ismove){c.style.left=(ax+aw)+"px";c.style.top=(ay+ah)+"px";}x2("qmactive",o,1);if(window.qmad&&qmad.bvis)eval(qmad.bvis);c.style.visibility="inherit";qm_li=c;}else  if(!qm_a(b[qp]))qm_li=b[qp];else qm_li=null;qm_kille(e);};function qm_gcs(obj,sname,jname){var v;if(document.defaultView&&document.defaultView.getComputedStyle)v=document.defaultView.getComputedStyle(obj,null).getPropertyValue(sname);else  if(obj.currentStyle)v=obj.currentStyle[jname];if(v&&!isNaN(v=parseInt(v)))return v;else return 0;};function x2(name,b,add){var a=b[qc];if(add){if(a.indexOf(name)==-1)b[qc]+=(a?' ':'')+name;}else {b[qc]=a.replace(" "+name,"");b[qc]=b[qc].replace(name,"");}};function qm_kille(e){if(!e)e=event;e.cancelBubble=true;if(e.stopPropagation&&!(qm_s&&e.type=="click"))e.stopPropagation();}
+
+			/*Menu 0 Settings*/
+			var a = qmad.qm0 = new Object();
+		
+			// Tabs (CSS Based) Add On
+			a.tabscss_type = "angled";
+			a.tabscss_size = 5;
+			a.tabscss_left_offset = 0;
+			a.tabscss_top_offset = 0;
+			a.tabscss_apply_far_left = true;
+			a.tabscss_apply_far_right = true;
+			a.tabscss_apply_middles = true;
+			a.tabscss_bg_color = "#FF9966";
+			a.tabscss_border_color = "#687a54";
+			a.tabscss_bg_image="menuback1.GIF";
+
+
+			// Item Bullets Add On
+			a.ibullets_apply_to = "parent";
+			a.ibullets_main_image = "menuback1.GIF";
+			a.ibullets_main_image_width = 8;
+			a.ibullets_main_image_height = 6;
+			a.ibullets_main_position_x = -21;
+			a.ibullets_main_position_y = -5;
+			a.ibullets_main_align_x = "right";
+			a.ibullets_main_align_y = "middle";
+
+			a.ibullets_sub_image = "arrow_right.gif";
+			a.ibullets_sub_image_width = 6;
+			a.ibullets_sub_image_height = 8;
+			a.ibullets_sub_position_x = -14;
+			a.ibullets_sub_position_y = -4;
+			a.ibullets_sub_align_x = "right";
+			a.ibullets_sub_align_y = "middle";
+			
+            qmad.br_ie=window.showHelp;qmad.br_mac=navigator.userAgent.indexOf("Mac")+1;qmad.br_old_safari=navigator.userAgent.indexOf("afari")+1&&!window.XMLHttpRequest;qmad.br_navigator=navigator.userAgent.indexOf("Netscape")+1;qmad.br_version=parseFloat(navigator.vendorSub);qmad.br_oldnav=qmad.br_navigator&&qmad.br_version<7.1;if(!(qmad.br_ie&&qmad.br_mac)&&!qmad.br_old_safari&&!qmad.br_oldnav&&!qmad.tabscss){qmad.tabscss=new Object();if(window.attachEvent)window.attachEvent("onload",qm_tabscss_init);else  if(window.addEventListener)window.addEventListener("load",qm_tabscss_init,1);};function qm_tabscss_init(e,spec){var z;if((z=window.qmv)&&(z=z.addons)&&(z=z.tabscss)&&(!z["on"+qmv.id]&&z["on"+qmv.id]!=undefined&&z["on"+qmv.id]!=null))return;qm_ts=1;var q=qmad.tabscss;var a;for(i=0;i<10;i++){if(!(a=document.getElementById("qm"+i))||(spec&&spec!=i))continue;var ss=qmad[a.id];if(ss&&ss.tabscss_type){q.type=ss.tabscss_type;q.h=ss.tabscss_size;if(!q.h)continue;q.border=ss.tabscss_border_color;q.background=ss.tabscss_bg_color;q.thick=ss.tabscss_thickness;if(!q.background)q.background="#ffffff";if(!q.border)q.border="#000000";if(!q.thick)q.thick=1;q.lc=ss.tabscss_apply_far_left;q.rc=ss.tabscss_apply_far_right;q.mid=ss.tabscss_apply_middles;if(!q.lc&&!q.rc&&!q.mid)q.mid=true;q.toff=ss.tabscss_top_offset;if(!q.toff)q.toff=0;q.loff=ss.tabscss_left_offset;if(!q.loff)q.loff=0;qm_tabscss_init_items(a);}i++;}};function qm_tabscss_init_items(a){var q=qmad.tabscss;var first=true;var lat=null;var at=a.childNodes;for(var i=0;i<at.length;i++){if(at[i].tagName=="A"){if((first&&q.lc)||(!first&&q.mid)){a.insertBefore(qm_tabscss_create_tabimg(at[i],first),at[i]);i++;}lat=at[i];first=false;continue;}}if(lat&&q.rc){a.insertBefore(qm_tabscss_create_tabimg(lat,false,1),lat.nextSibling);}};function qm_tabscss_create_tabimg(a,isfirst,islast){var q=qmad.tabscss;var s=document.createElement("SPAN");s.iscsstab=1;s.style.display="block";s.style.position="relative";s.style.fontSize="1px";s.style.styleFloat="left";s.style.cssFloat="left";s.style.zIndex=1;s.style.height=a.offsetHeight+"px";s.style.width="0px";s.noselect=1;var part="middle";if(isfirst)part="first";if(islast)part="last";var wt="";q.z1=0;for(var i=0;i<q.h;i++)wt+=qm_tabscss_get_span(q.h,i,part);s.innerHTML=wt;return s;};function qm_tabscss_get_span(size,i,part){var q=qmad.tabscss;var it=i;var il=0;var ih=1;var iw=1;var ml=0;var mr=0;var bl=1;var br=1;if(q.type=="angled"){ml=i;mr=i;iw=((size-i)*2)-q.thick;il=-size+(q.thick-1);it+=q.toff;il+=q.loff;ih=q.thick;if(part=="first"){iw=size-i;bl=0;ml=0;il+=size-(q.thick);}if(part=="last"){iw=size-i;br=0;mr=0;il -=1;}}else  if(q.type=="rounded"){ml=i;mr=i;iw=((size-i)*2)-1;il=-size;il+=q.loff;it+=q.toff;ih=i+1;it=q.z1;q.z1+=ih;if(part=="first"){iw=size-i;bl=0;ml=0;il+=size-1;}if(part=="last"){iw=size-i;br=0;mr=0;}}return '<span style="background-color:'+q.background+';border-color:'+q.border+';border-width:0px '+br+'px 0px '+bl+'px;border-style:solid;display:block;position:absolute;overflow:hidden;font-size:1px;line-height:0px;height:'+ih+'px;margin-left:'+ml+'px;margin-right:'+mr+'px;width:'+iw+'px;top:'+it+'px;left:'+il+'px;"></span>';}
+            qmad.br_navigator=navigator.userAgent.indexOf("Netscape")+1;qmad.br_version=parseFloat(navigator.vendorSub);qmad.br_oldnav6=qmad.br_navigator&&qmad.br_version<7;if(!qmad.br_oldnav6){if(!qmad.ibullets)qmad.ibullets=new Object();if(qmad.bvis.indexOf("qm_ibullets_active(o,false);")==-1){qmad.bvis+="qm_ibullets_active(o,false);";qmad.bhide+="qm_ibullets_active(a,1);";if(window.attachEvent)window.attachEvent("onload",qm_ibullets_init);else  if(window.addEventListener)window.addEventListener("load",qm_ibullets_init,1);if(window.attachEvent)document.attachEvent("onmouseover",qm_ibullets_hover_off);else  if(window.addEventListener)document.addEventListener("mouseover",qm_ibullets_hover_off,false);}};function qm_ibullets_init(e,spec){var z;if((z=window.qmv)&&(z=z.addons)&&(z=z.item_bullets)&&(!z["on"+qmv.id]&&z["on"+qmv.id]!=undefined&&z["on"+qmv.id]!=null))return;qm_ts=1;var q=qmad.ibullets;var a,b,r,sx,sy;z=window.qmv;for(i=0;i<10;i++){if(!(a=document.getElementById("qm"+i))||(!isNaN(spec)&&spec!=i))continue;var ss=qmad[a.id];if(ss&&(ss.ibullets_main_image||ss.ibullets_sub_image)){q.mimg=ss.ibullets_main_image;if(q.mimg){q.mimg_a=ss.ibullets_main_image_active;if(!z)qm_ibullets_preload(q.mimg_a);q.mimg_h=ss.ibullets_main_image_hover;if(!z)qm_ibullets_preload(q.mimg_a);q.mimgwh=eval("new Array("+ss.ibullets_main_image_width+","+ss.ibullets_main_image_height+")");r=q.mimgwh;if(!r[0])r[0]=9;if(!r[1])r[1]=6;sx=ss.ibullets_main_position_x;sy=ss.ibullets_main_position_y;if(!sx)sx=0;if(!sy)sy=0;q.mpos=eval("new Array('"+sx+"','"+sy+"')");q.malign=eval("new Array('"+ss.ibullets_main_align_x+"','"+ss.ibullets_main_align_y+"')");r=q.malign;if(!r[0])r[0]="right";if(!r[1])r[1]="center";}q.simg=ss.ibullets_sub_image;if(q.simg){q.simg_a=ss.ibullets_sub_image_active;if(!z)qm_ibullets_preload(q.simg_a);q.simg_h=ss.ibullets_sub_image_hover;if(!z)qm_ibullets_preload(q.simg_h);q.simgwh=eval("new Array("+ss.ibullets_sub_image_width+","+ss.ibullets_sub_image_height+")");r=q.simgwh;if(!r[0])r[0]=6;if(!r[1])r[1]=9;sx=ss.ibullets_sub_position_x;sy=ss.ibullets_sub_position_y;if(!sx)sx=0;if(!sy)sy=0;q.spos=eval("new Array('"+sx+"','"+sy+"')");q.salign=eval("new Array('"+ss.ibullets_sub_align_x+"','"+ss.ibullets_sub_align_y+"')");r=q.salign;if(!r[0])r[0]="right";if(!r[1])r[1]="middle";}q.type=ss.ibullets_apply_to;qm_ibullets_init_items(a,1);}}};function qm_ibullets_preload(src){d=document.createElement("DIV");d.style.display="none";d.innerHTML="<img src="+src+" width=1 height=1>";document.body.appendChild(d);};function qm_ibullets_init_items(a,main){var q=qmad.ibullets;var aa,pf;aa=a.childNodes;for(var j=0;j<aa.length;j++){if(aa[j].tagName=="A"){if(window.attachEvent)aa[j].attachEvent("onmouseover",qm_ibullets_hover);else  if(window.addEventListener)aa[j].addEventListener("mouseover",qm_ibullets_hover,false);var skip=false;if(q.type!="all"){if(q.type=="parent"&&!aa[j].cdiv)skip=true;if(q.type=="non-parent"&&aa[j].cdiv)skip=true;}if(!skip){if(main)pf="m";else pf="s";if(q[pf+"img"]){var ii=document.createElement("IMG");ii.setAttribute("src",q[pf+"img"]);ii.setAttribute("width",q[pf+"imgwh"][0]);ii.setAttribute("height",q[pf+"imgwh"][1]);ii.style.borderWidth="0px";ii.style.position="absolute";var ss=document.createElement("SPAN");var s1=ss.style;s1.display="block";s1.position="relative";s1.fontSize="1px";s1.lineHeight="0px";s1.zIndex=1;ss.ibhalign=q[pf+"align"][0];ss.ibvalign=q[pf+"align"][1];ss.ibiw=q[pf+"imgwh"][0];ss.ibih=q[pf+"imgwh"][1];ss.ibposx=q[pf+"pos"][0];ss.ibposy=q[pf+"pos"][1];qm_ibullets_position(aa[j],ss);ss.appendChild(ii);aa[j].qmibullet=aa[j].insertBefore(ss,aa[j].firstChild);aa[j]["qmibullet"+pf+"a"]=q[pf+"img_a"];aa[j]["qmibullet"+pf+"h"]=q[pf+"img_h"];aa[j].qmibulletorig=q[pf+"img"];ss.setAttribute("qmvbefore",1);ss.setAttribute("isibullet",1);if(aa[j].className.indexOf("qmactive")+1)qm_ibullets_active(aa[j]);}}if(aa[j].cdiv)new qm_ibullets_init_items(aa[j].cdiv);}}};function qm_ibullets_position(a,b){if(b.ibhalign=="right")b.style.left=(a.offsetWidth+parseInt(b.ibposx)-b.ibiw)+"px";else  if(b.ibhalign=="center")b.style.left=(parseInt(a.offsetWidth/2)-parseInt(b.ibiw/2)+parseInt(b.ibposx))+"px";else b.style.left=b.ibposx+"px";if(b.ibvalign=="bottom")b.style.top=(a.offsetHeight+parseInt(b.ibposy)-b.ibih)+"px";else  if(b.ibvalign=="middle")b.style.top=parseInt((a.offsetHeight/2)-parseInt(b.ibih/2)+parseInt(b.ibposy))+"px";else b.style.top=b.ibposy+"px";};function qm_ibullets_hover(e,targ){e=e||window.event;if(!targ){var targ=e.srcElement||e.target;while(targ.tagName!="A")targ=targ[qp];}var ch=qmad.ibullets.lasth;if(ch&&ch!=targ){qm_ibullets_hover_off(new Object(),ch);}if(targ.className.indexOf("qmactive")+1)return;var wo=targ.qmibullet;var ma=targ.qmibulletmh;var sa=targ.qmibulletsh;if(wo&&(ma||sa)){var ti=ma;if(sa&&sa!=undefined)ti=sa;if(ma&&ma!=undefined)ti=ma;wo.firstChild.src=ti;qmad.ibullets.lasth=targ;}if(e)qm_kille(e);};function qm_ibullets_hover_off(e,o){if(!o)o=qmad.ibullets.lasth;if(o&&o.className.indexOf("qmactive")==-1){if(o.firstChild&&o.firstChild.getAttribute&&o.firstChild.getAttribute("isibullet"))o.firstChild.firstChild.src=o.qmibulletorig;}};function qm_ibullets_active(a,hide){var wo=a.qmibullet;var ma=a.qmibulletma;var sa=a.qmibulletsa;if(!hide&&a.className.indexOf("qmactive")==-1)return;if(hide&&a.idiv){var o=a.idiv;if(o&&o.qmibulletorig){if(o.firstChild&&o.firstChild.getAttribute&&o.firstChild.getAttribute("isibullet"))o.firstChild.firstChild.src=o.qmibulletorig;}}else {if(!a.cdiv.offsetWidth)a.cdiv.style.visibility="inherit";if(a.cdiv){var aa=a.cdiv.childNodes;for(var i=0;i<aa.length;i++){if(aa[i].tagName=="A"&&aa[i].qmibullet)qm_ibullets_position(aa[i],aa[i].qmibullet);}}if(wo&&(ma||sa)){var ti=ma;if(sa&&sa!=undefined)ti=sa;if(ma&&ma!=undefined)ti=ma;wo.firstChild.src=ti;}}}
+		</script>
+
+
+	<!-- Optional Add-On's (Must appear after core menu code) -->
+	<!--<script type="text/JavaScript" src="qm_tabs_css.js"></script>
+	<script type="text/javascript" src="qm_item_bullets.js"></script>
+
+
+--><!--%%%%%%%%%%%% QuickMenu Styles [Keep in head for full validation!] %%%%%%%%%%%-->
+<style type="text/css">
+
+/*!!!!!!!!!!! QuickMenu Core CSS [Do Not Modify!] !!!!!!!!!!!!!*/
+.qmmc .qmdivider{display:block;font-size:1px;border-width:0px;border-style:solid;} .qmmc .qmdividery{float:left;width:0px;} .qmmc .qmtitle{display:block;cursor:default;white-space:nowrap;} .qmclear {font-size:1px;height:0px;width:0px;clear:left;line-height:0px;display:block;}.qmmc {position:relative;}.qmmc a {float:left;display:block;white-space:nowrap;}.qmmc div a {float:none;}.qmsh div a{float:left;}.qmmc div {visibility:hidden;position:absolute;}
+
+
+/*!!!!!!!!!!! QuickMenu Styles [Please Modify!] !!!!!!!!!!!*/
+
+
+	/* Remove the comments bleow for vertical mains and change the false value to
+           true in the qm_create function after the menus structure. */
+	/*.qmmc a {float:none}*/
+
+	
+	
+/*"""""""" (MAIN) Container""""""""*/
+	#qm0
+	{
+		margin:0px;
+		background-color:#daebd0;
+		 background-image:url("s3.GIF");
+        width: 900px;
+    }
+
+
+	/*"""""""" (MAIN) Items""""""""*/
+	#qm0 a
+	{
+		padding:4px 5px 4px 5px;
+		background-image:url("green1.JPG");
+		color:#222222;
+		font-family:Arial;
+       /* font-family:serif;*/
+        /*font-style:oblique;*/
+        font-size:9px;
+       /* font-weight:bold;*/
+
+        text-decoration:none;
+		text-align:left;
+		border-width:1px 0px 1px 1px;
+		border-style:solid;
+		border-color:#687a54;
+
+    }
+
+
+	/*"""""""" (MAIN) Hover State""""""""*/
+	#qm0 a:hover
+	{
+		color:#222222;
+	}
+
+
+	/*"""""""" (MAIN) Active State""""""""*/
+	body #qm0 .qmactive, body #qm0 .qmactive:hover
+	{
+		background-color:#c2e0a9;
+		background-image:url("green1.JPG");
+		
+	}
+
+
+	/*"""""""" (SUB) Container""""""""*/
+	#qm0 div, #qm0 ul
+	{
+		padding:5px;
+		background-image:url("green1.JPG");
+		background-color:#dcedcd;
+		background-image:url("green1.JPG");
+		border-width:1px;
+		border-style:solid;
+		border-color:#687a54;
+	}
+
+
+	/*"""""""" (SUB) Items""""""""*/
+	#qm0 div a, #qm0 ul a
+	{
+		padding:3px 20px 3px 5px;
+		color:#222222;
+        /*color: #f5ab62*/
+        font-size:9px;
+		text-align:left;
+		border-width:1px 0px;
+		border-color:#dcedcd;
+	}
+
+
+	/*"""""""" (SUB) Hover State""""""""*/
+	#qm0 div a:hover, #qm0 ul a:hover
+	{
+		background-color:#c2e0a9;
+		background-image:url("green1.JPG");
+		color:#222222;
+		border-color:#687a54;
+	}
+
+
+	/*"""""""" (SUB) Active State""""""""*/
+	body #qm0 div .qmactive, body #qm0 div .qmactive:hover
+	{
+		border-color:#687a54;
+	}
+	
+	
+	body{
+
+		margin:0;
+		
+        background-image:url("green1.JPG");
+   
+        width:100%;
+		height:100%;
+		border:thick;
+
+		border-bottom:#33CC66 thick solid;
+		border-top:#33CC66 thick solid;
+
+	}
+	
+    </style>
+
+</head>
+
+
+
+<body >
+
+
+
+<!--%%%%%%%%%%%% QuickMenu Stucture %%%%%%%%%%%*-->
+
+
+<div id="qm0" class="qmmc">
+
+	<a href="javascript:void(0)">Customer</a>
+				
+		<div>
+			<a><a href="/SCBClient/MenuLink.do?pageId=1001&value=1">New Customer</a></a>
+        	<a><a href="/SCBClient/MenuLink.do?pageId=1001&value=2">Verification</a></a>
+        	<a><a href="/SCBClient/MenuLink.do?pageId=1001&value=3">Ammendments</a></a>
+        	<a><a href="/SCBClient/CustomizationMenuLink.do?pageId=1005">Customization</a></a>
+        	<a><a href="/SCBClient/CustomerViewLogMenuLink.do?pageId=1006">Customer View Log</a></a>
+        	<a><a href="/SCBClient/QueryOnCustomerMenuLink.do?pageId=1007">Query On Customer</a></a>
+        	
+		</div>
+	
+		
+	<a href="javascript:void(0)">Cash</a>
+		<div>
+		<a>Receipts</a>
+		<div>		
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/ReceiptMenu.do?pageId=2001&value=1">General</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/MiscellaneousMenu.do?pageId=2002&value=1">Miscellanous</a></a>
+		</div>	
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/PaymentMenu.do?pageId=2003">Payment</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/TransferMenu.do?pageId=2004">Inter Counter</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/ExchangeMenu.do?pageId=2005&value=1">Currency Exchange</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/ConsolidatedMenu.do?pageId=2006">Consolidated Scroll</a></a>
+		<a>Closing</a>
+		<div>		
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/ExchangeMenu.do?pageId=2005&value=2">Sub Cashier</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/CurrencyStockMenu.do?pageId=2009&value=2">Main Cashier</a></a>
+		</div>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/CurrencyStockMenu.do?pageId=2009&value=1">Currency Stock Updation</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/RebalancingMenu.do?pageId=2011">Rebalancing Scroll</a></a>
+		</div>
+		
+			
+			
+	<a href="javascript:void(0)">Verification</a>
+			
+		<div>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/ReceiptMenu.do?pageId=2001&value=2">VERIFICATION-general receipt</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/MiscellaneousMenu.do?pageId=2002&value=2">Miscellanous</a></a>
+		<a>Loans On Deposit</a>
+		<div>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LoansOnDepositMenuLink.do?pageId=6001&value=2">LoansApplicationDE</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/AdditionalVerMenuLink.do?pageId=6014">AdditionalLoan</a></a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LDRecoveryMenuLink.do?pageId=6004&value=2">Loan Recovery</a></a>
+		</div>
+		<a>Share</a>
+		<div>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ShareAllotmentVerificationMenu.do?pageId=4032">Share Allotment</a></a>
+		</div>
+		<a href="javascript:void(0)">HTML Structure</a>
+		<a href="javascript:void(0)">Inline Loading</a>
+		<a href="javascript:void(0)">Pure CSS Mains</a>
+		<a href="javascript:void(0)">Scalability</a>
+		<a href="javascript:void(0)">Strict Validation</a>
+		</div>
+		
+		
+
+		
+	
+	<a href="javascript:void(0)" style="border-width:1px 1px 1px 1px;">Share</a>
+			
+		<div>
+		<a>Share Allotment</a>
+		<div>		
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/AllotmentMenu.do?pageId=4001">New Share</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/AdditionalAllotmentMenu.do?pageId=4002">Additional Share</a></a>
+        <a>Convert Shares</a>
+        <div>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ConvertTempMenu.do?pageId=4030">New Allotment</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ConvertTempAddMenu.do?pageId=4008">Add Allotment</a></a>
+        </div> 
+        <a>Inter Branch</a>
+        <div>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ShareDispatchMenu.do?pageId=4009">Share Dispatch</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/RegularizationMenu.do?pageId=4011">Regularisation</a></a>
+        </div>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/CertificateMenu.do?pageId=4012">Certificate</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ViewLogMenu.do?pageId=4013">View Log</a></a>	
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/MasterUpdationMenu.do?pageId=4014">Master Updation</a></a>	
+		</div>
+		<a><a href="/SCBClient/Share/WithdrawalMenu.do?pageId=4005">ShareWithdrawal</a></a>
+		<a>Reports</a>
+		<div>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ShareOpenReportMenu.do?pageId=4020">Open Report</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ShareCloseReportMenu.do?pageId=4021">Close Report</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/TempShareMenu.do?pageId=4022">Temporary Shares</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/PermShareMenu.do?pageId=4023">Permanent Shares</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/Votermenu.do?pageId=4024">Voter List</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ShareRegistryMenu.do?pageId=4025">Share Registry</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ShareAllotwithMenu.do?pageId=4026">Share Allotment/Withdrawal</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ShareRegistrySumMenu.do?pageId=4027">Share Registry Summary</a></a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Share/ShareLedgerMenu.do?pageId=4028">Share Ledger</a></a>           		
+		</div>
+		<a>Dividend</a>
+		<div>
+		<a><a href="/SCBClient/Share/DividendCalMenu.do?pageId=4003">Dividend Calculation</a></a>
+		<a><a href="/SCBClient/Share/DividendEntryMenu.do?pageId=4029">Dividend Data Entry</a></a>
+		<a><a href="/SCBClient/Share/UnClaimedDividendNoticeMenu.do?pageId=4015">Unclaimed Dividend Notice</a></a>
+		<a><a href="/SCBClient/Share/UnClaimedDividendMenu.do?pageId=4006">Unclaimed Dividend List</a></a>
+		<a><a href="/SCBClient/Share/DividendPaymentMenu.do?pageId=4016">Dividend Payment</a></a>
+		<a><a href="/SCBClient/Share/DividendRegistryMenu.do?pageId=4007">Dividend Registry</a></a>
+		<a><a href="/SCBClient/Share/DividendReportMenu.do?pageId=4031">Dividend Report</a></a>
+		</div>
+		<a><a href="/SCBClient/Share/PassBookMenu.do?pageId=4004">Pass Book</a></a>
+		<a>Admin</a>
+		<div>
+		<a><a href="/SCBClient/Share/ShareAdminMenu.do?pageId=4017">Share Admin</a></a>
+		<a><a href="/SCBClient/Share/ShareDivRateMenu.do?pageId=4018">Share Div Rate</a></a>
+		<a><a href="/SCBClient/Share/ChangeofModulesMenu.do?pageId=4019">Change of Modules</a></a>
+		</div>
+		
+		</div>
+		
+	<a href="javascript:void(0)" style="border-width:1px 1px 1px 1px;">Front Counter</a>
+			
+		<div>
+		<a >AccountOpening</a>
+			<div>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/FrontCounter/SBOpeningMenu.do?pageId=3001">SB/CA Application DE</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/FrontCounter/OdccApplicationMenu.do?pageId=3004">OD/CC Application DE</a></a>
+				<a><a href="/SCBClient/FrontCounter/OdccSanctionMenu.do?pageId=3004">OD/CC Sanctioning</a></a>
+				<a><a href="/SCBClient/FrontCounter/ViewLogMenu.do?pageId=3006">View Log</a></a>
+				<a><a href="/SCBClient/FrontCounter/CCPeriodMenu.do?pageId=3005">CC Periodical Inspection</a></a>
+				<a><a href="/SCBClient/FrontCounter/InOpProcessMenu.do?pageId=3007">Inoperative Process</a></a>
+			</div>
+		<a >ChequeOperation</a>
+			<div>
+				<a><a href="/SCBClient/FrontCounter/WithdrawMenu.do?pageId=3008">Cheque/Slip Withdrawal</a></a>
+				<a><a href="/SCBClient/FrontCounter/ChqIssMenu.do?pageId=3009">Cheque Issue</a></a>
+				<a><a href="/SCBClient/FrontCounter/ChqQueryMenu.do?pageId=3010">Query On Cheque</a></a>
+				<a><a href="/SCBClient/FrontCounter/ChqInsMenu.do?pageId=3011">ChequeInstruction</a></a>
+			</div>
+		<a>Pay Order</a>
+			<div>
+				<a><a href="/SCBClient/FrontCounter/PoDeMenu.do?pageId=3012">Pay Order Data Entry</a></a>
+				<a><a href="/SCBClient/FrontCounter/PoCoMenu.do?pageId=3013">Pay Order Consolidation</a></a>
+				<a><a href="/SCBClient/FrontCounter/PoInsMenu.do?pageId=3014">Pay Order Instruction</a></a>
+				<a>Reports</a>
+				<div>
+					<a><a href="/SCBClient/FrontCounter/ListPOUncashMenu.do?pageId=3027">List Of UnCashed PO</a></a>
+					<a><a href="/SCBClient/FrontCounter/POPrintMenu.do?pageId=3028">Pay Order Print</a></a>
+					<a><a href="/SCBClient/FrontCounter/ListPOCrMenu.do?pageId=3027">List Of Created PO</a></a>
+					<a><a href="/SCBClient/FrontCounter/ListPOConsolMenu.do?pageId=3027">List Of Consolidated PO</a></a>
+				
+				</div>
+			</div>
+		<a>Pass Book</a>
+			<div>
+				<a><a href="/SCBClient/FrontCounter/PassBKMenu.do?pageId=3015">Pass Book</a></a>
+				<a><a href="/SCBClient/FrontCounter/PassSheetMenu.do?pageId=3016">Pass Sheet</a></a>
+			</div>
+		<a>Interest</a>
+			<div>
+				<a><a href="/SCBClient/FrontCounter/IntCalMenu.do?pageId=3017">Interest Calculation</a></a>
+				<a><a href="/SCBClient/FrontCounter/IntRegMenu.do?pageId=3018">Interest Register</a></a>
+				<a><a href="/SCBClient/FrontCounter/IntPostMenu.do?pageId=3019">Interest Posting</a></a>
+			</div>
+		<a>Master Updation</a>
+			<div>
+				<a><a href="/SCBClient/FrontCounter/SBCAUpdtMenu.do?pageId=3020">SB/CA Update</a></a>
+				<a><a href="/SCBClient/FrontCounter/OdCcMastUpdtMenu.do?pageId=3021">OD/CC MasterUpdation</a></a>
+				<a><a href="/SCBClient/FrontCounter/OdCcTabUpdtMenu.do?pageId=3022">OD/CC TableUpdation</a></a>
+				<a><a href="/SCBClient/FrontCounter/JntHoldUpdtMenu.do?pageId=3023">Joint Holder Updation</a></a>
+				
+			</div>
+		<a>Admin</a>
+			<div>
+				<a><a href="/SCBClient/FrontCounter/SbCaAdminMenu.do?pageId=3024">SB/CA Admin</a></a>
+				<a><a href="/SCBClient/FrontCounter/OdCcAdminMenu.do?pageId=3024">OD/CC Admin</a></a>
+				<a><a href="/SCBClient/FrontCounter/PayOrdAdminMenu.do?pageId=3026">PayOrder Admin</a></a>
+			</div>
+		</div>
+		
+   <a href="javascript:void(0)" style="border-width:1px 1px 1px 1px;">Term Deposit</a>
+			
+		<div>
+		
+		<a>Account Opening </a>
+		  <div>
+		   <a> <a href="/SCBClient/TermDeposit/AccountOpeningMenu.do?pageId=13001&value=1">Deposit Account Opening</a></a>
+		   <a><a href="/SCBClient/TermDeposit/AmmendmentsMenu.do?pageId=13009">Ammendments</a></a> 
+		   <a><a href="/SCBClient/TermDeposit/DepositViewLogMenu.do?pageId=13004">DepositViewLog</a> </a>
+		 </div>
+		 
+		 <a>Deposit Receipts </a>
+		 <div>
+		    <a><a href="/SCBClient/TermDeposit/QueryOnReceiptNoMenu.do?pageId=13005">QueryOnReceiptNo</a></a>
+			<a><a href="/SCBClient/TermDeposit/ReceiptPrintingMenu.do?pageId=13006">ReceiptPrinting</a></a>
+			<a><a href="/SCBClient/TermDeposit/ReceiptUpdationMenu.do?pageId=13007">ReceiptUpdation</a></a>
+				 
+		 </div>	 
+			<a>Interest</a>
+			<div>
+				<a><a href="/SCBClient/TermDeposit/InterestCalculationMenu.do?pageId=13002">Interest Payment</a></a>
+				<a><a href="/SCBClient/TermDeposit/QuarterlyInterestMenu.do?pageId=13008">QuarterlyInterest</a></a>
+			</div>
+			<a>Deposit Maturity</a>
+			<div>
+				<a><a href="/SCBClient/TermDeposit/TDClosureMenu.do?pageId=13003">TDClosure</a></a>
+				<a><a href="/SCBClient/TermDeposit/AccountRenewalMenu.do?pageId=13010">AccountRenewal</a></a>
+				<a><a href="/SCBClient/TermDeposit/AccountRenewalMenu.do?pageId=13022">AutoRenewal</a></a>
+				<a><a href="/SCBClient/TermDeposit/VoucherPaymentMenu.do?pageId=13011">VoucherPayment</a></a>
+				</div>
+			 <a>Reports</a>
+			<div>
+				<a><a href="/SCBClient/TermDeposit/TermDepositRenewalNoticeMenu.do?pageId=13012">TermDepositRenewalNotice</a></a>
+				<a><a href="/SCBClient/TermDeposit/PeriodwiseReportMenu.do?pageId=13013">PeriodWise Report</a></a>
+			    <a><a href="/SCBClient/TermDeposit/QuantumwiseReportMenu.do?pageId=13014">Quantum Wise Report</a></a>
+			    <a><a href="/SCBClient/TermDeposit/OpenClosedAccountsMenu.do?pageId=13015">Open Closed Accounts</a></a>
+			   <a><a href="/SCBClient/TermDeposit/AutoRenewalListMenu.do?pageId=13016">AutoRenewalList</a></a>
+			   <a><a href="/SCBClient/TermDeposit/LedgerMenu.do?pageId=13021">Ledger</a></a>
+			   <a><a href="/SCBClient/TermDeposit/TDPassbookMenu.do?pageId=13017">TDPassbook</a></a>
+			   <a><a href="/SCBClient/TermDeposit/MISReportMenu.do?pageId=13018">MISReport</a></a>
+			   <a><a href="/SCBClient/TermDeposit/MaturityLedgerReportMenu.do?pageId=13019">MaturityLedgerReport</a></a>
+			   <a><a href="/SCBClient/TermDeposit/InterestAccruedReportMenu.do?pageId=13020">InterestAccruedReport</a></a>
+			   <a href="/SCBClient/TermDeposit/AdminMenu.do?pageId=13021">Admin</a>
+			</div>
+		</div>		
+		
+		
+	<a href="javascript:void(0)" style="border-width:1px 1px 1px 1px;">Loans</a>
+			
+		<div>
+		<a>Granting</a>
+		<div>
+		<a><a href="/SCBClient/Loans/LoanApplicationMenu.do?pageidentity.pageId=5001">Loan Application DE</a></a>
+		<a><a href="/SCBClient/Loans/ReschedulingMenu.do?pageidentity.pageId=5014">Rescheduling</a></a>
+		</div>
+		<a>Recovery</a>
+		<div>
+			<a><a href="/SCBClient/Loans/LoanRecoveryMenu.do?pageidentity.pageId=5017">Query On Loan Status</a></a>
+			<a><a href="/SCBClient/Loans/LoanDailyPostingMenu.do?pageidentity.pageId=5010">LoanDailyPosting</a></a>
+			<a><a href="/SCBClient/Loans/LoanPassBookMenu.do?pageidentity.pageId=5042">Loan PassBook</a></a>
+		</div>
+		
+		<a>Loan Activities</a>
+		<div>
+		<a><a href="/SCBClient/Loans/OtherChargesMenu.do?pageidentity.pageId=5012">O/C DE</a> </a>
+		<a><a href="/SCBClient/Loans/LoanDocsUpdationMenu.do?pageidentity.pageId=5026">Loan Documentation Updation</a></a>		
+		<a><a href="/SCBClient/Loans/LoanLeadgerMenu.do?pageidentity.pageId=5028">Loan Leadger</a></a>
+		<a><a href="/SCBClient/Loans/LoanSplIntRateUpdnMenu.do?pageidentity.pageId=5031">Spl Int Rate Updation</a></a>
+		<a><a href="/SCBClient/Loans/LoanMeetingAgendaMenu.do?pageidentity.pageId=5030">Loan Meeting Agenda Printing</a></a>
+		<a><a href="/SCBClient/Loans/ReverseRecoveryMenu.do?pageidentity.pageId=5011">ReverseRecovery</a></a>
+		</div>
+		<a>Process</a>
+		<div>
+		<a><a href="/SCBClient/Loans/NPAProcessMenu.do?pageidentity.pageId=5043">NPAProcess</a></a>
+		<a>DCB Process</a>
+		<div>
+			<a><a href="/SCBClient/Loans/DCBProcessMenu.do?pageidentity.pageId=5041">DCBProcess</a></a>
+			<a><a href="/SCBClient/Loans/DCBSchedulingMenu.do?pageidentity.pageId=5038">DCBScheduling</a></a>
+			<a><a href="/SCBClient/Loans/DCBSummaryMenu.do?pageidentity.pageId=5039">DCBSummary</a></a>
+			<a><a href="/SCBClient/Loans/DCBMaintenanceMenu.do?pageidentity.pageId=5040">DCBMaintenance</a></a>
+		</div>
+		</div>
+		<a>Reports</a>
+		<div>
+		<a><a href="/SCBClient/Loans/InterestAccuredReportMenu.do?pageidentity.pageId=5015">InterestAccuredReport</a></a>
+		<a><a href="/SCBClient/Loans/OpenClosedStatMenu.do?pageidentity.pageId=5016">Open-ClosedStat</a></a>
+		<a><a href="/SCBClient/Loans/PSWSProcessingMenu.do?pageidentity.pageId=5035">PSWSProcessing</a></a>
+		<a><a href="/SCBClient/Loans/PSWSScheduleMenu.do?pageidentity.pageId=5036">PSWSScheduling</a></a>
+		<a><a href="/SCBClient/Loans/JewelReportMenu.do?pageidentity.pageId=5037">JewelReport</a></a>
+        <a><a href="/SCBClient/Loans/NPAReportMenu.do?pageidentity.pageId=5047">NPAReport</a></a>		
+        <a><a href="/SCBClient/Loans/NPALoanSummaryMenu.do?pageidentity.pageId=5025">NPASummary</a></a>
+		<a><a href="/SCBClient/Loans/OCReportMenu.do?pageidentity.pageId=5023">OtherChargesReport</a></a>
+		<a><a href="/SCBClient/Loans/ODReportMenu.do?pageidentity.pageId=5024">OverDueReport</a></a>
+		</div>
+		
+		<a>Loan Monitor</a>
+		<div>
+		<a><a href="/SCBClient/Loans/PenalIntFixMenu.do?pageidentity.pageId=5033">Penal Int Fix</a></a>		
+		<a><a href="/SCBClient/Loans/ActionDueReportMenu.do?pageidentity.pageId=5034">ActionDueReport</a></a>
+		<a><a href="/SCBClient/Loans/LoanDefaultProcessingMenu.do?pageidentity.pageId=5044">LoanDefaulterProcessing</a></a>
+		</div>
+		
+		<a>Loan Admin</a>
+		<div>
+		<a><a href="/SCBClient/Loans/LoanAdminMenu.do?pageidentity.pageId=5045">Loan Admin</a></a>		
+		</div>
+			
+		</div>	
+		
+   <a href="javascript:void(0)" style="border-width:1px 1px 1px 1px;">Clearing</a>
+			
+		<div>
+		<a>OUTWARD</a>
+		
+		<div>
+		<a><a href="/SCBClient/Clearing/ChequeDeposition.do?pageId=7001">Cheque Deposition</a></a>
+		<a> <a href="/SCBClient/Clearing/ClearingIdentificationM.do?pageId=7003">Identify</a> </a>
+		</div>
+		
+		<a> <a href="/SCBClient/Clearing/unIdentifyMlink.do?pageId=7018">unidentify</a> </a>
+		
+		
+		<a>INTERBRANCH</a>
+		<div>
+		<a><a href="/SCBClient/Clearing/ackDataEntryMLink.do?pageId=7015">AckData Entry</a></a>
+		<a><a href="/SCBClient/Clearing/AckReconciliationMlink.do?pageId=7017">Ack Reconciliation</a></a>
+		</div>	
+		
+		<a>Bounce</a>
+		<div>
+		<a><a href="/SCBClient/Clearing/LateReturnsMLink.do?pageId=7012">LateReturns</a></a>		
+		<a><a href="/SCBClient/Clearing/MailingChargesMLink.do?pageId=7013">Mailing Charges</a></a>
+		</div>
+		
+		
+		
+		<a>Reports</a>
+		<div>
+		<a><a href="/SCBClient/Clearing/Inwardstmtlink.do?pageId=7007">InwardStatments</a></a>
+		<a><a href="/SCBClient/Clearing/Outwardstmtlink.do?pageId=7008">OutwardStatments</a></a>
+		<a><a href="/SCBClient/Clearing/Bouncedreglink.do?pageId=7009">Bounced Register</a></a>
+		<a><a href="/SCBClient/Clearing/ControlnoLink.do?pageId=7010">Query On Cheque</a></a>
+		<a><a href="/SCBClient/Clearing/BouncedletterLink.do?pageId=7022">Bounced Letter</a></a>
+		<a><a href="/SCBClient/Clearing/ControlNumbersQueryMlink.do?pageId=7025">ControlNumbersQuery</a></a>
+		
+		
+		</div>	
+		</div>
+  <a href="javascript:void(0)" style="border-width:1px 1px 1px 1px;">Pygmy Deposit</a>
+			
+		<div>
+			<a>Pygmy Open</a>
+			<div>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/AgentOpeningMenu.do?pageid=8001">AgentOpening</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/PygmyOpeningMenu.do?pageid=8002">PygmyOpening</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/AgentClosingMenu.do?pageid=8010">AgentClosing</a></a>
+			</div>
+			<!--<a>Remittance</a>
+			<div>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/AgentOpeningMenu.do?pageid=8003">DailyRemittance</a></a>
+			</div>
+			--><a>Withdrawal</a>
+			<div>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/PygmyWithdrawalMenu.do?pageid=8003">PygmyWithdrawal</a></a>
+			</div>
+			<a>Interest</a>
+			<div>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/PygmyInterestCalculationMenu.do?pageid=8011">Pygmy Interest Calculation</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/InterestRegisteredMenu.do?pageid=8004">Interest Registered Report</a></a>
+			</div>
+			<a>Reports</a>
+			<div>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/OpenCloseMenu.do?pageid=8005">Open/Close Report</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/AcknowledgementMenu.do?pageid=8013">Acknowledgement Printing</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/AgentRemittanceMenu.do?pageid=8006">Agent Remittance Report</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/MonthlyRemittanceMenu.do?pageid=8007">Monthly Remittance Report</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/PassBookMenu.do?pageid=8008">Pass Book</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/RegisterPrintingMenu.do?pageid=8009">Register Printing</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/LedgerPrintingMenu.do?pageid=8012">Ledger Printing</a></a>
+			</div>
+			
+			<!--<a>Admin</a>
+			<div>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/AgentCommissionMenu.do?pageid=8014">Agent Commission Rates</a></a>
+			</div>
+			--><a>Master Updation</a>
+			<div>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/AgentUpdateMenu.do?pageid=8017">Agent Master Update</a></a>
+				<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/Pygmy/PygmyUpdateMenu.do?pageid=8019">Pygmy Master Update</a></a>
+			</div>		
+		</div>	
+				
+		
+  <a href="javascript:void(0)" style="border-width:1px 1px 1px 1px;">Loans on Deposit</a>
+				
+		<div>
+			<a>Granting Of LD</a>
+		
+		<div>
+			<a href="/SCBClient/LoansOnDepositMenuLink.do?pageId=6001&value=1">LoansApplicationDE</a>
+		</div>
+		
+		<a>Reports</a>
+		
+		<div>
+            <a href="/SCBClient/LDPassbookMenuLink.do?pageId=6008">PassBook</a>
+            <a href="/SCBClient/LDOpenClosedMenuLink.do?pageId=6009">OpenClosedAccounts</a>
+            <a href="/SCBClient/LDIntrestAccruedReportMenuLink.do?pageId=6011">IntrestAccruedReport</a>
+            <a href="/SCBClient/LDMaturityListMenuLink.do?pageId=6012">MaturityList</a>
+            <a href="/SCBClient/LDMaturityExcedingMatListMenuLink.do?pageId=6013">LDExcedMaturityList</a>
+          
+		</div>
+		
+		<a>  <a href="/SCBClient/LDRecoveryMenuLink.do?pageId=6004&value=1">Recovery</a></a>
+			</div>	
+	
+
+ <a href="javascript:void(0)" style="border-width:1px 1px 1px 1px;">Lockers</a>
+			
+		<div>
+		<a>Lockerss</a>
+		
+		<div>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LKIssueMenuLink.do?pageId=9001">LockerIssue</a> </a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LKSurrenderMenuLink.do?pageId=9004">LockerSurrender</a> </a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LKTableMenuLink.do?pageId=9007">LockerTable</a> </a>		
+		</div>
+		
+		
+		<a>ADMIN</a>
+		<div>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LockerDEMenuLink.do?pageId=00">LockerDE</a> </a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LKTypesMenuLink.do?pageId=9005">LockerTypes</a> </a>		
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/RateAdminMLink.do?pageId=9008">LockerRateDefine</a> </a>
+		</div>
+		
+		<a>Reports</a>
+		<div>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LKPassBookMLink.do?pageId=9011">LockerPassBook</a> </a>
+		<a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LockerOwnerReportMLink.do?pageId=9012">LockerOwnerReport</a> </a>
+        <a style="border-width:1px 1px 1px 1px;"><a href="/SCBClient/LockerOperationReportMLink.do?pageId=9013">LockerOperationReport</a> </a>		
+		<a style="border-

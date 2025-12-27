@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<ejb-jar>
+  <enterprise-beans>
+    <session>
+      <ejb-name>TempEJB</ejb-name>
+      <home>TemperatureHome</home>
+      <remote>Temperature</remote>
+      <ejb-class>TempBean</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
+  </enterprise-beans>
+</ejb-jar>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memo>
+	<to>Jodie</to>
+	<from>Bill</from>
+	<cc>Philip</cc>
+	<subject>Chapter 2</subject>
+	<body>This is where we start getting into some XML code!</body>
+</memo>

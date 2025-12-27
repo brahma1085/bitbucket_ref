@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+	<definition name="logindef" page="/layout.jsp">
+		<put name="header" value="/headercontent.jsp"></put>
+		<put name="footer" value="/footercontent.jsp"></put>
+		<put name="menu" value="/menucontentone.jsp"></put>
+		<put name="body" value="/loginbodycontent.jsp"></put>
+	</definition>
+	<definition name="registerdef" extends="logindef">
+		<put name="body" value="/registerbodycontent.jsp"></put>
+	</definition>
+	<definition name="userhomedef" extends="logindef">
+		<put name="menu" value="/menucontenttwo.jsp"></put>
+		<put name="body" value="/homebodycontent.jsp"></put>
+	</definition>
+</tiles-definitions>

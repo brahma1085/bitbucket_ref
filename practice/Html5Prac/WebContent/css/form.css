@@ -1,0 +1,135 @@
+/* @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+******************
+SELECTION STYLING
+******************
+::selection {
+	color: #fff;
+	background: #f676b2; Safari
+}
+
+::-moz-selection {
+	color: #fff;
+	background: #f676b2; Firefox
+}
+
+******************
+BODY STYLING
+******************
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+body {
+	background:
+		url('http://www.demo.amitjakhu.com/login-form/images/bg.png');
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+#wrapper {
+	Center wrapper perfectly
+	width: 300px;
+	height: 400px;
+	margin: 70px auto;
+} */
+
+/* Download Button (Demo Only) */
+/* .download {
+	display: block;
+	position: absolute;
+	float: right;
+	right: 25px;
+	bottom: 25px;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: right;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.5);
+	text-shadow: 1px 1px 0 rgba(256, 256, 256, 0.5);
+}
+
+.download:hover {
+	color: rgba(0, 0, 0, 0.75);
+	text-shadow: 1px 1px 0 rgba(256, 256, 256, 0.5);
+}
+
+.download:focus {
+	bottom: 24px;
+}
+
+.gradient {
+	Center Positioning
+	width: 600px;
+	height: 600px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px;
+	margin-top: -300px;
+	z-index: -2;
+	Fallback
+	background-image:
+		url(http://www.demo.amitjakhu.com/login-form/images/gradient.png);
+	background-repeat: no-repeat;
+	CSS3 Gradient
+	background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(rgba(213, 246, 255, 1)),
+		to(rgba(213, 246, 255, 0)));
+	background-image: -webkit-radial-gradient(50% 50%, 40% 40%, rgba(213, 246, 255, 1),
+		rgba(213, 246, 255, 0));
+	background-image: -moz-radial-gradient(50% 50%, 50% 50%, rgba(213, 246, 255, 1),
+		rgba(213, 246, 255, 0));
+	background-image: -ms-radial-gradient(50% 50%, 50% 50%, rgba(213, 246, 255, 1),
+		rgba(213, 246, 255, 0));
+	background-image: -o-radial-gradient(50% 50%, 50% 50%, rgba(213, 246, 255, 1),
+		rgba(213, 246, 255, 0));
+} */
+
+/* #contact {
+	background: #fff;
+	margin-bottom: 2em;
+	overflow: hidden;
+	width: 760px;
+	padding: 20px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#contact .social_links {
+	padding: 2px;
+	margin: 0;
+	float: left;
+	display: inline;
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+}
+
+#contact .social_links li {
+	margin-right: 4px;
+}
+
+#contact .social_links li a {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;
+	color: #C74451;
+}
+
+#contact .social_links li a:hover,#contact .social_links li a:focus {
+	color: #fff;
+	border-radius: 80px;
+	text-decoration: none;
+}
+ */

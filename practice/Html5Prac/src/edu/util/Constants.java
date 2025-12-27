@@ -1,0 +1,14 @@
+package edu.util;
+
+public class Constants {
+
+	public static String INSERT_USERS = "INSERT INTO USERS (ID, NAME, PASSWORD, DESCRIPTION, CREATED_DATE, CREATED_BY) VALUES (?,?,?,?,?,?)";
+	public static String GET_ALL_USERS = "SELECT * FROM USERS ORDER BY ID";
+	public static String GET_USER = "SELECT * FROM USERS WHERE ID=?";
+	public static String DELETE_USER = "DELETE FROM USERS WHERE ID=?";
+	public static String GET_ALL_CONTACT_INFO = "SELECT * FROM CONTACT ORDER BY ID";
+	public static String DELETE_CONTACT = "DELETE FROM CONTACT WHERE ID=?";
+	public static String INSERT_CONTACT = "INSERT INTO CONTACT (ID, NAME, DESIGNATION, INFO, DESCRIPTION, CREATED_DATE, CREATED_BY) VALUES (?,?,?,?,?,?,?)";
+	public static String UPDATE_USER = "UPDATE USERS SET NAME=?, PASSWORD=? WHERE ID=?";
+	public static String UPDATE_CONTACT = "UPDATE CONTACT SET NAME=? DESIGNATION=?, INFO=?, DESCRIPTION=? WHERE ID=?";
+}

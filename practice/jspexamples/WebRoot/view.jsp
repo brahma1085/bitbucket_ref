@@ -1,0 +1,11 @@
+<h1>
+${requestScope.a}<br/>
+${requestScope.b}<br/>
+${requestScope.c}<br/>------------------------<br/>
+${sessionScope.b}<br/>
+${sessionScope.a}<br/>
+${sessionScope.c}<br/>------------------------<br/>
+${applicationScope.c}<br/>
+${applicationScope.a}<br/>
+${applicationScope.b}<br/>----------------------------
+</h1>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://struts.apache.org/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <form-beans>
+  	<form-bean name="menteeForm" type="com.ge.crd.ementoring.formbean.mentee.MenteeRegistrationForm" />
+	<form-bean name="MenteeEditForm" type="com.ge.crd.ementoring.formbean.mentee.MenteeEditForm" />	
+	<form-bean name="MenteeFindingMentorForm" type="com.ge.crd.ementoring.formbean.mentee.MenteeFindingMentorForm" />
+	<form-bean name="MenteeMentorLoadForm" type="com.ge.crd.ementoring.formbean.mentee.MenteeMentorLoadForm" />	
+    <form-bean name="MentorProfileForm" type="com.ge.crd.ementoring.formbean.mentee.MentorProfileForm" />
+    <form-bean name="EditInputprogressForm" type="com.ge.crd.ementoring.formbean.mentee.EditInputprogressForm" />
+    <form-bean name="MenteeProfileForm" type="com.ge.crd.ementoring.formbean.mentee.MenteeProfileFormBean" />
+    <form-bean name="registeredMenteeForm" type="com.ge.crd.ementoring.formbean.mentee.RegisteredMenteeForm"/>
+    <form-bean name="MenteeProgressForm" type="com.ge.crd.ementoring.formbean.mentee.MenteeProgressForm"/>
+  </form-beans>
+  
+  <action-mappings>
+   
+    <action path="/menteeRegistration"
+            name="menteeForm"
+            type="com.ge.crd.ementoring.action.mentee.MenteeRegAction" 
+    	    scope="request">
+    	    <forward name="Success" path="/jsp/mentee/MenteeRegistration.jsp" />
+		    <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		    <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />    	  
+    </action>
+    
+    <action path="/MenteeRegistrationPage" 
+  	    name="menteeForm" 
+  	    type="com.ge.crd.ementoring.action.mentee.MenteeRegistation" 
+	  	scope="request">
+	  	<forward name="Success" path="/jsp/mentee/SuccessRegistration.jsp" />
+  		<forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		<forward name="NoSession" path="/jsp/nosession.jsp" />
+    </action>
+   
+    <action path="/SaveMenteeProfile" 
+  	    name="menteeForm" 
+  	    type="com.ge.crd.ementoring.action.mentee.SaveMenteeAction" 
+	  	scope="request">
+	  	<forward name="Success" path="/jsp/mentee/SuccessSaveMenteeDetails.jsp" />
+  		<forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		<forward name="NoSession" path="/jsp/nosession.jsp" />
+    </action>
+   
+    <action path="/MenteeEditRegistration"
+            name="MenteeEditForm"
+            type="com.ge.crd.ementoring.action.mentee.MenteeUpdateAction" 
+            scope="request">
+    	  <forward name="Success" path="/jsp/mentee/MenteeEditRegistration.jsp" />
+		  <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		  <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		  <forward name="NoSession" path="/jsp/nosession.jsp" />    	  
+    </action>
+   
+    <action path="/MenteeUpdateRegistration"
+            name="MenteeEditForm"
+            type="com.ge.crd.ementoring.action.mentee.MenteeUpdateAction" 
+    	    scope="request">
+    	  <forward name="Success" path="/jsp/mentee/SuccessUpdation.jsp" />
+		  <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		  <forward name="NoSession" path="/jsp/nosession.jsp" />    	  
+    </action>
+      
+    <action path="/MenteeSearchingHisMentor"
+             type="com.ge.crd.ementoring.action.mentee.FindingMentorAction"        
+             name="MenteeFindingMentorForm"
+			 scope="session">                   
+           <forward name="Success" path="/jsp/mentee/MenteeFindingMentor.jsp" />
+           <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+           <forward name="AlreadySelected" path="/jsp/mentee/MenteeSelectedMentor.jsp" />
+       	   <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		  <forward name="NoSession" path="/jsp/nosession.jsp" />
+    </action> 
+ 
+    <action path="/MenteeSearchResult"
+            name="MenteeFindingMentorForm"
+            scope="session"
+            type="com.ge.crd.ementoring.action.mentee.MenteeFindingMentorAction" >
+    	    <forward name="Success" path="/jsp/mentee/MenteeFindingMentor.jsp" />
+            <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+            <forward name="SendRequest" path="/jsp/mentee/MenteeSendRequestToMentor.jsp" />
+		    <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />            
+    </action>
+    
+    <action path="/MenteeSendingRequest"
+            name="MenteeFindingMentorForm"
+            scope="session"
+            type="com.ge.crd.ementoring.action.mentee.MenteeFindingMentorAction" >
+    	    <forward name="Success" path="/jsp/mentee/MenteeFindingMentor.jsp" />
+            <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+            <forward name="SendRequest" path="/jsp/mentee/MenteeSendRequestToMentor.jsp" />
+		    <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />            
+    </action>
+    
+    <action path="/ViewMentorDetailsPage"
+            name="MenteeFindingMentorForm"
+            type="com.ge.crd.ementoring.action.mentee.MentorDetailsAction"        
+			scope="session">                   
+            <forward name="Success" path="/jsp/mentee/MentorDetails.jsp" />
+		    <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		    <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+  
+    <action path="/ViewMenteeDetailsPage"
+            name="MenteeProfileForm"
+            type="com.ge.crd.ementoring.action.mentee.MenteeDetailsAction"        
+			scope="session">                   
+            <forward name="Success" path="/jsp/mentee/MenteeDetails.jsp" />
+		    <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		    <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+    
+    <action path="/ViewMentorFullDetailsPage" 
+            name="MenteeFindingMentorForm"
+            type="com.ge.crd.ementoring.action.mentee.MentorDetailsAction"        
+			scope="session">                   
+            <forward name="Success" path="/jsp/mentee/MentorDetailsPage.jsp" />
+		    <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		    <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+  
+  
+  
+  
+    <action path="/InputProgress"
+            name="MenteeMentorLoadForm"
+            type="com.ge.crd.ementoring.action.mentee.InputProgressAction"        
+			scope="session">                   
+            <forward name="Success" path="/jsp/mentee/InputProgress.jsp" />
+         	<forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+         	<forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />
+    </action> 
+ 
+    
+    <action path="/InputProgressPage"
+            name="MenteeMentorLoadForm"
+            type="com.ge.crd.ementoring.action.mentee.InputProgressAction"        
+			scope="session">                   
+            <forward name="Success" path="/jsp/mentee/InputProgress.jsp" />
+         	<forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />
+    </action> 
+  
+   <action path="/InputProgressOfPeople"
+            name="MenteeMentorLoadForm"
+            type="com.ge.crd.ementoring.action.mentee.InputProgressAction"        
+			scope="session">                   
+           <forward name="Success" path="/jsp/mentee/SuccessInputProgress.jsp" />
+		   <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		   <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		   <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+    
+    <action path="/CurrentMentorList"
+            name="MentorProfileForm"
+            type="com.ge.crd.ementoring.action.mentee.CurrentMentorListAction"        
+			scope="session">                   
+           <forward name="Success" path="/jsp/mentee/CurrentMentorList.jsp" />
+		   <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		   <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		   <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+    
+    <action path="/CurrentMentorResultList"
+            name="MentorProfileForm"
+            type="com.ge.crd.ementoring.action.mentee.CurrentMentorListAction"        
+			scope="session">                   
+           <forward name="Success" path="/jsp/mentee/CurrentMentorList.jsp" />
+		   <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		   <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		   <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+    
+    <action path="/EditInputProgress"
+            name="EditInputprogressForm"
+            type="com.ge.crd.ementoring.action.mentee.UpdateInputProgressAction" 
+            scope="request">
+    	   <forward name="Success" path="/jsp/mentee/EditInputProgress.jsp" />
+		   <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		   <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		   <forward name="NoSession" path="/jsp/nosession.jsp" />    	  
+    </action>
+   
+    <action path="/UpdateInputProgress"
+            name="EditInputprogressForm"
+            type="com.ge.crd.ementoring.action.mentee.UpdateInputProgressAction" 
+    	    scope="request">
+    	    <forward name="Success" path="/jsp/mentee/UpdateInputProgress.jsp" />
+		    <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />    	  
+    </action>
+    
+    <action path="/SuccessUpdateInputProgress"
+            name="EditInputprogressForm"
+            type="com.ge.crd.ementoring.action.mentee.UpdateInputProgressAction" 
+    	    scope="request">
+    	    <forward name="Success" path="/jsp/mentee/SuccessUpdateInputProgress.jsp" />
+		    <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		    <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		    <forward name="NoSession" path="/jsp/nosession.jsp" />    	  
+    </action>
+   
+     <action path="/SuperAdminViewRegMenteeList"
+            name="MenteeProfileForm"
+            type="com.ge.crd.ementoring.action.mentee.SuperAdminMenteeListAction"        
+			scope="request">                   
+           <forward name="Success" path="/jsp/mentee/ViewMenteeList.jsp" />
+		   <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		   <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+    
+    <action path="/SuperAdminViewRegMenteeResultList"
+            name="MenteeProfileForm"
+            type="com.ge.crd.ementoring.action.mentee.SuperAdminMenteeListAction"        
+			scope="request">                   
+           <forward name="Success" path="/jsp/mentee/ViewMenteeList.jsp" />
+		   <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		   <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		   <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+    
+    <action path="/SuperAdminViewMenteeProgressList"
+            name="MenteeProgressForm"
+            type="com.ge.crd.ementoring.action.mentee.SuperAdminMenteeProgressListAction"        
+			scope="request">                   
+           <forward name="Success" path="/jsp/mentee/ViewMenteeProgressList.jsp" />
+		   <forward name="Failure" path="/jsp/NotAbleToProcessRequest.jsp" />
+		   <forward name="NoAccess" path="/jsp/noaccess.jsp" />
+		   <forward name="NoSession" path="/jsp/nosession.jsp" />           
+    </action> 
+  </action-mappings>
+ 	
+</struts-config>

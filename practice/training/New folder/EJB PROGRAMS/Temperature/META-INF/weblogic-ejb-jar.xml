@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<weblogic-ejb-jar>
+  <weblogic-enterprise-bean>
+    <ejb-name>TempEJB</ejb-name>
+    <jndi-name>degree</jndi-name>
+  </weblogic-enterprise-bean>
+</weblogic-ejb-jar>
+

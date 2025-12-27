@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+		  http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd"
+	version="2.1">
+	<enterprise-beans>
+		<session>
+			<ejb-name>BACKOFFICEEJBWEB</ejb-name>
+			<home>backOfficeServer.BackOfficeHome</home>
+			<remote>backOfficeServer.BackOfficeRemote</remote>
+			<ejb-class>backOfficeServer.BackOfficeBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+
+			<ejb-local-ref>
+				<ejb-ref-name>COMMONLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>commonServer.CommonHome</local-home>
+				<local>commonServer.CommonLocal</local>
+				<ejb-link>COMMONEJBWEB</ejb-link>
+			</ejb-local-ref>
+			<ejb-local-ref>
+				<ejb-ref-name>SHARELOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>shareServer.ShareLocalHome</local-home>
+				<local>shareServer.ShareLocal</local>
+				<ejb-link>SHAREEJBWEB</ejb-link>
+			</ejb-local-ref>
+			<ejb-local-ref>
+				<ejb-ref-name>CASHLOCAL</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>cashServer.CashLocalHome</local-home>
+				<local>cashServer.CashLocal</local>
+				<ejb-link>CASHEJB</ejb-link>
+			</ejb-local-ref>
+		</session>
+
+		<session>
+			<ejb-name>COMMONEJBWEB</ejb-name>
+			<home>commonServer.CommonHome</home>
+			<remote>commonServer.CommonRemote</remote>
+			<local-home>commonServer.CommonLocalHome</local-home>
+			<local>commonServer.CommonLocal</local>
+			<ejb-class>commonServer.CommonBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+			<security-identity>
+				<use-caller-identity />
+			</security-identity>
+		</session>
+
+
+		<!-- <session> <ejb-name>PARAMETERSEJB</ejb-name> <home>parametersServer.parametersHome</home> 
+			<remote>parametersServer.parametersRemote</remote> <ejb-class>parametersServer.parametersBean</ejb-class> 
+			<session-type>Stateless</session-type> <transaction-type>Container</transaction-type> 
+			<security-identity><use-caller-identity/></security-identity> </session> -->
+
+
+		<session>
+			<ejb-name>LOCKERSEJBWEB</ejb-name>
+			<home>lockerServer.LockersHome</home>
+			<remote>lockerServer.LockersRemote</remote>
+			<local-home>lockerServer.LockersLocalHome</local-home>
+			<local>lockerServer.LockersLocal</local>
+			<ejb-class>lockerServer.LockersBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+			<security-identity>
+				<use-caller-identity />
+			</security-identity>
+		</session>
+
+		<session>
+			<ejb-name>FRONTCOUNTEREJBWEB</ejb-name>
+			<home>frontCounterServer.FrontCounterHome</home>
+			<remote>frontCounterServer.FrontCounterRemote</remote>
+			<local-home>frontCounterServer.FrontCounterLocalHome</local-home>
+			<local>frontCounterServer.FrontCounterLocal</local>
+			<ejb-class>frontCounterServer.FrontCounterBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+			<security-identity>
+				<use-caller-identity />
+			</security-identity>
+		</session>
+
+
+		<session>
+			<ejb-name>CASHEJBWEB</ejb-name>
+			<home>cashServer.CashHome</home>
+			<remote>cashServer.CashRemote</remote>
+			<local-home>cashServer.CashLocalHome</local-home>
+			<local>cashServer.CashLocal</local>
+			<ejb-class>cashServer.CashBean</ejb-class>
+			<!--<local-home>cashServer.CashLocalHome</local-home> <local>cashServer.CashLocal</local> -->
+
+
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+
+
+			<ejb-local-ref>
+				<ejb-ref-name>COMMONLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>commonServer.CommonLocalHome</local-home>
+				<local>commonServer.CommonLocal</local>
+				<ejb-link>COMMONEJBWEB</ejb-link>
+			</ejb-local-ref>
+			<ejb-local-ref>
+				<ejb-ref-name>LOANSLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>loanServer.LoanLocalHome</local-home>
+				<local>loanServer.LoanLocal</local>
+				<ejb-link>LOANSEJBWEB</ejb-link>
+			</ejb-local-ref>
+
+		</session>
+
+		<session>
+			<ejb-name>LOANSONDEPOSITEJBWEB</ejb-name>
+			<home>loansOnDepositServer.LoansOnDepositHome</home>
+			<remote>loansOnDepositServer.LoansOnDepositRemote</remote>
+			<local-home>loansOnDepositServer.LoansOnDepositLocalHome</local-home>
+			<local>loansOnDepositServer.LoansOnDepositLocal</local>
+			<ejb-class>loansOnDepositServer.LoansOnDepositBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+			<ejb-local-ref>
+				<ejb-ref-name>FRONTCOUNTERLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>frontCounterServer.FrontCounterLocalHome</local-home>
+				<local>frontCounterServer.FrontCounterLocal</local>
+				<ejb-link>FRONTCOUNTEREJBWEB</ejb-link>
+			</ejb-local-ref>
+			<ejb-local-ref>
+				<ejb-ref-name>COMMONLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>commonServer.CommonLocalHome</local-home>
+				<local>commonServer.CommonLocal</local>
+				<ejb-link>COMMONEJBWEB</ejb-link>
+			</ejb-local-ref>
+
+		</session>
+
+		<session>
+			<ejb-name>LOANSEJBWEB</ejb-name>
+			<home>loanServer.LoanHome</home>
+			<remote>loanServer.LoanRemote</remote>
+			<local-home>loanServer.LoanLocalHome</local-home>
+			<local>loanServer.LoanLocal</local>
+
+			<ejb-class>loanServer.LoanBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+
+			<ejb-local-ref>
+				<ejb-ref-name>FRONTCOUNTERLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>frontCounterServer.FrontCounterLocalHome</local-home>
+				<local>frontCounterServer.FrontCounterLocal</local>
+				<ejb-link>FRONTCOUNTEREJBWEB</ejb-link>
+			</ejb-local-ref>
+		</session>
+
+		<session>
+			<ejb-name>CUSTOMEREJBWEB</ejb-name>
+			<home>customerServer.CustomerHome</home>
+			<remote>customerServer.CustomerRemote</remote>
+			<local-home>customerServer.CustomerLocalHome</local-home>
+			<local>customerServer.CustomerLocal</local>
+
+			<ejb-class>customerServer.CustomerBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+
+
+			<ejb-local-ref>
+				<ejb-ref-name>GLLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>generalLedgerServer.GLLocalHome</local-home>
+				<local>generalLedgerServer.GLLocal</local>
+				<ejb-link>GLEJBWEB</ejb-link>
+			</ejb-local-ref>
+
+		</session>
+
+
+		<session>
+			<ejb-name>SHAREEJBWEB</ejb-name>
+			<home>shareServer.ShareHome</home>
+			<remote>shareServer.ShareRemote</remote>
+			<local-home>shareServer.ShareLocalHome</local-home>
+			<local>shareServer.ShareLocal</local>
+
+
+			<ejb-class>shareServer.ShareBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+
+		<session>
+			<ejb-name>PYGMYEJBWEB</ejb-name>
+			<home>pygmyServer.PygmyHome</home>
+			<remote>pygmyServer.PygmyRemote</remote>
+			<local-home>pygmyServer.PygmyLocalHome</local-home>
+			<local>pygmyServer.PygmyLocalRemote</local>
+
+			<ejb-class>pygmyServer.PygmyBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+
+		<session>
+			<ejb-name>TERMDEPOSITEJBWEB</ejb-name>
+			<home>termDepositServer.TermDepositHome</home>
+			<remote>termDepositServer.TermDepositRemote</remote>
+			<local-home>termDepositServer.TermDepositLocalHome</local-home>
+			<local>termDepositServer.TermDepositLocalRemote</local>
+
+			<ejb-class>termDepositServer.TermDepositBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+
+		<session>
+			<ejb-name>CLEARINGEJBWEB</ejb-name>
+			<home>clearingServer.ClearingHome</home>
+			<remote>clearingServer.ClearingRemote</remote>
+			<local-home>clearingServer.ClearingLocalHome</local-home>
+			<local>clearingServer.ClearingLocal</local>
+			<ejb-class>clearingServer.ClearingBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+			<ejb-local-ref>
+				<ejb-ref-name>COMMONLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>commonServer.CommonLocalHome</local-home>
+				<local>commonServer.CommonLocal</local>
+				<ejb-link>COMMONEJBWEB</ejb-link>
+
+			</ejb-local-ref>
+
+			<ejb-local-ref>
+				<ejb-ref-name>CASHLOCALWEB</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>cashServer.CashLocalHome</local-home>
+				<local>cashServer.CashLocal</local>
+				<ejb-link>CASHEJBWEB</ejb-link>
+			</ejb-local-ref>
+
+
+		</session>
+
+
+
+
+
+
+
+		<session>
+			<ejb-name>ADMINISTRATOREJBWEB</ejb-name>
+			<home>administratorServer.AdministratorHome</home>
+			<remote>administratorServer.AdministratorRemote</remote>
+			<ejb-class>administratorServer.AdministratorBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+
+		<session>
+			<ejb-name>ALMEJBWEB</ejb-name>
+			<home>alm.ALMHome</home>
+			<remote>alm.ALMRemote</remote>
+			<ejb-class>alm.ALMBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+
+		<session>
+			<ejb-name>GLEJBWEB</ejb-name>
+			<home>generalLedgerServer.GLHome</home>
+			<remote>generalLedgerServer.GLRemote</remote>
+			<local-home>generalLedgerServer.GLLocalHome</local-home>
+			<local>generalLedgerServer.GLLocal</local>
+			<ejb-class>generalLedgerServer.GLBean</ejb-class>
+
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+
+
+
+
+
+	</enterprise-beans>
+
+	<assembly-descriptor>
+
+		<security-role>
+			<description>
+         This role represents everyone who is allowed full access to the beans.
+      </description>
+			<role-name>everyone</role-name>
+		</security-role>
+
+
+
+		<method-permission>
+			<role-name>everyone</role-name>
+			<method>
+				<ejb-name>SHAREEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+
+
+
+		<method-permission>
+			<role-name>everyone</role-name>
+			<method>
+				<ejb-name>PYGMYEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+
+
+		<method-permission>
+			<role-name>everyone</role-name>
+			<method>
+				<ejb-name>BACKOFFICEEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+
+		<method-permission>
+			<role-name>everyone</role-name>
+			<method>
+				<ejb-name>COMMONEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+
+		<method-permission>
+			<role-name>everyone</role-name>
+			<method>
+				<ejb-name>LOANSONDEPOSITEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+
+		<method-permission>
+			<role-name>everyone</role-name>
+			<method>
+				<ejb-name>LOCKERSEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+
+
+
+
+
+
+
+
+		<!-- <container-transaction> <method> <ejb-name>BACKOFFICEEJBWEB</ejb-name> 
+			<method-name>*</method-name> </method> <trans-attribute>Required</trans-attribute> 
+			</container-transaction> -->
+
+		<container-transaction>
+			<method>
+				<ejb-name>PYGMYEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+
+
+		<!--container-transaction> <method> <ejb-name>LOCKERSEJB</ejb-name> <method-name>*</method-name> 
+			</method> <trans-attribute>Required</trans-attribute> </container-transaction -->
+
+
+		<container-transaction>
+			<method>
+				<ejb-name>SHAREEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+
+		<container-transaction>
+			<method>
+				<ejb-name>COMMONEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+
+		<container-transaction>
+			<method>
+				<ejb-name>LOANSONDEPOSITEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+
+		<container-transaction>
+			<method>
+				<ejb-name>ADMINISTRATOREJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+
+		<container-transaction>
+			<method>
+				<ejb-name>GLEJBWEB</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+
+	</assembly-descriptor>
+</ejb-jar>

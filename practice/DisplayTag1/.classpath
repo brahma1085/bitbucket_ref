@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/antlr.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/commons-digester.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/commons-fileupload-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/commons-logging.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/commons-validator.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/displaytag-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/displaytag-export-poi-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/displaytag-portlet-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/itext-1.3.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="E:/jar files/display example/struts.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

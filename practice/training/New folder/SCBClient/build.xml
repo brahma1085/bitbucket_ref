@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="project" default="final_task" basedir=".">
+	<property environment="env" />
+    <property name="jboss.home" value="${env.JBOSS_HOME}"/>
+	<property name="src" value="${basedir}/src" />
+	<property name="War" value="${basedir}/Zip"/>
+	<property name="TempFolder" value="${basedir}/TempFolder"/>
+	<property name="build" value="${basedir}/build"/>
+	<property name="build_temp" value="${basedir}/build_temp"/>
+	<property name="lib_path" value="${basedir}/WebContent/WEB-INF/lib"/>
+	<property name="web_path" value="${basedir}/WebContent"/>
+	<property name="temp_path" value="${basedir}/TempFolder"/>
+	<property name="srcJar" value="srcJar"/>
+	<property name="ALM" value="${web_path}/ALM"/>
+	<property name="shareWebPages" value="${web_path}/ShareWebPages"/>
+	<property name="adminWebPages" value="${web_path}/AdministratiorWebPages"/>
+	<property name="backOfficeWebPages" value="${web_path}/BackOfficeWebPages"/>
+	<property name="cashWebPages" value="${web_path}/CashWebPages"/>
+	<property name="clearingWebPages" value="${web_path}/ClearingWebPages"/>
+	<property name="commonWebPages" value="${web_path}/CommonWebPages"/>
+	<property name="customerWebPages" value="${web_path}/CustomerWebPages"/>
+	<property name="frontCounterWebPages" value="${web_path}/FrontCounterWebPages"/>
+	<property name="glWebPages" value="${web_path}/GeneralLeadgerWebPages"/>
+	<property name="ldWebPages" value="${web_path}/LoansOnDepositWebPages"/>
+	<property name="loansWebPages" value="${web_path}/LoansWebPages"/>
+	<property name="lockerWebPages" value="${web_path}/LockerWebPages"/>
+	<property name="pygmyWebPages" value="${web_path}/PygmyDepositWebPages"/>
+	<property name="tdWebPages" value="${web_path}/TermDepositWebPages"/>
+	<property name="js" value="${web_path}/js"/>
+	<property name="css" value="${web_path}/css"/>
+	<property name="coreBankClient" value="${basedir}/CoreBankClient"/>
+	<splash showduration="2000"/>
+	<tstamp id="DateTime">
+	</tstamp>
+	<!-- ================================= 
+          target: making_dir              
+         ================================= -->
+    <target name="making_dir"  description="--> description">
+    	<echo>*********************************</echo>
+    	<echo> Started ..... </echo>
+    	<echo>*********************************</echo>
+    	<mkdir dir="${build_temp}"/>
+    	<mkdir dir="${TempFolder}"/>
+    	<mkdir dir="${War}"/>
+    	<mkdir dir="${srcJar}"/>
+    	<echo> Created Directories</echo>
+    </target>
+	<target name="warFile">
+		<mkdir dir="${coreBankClient}"/>
+		<mkdir dir="${coreBankClient}/Images"/>
+		<mkdir dir="${coreBankClient}/WEB-INF"/>
+		<mkdir dir="${coreBankClient}/js"/>
+		<mkdir dir="${coreBankClient}/css"/>
+		
+		<copydir dest="${coreBankClient}" src="${ALM}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${shareWebPages}" includes="**/*.*"/>
+		<copydir dest="${coreBankClient}" src="${adminWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${backOfficeWebPages}" includes="**/*.*"></copydir>
+		<copydir dest="${coreBankClient}" src="${cashWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${clearingWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${commonWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${customerWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${frontCounterWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${glWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${ldWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${loansWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${lockerWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${pygmyWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}" src="${tdWebPages}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}/js" src="${js}" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}/css" src="${css}" includes="**/*.*" ></copydir>
+				
+		<copydir dest="${coreBankClient}/Images" src="${web_path}/Images" includes="**/*.*" ></copydir>
+		<copydir dest="${coreBankClient}/WEB-INF" src="${web_path}/WEB-INF" includes="**/*.*" ></copydir>	
+		<copydir includes="**/*.*" dest="${coreBankClient}/WEB-INF/" src="${build}"  />
+		
+		 <war destfile="${War}/SCBClient.war" webxml="${coreBankClient}/WEB-INF/web.xml">
+		        	<fileset dir="${coreBankClient}">
+		        	   <include name="**/*.*"/>
+		        	</fileset>
+		 </war>
+	<copy file="${War}/SCBClient.war" todir="${jboss.home}/server/default/deploy"></copy>
+	<!--<delete dir="${coreBankClient}"></delete>-->
+	</target>
+
+	<!-- ================================= 
+          ClassPath: Supporting Jars Addition              
+         ================================= -->
+    <path id="classpath"> 
+    	<fileset dir="${lib_path}">
+    	   <include name="**/*.jar"/>
+    	 </fileset>
+    	<fileset dir="${jboss.home}/client">
+    	   <include name="**/*.jar"/>
+    	 </fileset>
+    	<fileset dir="${jboss.home}/server/all/lib">
+    	    	   <include name="**/*.jar"/>
+    	</fileset>
+    	<fileset dir="${jboss.home}/server/default/deploy">
+    	    	   <include name="**/*.jar"/>
+    	</fileset>
+    </path>
+	<!-- ================================= 
+          target: Compile              
+         ================================= -->
+	
+    <target name="Compile" depends="making_dir" description=" Compile">
+    	<!-- <javac srcdir="${src}"
+    	         destdir="${build_temp}"
+    	         debug="off"
+    	         includes="**">
+    	        	<classpath refid="classpath"></classpath>
+    	        </javac> 
+        -->
+    	    	<echo> Compiled Sucessfully </echo> 
+    	    	<copydir includes="**/*.*" dest="${TempFolder}" src="${web_path}"/>
+    	<!--
+				Use This Below Copy Command Line If you Have Compiled Using ANT Compilation
+		-->
+    	<!-- <copydir includes="**/*.*" dest="${TempFolder}/WEB-INF/" src="${build_temp}"  /> -->
+    	     <copydir includes="**/*.*" dest="${TempFolder}/WEB-INF/" src="${build}"  />
+    	    	<echo> Copied Sucessfully </echo>
+    </target>
+	
+	<!-- ================================= 
+          target: Zip Creation              
+         ================================= -->
+    <target name="Zip Creation" depends="Compile" description="--> Zip Creation">
+    	<echo> Zip Creation Started.. </echo>
+    	<delete file="${jboss.home}/server/default/deploy/SCBClient.war"></delete>
+    	<delete file="${War}/SCBClient.war"></delete>
+        <war destfile="${War}/SCBClient.war" webxml="${TempFolder}/WEB-INF/web.xml" >
+        	<fileset dir="${temp_path}">
+        	   <include name="**/*.*"/>
+        	</fileset>
+        </war>
+    	<jar jarfile="${src}/SCBClientSRC.jar">
+    		<fileset dir="${src}">
+    		  	   <include name="**/*.java"/>
+    			   <include name="**/*.properties"/>
+    			   <include name="**/*.xml"/>
+    			   
+    			  	
+    		</fileset>
+    		<fileset dir="${web_path}">
+    	    		  	   <include name="**/*.*"/>
+    	    </fileset>
+    	</jar>
+    	<copy file="${src}/SCBClientSRC.jar" todir="${srcJar}"/>
+    	<tstamp>
+    		<format property="TODAY" pattern="dd/MM/yyyy"/>
+    	</tstamp>
+    	<rename dest="${srcJar}/SCBClientSRC${TODAY}.jar" src="${srcJar}/SCBClientSRC.jar"/>
+    	<delete dir="${TempFolder}"/>
+    	<delete dir="${build_temp}"/>
+    	
+    	<echo> Deleted Temporary Directories.. </echo>
+    	<echo> Zip Creation Completed.. </echo>
+    </target>
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: final_task      depends="Zip Creation"                
+         - - - - - - - - - - - - - - - - - -->
+    <target name="final_task" >
+    	<echo> Deploying.. </echo>
+    	<delete file="${jboss.home}/server/default/deploy/SCBClient.war"></delete>
+    	<!--<copy file="${War}/SCBClient.war" todir="${jboss.home}/server/default/deploy"></copy>-->
+    	<!--<rename dest="${War}/SCBClient(${DSTAMP})(${TSTAMP}).war" src="${War}/SCBClient.war"/>-->
+    	<echo> Deployed Sucessfully.. </echo>
+    	<echo>********************************* </echo>
+    	<echo> All Tasks Completed Sucessfully </echo>
+    	<echo>*********************************</echo>
+    	<antcall target="warFile"></antcall>
+    </target>
+
+
+</project>

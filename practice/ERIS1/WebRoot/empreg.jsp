@@ -1,0 +1,174 @@
+
+
+<%@ page import="javax.servlet.http.*,java.sql.*,javax.servlet.*,com.eris.DBConnection" %>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Enterprise Resource Information System</title>
+</head>
+
+<body>
+<form action= "./empreg">
+<div style="background-color: #C0C0C0">
+  <p align="center"><b>Enterprise Resource Information System</b></div>
+<p align="center"><u><b>EMPLOYEE REGISTRATION</b></u></p>
+<p align="center"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  EMPLOYEE ID </font>
+<%! int empid ;%>
+<%
+DBConnection  db= new DBConnection();
+ResultSet rs=db.executeQuery("select empid.nextval  from dual ");
+
+      	if(rs.next())
+	{
+           	empid=rs.getInt(1);
+	}
+
+%>
+  <input type="text" name="employeeid" value='<%=empid%>'size="20" style="border-style: solid; border-width: 1" >
+  <span style="font-size: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<table width="75%" border="0" align="center">
+  <tr>
+    <td colspan="2">
+      <div align="center"><b>PERSONAL DETAILS</b></div>
+    </td>
+    <td colspan="2">
+      <div align="center"><b>ADDRESS DETAILS</b></div>
+    </td>
+  </tr>
+  <tr>
+    <td>First Name</td>
+    <td>
+      <input type="text" name="firstname">
+    </td>
+    <td>Address</td>
+    <td>
+      <textarea name="address" wrap="VIRTUAL"></textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>LastName</td>
+    <td>
+      <input type="text" name="lastname">
+    </td>
+    <td>City</td>
+    <td>
+      <input type="text" name="city">
+    </td>
+  </tr>
+  <tr>
+    <td>Initial</td>
+    <td>
+      <input type="text" name="initial">
+    </td>
+    <td>Zip</td>
+    <td>
+      <input type="text" name="zip">
+    </td>
+  </tr>
+  <tr>
+    <td>Date of Dirth</td>
+    <td>
+      <input type="text" name="dateofbirth">
+    </td>
+    <td>State</td>
+    <td>
+      <input type="text" name="state">
+    </td>
+  </tr>
+  <tr>
+    <td>Martial Status</td>
+    <td>
+      <select name="martialstatus">
+        <OPTION> SINGLE</OPTION><OPTION>MARRIED</OPTION>
+      </select>
+    </td>
+    <td>Country</td>
+    <td>
+      <input type="text" name="dayphone">
+    </td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td>
+      <input type="radio" name="gender" value="radiobutton" checked>
+      M
+      <input type="radio" name="gender" value="radiobutton">
+      F </td>
+    <td>Day Phone</td>
+    <td>
+      <input type="text" name="textfield10">
+    </td>
+  </tr>
+  <tr>
+    <td>Designation</td>
+    <td>
+      <input type="text" name="designation">
+    </td>
+    <td>Ext</td>
+    <td>
+      <input type="text" name="ext">
+    </td>
+  </tr>
+  <tr>
+    <td>Role</td>
+    <td>
+      <select name="role">
+        <OPTION>RECRUTIER</OPTION><OPTION>MARKETING EXECUTIVE</OPTION>
+      </select>
+    </td>
+    <td>Evening Phone</td>
+    <td>
+      <input type="text" name="eveningphone">
+    </td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>
+      <input type="text" name="password">
+    </td>
+    <td>Mobile Phone</td>
+    <td>
+      <input type="text" name="mobilephone">
+    </td>
+  </tr>
+  <tr>
+    <td>Client ID</td>
+    <td>
+<select name="clientid">
+<%    ResultSet rs2=db.executeQuery("select clientid  from clientdetails ");
+
+      	while(rs2.next())
+	{
+%>
+<option> <%=rs2.getInt(1)%> </option>
+<%
+	}
+  %>
+    </td>
+    <td>E-Mail</td>
+    <td>
+      <input type="text" name="email">
+    </td>
+  </tr>
+      <td height="18"><tr>
+
+    <td colspan="4">
+      <div align="center">
+        <input type="submit" name="Submit" value="save">
+		<input type="reset" name="cancle" value="cancle">
+      </div>
+    </td>
+  </tr>
+</table>
+  <p align="center"><a href="admin.htm">BACK&nbsp;</a></p>
+
+</form>
+</body>
+
+</html>

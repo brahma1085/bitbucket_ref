@@ -1,0 +1,13 @@
+tr.odd{
+	 background-color:#FFFFCC
+	
+}
+
+tr.even{
+	background-image: url("blueprintsRow_blue");
+	background-repeat: repeat-x
+}
+
+table.suraj{
+	background-color: #CDCEAE
+}

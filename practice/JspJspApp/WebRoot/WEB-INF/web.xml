@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <servlet>
+  <servlet-name>jsp1</servlet-name>
+  <jsp-file>/WEB-INF/Student.jsp</jsp-file>
+ </servlet>
+ <servlet>
+  <servlet-name>jsp2</servlet-name>
+  <jsp-file>/WEB-INF/InsertStudent.jsp</jsp-file>
+ </servlet>
+ <servlet>
+  <servlet-name>jsp3</servlet-name>
+  <jsp-file>/WEB-INF/Success.jsp</jsp-file>
+ </servlet>
+ <servlet>
+  <servlet-name>jsp4</servlet-name>
+  <jsp-file>/WEB-INF/failure.jsp</jsp-file>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>jsp1</servlet-name>
+  <url-pattern>/j1</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>jsp2</servlet-name>
+  <url-pattern>/j2</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>jsp3</servlet-name>
+  <url-pattern>/j3</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>jsp4</servlet-name>
+  <url-pattern>/j4</url-pattern>
+ </servlet-mapping>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+</web-app>

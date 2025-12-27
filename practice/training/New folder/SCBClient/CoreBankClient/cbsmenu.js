@@ -1,0 +1,31 @@
+	var qmad = new Object();
+		qmad.bvis="";
+		qmad.bhide="";
+		qmad.bhover="";
+var a = qmad.qm0 = new Object();
+		a.tabscss_type = "angled";
+		a.tabscss_size = 5;
+		a.tabscss_left_offset = 0;
+		a.tabscss_top_offset = 0;
+		a.tabscss_apply_far_left = true;
+		a.tabscss_apply_far_right = true;
+		a.tabscss_apply_middles = true;
+		a.tabscss_bg_color = "#ffffff";
+		a.tabscss_border_color = "#687a54";
+
+		a.ibullets_apply_to = "parent";
+		a.ibullets_main_image = "";
+		a.ibullets_main_image_width = 8;
+		a.ibullets_main_image_height = 6;
+		a.ibullets_main_position_x = -15;
+		a.ibullets_main_position_y = -5;
+		a.ibullets_main_align_x = "right";
+		a.ibullets_main_align_y = "middle";
+
+		a.ibullets_sub_image = "images/arrow_right.gif";
+		a.ibullets_sub_image_width = 6;
+		a.ibullets_sub_image_height = 8;
+		a.ibullets_sub_position_x = -14;
+		a.ibullets_sub_position_y = -4;
+		a.ibullets_sub_align_x = "right";
+		a.ibullets_sub_align_y = "middle";

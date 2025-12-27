@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="dao" class="edu.dao.DaoImpl"></bean>
+	<bean id="service" class="edu.service.ServiceImpl">
+		<property name="dao">
+			<ref bean="dao" />
+		</property>
+		<constructor-arg>
+			<ref bean="dao" />
+		</constructor-arg>
+	</bean>
+</beans>

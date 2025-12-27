@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="SCBServer"/>
+	<classpathentry kind="lib" path="C:/Java/jboss-4.0.0/client/jboss-client.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jboss-4.0.0/client/jnp-client.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jboss-4.0.0/client/log4j.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jboss-4.0.0/client/logkit.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jboss-4.0.0/client/jbossall-client.jar"/>
+	<classpathentry kind="lib" path="E:/Java/jar files/jars/mysql-connector-java-5.1.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_21">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Java/jboss-4.0.0/client/namespace.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
