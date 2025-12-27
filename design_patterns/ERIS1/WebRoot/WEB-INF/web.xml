@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<servlet>
+		<servlet-name>empRegServlet</servlet-name>
+		<servlet-class>EmpRegServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>clientRegServlet</servlet-name>
+		<servlet-class>ClientRegServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>addJobServlet</servlet-name>
+		<servlet-class>AddJobServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>addPlacementServlet</servlet-name>
+		<servlet-class>AddPlacementServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>addAppServlet</servlet-name>
+		<servlet-class>AddAppServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>skillControllServlet</servlet-name>
+		<servlet-class>SkillControllServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>addSkillServlet</servlet-name>
+		<servlet-class>AddSkillServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>addResumeServlet</servlet-name>
+		<servlet-class>AddResumeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>searchapp</servlet-name>
+		<servlet-class>searchapp</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>updAppServlet</servlet-name>
+		<servlet-class>UpdAppServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>updSkillServlet </servlet-name>
+		<servlet-class>UpdSkillServlet </servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>updResumeServlet</servlet-name>
+		<servlet-class>UpdResumeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>updSkillControllServlet</servlet-name>
+		<servlet-class>UpdSkillControllServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>itype</servlet-name>
+		<servlet-class>InterviewTyp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itype</servlet-name>
+		<url-pattern>/InterviewType</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>empRegServlet</servlet-name>
+		<url-pattern>/empreg</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>clientRegServlet</servlet-name>
+		<url-pattern>/clientreg</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>addJobServlet</servlet-name>
+		<url-pattern>/addJobServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>addPlacementServlet</servlet-name>
+		<url-pattern>/addPlacementServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>addAppServlet</servlet-name>
+		<url-pattern>/addAppServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>skillControllServlet</servlet-name>
+		<url-pattern>/skillControllServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>addSkillServlet</servlet-name>
+		<url-pattern>/addSkillServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>addResumeServlet</servlet-name>
+		<url-pattern>/addResumeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>searchapp</servlet-name>
+		<url-pattern>/searchapp1</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updAppServlet</servlet-name>
+		<url-pattern>/updAppServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updSkillServlet </servlet-name>
+		<url-pattern>/updSkillServlet </url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updResumeServlet</servlet-name>
+		<url-pattern>/updResumeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updSkillControllServlet</servlet-name>
+		<url-pattern>/updskillControllServlet</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>/login.htm </welcome-file>
+	</welcome-file-list>
+
+</web-app>

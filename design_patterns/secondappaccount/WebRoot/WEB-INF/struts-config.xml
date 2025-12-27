@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="accountform" type="com.nit.struts.AccountFormBean"></form-bean>
+	</form-beans>
+	<action-mappings>
+		<action path="/account" name="accountform" type="com.nit.struts.AccountAction">
+			<forward name="success" path="/accountdetails.jsp"></forward>
+			<forward name="failed" path="/noaccount.jsp"></forward>
+			<forward name="abnormal" path="/problem.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>
