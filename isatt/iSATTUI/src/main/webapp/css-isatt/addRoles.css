@@ -1,0 +1,211 @@
+body#addRolesPage{
+	background: #F7F7F7;
+}
+/* Images */
+.search{
+	background: url(../imgITAP/icons_search.png) no-repeat transparent;
+}
+.add{
+	background: url(../imgITAP/icons_add.png) no-repeat transparent;
+}
+.remove{
+	background: url(../imgITAP/icons_Remove.png) no-repeat;
+}
+.quitPage{
+	background: url(../imgITAP/icons_Close.png) no-repeat;
+}
+.icons{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+/* Fixed Nav */
+#fixed_nav{
+	position: fixed;
+	width: 100%;
+	background: #F7F7F7;
+}
+#fixed_wrapper{
+	height: 40px;
+	border-bottom: 1px solid rgb(222, 222, 222);
+}
+#fixed_wrapper h1{
+	margin :0;
+	display: inline-block;
+}
+#fixed_wrapper .logo_wrapper{
+	padding: 0 20px;
+}
+.heading{
+	color: #808080;
+	font-weight: normal;
+	font-size: 18px;
+	margin: 0;
+	vertical-align: middle;
+}
+/* Scrollable Content */
+
+/* Initial No Role */
+#noRoles{
+	position: fixed;
+	width: 100%;
+	height: 100%;	
+}
+#noRoles .message{
+	position: absolute;
+	top: 40%;
+	width: 40%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align:center;
+	color: rgb(205,205,205);
+}
+.message h2{
+	font-size: 42px;
+	font-weight: lighter;
+}
+.message a{
+	color: #2CACFD;
+}
+.message p{
+	font-size: 42px;
+	font-weight: lighter;
+	margin-top: 0;
+	width: auto;
+	height: auto;
+}
+.message p + p{
+	font-size: 16px;
+	font-weight: lighter;
+}
+#roles_info_scrollable{
+	padding-top: 41px;
+}
+#roles_info_wrapper{
+	padding: 20px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.role_info{
+	border: 1px solid rgb(191,191,191);
+	width: 15%;
+	height: 40px;
+	margin: 10px;
+	padding-left: 10px;
+	line-height: 40px;
+	background: rgb(235, 235, 235);
+	display: inline-block;
+	cursor:pointer;
+}
+
+/* Expanded/Update Role information Section */
+#role_info_up{
+	width: 100%;
+	position: absolute;
+}
+.info_wrapper{
+	min-height: 150px;
+	background: rgb(242,242,242);
+	border-bottom: 1px solid rgb(205,205,205);
+	border-top: 2px solid rgb(205,205,205);
+	width: 100%;
+	display: inline-block;
+}
+.general_info{
+	padding: 10px 30px;
+	margin: 0 auto;
+}
+#group_application_info{
+	width: 75%;
+}
+#groupType{
+	width: 40%; 
+}
+.header{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.header span{
+	margin-right: 150px;
+	font-size: 14px;
+	display: inline-block;
+	font-weight: bold;
+	vertical-align: middle;
+}
+#groupType .user_info{
+	width: 60%;
+}
+.group_application_wrapper{
+	display: inline-block;
+	border: 1px solid rgb(205, 205, 205);
+	background: rgb(235,235,235);
+	width: 95%;
+	float: right;
+}
+.general_info label{
+	font-size: 14px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.input_fields{
+	font-size: 0;
+}
+.buttons_wrapper{
+	width: 40%;
+}
+.buttons input{
+	margin-right: 20px;
+}
+.buttons{
+	padding: 20px 10px 0px 10px;
+	float: right;
+	margin-right: 25%;
+}
+.emptyDiv{
+	width: 60%;
+	height: 1px;
+	clear: both;
+}
+.arrowPointingUp{
+	border-bottom: 15px solid #dadada;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: -15px;
+	left: 1627px;
+}
+/* New Role Add Div CSS */
+#new_role_info{
+	padding: 0px 20px 20px 20px;
+}
+.new_dotted_div{
+	border: 2px dashed rgb(191,191,191);
+	width: 15%;
+	height: 40px;
+	margin: 10px;
+	padding-left: 10px;
+	line-height: 40px;
+	display: inline-block;
+	cursor: pointer;
+	color: rgb(191,191,191);
+}
+.input_fields_child{
+	display: inline-block;
+	width: 50%;
+	font-size: 12px;
+}
+.input_fields_child textarea{
+	min-height: 70px;
+	width: 75%;	
+	padding: 5px;
+}
+.roleName{
+	height: 30px;
+	width: 50%;
+}

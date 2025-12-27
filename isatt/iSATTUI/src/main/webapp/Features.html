@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="no-js lt-ie9">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html class="no-js">
+  
+  <!--
+<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>iTap</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/vendor/jquery-1.9.0.min.js"></script>
+    <script src="js/vendor/jquery-ui.js"></script> 
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/vendor/jquery.slimscroll.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>    
+    <link rel="stylesheet" href="css/chosen.css"/>
+  </head>
+  <body>
+  	<div id="mainContainer">
+  		<div id="itap_content">
+  			<div id="iTap_header">
+  				<div class="floatleft">
+  					<h1>
+  						<img src="../img/iTap.png" alt="iTap Logo"/>
+  					</h1>
+  					<span>Application Name</span>
+  				</div>
+  				<div class="floatright">
+  					<span>13 Jan 2014, 7:30 pm IST</span>
+  					<a href="#">
+  						First, Lastname<span>login</span>
+  					</a>
+  				</div>
+  			</div>
+  			<div class="clear"></div>
+  			<div id="iTap_menus">
+  				<a href="#" class="floatleft">Home<span>home</span></a>
+  				<a href="#" class="floatright">Import<span>import</span></a>
+  				<ul>
+  					<li>	
+  						<a href="#">Overview</a>
+  					</li>
+  					<li>	
+  						<a href="#">Functions & Features</a>
+  					</li>
+  					<li>
+  						<a href="#">Objects & Parameters</a>
+  					</li>
+  					<li>
+  						<a href="#">Test Cases</a>
+  					</li>
+  					<li>
+  						<a href="#">Test Data</a>
+  					</li>
+  					<li>
+  						<a href="#">Scheduler</a>
+  					</li>
+  				</ul>
+  			</div>
+  			<div class="clear"></div>
+  			<div id="sub_heading">
+  				<h2>Functions & Features</h2>
+  				<div id="accordion_FnF">
+				  <div class="sectionHeader">
+						<h3><span class="countGray">1</span><a href="#">Functions</a><span>Select to Proceed</span>
+							<div class="floatright">
+							<a href="#" class="icon_lightBG search floatleft"><span>Search</span>
+								<input class="searchField" type="text"/>
+							</a>
+							<a href="#" class="icon_lightBG plus addingTestLink floatleft" id="addPlans"><span>Add</span></a>
+							<a href="#" class="icon_lightBG minus floatleft"><span>Remove</span></a>
+						</div>
+						</h3> 					 				
+						<table>
+								<tr>
+									<th class="table_name">Name</th>
+									<th class="table_desc">Description</th>
+									<th class="table_suite">Features</th>
+									<th class="table_check"><input type="checkbox" id="selectall_functions"/></th>
+								</tr>
+								<tr>
+									<td class="table_name">Function 1</td>
+									<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+									<td class="table_suite">4</td>	
+									<td class="table_check"><input type="checkbox" class="function_checklist" name="function_checklist" value="1" /></td>						
+								</tr>
+								<tr>
+									<td class="table_name">Function 2</td>
+									<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+									<td class="table_suite">6</td>
+									<td class="table_check"><input type="checkbox" class="function_checklist" name="function_checklist" value="2"/></td>
+								</tr>
+								<tr>
+									<td class="table_name">Function 3</td>
+									<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+									<td class="table_suite">1</td>
+									<td class="table_check"><input type="checkbox" class="function_checklist" name="function_checklist" value="3"/></td>
+								</tr>					
+						</table>
+					</div>			
+					<div class="sectionHeader">
+						<h3><span class="countGray">2</span><a href="#">Features</a><span>Select to Proceed</span>
+							<div class="floatright">
+								<a href="#" class="icon_lightBG search floatleft"><span>Search</span>
+									<input class="searchField" type="text"/>
+								</a>
+								<a href="#" class="icon_lightBG plus addingTestLink floatleft" id="addPlans"><span>Add</span></a>
+								<a href="#" class="icon_lightBG minus floatleft"><span>Remove</span></a>
+							</div>
+						</h3>					 				
+						<table>
+								<tr>
+									<th class="table_name">Name</th>
+									<th class="table_desc">Description</th>
+									<th class="table_suite">Screens</th>
+									<th class="table_check"><input type="checkbox" id="selectall_features"/></th>
+								</tr>
+								<tr>
+									<td class="table_name">Screens 1</td>
+									<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+									<td class="table_suite">4</td>	
+									<td class="table_check"><input type="checkbox" class="feature_checklist" name="feature_checklist" value="1" /></td>						
+								</tr>
+								<tr>
+									<td class="table_name">Screens 2</td>
+									<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+									<td class="table_suite">6</td>
+									<td class="table_check"><input type="checkbox" class="feature_checklist" name="feature_checklist" value="2"/></td>
+								</tr>
+								<tr>
+									<td class="table_name">Screens 3</td>
+									<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+									<td class="table_suite">1</td>
+									<td class="table_check"><input type="checkbox" class="feature_checklist" name="feature_checklist" value="3"/></td>
+								</tr>					
+						</table>
+					</div>					
+					<div class="sectionHeader">
+						<h3><span class="countGray">3</span><a href="#">Screens</a><span>Select to View Object Groups</span>
+							<div class="floatright">
+								<a href="#" class="icon_lightBG search floatleft"><span>Search</span>
+									<input class="searchField" type="text"/>
+								</a>
+								<a href="#" class="icon_lightBG plus addingTestLink floatleft" id="addPlans"><span>Add</span></a>
+								<a href="#" class="icon_lightBG minus floatleft"><span>Remove</span></a>
+							</div>
+						</h3>
+						<table>
+							<tr>
+								<th class="table_name">Name</th>
+								<th class="table_desc">Description</th>
+								<th class="table_suite">Object Groups</th>
+								<th class="table_check"><input type="checkbox" id="selectall_plans"/></th>
+							</tr>
+							<tr>
+								<td class="table_name">Screen 1</td>
+								<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+								<td class="table_suite">4</td>	
+								<td class="table_check"><input type="checkbox" class="screen_checklist" name="screen_checklist" value="1" /></td>						
+							</tr>
+							<tr>
+								<td class="table_name">Screen 2</td>
+								<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+								<td class="table_suite">6</td>
+								<td class="table_check"><input type="checkbox" class="screen_checklist" name="screen_checklist" value="2"/></td>
+							</tr>
+							<tr>
+								<td class="table_name">Screen 3</td>
+								<td class="table_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed vestibulum justo.</td>
+								<td class="table_suite">1</td>
+								<td class="table_check"><input type="checkbox" class="screen_checklist" name="screen_checklist" value="3"/></td>
+							</tr>					
+						</table>
+					</div> 					 				
+					
+				</div>	
+  			</div>
+  		</div>
+  	</div>
+  </body>
+  
+</html>

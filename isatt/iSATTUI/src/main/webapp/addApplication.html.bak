@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="no-js lt-ie9">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html class="no-js" data-ng-app="iTap">
+
+<!--
+<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Add Roles</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
+<script src="js-isatt/vendor/jquery-1.9.0.min.js"></script>
+<script src="js-isatt/vendor/jquery-ui.js"></script>
+<script src="js-isatt/chosen.jquery.min.js"></script>
+<script src="angular/angular.min.js"></script>
+
+<script src="angular-dragdrop.js"></script>
+<script src="angular-dragdrop.min.js"></script>
+
+<script src="js/spagojs/sbisdk-all-production.js"></script>
+
+<script src="controllersITAP.js"></script>
+<script type="text/javascript" src="js-isatt/adminMain.js"></script>
+<script type="text/javascript" src="js-isatt/addApplication.js"></script>
+
+<link rel="stylesheet" href="css-isatt/jquery-ui.css" />
+<link rel="stylesheet" href="css-isatt/normalize.css" />
+<link rel="stylesheet" href="css-isatt/main.css" />
+<link rel="stylesheet" href="css-isatt/styles.css" />
+<link rel="stylesheet" href="css-isatt/addApplication.css" />
+
+
+<link rel="stylesheet" href="css-isatt/chosen.css" />
+<script src="js-isatt/vendor/jquery.slimscroll.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	var appID;
+	var appIDs;
+</script>
+
+<script>
+	
+</script>
+
+</head>
+<body id="addApplicationPage">
+	<!-- Fixed Top Section -->
+	<div id="fixed_nav">
+		<div id="fixed_wrapper">
+			<div class="floatleft logo_wrapper">
+			<a href="#"><h1><img src="./img-isatt/logo.png" alt="iTap Logo"></h1></a>
+			<span class="heading">Admin Settings - Application management</span>
+		</div>
+		<div class="floatright">
+			<span class="icons search floatleft"></span>
+			<span class="icons add floatleft addNewApplication " id=""></span>
+			<a href="./index.html"><span class="icons close quitPage floatleft"></span></a>
+		</div>
+		</div>
+	</div>
+	
+	<!--  Scrollable Content -->
+	<div id="application_info_scrollable" data-ng-controller="addApplicationController2">
+		<div id="noApplication" style="display:none;">
+			<div class="message">
+				<p>Currently no Application exist.</p>
+				<p>Click <a class="addNewApplication">here</a> to add new Application</p>
+			</div>
+		</div>
+		<div id="applications_info_wrapper">
+			<div  >
+				<div class="application_info" data-ng-repeat="thisApplication in AllApplications" data-ng-click="editApplication(thisApplication.appID)">
+					<span>{{thisApplication.appName}}</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Expanded Version of Div -->
+		<div id="application_info_up" class="application_information" style="display:none;">
+			<div class="info_wrapper">
+				<div class="general_info">
+				<form name="updateApplicationForm" data-ng-submit="addApplication()">
+					<div class="input_fields">
+					<input type="hidden" name="editAppID" data-ng-model="editAppID" value="{{editAppID}}" />
+					
+						<div class="input_fields_child">
+							<label for="applicationName">Application Name</label>
+							<input type ="text" name="editAppName" class="applicationName"  data-ng-model="editAppName" value={{editAppName}} data-ng-minlength=3 data-ng-maxlength=50 required />
+							<div class="error"
+											data-ng-show="updateApplicationForm.editAppName.$dirty && updateApplicationForm.editAppName.$invalid">
+											<span class="error"
+												data-ng-show="updateApplicationForm.editAppName.$error.required">
+												Application name is required. </span> <span class="error"
+												data-ng-show="updateApplicationForm.editAppName.$error.minlength">
+												Application name is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="updateApplicationForm.editAppName.$error.maxlength">
+												Application name cannot be longer than 50 characters </span>
+										</div>		
+						</div>
+						<div class="input_fields_child">
+							<label>Application Description</label>
+							<textarea name="appDescription" class="application_desc" data-ng-model="appDescription" value={{appDescription}} data-ng-minlength=3 data-ng-maxlength=100 required/></textarea>
+							<div class="error"
+											data-ng-show="updateApplicationForm.appDescription.$dirty && updateApplicationForm.appDescription.$invalid">
+											<span class="error"
+												data-ng-show="updateApplicationForm.appDescription.$error.required">
+												Application description is required. </span> <span class="error"
+												data-ng-show="updateApplicationForm.appDescription.$error.minlength">
+												Application description is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="updateApplicationForm.appDescription.$error.maxlength">
+												Application description cannot be longer than 100 characters </span>
+										</div>				
+						</div>
+					</div>
+					
+					<div class="input_fields">
+						<div class="input_fields_child">
+							&nbsp;
+						</div>
+						<div class="input_fields_child">
+							<div class="buttons">
+								<input type="button" value="Cancel" class="greybutton close_application_info cancel">
+								<input type="button" value="Update Application" class="update blueButton" id="updateApplication" data-ng-click="updateApplication()" data-ng-disabled="updateApplicationForm.$invalid">
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>			
+		</div>
+		<!-- END Expanded Version of Div -->
+		
+		<!-- New Application add Div -->
+		<div id="new_application_info" class="application_information" style="display:none;">
+			<div class="new_dotted_div">New Role</div>
+			<div class="info_wrapper">
+				<div class="general_info">
+				<form name="addApplicationForm" novalidate
+									data-ng-submit="addApplication()">
+					<div class="input_fields">
+						<div class="input_fields_child">
+							<label for="applicationName">Application Name</label>
+							<input type ="text" name="applicationName" class="applicationName" placeholder ="Enter Application Name" data-ng-model="applicationName" data-ng-minlength=3 data-ng-maxlength=100 required duplicate= "AllApplications" attributename = "{name:'appName'}"/>
+							<div class="error"
+											data-ng-show="addApplicationForm.applicationName.$dirty && addApplicationForm.applicationName.$invalid">
+											<span class="error"
+												data-ng-show="addApplicationForm.applicationName.$error.duplicate">
+												Application name is already in use </span>
+											<span class="error"
+												data-ng-show="addApplicationForm.applicationName.$error.required">
+												Application name is required. </span> <span class="error"
+												data-ng-show="addApplicationForm.applicationName.$error.minlength">
+												Application name is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="addApplicationForm.applicationName.$error.maxlength">
+												Application name cannot be longer than 50 characters </span>
+										</div>		
+						</div>
+						
+						<div class="input_fields_child">
+							<label>Application Description</label>
+							<!-- <textarea class="application_desc" /></textarea> -->
+							<textarea cols="40" rows="6" name="description" class="application_desc" data-ng-model="description" data-ng-minlength=3 data-ng-maxlength=100 required></textarea>
+							<div class="error"
+											data-ng-show="addApplicationForm.description.$dirty && addApplicationForm.description.$invalid">
+											<span class="error"
+												data-ng-show="addApplicationForm.description.$error.required">
+												Application description is required. </span> <span class="error"
+												data-ng-show="addApplicationForm.description.$error.minlength">
+												Application description is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="addApplicationForm.description.$error.maxlength">
+												Application description cannot be longer than 100 characters </span>
+										</div>				
+						</div>
+					</div>
+					
+					<div class="input_fields">
+						<div class="input_fields_child">
+							&nbsp;
+						</div>
+						<div class="input_fields_child">
+							<div class="buttons">
+								<input type="button" value="Cancel" class="greybutton close_application_info cancel">
+								<input type="button" value="Create Application" class="blueButton" id="createApplication"  data-ng-click="addApplication()" data-ng-disabled="addApplicationForm.$invalid">
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>			
+		</div>
+		<!-- END New Application add Div -->
+	</div>
+	<!-- END Scrollable Content -->
+	
+</body>
+
+</html>

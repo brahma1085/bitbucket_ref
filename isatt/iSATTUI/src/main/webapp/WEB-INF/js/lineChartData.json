@@ -1,0 +1,18 @@
+[
+	
+	 {"days":1,"sessionSample":10, "mobileApp":23, "sphereShare":12, "panalApp": 21, "eziBuider": 12},
+	{"days":2,"sessionSample":20, "mobileApp":33, "sphereShare":22, "panalApp": 25, "eziBuider": 14},
+	{"days":3,"sessionSample":30, "mobileApp":37, "sphereShare":26, "panalApp": 28, "eziBuider": 16},
+	{"days":4,"sessionSample":32, "mobileApp":40, "sphereShare":29, "panalApp": 32, "eziBuider": 18},
+	{"days":5,"sessionSample":33, "mobileApp":44, "sphereShare":37, "panalApp": 39, "eziBuider": 20},
+	{"days":6,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25},
+	{"days":7,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25},
+	{"days":8,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25},
+	{"days":9,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25},
+	{"days":10,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25},
+	{"days":11,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25},
+	{"days":12,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25},
+	{"days":13,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25},
+	{"days":14,"sessionSample":50, "mobileApp":56, "sphereShare":42, "panalApp": 48, "eziBuider": 25}
+    
+]

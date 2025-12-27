@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>isatt.sssoft.com</groupId>
+	<artifactId>iSATT_Data</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+	
+	<name>iSATT_Data</name>
+	<description>iSATT_Data</description>
+	<!-- <url>http://maven.apache.org</url> -->
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<apache.dbcp.version>6.0.37</apache.dbcp.version>
+		<common-dbcp.version>20030825.184428</common-dbcp.version>
+		<common-pool.version>20030825.183949</common-pool.version>
+		<dbutils.version>1.5</dbutils.version>
+		<mysql.driver.version>5.1.25</mysql.driver.version>
+		<querydsl-maven-plugin.version>3.2.1</querydsl-maven-plugin.version>
+		<querydsl.version>2.8.2</querydsl.version>
+		<spring-data-jdbc.version>1.0.0.RELEASE</spring-data-jdbc.version>
+		<spring.version>3.0.7.RELEASE</spring.version>
+		<mockito-all.version>1.9.5</mockito-all.version>
+		<jackson-mapper.version>1.8.5</jackson-mapper.version>
+		<jackson-core.version>1.8.5</jackson-core.version>
+		<gson.version>2.2.4</gson.version>
+		<properties-maven-plugin.version>1.0-alpha-2</properties-maven-plugin.version>
+		<iSATT.version>0.0.1</iSATT.version>
+		<config_path>/data/isatt/config</config_path>
+	</properties>
+
+	<dependencies>
+		<!-- Own project dependencies -->
+		<dependency>
+			<groupId>isatt.sssoft.com</groupId>
+			<artifactId>iSATT_Utils</artifactId>
+			<version>${iSATT.version}</version>
+		</dependency>
+
+		<!-- Database driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.driver.version}</version>
+		</dependency>
+
+		<!-- Needed for datasource -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>dbcp</artifactId>
+			<version>${apache.dbcp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${common-dbcp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>${common-pool.version}</version>
+		</dependency>
+
+
+		<!-- Compile dependencies -->
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<version>${dbutils.version}</version>
+		</dependency>
+
+		<!-- Query DSL -->
+		<dependency>
+			<groupId>com.mysema.querydsl</groupId>
+			<artifactId>querydsl-sql</artifactId>
+			<version>${querydsl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mysema.querydsl</groupId>
+			<artifactId>querydsl-core</artifactId>
+			<version>${querydsl.version}</version>
+		</dependency>
+
+		<!-- Spring Data JDBC Extensions -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jdbc-core</artifactId>
+			<version>${spring-data-jdbc.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Spring Framework Project libraries -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>quartz</groupId>
+					<artifactId>quartz</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Spring framework mock-it testing -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito-all.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson-mapper.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>${jackson-core.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>springsource-repo</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.springsource.org/release</url>
+		</repository>
+
+		<repository>
+			<id>org.springsource.maven.snapshot</id>
+			<name>SpringSource Maven Central-compatible Snapshot Repository</name>
+			<url>http://maven.springframework.org/snapshot</url>
+			<snapshots>
+				<updatePolicy>daily</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+			</resource>
+			<resource>
+				<directory>src/test/java</directory>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.xls</include>
+				</includes>
+				<excludes>
+					<exclude>log4j.properties</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>${config_path}</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/main.properties</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<filters>
+			<filter>${config_path}/main.properties</filter>
+		</filters>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<!-- JAR Plugin to configure JAR generation. -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>./</classpathPrefix>
+						</manifest>
+						<manifestEntries>
+							<Class-Path>.</Class-Path>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>${properties-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>${config_path}/main.properties</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>com.mysema.querydsl</groupId>
+				<artifactId>querydsl-maven-plugin</artifactId>
+				<version>${querydsl-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>export</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<jdbcDriver>${driverClassName}</jdbcDriver>
+					<jdbcUrl>${url}</jdbcUrl>
+					<jdbcUser>${username}</jdbcUser>
+					<jdbcPassword>${password}</jdbcPassword>
+					<packageName>com.sssoft.isatt.data.generated.pojo</packageName>
+					<targetFolder>${project.basedir}/src/main/java</targetFolder>
+					<schemaPattern>APP</schemaPattern>
+					<goalPrefix>mysema1</goalPrefix>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>${mysql.driver.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.basedir}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<!-- Ignore/Execute plugin execution -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<!-- copy-dependency plugin -->
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>copy-dependencies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>properties-maven-plugin</artifactId>
+										<versionRange> [1.0-alpha-2,)</versionRange>
+										<goals>
+											<!-- plugin goals -->
+											<goal>read-project-properties</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- M2E should ignore the plugin -->
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.mysema.querydsl</groupId>
+										<artifactId>querydsl-maven-plugin</artifactId>
+										<versionRange> [3.2.1,)</versionRange>
+										<goals>
+											<!-- plugin goals -->
+											<goal>export</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- M2E should ignore the plugin -->
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

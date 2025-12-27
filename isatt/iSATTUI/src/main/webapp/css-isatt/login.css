@@ -1,0 +1,96 @@
+/* Login Page CSS */
+
+html, head, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	ext-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+.floatleft{
+	float: left;
+}
+.floatright{
+	float: right;
+}
+body#login{
+	background: #EFEFEF !important; 
+}
+
+#login_page_container{
+	border: 1px solid #D6D6D6;
+	position: absolute;
+	top: 50%;
+	width: 40%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #F4F4F4;
+}
+.header, .footer{
+	width: 50%;
+	margin: 0 auto;
+}
+#logo{
+	border-bottom: 1px solid #d6d6d6;
+}
+.logoImg{
+	text-align: left;
+	margin: 0 auto;
+	display: block;
+	height: 62px;
+	padding: 30px;
+}
+.inputFields{
+	text-align: center;
+	width: 30%;
+	margin: 0px auto 50px auto;
+}
+.inputFields label{
+	padding: 60px 20px 20px 0px;
+	display: block;
+	text-align: left;
+	font-size: 18px;
+}
+label[for=password] {
+	padding: 20px 20px 20px 0px;
+}
+.inputFields input{
+	height: 25px;
+	padding: 2px;
+	width: 100%;
+	border: 1px solid #A9A9A9;
+}
+#loginBtn{
+	width: 50%;
+	margin: 0 auto;
+	background: #1A9FE6;
+	padding: 15px;
+	border: 2px solid #199ADF;
+	border-radius: 5px;
+	line-height: 0px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: #fff;
+}
+.bottomNav{
+	border-top: 1px solid #d6d6d6;
+	padding: 20px 0;
+}
+.bottomNav .link{
+	text-decoration: none;
+	font-size: 13px;
+}
+.forgotPass.link{
+	color: #1A9FE6;
+}
+.TandC.link:link, .TandC.link:visited, .TandC.link:hover, .TandC.link:active{
+	color: #222;
+}
+.error{
+	font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 8px;
+    text-align: center;
+}

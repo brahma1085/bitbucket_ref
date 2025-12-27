@@ -1,0 +1,1140 @@
+/*
+Author Name: Swaraj Ghosh & Preethi RS
+Description: CSS of Testing FrameWork
+Start Date: 26/08/2013
+End date: 19/09/2013
+*/
+/* ==========================================================================
+   Custom styles: 
+   ========================================================================== */
+@font-face
+{
+	font-family: "HelveticaNeue";
+	src: url('../Fonts/HelveticaNeue,HelveticaNeue_IEMedium.ttf');
+}
+@font-face
+{
+	font-family: "HelveticaNeue_IE";
+	src: url('../Fonts/HelveticaNeue,HelveticaNeue_IEmedium-webfont.eot');
+}
+@font-face {
+    font-family: "MyriadPro";
+    src: url("../fonts/MyriadPro-Regular.otf");
+}
+body{
+	background-color: #f1f1f1;
+}
+*{
+	outline: none;
+	margin: 0 auto;
+	border: 0 none;
+	padding: 0;
+}
+h1,h2,h3,h4{
+	margin: 0;
+	font-family: HelveticaNeue,HelveticaNeue_IE;
+}
+h4 {
+    color: #585858;
+}
+a{
+	text-decoration:none;
+	cursor: pointer;
+}
+dl,dd,ul{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	display: inline-block;
+}
+.floatleft{
+	float: left;
+}
+.floatright{
+	float: right;
+}
+.floatrightbtn{
+	float: right;
+	height: 28px;
+    margin-right: 5px;
+    margin-top: 4px;
+    width: 100px;
+	
+}
+.clear{
+	clear:both;
+}
+span.error_message{
+	display : none;
+}
+.myClass{
+border: 1px solid red;
+width: 150px;
+margin-left: 0px;
+}
+
+/*-------Main Screen------*/
+body > div{
+	border-bottom: 5px solid #304971;
+    min-height: 1100px;
+	width: 80%;
+	background-color: #fff;
+}
+body > div > div:first-Child{
+	background-color: #304971;
+	border-bottom: 5px solid #4B85BA;
+	height: 50px;
+	color: #fff;
+	padding: 0 20px;
+}
+body > div > div:first-Child h1{
+	background: url("../img/AppleLogo.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    height: 21px;
+    line-height: 1.067em;
+    margin-top: 13px;
+    padding-left: 27px;
+}
+body > div > div:first-Child  ul li{
+	margin-top: 15px;
+    padding: 3px 6px;
+}
+body > div > div:first-Child  ul li a{
+	font: 1em "MyriadPro";
+	color: #fff;
+	padding: 0 0 0 16px;
+}
+body > div > div:first-Child  ul li a#settings{
+	background: url(../img/SettingsIcon.png) no-repeat scroll left center transparent;
+}
+body > div > div:first-Child  ul li a#help{
+	background: url("../img/HelpIcon.png") no-repeat scroll left center transparent;
+}
+body > div > div:first-Child  ul li a#logout{
+	background: url(../img/LogoutIcon.png) no-repeat scroll left center transparent;
+}
+#dashboard{
+	border-bottom: 2px solid #F1F1F1;
+	height: 47px;
+	padding: 0 20px;
+	background-color: #FBFBFB;
+}
+#dashboard h2{
+	background: url("../img/DashboardIcon.png") no-repeat scroll left center transparent;
+    line-height: 1.2em;
+    margin-top: 15px;
+    padding-left: 25px;
+}
+#dashboard h2 a{
+	color: #4a4a4a;
+}
+.close{
+	background: url("../img/Popup-cancel-white.png") no-repeat scroll 91% center transparent;
+}
+			/* -----------------------------Home page-------------------------------- */
+
+#application_status_graph{
+	margin: 16px 0;
+	border: 2px solid #DEDEDE;
+    height: 336px;
+    width: 97.7%;
+}
+#homepage > div:first-child {
+    padding: 38px 0;
+}
+#homepage, #ApplicationDetails{
+    padding: 0 22px 0 45px;
+}
+.select_application{
+	border: 1px solid #DEDEDE;
+    cursor: pointer;
+    display: inline-block;
+    margin: 14px 20px 12px 0;
+    padding-top: 10px;
+    width: 213px;
+}
+.select_application .editApplication,
+.select_application .cancelApplication{
+	padding: 10px;
+}
+.warning{
+	background: url("../img/Notification Icon.png") no-repeat scroll 96% 8px transparent;
+	background-color : #fff0f0;
+	border : 1px solid #fc8383;
+}
+.warning a{
+	display: none;
+}
+#add_application{
+	margin: 0 26px 0 0;
+}
+#addApplication_popup{
+	display: none;
+	padding: 0 0 22px;
+}
+.select_application:hover, #active > div:hover, .suites:hover, 
+#complete > div:hover{
+	border: 1px solid #5b86ba;
+}
+.select_application h3{
+    padding: 1px 8px 14px;
+}
+.select_application .editApplication{
+	background: url(../img/EditIcon_grey.png) no-repeat;
+}
+.select_application .cancelApplication{
+	background: url("../img/Cancellation_grey.png") no-repeat scroll 0% 2px transparent;
+}
+.select_application > ul {
+	border-top: 1px solid #DFDFDF;
+    padding: 10.5px 0;
+}
+.select_application ul li{
+	text-align: center;
+	padding: 0 3px;
+	font: 0.917em HelveticaNeue,HelveticaNeue_IE;
+	border-left: 1px solid #ccc;
+	color: #636365;
+}
+.select_application ul li:first-child{
+	border: none;
+}
+.select_application ul li span{
+	display: block;
+	font: 2.5em/1.4em HelveticaNeue,HelveticaNeue_IE;
+	color: #585858;
+}
+/*---------Common Properties----------------*/
+#ApplicationDetails > div:First-child {
+    margin-bottom: 27px;
+}
+#ApplicationDetails > div:First-child ul {
+   margin-top: 8px;
+}
+#ApplicationDetails > div:First-child ul li{
+	border-left: 1px solid #EDEDED;
+    padding: 0 12px;
+}
+#ApplicationDetails > div:First-child ul li:first-child {
+    border: 0 none;
+    padding-left: 0;
+}
+#ApplicationDetails > div:First-child a{
+	color: #585858;
+    font: 1.333em "HelveticaNeue,HelveticaNeue_IE";
+}
+#ApplicationDetails > div:First-child a:hover, #ApplicationDetails > div:First-child a.activeTab{
+	color: #4b85bb;
+}
+/* -----------------------------Overview page-------------------------------- */
+#testcases {
+	width: 100%;
+}
+#testcases > div > div{
+	border: 1px solid #DEDEDE;
+    height: 310px;
+    margin-top: 4px;
+}
+#testcases h3 span{
+	color: #8F8F8F;
+    display: block;
+    font-weight: normal;
+    padding-top: 10px;
+}
+#testcases > h3 {
+    padding-bottom: 8px;
+}
+#leftGraph{
+    width: 65%;
+}
+#leftGraph span, #rightGraph span{
+	font: 1em "HelveticaNeue,HelveticaNeue_IE";
+	color: #9e9e9e;
+}	
+#rightGraph{
+	width: 33%;
+}
+#testcases_data{
+	border: medium none;
+    width: 100%;
+}	
+.critical{
+	border-left: 2px solid #d53809;
+	background-color: #fbf0f1;
+}
+#testcases_data >div{
+    margin: 30px 0 0 19px;
+}
+#testcases_data >div > div{
+	border: 1px solid #DEDEDE;
+	margin: 9px 0;
+}
+#testcases_data div dl dt{
+    color: #595959;
+    font: 400 1.25em HelveticaNeue,HelveticaNeue_IE;
+    padding: 10px 0 0 10px;
+}
+#testcases_data div dl dd{
+    border-bottom: 1px solid #DFDFDF;
+    color: #686868;
+    font: 1em MyriadPro;
+    padding: 5.3px 10px;
+}
+/*----[Test Case Details Block]-------*/
+#test_case_details{
+	margin-left: 0 !important;
+    width: 36.9%;
+}
+#test_case_details div div > ul > li {
+    border-bottom: 1px solid #DFDFDF;
+    padding: 12px 7px;
+    width: 98%;
+}
+#test_case_details ul li{
+	text-align: center;
+	padding: 0 4px;
+	margin-top: -3px;
+}
+#test_case_details > div > div > ul> li > span{
+	color: #686868;
+    font: 1.083em/2.4em "MyriadPro";
+    padding: 0 0 0 6px;
+}
+#test_case_details ul> li > ul > li >span{
+	color: #494A4A;
+    display: block;
+    font: 1.8em "HelveticaNeue,HelveticaNeue_IE";
+}
+#test_case_details > div > div > ul> li > ul > li{
+	font: 0.833em "HelveticaNeue,HelveticaNeue_IE";
+	border-left: 1px solid #ccc;
+	color: #636365;
+}
+#test_case_details > div > div > ul> li > ul > li:first-child{
+	border: none;
+}
+
+/*----[Upcoming Function Block]-------*/
+#upcoming_function{
+	width: 26%;
+}
+/*----[Latest Test Case Block]-------*/
+#latest_test_runs{
+	 width: 33%;
+}
+
+/*----[Graph]-----*/
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/*---[Bar Graph]---*/
+
+.bar {
+  fill: steelblue;
+}
+/*------ Multiple line graph -------- */
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}		
+/*-------[Horizontal bar]---------*/
+.chart rect {
+	stroke: white;
+	fill: steelblue;
+}
+.chart text {
+	fill: white;
+}
+.chart text.name {
+	fill: #000;
+}
+.chart line {
+	stroke: #c1c1c1;
+}
+.chart .rule {
+	fill: #000;
+}
+#horizontal_bar_graph .chart rect {
+	stroke: none;
+}
+#horizontal_bar_graph .chart rect:hover {
+	fill: #64707D;
+}	
+/* -----------------------------Test Suites page-------------------------------- */
+
+.testSuites > h3 {
+    margin-bottom: 16px;
+}
+.suites{
+	background: -moz-linear-gradient(center top , #F8F8F8 0%, #F8F8F8 0%, #FFFFFF 50%, #F8F8F8 100%, #F8F8F8 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(center top , #F8F8F8 0%, #F8F8F8 0%, #FFFFFF 50%, #F8F8F8 100%, #F8F8F8 100%) repeat scroll 0 0 transparent;
+	background: -O-linear-gradient(center top , #F8F8F8 0%, #F8F8F8 0%, #FFFFFF 50%, #F8F8F8 100%, #F8F8F8 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #E1E0E0;
+    cursor: pointer;
+    float: left;
+    margin: 0 30px 30px 0;
+    width: 290px;
+	padding: 4px 0 13px;
+}
+.suites ul > li > span:first-child a{
+	border-right: 1px solid #a8a8a8;
+	padding-right: 6px;
+}
+.suites h3{
+    padding: 5px 4px 3px 12px;
+}
+.suites ul{
+	padding: 5px 0 3px 12px;
+	color: #a8a8a8;
+}
+.suites ul + ul {
+    border-top: 1px solid #DFDFDF;
+    padding: 16px 0 0;
+}
+.suites li:first-child {
+    border-right: 1px solid #DFDFDF;
+}
+.suites ul + ul li{
+	color: #585858;
+    font: 0.917em HelveticaNeue,HelveticaNeue_IE;
+    padding: 0 12px;
+    text-align: center;
+}
+.suites ul + ul li span{
+	display: block;
+    font: 2.5em HelveticaNeue,HelveticaNeue_IE;
+	color: #585858;
+}
+.suites a {
+	color: #585858;
+    font: 0.917em MyriadPro;
+    padding-right: 6px;
+}
+#selected_suite > span {
+    color: #9E9E9E;
+    font: 0.917em/2em HelveticaNeue,HelveticaNeue_IE;
+}
+#suite_details > div > div, #specificCase{
+	border: 1px solid #EEEEEE;
+    display: inline-block;
+    height: 48px;
+    margin-top: 15px;
+    width: auto;
+}
+#suite_details > div > a {
+    background: url("../img/EditIcon.png") no-repeat scroll 0 0 transparent;
+    color: #38A4E0;
+    font: 1em HelveticaNeue,HelveticaNeue_IE;
+    left: 14px;
+    padding: 0 17px;
+    position: relative;
+    top: -10px;
+}
+#suite_details input[type="button"], #case_list input[type="button"], #addTestPlanBtn, #addTestSuiteBtn,#addTestRunBtn, #addTestParamDataBtn, #addTestDefinitionBtn, #addTestPlanPopUpBtn, #addTestRun input[type="button"], #addAppFeatureBtn, #addFunctionBtn,#addObjectTypeBtn,#addScreenBtn,#addObjectGrpBtn,#addObjectBtn,#addConditionBtn,#addConditionGrpBtn,
+#addParamGrpBtn,#addParameterBtn,#addRemove,#addEntry,#uploadExcel,#addIdentifierTypesBtns,#uploadExcelBtn,
+#addTestPlan input[type="button"], #addTestSuitesbtn, #addTestCasebtn,#addIdentiTypesBtns,#addReplacStringsBtns,#addtestCasesButtons, #addSuitesPop input[type="button"],#addTestPop input[type="button"], #editTestPop input[type="button"],#addApplication_popup input[type="button"],#addTestPlan1 input[type="button"],#addFunctional input[type="button"],
+#add_application{
+	background: url("../img/PlusIcon.png") no-repeat scroll 4% 56% #304971;
+    color: #FFFFFF;
+    font: 0.833em HelveticaNeue,HelveticaNeue_IE;
+    height: 24px;
+    width: 100px;
+	margin-bottom: 5px;
+}
+#suite_details > div > div ul{
+	padding: 3px 12px;
+}
+#specificCase > ul {
+    padding: 12px;
+}
+#specificCase{
+	width: auto;
+}
+#specificCase li {
+    border-left: 1px solid #DFDFDF;
+    color: #585858;
+    font: 0.913em HelveticaNeue,HelveticaNeue_IE;
+    padding: 0 11px;
+}
+#specificCase li:first-child{
+	border-left: 0;
+	padding-left: 6px;
+}
+#specificCase li  span{
+	color: #979897;
+}
+#testStep_details div ul li:hover{
+	background-color: #38a4e0;
+}
+#addTestRun input[type="button"],
+#addTestPlan input[type="button"], #addSuitesPop input[type="button"], #addTestPop input[type="button"],#editTestPop input[type="button"],#addCase input.close, #addTestPlan1 input[type="button"],#addFunctional input[type="button"],
+#addApplication_popup input[type="button"]{
+	background: none repeat scroll 0 0 #304971 !important;
+} 
+#addTestPlanBtn{
+	margin: -28px 152px 0 0;
+}
+#addFunctionalBtn{
+	margin: -28px 152px 0 0;
+}
+#addTestPlanPopUpBtn{
+	margin: -28px 152px 0 0;
+}
+#addAppFeatureBtn{
+	margin: -28px 152px 0 0;
+}
+#addFunctionBtn{
+	margin: -28px 152px 0 0;
+}
+#addObjectTypeBtn,#addObjectBtn,#addConditionBtn,#addConditionGrpBtn,#addParamGrpBtn,#addParameterBtn,#addRemove,#addEntry,#uploadExcel,#addIdentifierTypesBtns,#uploadExcelBtn{
+	margin: -28px 152px 0 0;
+}
+#addScreenBtn{
+	margin: -28px 152px 0 0;
+}
+#addObjectGrpBtn{
+	margin: -28px 152px 0 0;
+}
+#addTestRunBtn{
+	margin: -28px 30px 0 0;
+}
+#addTestDefinitionBtn{
+    margin: -4px 66px  0 0;
+    padding: 1px 0 0 11px;
+}
+
+#addTestParamDataBtn{
+    margin: -4px 66px  0 0;
+    padding: 1px 0 0 11px;
+}
+
+#addTestSuitesbtn{
+    margin: -4px 66px  0 0;
+    padding: 1px 0 0 11px;
+}
+#addTestCasebtn{
+    margin: -4px 66px  0 0;
+    padding: 1px 0 0 11px;
+}
+#suite_details > div > div ul li{
+	color: #585858;
+    font: 1.333em HelveticaNeue,HelveticaNeue_IE;
+    padding: 2px 28px;
+}
+#suite_details > div > div ul li:first-child {
+	border-right: 1px solid #DEDEDE;
+	padding-left: 6px;
+}
+#suite_details > div > div ul li span{
+	color: #979897;
+    display: block;
+    font: 0.75em HelveticaNeue,HelveticaNeue_IE;
+}
+table tr td a span, #addCase a span, #addTestRun a span, #addTestPlan a span, 
+#addSuitesPop a span, #addApplication_popup a span,#dataset_header a span, #addTestPop a span, #editTestPop a span, #addFunctional a span,
+.select_application .editApplication span,.select_application .cancelApplication span{
+	display: none;
+}
+table tr td a.edit{
+	background: url("../img/EditIcon.png") no-repeat scroll center center transparent;
+    padding: 7px;
+}
+table tr td a.cancel{
+	background: url("../img/CancelIcon.png") no-repeat scroll center center transparent;
+    padding: 7px;
+}
+#add_testCases table td a {
+    color: #0E72B1;
+}
+#add_testCases table td a:hover{
+	color: #585858;
+}
+#case_list > ul > li {
+	padding-right: 5px;
+}
+#case_list > ul > li  a{
+	font: 0.917em HelveticaNeue,HelveticaNeue_IE;
+	color: #585858;
+}
+#case_list > ul > li:first-child{
+	border-right: 1px solid #dfdfdf;
+}
+#case_history table {
+    width: 500px;
+	margin: 0;
+}
+/* -----------------------------Reports-------------------------------- */
+#reports > span {
+    color: #686868;
+    font: 0.917em/2em HelveticaNeue,HelveticaNeue_IE;
+}
+#exchange_status ul{
+    min-width: 327px;
+    width: 35.5%;
+}
+#exchange_status ul li{
+	border: 1px solid #D1D0D0;
+    color: #6C6C6D;
+    display: block;
+    font: 1.583em HelveticaNeue,HelveticaNeue_IE;
+    height: 55px;
+    list-style: none outside none;
+    margin: 21px 0 41px;
+    padding: 27px 0 0 22px;
+}
+#exchange_status ul li span{
+	color: #484849;
+    font: 1.667em/0.667em "HelveticaNeue,HelveticaNeue_IE";
+    padding-right: 15px;
+}
+#horizontal_bar_graph{
+	border: 1px solid #D1D0D0;
+    height: 332px;
+    margin-top: 21px;
+    width: 62%;
+}
+#modules_testCases div{
+	background: -moz-linear-gradient(center top , #F8F8F8 0%, #F8F8F8 0%, #FFFFFF 50%, #F8F8F8 100%, #F8F8F8 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(center top , #F8F8F8 0%, #F8F8F8 0%, #FFFFFF 50%, #F8F8F8 100%, #F8F8F8 100%) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(center top , #F8F8F8 0%, #F8F8F8 0%, #FFFFFF 50%, #F8F8F8 100%, #F8F8F8 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #D1D0D0;
+    display: inline-block;
+    height: 118px;
+    margin: 0px 13px 19px 0px;
+	width: 174px;
+}
+#modules_testCases div h3{
+	border-bottom: 1px solid #DFDFDF;
+    padding: 10px 0 10px 12px;
+}
+#modules_testCases ul {
+    padding: 14px 0;
+}
+#modules_testCases div ul li{
+	color: #686868;
+    font: 0.917em HelveticaNeue,HelveticaNeue_IE;
+    text-align: center;
+	padding: 0 11px;
+}
+#modules_testCases div ul li span{
+    display: block;
+    font: 2.455em "HelveticaNeue,HelveticaNeue_IE";
+}
+#modules_testCases li:first-child {
+    border-right: 1px solid #DFDFDF;
+    padding-left: 13px;
+}
+#testCase_header > span {
+    font: 1.083em HelveticaNeue,HelveticaNeue_IE;
+}
+#testCase_header{
+	background-color: #38A4E0;
+    color: #FFFFFF;
+    height: 22px;
+    padding: 12px 12px 0;
+	margin-bottom: -12px;
+}
+#testCase_details_table > div a{
+	margin: 0 0 0 20px;
+    padding: 0 0 22px 19px;
+}
+#testCase_details_table th{
+	background-color: #ececec;
+	color: #585858;
+}
+#table_view{
+	background: url("../img/Graph View- Inactive.png") no-repeat scroll right 0 transparent;
+}
+#graph_view{
+	background: url("../img/Grid View Inactive.png") no-repeat scroll right 0 transparent; 
+}
+#testCase_header a.activeForm, #testCase_header a:hover {
+	margin-top: -5px;
+    padding: 13.5px 16px;
+}
+#table_view.activeForm, #table_view:hover {
+    background: url("../img/Graph View-Active.png") no-repeat scroll center center #ECECEC;
+}
+#graph_view.activeForm, #graph_view:hover{
+	 background: url("../img/Grid View Active.png") no-repeat scroll center center #ECECEC;
+}
+#testRunsRusults ul li a:hover, #suite ul li a:hover, #case_list a:hover, #testRunsRusults ul li a.activeRun, 
+#case_list a.activeSuite, #suite ul li a.activeTest_suite, .suites ul li a:hover{
+	color: #38A4E0;
+}
+#stacked_bar_graph{
+    border: 1px solid #CECECE;
+    height: 373px;
+	margin-top: 12px;
+}
+/* -----------------------------[Test Runs & Results Page ]-------------------------------- */
+#suite > ul {
+    margin-top: 8px;
+}
+#suite ul li a{
+	color: #585858;
+}
+#testRunsRusults   ul{
+	margin-top: 9px;
+	padding: 0;
+}
+#testRunsRusults   ul li a,#suites ul li a{
+	border-left: 1px solid #9C9D9F;
+    color: #B8B8B8;
+    font: 1em "MyriadPro";
+    padding: 0 8px;
+}
+#testRunsRusults   ul li:first-child a,#suites ul li:first-child a{
+	border: none;
+	padding: 0;
+}
+.testRuns > span {
+	font: 1em HelveticaNeue,HelveticaNeue_IE;
+	color: #0086bf;
+}
+/*----[Active Block]----*/
+#testRunsRusults > div > div{
+	border: 1px solid #E9E9E9;
+    float: left;
+    cursor: pointer;
+    height: 119px;
+    margin: 11px 26px 12px 0px;
+	width: 211px;
+}
+#testRunsRusults > div > div>div{
+	height: 41px;
+    padding: 10px 13px 0;
+}
+#active > div, #complete > div{
+	 background: -moz-linear-gradient(center top , #F8F8F8 0%, #F8F8F8 0%, 
+	 #FFFFFF 50%, #F8F8F8 100%, #F8F8F8 100%) repeat scroll 0 0 transparent;
+}
+#active > div > div > div > h3,
+#activeTestPlans > div > div > div > h3,
+#complete > div > div > div > h3{
+	padding-top: 5px;
+}
+#active > div > div > div > span.completedBy,
+#activeTestPlans > div > div > div > span.completedBy,
+#complete > div > div > div > span.completedBy{
+	color: #979897;
+    display: block;
+    font: 1em/2em "MyriadPro";
+}
+#testRunsRusults > div > div ul {
+	border-top: 1px solid #CCCCCC;
+    padding: 7px 0;
+    text-align: center;
+    width: 100%;
+}
+#testRunsRusults > div > div ul li {
+	border-left: 1px solid #CCCCCC;
+    color: #979897;
+    font: 0.917em "MyriadPro";
+    height: 34px;
+    padding: 0 3.4px;
+}
+#testRunsRusults > div > div ul li:first-child {
+	border-left: 0;
+}
+#testRunsRusults > div > div ul li span{
+	display: block;	
+	 font: 2.3em "HelveticaNeue,HelveticaNeue_IE";
+	color: #5d5d5d;
+}
+.completeStatus{
+	color: #0086BF;
+    font: 2em "HelveticaNeue,HelveticaNeue_IE";
+}
+/*----[Specifc suites Block]----*/
+.graph{
+	border: 1px solid #DFDFDF;
+    height: 389px;
+    margin-top: 14px;
+    width: 56%;
+}
+.testRuns{
+	margin-top: -13px;
+    width: 40.5%;
+	height: 328px;
+}
+table {
+	border: 1px solid #CECECE;
+    width: 100%;
+    margin-top: 12px;
+}
+table tr {
+    text-align: left;
+}
+table tr.odd{
+	background-color: #fbfdfe;
+}
+ table tr th,
+ table tr td {
+   height: 18px;
+    padding: 10px 0 10px 15px;
+}
+ table tr th {
+ 	font: 1.333em HelveticaNeue,HelveticaNeue_IE;
+	background-color: #38A4E0;
+    color: #FFFFFF;
+}
+ table tr td {
+	border-bottom: 1px solid #F0F0F0;
+    color: #6A6463;
+    font: 1.167em "HelveticaNeue,HelveticaNeue_IE";
+}
+.testRuns dl{
+	border: 1px solid #dfdfdf;
+	margin-top: 12px;
+}
+.testRuns dl dt{
+	color: #585858;
+    font: 1.25em HelveticaNeue,HelveticaNeue_IE;
+     padding: 20.5px 15px 0;
+}
+.testRuns dl dd span{
+	float: right;
+}
+.testRuns dl dd{
+	border-bottom: 1px solid #DFDFDF;
+    color: #686868;
+    font: 0.917em MyriadPro;
+    padding: 0 16px 10px;
+}
+.subHeading, .tab_selected, .suiteSelected, .caseSelected {
+    font: 0.667em "HelveticaNeue,HelveticaNeue_IE";
+    padding: 0 0 0 8px;
+	cursor: pointer;
+}
+/*-------[Progress bar(Small)]---------*/
+.ui-widget-header{
+	background: url(../img/ProgressBar.png) repeat;
+	border: 0 none;
+}
+.ui-widget-content{
+	background: none #dfdddd;
+	border: 0;
+}
+.ui-progressbar {
+    height: 2px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+	border-radius: 2px;
+}
+-------[Horizontal bar]---------*/
+.chart rect {
+stroke: white;
+fill: steelblue;
+}
+ 
+.chart text {
+fill: white;
+}
+ 
+.chart text.name {
+fill: #000;
+}
+ 
+.chart line {
+stroke: #c1c1c1;
+}
+ 
+.chart .rule {
+fill: #000;
+}
+
+#horizontal_bar_graph .chart rect {
+stroke: none;
+}
+
+#horizontal_bar_graph .chart rect:hover {
+fill: #64707D;
+}
+
+#overLay
+{
+	background-color: #7B7B7B;
+    height: 1105px;
+    left: 0;
+    opacity: 0.92;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 998;
+}
+#editPage , #addCase, #addTestPlan, #addTestRun, #addSuitesPop, #addApplication_popup, #addTestPop, #editTestPop,#addFunctional, #addApplication_popup{
+	background-color: #EAEAEA;
+    display: none;
+    height: auto;
+    left: 27%;
+    position: absolute;
+    top: 118px;
+    width: 686px;
+    z-index: 999;
+}
+#addCase{
+	height: 750px;
+	width: 83%;
+	left:8%;
+}
+.popupHeader{
+	background-color: #143660;
+    height: 55px;
+}
+.popupHeader h2{
+	color: #FFFFFF;
+    padding: 23px 0 0 20px;
+}
+.popupHeader a{
+	background: url("../img/Cancel1.png") no-repeat scroll 91% center transparent;
+    margin: 11px 10px 0 0;
+    padding: 0 0 30px 33px;
+}
+#close_dataset{
+	background: url("../img/Popup-cancel-gray.png") no-repeat scroll right center transparent;
+    margin: 3px 3px 0 0;
+    padding: 0 0 20px 20px;
+}
+#functions, #features{
+    width: 49.9%;
+	height: 586px;
+	overflow: hidden;
+}
+#functions h4, #features h4{
+	background-color: #C1C1C1;
+    color: #1F4168;
+    height: 32px;
+    margin: 0;
+    padding: 14px 0 0 80px;
+}
+#add_function , #add_features{
+	color: #1F4168;
+    padding: 0 0 0 15px;
+}
+#show_addFunction, #show_addFeature{
+	background-color: #CCCCCC;
+    display: none;
+	height: 214px;
+    padding: 10px 0 0 21px;
+}
+#functions ul li:hover, #features ul li:hover, #functions ul li.current, #features ul li.current{
+	background-color: #EAEAEA;
+}
+#functions ul li, #features ul li{
+	background-color: #FFFFFF;
+    color: #757575;
+    display: block;
+    font: bold 1em HelveticaNeue,HelveticaNeue_IE;
+    height: 28px;
+    padding: 11px 0 0 80px;
+	cursor: pointer;
+}
+#features{
+	 border-left: 1px solid #e2e2e2;
+}
+#editPage input[type="button"]{
+	
+}
+#editPage input[type="button"], #addtest_steps input[type="button"], #addsteps_dataset table input[type="submit"],
+#addTestCase_form input[type="submit"]{
+	background-color: #304971;
+    color: #FFFFFF;
+    height: 30px;
+    margin: 6px 28px 0 0;
+    width: 65px;
+}
+#addTestCase_form input[type="submit"]{
+	width: 96px;
+	margin-right: 4px;
+}
+#addTestCase_form {
+	margin-left: 20px;
+    width: 95%;
+}
+#addTestCase_form form label, #show_addFunction label, #show_addFeature label{
+	color: #585858;
+    display: block;
+    font: 0.833em HelveticaNeue,HelveticaNeue_IE;
+	padding: 0 0 5px;
+}
+#addsteps_dataset label {
+   font: 1.283em HelveticaNeue,HelveticaNeue_IE !important;
+    padding: 11px 0 7px 9px !important;
+}
+#addsteps_dataset input[type="text"], #show_addFunction input[type="text"], 
+#show_addFeature input[type="text"]{
+	border: 1px solid #CECECE;
+    margin: 0 0 0 10px;
+    padding: 7px 9px;
+    width: 232px;
+}
+textarea {
+    border: 1px solid #CECECE;
+    margin: 0 12px;
+    width: 250px;
+}
+#addTestCase_form form select {
+    background-color: #EBEBEB;
+    border: 1px solid #CECECE;
+    color: #585858;
+    font: 0.83em HelveticaNeue,HelveticaNeue_IE;
+    padding: 2px 5px;
+    width: 200px;
+}
+#addTestCase_form form > input[type="text"]{
+	border: 1px solid #e1e1e1;
+}
+#addtest_steps{
+	background-color: #DFE7F2;
+    border: 1px solid #87ABC6;
+    height: 36px;
+    margin-top:50px;
+}
+#addtest_steps h4{
+	color: #174873;
+    padding: 12px 0 0 20px;
+}
+#addtest_steps_table table td input[type="text"]{
+	background-color: #E8E8E8;
+    font: 0.7em HelveticaNeue,HelveticaNeue_IE;
+    width: 52px;
+}
+#addtest_steps_table table th{
+	background-color: #ABB2B7;
+    color: #4F4F4F;
+    font: 0.833em HelveticaNeue,HelveticaNeue_IE;
+    height: 13px;
+}
+#addtest_steps input[type="button"]{
+    height: 28px;
+    margin-right: 5px;
+    margin-top: 4px;
+    width: 69px;
+}
+#addTestCase_form table{
+	border: medium none;
+    margin: 0;
+    padding-left: 0;
+}
+#addTestCase_form table td{
+	border: none;
+	width:35%;
+}
+#addTestCase_form table td a {
+    font: 0.83em HelveticaNeue,HelveticaNeue_IE;
+}
+#addTestCase_form table:first-child td input[type="text"]{
+	background-color: #EBEBEB;
+    border: 1px solid #CCCCCE;
+    padding: 2px 5px;
+    width: 189px;
+}
+#addtest_steps_table {
+	margin-top: 50px;
+}
+#addsteps_dataset{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CECECE;
+    display: none;
+}
+#addsteps_dataset > div{
+	background-color: #ACACAC;
+    height: 40px;
+}
+#addsteps_dataset h4{
+    color: #585858;
+    padding: 13px 7px;
+}
+#addsteps_dataset table td input[type="text"]{
+	margin-left: 0;
+}
+#addsteps_dataset table td input[type="text"].userName{
+	width: 80px;
+}
+#addsteps_dataset table td input[type="text"].subject{
+	width: 120px
+}
+#addsteps_dataset table td input[type="text"].message{
+    width: 250px;
+}
+#addsteps_dataset table td a.submit{
+	background: url(../img/Submit.png) no-repeat;
+	 padding: 3px 10px;
+}
+#addsteps_dataset table td a.cancelDataset{
+	background: url(../img/Cancel.png) no-repeat;
+	 padding: 3px 10px;
+}
+/*------[Test run plan popup]-----------*/
+#addTestRun> div:nth-child(2) ,
+#addTestPlan> div:nth-child(2){
+    border-bottom: 1px solid #585858;
+    padding: 16px;
+}
+#addTestRun select, #addTestRun input[type="text"] ,
+#addTestPlan select, #addTestPlan input[type="text"],#addTestPop input[type="text"],#editTestPop input[type="text"],#addFunctional input[type="text"],
+#addSuitesPop input[type="text"], #addApplication_popup input[type="text"]{
+    color: #585858;
+    font: 0.917em HelveticaNeue,HelveticaNeue_IE;
+    padding: 5px 3px;
+    width: 242px;
+}
+#addTestRun input[type="button"], #addTestPlan input[type="button"], #addSuitesPop input[type="button"],  #addTestPop input[type="button"], #editTestPop input[type="button"], #addFunctional input[type="button"],
+#addApplication_popup input[type="button"]{
+	font: 1.033em HelveticaNeue,HelveticaNeue_IE;
+    margin: 50px 15px 12px 0 !important;
+}
+#cases{
+	padding-top: 10px;
+}
+#cases li{
+	display: block;
+	padding: 16px 0 0;
+}
+#addTestRun textarea,#addTestPlan textarea, #addTestPop textarea, #editTestPop textarea, #addFunctional textarea, 
+#addSuitesPop textarea, #addApplication_popup textarea, #show_addFunction textarea,
+#show_addFunction input[type="text"], #show_addFeature input[type="text"], #show_addFeature textarea{
+	margin: 0;
+} 
+#addTestRun> div:nth-child(3) > div{
+	height: 350px;
+    padding: 15px;
+    width: 45%;
+}
+#addTestPlan> div:nth-child(3),
+#addTestPop > div:nth-child(2),#editTestPop > div:nth-child(2),#addFunctional > div:nth-child(2)
+#addSuitesPop > div:nth-child(2), #addApplication_popup > div:nth-child(2){
+	padding: 15px;
+}
+#addTestRun label,
+#addTestPlan label, #addTestPop label,#editTestPop label, #addFunctional label
+#addSuitesPop label, #addApplication_popup label{
+	color: #585858;
+	font: 1em HelveticaNeue,HelveticaNeue_IE;
+    padding: 8px 0;
+}
+#addTestPlan span, #addTestPop span, #editTestPop span, #addFunctional span,
+#addSuitesPop span, #addApplication_popup p{
+	color: #686868;
+	display: block;
+    padding: 9px 0;
+}
+#addTestRun> div:nth-child(3) label,
+#addTestPlan> div:nth-child(3) label,
+#addTestPop> div:nth-child(2) label,
+#editTestPop> div:nth-child(2) label,
+#addFunctional> div:nth-child(2) label,
+#addSuitesPop > div:nth-child(2) label, #addApplication_popup > div:nth-child(2) label{
+	display: block;
+}
+#addTestRun > div:nth-child(3) > div:nth-child(2) {
+    background-color: #CCCCCC;
+}

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    	
+    <wb-module deploy-name="iSATTUI">
+                
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        		
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        		
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        		
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="stax-api-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/stax-api-1.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-lib-2.4-jdk15.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/json-lib-2.4-jdk15.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-asm-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-asm-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mail-1.4.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/mail-1.4.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mysema-commons-lang-0.2.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/mysema-commons-lang-0.2.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="validation-api-1.0.0.GA.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/validation-api-1.0.0.GA.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jetty-websocket-8.1.9.v20130131.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jetty-websocket-8.1.9.v20130131.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="querydsl-core-2.8.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/querydsl-core-2.8.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-asl-1.8.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jackson-core-asl-1.8.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-beans-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-beans-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.17.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/log4j-1.2.17.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-pool-20030825.183949.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-pool-20030825.183949.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpmime-4.2.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/httpmime-4.2.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-2.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jackson-core-2.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dbcp-6.0.37.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/dbcp-6.0.37.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hamcrest-library-1.3.RC2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/hamcrest-library-1.3.RC2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-context-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-security-config-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-security-config-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-mapper-asl-1.8.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jackson-mapper-asl-1.8.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-log4j12-1.6.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/slf4j-log4j12-1.6.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jna-3.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jna-3.4.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpclient-4.2.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/httpclient-4.2.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-collections-3.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-security-core-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-security-core-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="aspectjweaver-1.6.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/aspectjweaver-1.6.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="iSATT_Data-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/iSATT_Data-0.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="servlet-api-3.0-alpha-1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/servlet-api-3.0-alpha-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jetty-websocket-8.1.8.v20121106.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jetty-websocket-8.1.8.v20121106.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bsh-1.3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/bsh-1.3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-validator-annotation-processor-4.1.0.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/hibernate-validator-annotation-processor-4.1.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cglib-nodep-2.1_3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/cglib-nodep-2.1_3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-dbcp-20030825.184428.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-dbcp-20030825.184428.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="apache-mime4j-0.6.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/apache-mime4j-0.6.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cglib-2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/cglib-2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsp-api-2.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jsp-api-2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-20080701.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/json-20080701.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-data-jdbc-core-1.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-data-jdbc-core-1.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.servlet-api-3.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/javax.servlet-api-3.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="htmlunit-2.12.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/htmlunit-2.12.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mailapi-1.4.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/mailapi-1.4.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="querydsl-sql-2.8.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/querydsl-sql-2.8.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="joda-time-1.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/joda-time-1.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zip4j-1.2.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/zip4j-1.2.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-databind-2.1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jackson-databind-2.1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.inject-1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/javax.inject-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cssparser-0.9.9.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/cssparser-0.9.9.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jcl-over-slf4j-1.6.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jcl-over-slf4j-1.6.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="asm-3.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/asm-3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-dbutils-1.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-dbutils-1.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-3.5.7.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/netty-3.5.7.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jstl-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jstl-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="poi-3.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/poi-3.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-jxpath-1.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-jxpath-1.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-digester-1.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-digester-1.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="junit-4.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/junit-4.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpcore-4.2.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/httpcore-4.2.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-test-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-test-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-exec-1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-exec-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dom4j-1.6.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/dom4j-1.6.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-codec-1.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-codec-1.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-annotations-2.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jackson-annotations-2.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-core-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-core-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang-2.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-lang-2.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context-support-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-context-support-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="htmlunit-core-js-2.12.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/htmlunit-core-js-2.12.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-io-2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-fileupload-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-fileupload-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-smart-1.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/json-smart-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-path-0.8.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/json-path-0.8.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gson-2.2.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/gson-2.2.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ini4j-0.5.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/ini4j-0.5.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-retry-1.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-retry-1.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-logging-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-lang3-3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils-1.8.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-beanutils-1.8.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-webmvc-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="rhino-1.7R4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/rhino-1.7R4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mockito-all-1.9.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/mockito-all-1.9.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="poi-ooxml-schemas-3.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/poi-ooxml-schemas-3.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xalan-2.7.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/xalan-2.7.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava-14.0-rc1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/guava-14.0-rc1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-schema-validator-1.5.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/json-schema-validator-1.5.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="platform-3.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/platform-3.4.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-security-web-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-security-web-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mysql-connector-java-5.1.25.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/mysql-connector-java-5.1.25.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xercesImpl-2.10.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/xercesImpl-2.10.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="aopalliance-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/aopalliance-1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="nekohtml-1.9.17.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/nekohtml-1.9.17.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jcommander-1.29.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jcommander-1.29.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsr305-1.3.9.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jsr305-1.3.9.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-validator-1.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/commons-validator-1.4.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="poi-scratchpad-3.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/poi-scratchpad-3.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-validator-4.1.0.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/hibernate-validator-4.1.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="aspectjrt-1.6.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/aspectjrt-1.6.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ezmorph-1.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/ezmorph-1.0.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="protobuf-java-2.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/protobuf-java-2.4.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jetty-util-8.1.9.v20130131.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jetty-util-8.1.9.v20130131.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hamcrest-core-1.3.RC2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/hamcrest-core-1.3.RC2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="activation-1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/activation-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="iSATT_Utils-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/iSATT_Utils-0.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-web-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jetty-io-8.1.9.v20130131.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jetty-io-8.1.9.v20130131.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-tx-3.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-tx-3.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-aop-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-aop-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jetty-http-8.1.9.v20130131.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/jetty-http-8.1.9.v20130131.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="iSATT_Verifiers-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/iSATT_Verifiers-0.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.6.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/slf4j-api-1.6.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xmlbeans-2.3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/xmlbeans-2.3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="poi-ooxml-3.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/poi-ooxml-3.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="serializer-2.7.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/serializer-2.7.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="libphonenumber-5.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/libphonenumber-5.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sac-1.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/sac-1.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xml-apis-1.4.01.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/xml-apis-1.4.01.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-expression-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-expression-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-jdbc-3.0.7.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/iSATTUI/lib/spring-jdbc-3.0.7.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        		
+        <property name="java-output-path" value="target/classes"/>
+                
+        <property name="context-root" value="iSATTUI"/>
+                
+        <property name="component.exclusion.patterns" value="WEB-INF/lib/*.jar"/>
+        	
+    </wb-module>
+    
+</project-modules>

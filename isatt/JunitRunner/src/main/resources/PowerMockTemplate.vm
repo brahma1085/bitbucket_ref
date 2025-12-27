@@ -1,0 +1,63 @@
+package $fullPkg;
+
+import static org.easymock.EasyMock.expect;
+import static org.powermock.api.easymock.PowerMock.mockStatic;
+import static org.powermock.api.easymock.PowerMock.replay;
+import static org.powermock.api.easymock.PowerMock.replayAll;
+
+import java.util.HashMap;
+import java.util.Map;
+import junit.framework.Assert;
+import java.util.ArrayList;
+import java.util.*;
+
+import java.util.Date;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.modules.junit4.PowerMockRunner;
+
+import org.junit.*;
+
+import $basePkg.*;
+import $fullPkg.*;
+
+#foreach( $paramType in $paramsList )	
+$ifImport $paramType;
+#end
+
+@RunWith(PowerMockRunner.class)
+@PrepareForTest({$staticClassNm})
+
+public class $mockClassNm{
+
+
+	int intVal;
+	HashMap map0 = new HashMap();
+	Date accrualDt = new Date();
+	Date otherDt = new Date(24L * 60L * 60L * 1000L);
+ 
+	
+	@Before
+	public void setUp(){
+		
+	}	
+	
+	#foreach($stCallMthd in $stCallMthdList)
+		$stCallMthd.staticCallMthd
+	#end
+	
+			
+	#foreach( $method in $methodList )		
+	@Test
+	public void test$method
+		
+		$mockStatic$staticClassNm$endBraceMockSt
+		$expect$staticCallMthd$return$returnVal$endBrace
+		$replay
+		 
+	}
+	#end
+}
+

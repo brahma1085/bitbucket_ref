@@ -1,0 +1,189 @@
+<html data-ng-app>
+
+<head>
+<script src="angular/angular.min.js"></script>
+<script src="controllers.js"></script>
+<title>iTAP Admin Create User Page</title>
+<!--<style>
+.errorblock {
+	color: #ff0000;
+	background-color: #ffEEEE;
+	border: 3px solid #ff0000;
+	padding: 8px;
+	margin: 16px;
+}
+</style>-->
+</head><!--bgcolor="#d3d3d3"-->
+<body bgcolor="#d3d3d3" ><!--  onload='document.f.j_username.focus();'><center>
+		<div style="width: 800px; height: 200px; border: 2px solid grey;" align="center" style="vertical-align:bottom">
+		
+			<h3 style="color: #2F4F4F">iTAP Admin</h3>
+			<hr width=85% size="3">
+			<form name='f' action="<c:url value='j_spring_security_check' />"
+				method='POST'>
+				<center>
+					<table>
+						<tr>
+							<td><font color="#2F4F4F">Username</td>
+							<td><input type='text' name='j_username' value=''></td>
+                        </tr>
+						<tr>
+							<td><font color="#2F4F4F">Password</td>
+							<td><input type='password' name='j_password' /></td>
+						</tr>
+						
+						<tr>
+							<td><font color="#2F4F4F">Application</td>
+							<td>
+							<div ng-controller="addApplicationController">
+							<select id="name" data-ng-model="appName" name="appName">
+														<option data-ng-repeat="app in AllApplications" value="{{app.appID}}">
+															{{app.appName}}</option>
+							</select>
+							</div>
+							</td>
+						</tr>-->
+						
+						<!--<tr>
+							<td><font color="#2F4F4F">Role</td>
+							<td>
+							<div ng-controller="rolesController">
+							<select id="name" data-ng-model="roleName" name="roleName">
+														<option data-ng-repeat="role in AllRoles" value="{{role.roleID}}">
+															{{role.roleName}}</option>
+							</select>
+							</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='2'><input name="reset" type="reset" style="height: 200px; width: 100px" /></td>-->
+							<!--<td colspan='2'><input name="submit" type="submit" value="Create User" style=" height: 200px; width: 100px " /></td>-->
+							<!--<td colspan='2'><input type="button" class="floatright" id="addApplicationDataBtn" value="Create New User" data-ng-disabled="addApplicationForm.$invalid" data-ng-click="addApplication()" /></td>
+						</tr>
+					</table>
+					</center>
+			</form>
+		</div>
+		</center>
+	</center>
+
+	<center>
+			<marquee><h3 style="color: #2F4F4F">Welcome to iTAP(integrated Test
+				Automation Platform) Admin Login Page</h3></marquee>
+		</center>
+		</center>-->
+		
+		
+		
+		
+		
+<center>	
+<div style="width: 800px; height: 350px; border: 2px solid grey;" align="center" style="vertical-align:bottom">
+					
+					<div data-ng-controller="addUsersController">
+						<form name="addRolesForm" novalidate
+							data-ng-submit="addUsersRoles()">
+							<div class="popupHeader">
+								<h2 class="floatleft"><font color="#2F4F4F">iTAP Admin (Users and Groups)</h2>
+							</div>
+							<hr width=85% size="3">
+							<div align="left">
+							<div>
+								<label for="func_name">Username </label> <input
+									type="text" autocomplete="off" placeholder="Enter Username" name="username"
+									data-ng-model="username" data-ng-minlength=2 data-ng-maxlength=50 required />
+								<div class="error"
+									data-ng-show="addRolesForm.username.$dirty && addRolesForm.username.$invalid">
+									<span class="error"
+										data-ng-show="addRolesForm.username.$error.required">
+										Username is Required. </span> <span class="error"
+										data-ng-show="addRolesForm.username.$error.minlength">
+										Username is required. Enter atleast 3 characters </span> <span
+										class="error"
+										data-ng-show="addRolesForm.username.$error.maxlength">
+										Username cannot be longer than 20 characters </span>
+								</div>
+								
+								<!--<span>Ex: Username should be atleast 3 characters long .. </span>--> 
+								<br>
+								<hr width=100% size="3">
+								<label for="func_name">Password </label> <input
+									type="password" autocomplete="off" placeholder="Enter Password" name="password"
+									data-ng-model="password" data-ng-minlength=3 data-ng-maxlength=20 required />
+								<div class="error"
+									data-ng-show="addRolesForm.password.$dirty && addRolesForm.password.$invalid">
+									<span class="error"
+										data-ng-show="addRolesForm.password.$error.required">
+										Password is Required. </span> <span class="error"
+										data-ng-show="addRolesForm.password.$error.minlength">
+										Password is required. Enter atleast 3 characters </span> <span
+										class="error"
+										data-ng-show="addRolesForm.password.$error.maxlength">
+										Password cannot be longer than 15 characters </span>
+								</div>
+
+								<!--<span>Ex: Password should be atleast 3 characters long .. </span>-->
+							</div>
+							
+							
+							<br>
+							<hr width=100% size="3">
+						
+							<div align="left">
+							<label for="func_name">Select Application </label>
+							
+							<div ng-controller="addApplicationController">
+							<select id="name" data-ng-model="appName" name="appName">
+														<option data-ng-repeat="app in AllApps" value="{{app.appID}}">
+															{{app.appName}}</option>
+							</select>
+							</div>
+							</div>
+							
+							<hr width=100% size="3">
+							<div align="left">
+							<label for="func_name">Select Group </label>
+							
+							
+							<select id="name" data-ng-model="authority" name="authority">
+														<option data-ng-repeat="role in AllRoles" value="{{role.authority}}">
+															{{role.authority}}</option>
+							</select>
+							</div>
+							
+							<hr width=100% size="3">
+							Need an Account ?
+							<input type="button" class="floatright"
+								id="addApplicationDataBtn" value="Register User"
+								data-ng-disabled="addRolesForm.$invalid"
+								data-ng-click="addUsersRoles()" />
+								
+							
+							<input type="button" class="floatright"
+								id="addApplicationDataBtn" value="Grant Access to Applications and Group"
+								data-ng-disabled="addRolesForm.$invalid"
+								data-ng-click="addAppsRoles()" />
+								
+							<INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;">	
+							</div>
+							
+						</form>
+					</div>
+					
+					</div>
+					<center>
+			<marquee><h3 style="color: #2F4F4F">Welcome to iTAP(integrated Test
+				Automation Platform) Admin (Users and Groups) !!!</h3></marquee>
+		</center>
+</center>	
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="no-js lt-ie9">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+
+<html class="no-js" data-ng-app="iTap">
+
+<!--
+<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Add Roles</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
+<script src="js-isatt/vendor/jquery-1.9.0.min.js"></script>
+<script src="js-isatt/vendor/jquery-ui.js"></script>
+<script src="js-isatt/chosen.jquery.min.js"></script>
+<script src="angular/angular.min.js"></script>
+
+<script src="angular-dragdrop.js"></script>
+<script src="angular-dragdrop.min.js"></script>
+
+<script src="js/spagojs/sbisdk-all-production.js"></script>
+
+<script src="controllersITAP.js"></script>
+<script type="text/javascript" src="js-isatt/adminMain.js"></script>
+<script type="text/javascript" src="js-isatt/addRoles.js"></script>
+
+<link rel="stylesheet" href="css-isatt/jquery-ui.css" />
+<link rel="stylesheet" href="css-isatt/normalize.css" />
+<link rel="stylesheet" href="css-isatt/main.css" />
+<link rel="stylesheet" href="css-isatt/styles.css" />
+<link rel="stylesheet" href="css-isatt/addRoles.css" />
+
+
+<link rel="stylesheet" href="css-isatt/chosen.css" />
+<script src="js-isatt/vendor/jquery.slimscroll.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	var appID;
+	var appIDs;
+</script>
+
+<script>
+	
+</script>
+
+</head>
+<body id="addRolesPage">
+	<!-- Fixed Top Section -->
+	<div id="fixed_nav">
+		<div id="fixed_wrapper">
+			<div class="floatleft logo_wrapper">
+			<a href="#"><h1><img src="./img-isatt/logo.png" alt="iTap Logo"></h1></a>
+			<span class="heading">Admin Settings - Role management</span>
+		</div>
+		<div class="floatright">
+			<span class="icons search floatleft"></span>
+			<span class="icons add floatleft addNewRole " id=""></span>
+			<a href="./index.html"><span class="icons close quitPage floatleft"></span></a>
+		</div>
+		</div>
+	</div>
+	
+	<!--  Scrollable Content -->
+	<div id="roles_info_scrollable" data-ng-controller = "rolesController">
+		<div id="noRoles" style="display:none;">
+			<div class="message">
+				<p>Currently no Roles exist.</p>
+				<p>Click <a class="addNewRole">here</a> to add new Role</p>
+			</div>
+		</div>
+		<div id="roles_info_wrapper" data-ng-controller="getRolesController">
+			<div>
+				<div class="role_info" data-ng-repeat="role in roles" data-ng-click = "editRoles(role.roleID)">
+					<span>{{role.authority}}</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Expanded Version of Div -->
+		<div id="role_info_up" class="role_information" style="display:none;">
+			<div class="info_wrapper">
+				<div class="general_info">
+				<form name="updateRoleForm"  novalidate
+									data-ng-submit="updateRoles()">
+					<div class="input_fields">
+						
+						<input type="hidden" name="editRoleID" data-ng-model="editRoleID" value="{{editRoleID}}" />
+						<div class="input_fields_child">
+							<label for="roleName">Role Name</label>
+							<input type ="text" name="roleName" class="roleName" data-ng-model="roleName" value="{{roleName}}" data-ng-minlength=3 data-ng-maxlength=50
+											required/>
+							<div class="error"
+											data-ng-show="updateRoleForm.roleName.$dirty && updateRoleForm.roleName.$invalid">
+											<span class="error"
+												data-ng-show="updateRoleForm.roleName.$error.required">
+												Runner Name is required. </span> <span class="error"
+												data-ng-show="updateRoleForm.roleName.$error.minlength">
+												Runner Name is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="updateRoleForm.roleName.$error.maxlength">
+												Runner Name cannot be longer than 50 characters </span>
+										</div>		
+						</div>
+						<div class="input_fields_child">
+							<label>Role Description</label>
+							<textarea class="role_desc" name = "roledescription" data-ng-model="roledescription" data-ng-minlength=3 data-ng-maxlength=100
+											required>{{roledescription}}</textarea>
+									<div class="error"
+											data-ng-show="updateRoleForm.roledescription.$dirty && updateRoleForm.roledescription.$invalid">
+											<span class="error"
+												data-ng-show="updateRoleForm.roledescription.$error.required">
+												Runner Description is required. </span> <span class="error"
+												data-ng-show="updateRoleForm.roledescription.$error.minlength">
+												Runner Description is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="updateRoleForm.roledescription.$error.maxlength">
+												Runner Description cannot be longer than 100 characters </span>
+										</div>				
+						</div>
+						
+					</div>
+					</form>
+					<div class="input_fields">
+						<div class="input_fields_child">
+							&nbsp;
+						</div>
+						<div class="input_fields_child">
+							<div class="buttons">
+								<input type="button" value="Cancel" class="greybutton close_role_info cancel">
+								<input type="button" value="Update Role" class="update blueButton" id="updateRole"  data-ng-disabled="updateRoleForm.$invalid" data-ng-click = "updateRoles()">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!-- END Expanded Version of Div -->
+		
+		<!-- New Role add Div -->
+		<div id="new_role_info" class="role_information" style="display:none;">
+			<div class="new_dotted_div">New Role</div>
+			<div class="info_wrapper">
+				<div class="general_info">
+				<form name="addRoleForm" data-ng-submit="addRoles()">
+					<div class="input_fields">
+						<div class="input_fields_child">
+							<label for="roleName">Role Name</label>
+							<input type ="text" name="roleName" class="roleName" placeholder ="Enter Role" data-ng-model="roleName" data-ng-minlength=3 data-ng-maxlength=50
+											required duplicate= "roles" attributename = "{name:'authority'}"/>
+							<div class="error"
+											data-ng-show="addRoleForm.roleName.$dirty && addRoleForm.roleName.$invalid">
+											<span class="error"
+												data-ng-show="addRoleForm.roleName.$error.duplicate">
+												Role name is already in use </span>
+											<span class="error"
+												data-ng-show="addRoleForm.roleName.$error.required">
+												Role name is required. </span> <span class="error"
+												data-ng-show="addRoleForm.roleName.$error.minlength">
+												Role name is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="addRoleForm.roleName.$error.maxlength">
+												Role name cannot be longer than 50 characters </span>
+										</div>			
+						</div>
+						<div class="input_fields_child">
+							<label>Role Description</label>
+							<textarea class="role_desc" class="role_desc" name="roledescription"  data-ng-model="roledescription" ata-ng-minlength=3 data-ng-maxlength=100
+											required/></textarea>
+											<div class="error"
+											data-ng-show="addRoleForm.roledescription.$dirty && addRoleForm.roledescription.$invalid">
+											<span class="error"
+												data-ng-show="addRoleForm.roledescription.$error.required">
+												Role description is required. </span> <span class="error"
+												data-ng-show="addRoleForm.roledescription.$error.minlength">
+												Role description is required to be at least 3 characters </span> <span
+												class="error"
+												data-ng-show="addRoleForm.roledescription.$error.maxlength">
+												Role description cannot be longer than 100 characters </span>
+										</div>				
+						</div>
+					</div>
+				</form>	
+					<div class="input_fields">
+						<div class="input_fields_child">
+							&nbsp;
+						</div>
+						<div class="input_fields_child">
+							<div class="buttons">
+								<input type="button" value="Cancel" class="greybutton close_role_info cancel">
+								<input type="button" value="Create Role" class="blueButton" id="createRole" data-ng-disabled="addRoleForm.$invalid" data-ng-click="addRoles()">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!-- END New Role add Div -->
+	</div>
+	<!-- END Scrollable Content -->
+	
+</body>
+
+</html>

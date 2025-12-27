@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+ http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<mvc:annotation-driven />
+
+	<import resource="classpath*:applicationContext.xml" />
+	<import resource="classpath*:dataAccessContext-local.xml" />
+	<import resource="classpath*:spring-service.xml" />
+	<import resource="classpath*:spring-database.xml" />
+
+	<context:component-scan base-package="com.sssoft.isatt" />
+	<context:annotation-config />
+
+	<bean
+		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="order" value="1" />
+		<!-- <property name="ignoreAcceptHeader" value="true" /> -->
+		<property name="mediaTypes">
+			<map>
+				<entry key="html" value="text/html" />
+				<entry key="json" value="application/json" />
+			</map>
+		</property>
+		<property name="viewResolvers">
+			<list>
+				<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+				<bean
+					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+					<property name="prefix" value="/views/*" />
+					<property name="suffix" value=".html" />
+				</bean>
+			</list>
+		</property>
+		<property name="defaultViews">
+			<list>
+				<bean
+					class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+					<property name="prefixJson" value="true" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>mymessages</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+
+
+	<bean id="addScenarioController" class="com.sssoft.isatt.ui1.controller.AddScenarioController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestCaseController" class="com.sssoft.isatt.ui1.controller.AddTestCaseController">
+		<property name="inputService" ref="inputService" />
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addTestPlanController" class="com.sssoft.isatt.ui1.controller.AddTestPlanController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestSuiteController" class="com.sssoft.isatt.ui1.controller.AddTestSuiteController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addApplicationController" class="com.sssoft.isatt.ui1.controller.AddApplicationController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addDataDefinitionController" class="com.sssoft.isatt.ui1.controller.AddDataDefinitionController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addFunctionController" class="com.sssoft.isatt.ui1.controller.AddFunctionController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addRunnersController2" class="com.sssoft.isatt.ui2.controller.AddRunnersController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="conditionGroupController" class="com.sssoft.isatt.ui1.controller.ConditionGroupController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestStepController" class="com.sssoft.isatt.ui1.controller.AddTestStepController">
+		<property name="mainService" ref="mainService" />
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="objectController" class="com.sssoft.isatt.ui1.controller.ObjectController">
+		<property name="inputService" ref="inputService" />
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="paramGroupController" class="com.sssoft.isatt.ui1.controller.ParamGroupController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+	
+	<bean id ="usersController2" class="com.sssoft.isatt.ui2.controller.UsersController2">
+    	<property name="mainService" ref="mainService" />
+    </bean>
+
+	<bean id="addIdentifierTypeController" class="com.sssoft.isatt.ui1.controller.AddIdentifierTypeController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addReplacementStringsController" class="com.sssoft.isatt.ui1.controller.AddReplacementStringsController">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="reportsController" class="com.sssoft.isatt.ui1.controller.ReportsController">
+		<property name="outputService" ref="outputService" />
+	</bean>
+
+	<bean id="importExcelController" class="com.sssoft.isatt.ui1.controller.ImportExcelController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+
+	<bean id="addScenarioController2" class="com.sssoft.isatt.ui2.controller.AddScenarioController2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestCaseController2" class="com.sssoft.isatt.ui2.controller.AddTestCaseController2">
+		<property name="inputService" ref="inputService" />
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addTestPlanController2" class="com.sssoft.isatt.ui2.controller.AddTestPlanController2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestSuiteController2" class="com.sssoft.isatt.ui2.controller.AddTestSuiteController2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addConditionGroupController2" class="com.sssoft.isatt.ui2.controller.AddConditionGroupController2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addFunctionController2" class="com.sssoft.isatt.ui2.controller.AddFunctionController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addFeatureController2" class="com.sssoft.isatt.ui2.controller.AddFeatureController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+	<bean id="addScreenController2" class="com.sssoft.isatt.ui2.controller.AddScreenController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addTestStepsController2" class="com.sssoft.isatt.ui2.controller.AddTestStepsController2">
+		<property name="inputService" ref="inputService" />
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="addParamGroupController2" class="com.sssoft.isatt.ui2.controller.AddParamGroupController2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addIdentifierTypeController2" class="com.sssoft.isatt.ui2.controller.AddIdentifierTypeController2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addObjectGroupController2" class="com.sssoft.isatt.ui2.controller.AddObjectGroupController2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addTestDataController2" class="com.sssoft.isatt.ui2.controller.AddTestDataController2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addApplicationController2" class="com.sssoft.isatt.ui2.controller.AddApplicationController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="forgotPasswordController2" class="com.sssoft.isatt.ui2.controller.ForgotPasswordController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="resetController2" class="com.sssoft.isatt.ui2.controller.ResetController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="testExecutionController2" class="com.sssoft.isatt.ui2.controller.TestExecutionController2">
+		<property name="mainService" ref="mainService" />
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="addConditions2" class="com.sssoft.isatt.ui2.controller.AddConditions2">
+		<property name="inputService" ref="inputService" />
+	</bean>
+
+	<bean id="rolesController" class="com.sssoft.isatt.ui1.controller.RolesController">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="rolesController2" class="com.sssoft.isatt.ui2.controller.RolesController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+
+	<bean id="loginController" class="com.sssoft.isatt.ui.filter.LoginController"></bean>
+
+	<bean id="testingFlowController2" class="com.sssoft.isatt.ui2.controller.TestingFlowController2">
+		<property name="mainService" ref="mainService" />
+	</bean>
+</beans>

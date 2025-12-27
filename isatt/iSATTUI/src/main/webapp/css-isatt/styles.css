@@ -1,0 +1,1961 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, head, body{
+	height: 100%;
+}
+body {
+  font: 12px/1.5em Helvetica,Arial,sans-serif;
+  background: #efefef;
+}
+.floatleft {
+  float: left;
+}
+.floatright {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+ul li {
+  list-style: none;
+}
+ul li  a , a {
+  text-decoration: none;
+}
+a{
+	cursor: pointer;
+	outline: none;
+}
+a span{
+	display:none;
+}
+h1 {
+	color: #808080;
+	font-size: 18px;
+	font-weight: normal;
+}
+header {
+	border-bottom: 1px solid #ccc;
+}
+.active {
+	font-weight: bold;
+}
+.baseline {
+	border-top: 1px solid #ccc;
+}
+table tr{
+	cursor: pointer;
+    display: table;
+    height: 30px;
+    margin: 0 0 1px;
+    width: 100%;
+}
+.blueBubble {
+	background: none repeat scroll 0 0 #0099FF;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0 10px 0 -28px;
+    padding: 0 12px 0 0;
+}
+.error{
+	color: red;
+}
+/********************* FIXED NAV TOP ******************/
+
+#fixed_nav_top{
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+#iTap_header{
+	height: 40px;
+	background: rgb(239, 239, 239);
+	border-bottom: 1px solid rgb(222, 222, 222);
+}
+#iTap_header .logo_wrapper{
+	padding: 0 20px;
+}
+#iTap_header h1 {
+	display: inline-block;
+	margin: 0; 
+}
+#iTap_header .floatleft span {
+	font-size: 1.4em;
+	color: #01ACFF;
+}
+#iTap_header > div{
+	padding: 10px 20px;
+}
+#iTap_header .floatright > * {
+	font-size: 1.1em;
+	color: #404040;
+}
+#iTap_header .floatright a {	
+	color: #0084E3;
+	margin-left: 30px;
+}
+#iTap_header a span{
+	display: inline-block;
+}
+#iTap_header .arrow-bottom{
+	float: right;
+	margin-left: 8px;
+	margin-right: -1px;
+}
+.navBar_links{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+.home_link, .import_link{
+    padding: 5px 20px;
+}
+
+#iTap_header .dateTimeInfo span{
+	display: inline-block;
+	float: none;
+	margin-top: 0;
+	vertical-align: middle;	
+}
+#iTap_header .dateTimeInfo .dropdown{
+	margin: 0;
+}
+#iTap_header .dateTimeInfo .dropdown dt a{
+	padding-right: 0;
+	margin-left: 0;
+	width: auto;
+}
+#iTap_header .dateTimeInfo .dropdown ul li a{
+	margin-left: 0;
+}
+/******* Menu *****/
+
+#iTap_menus{
+    background: #E3E3E3;
+    line-height:40px;
+}
+#iTap_menus ul{
+	border-top: 1px solid #D6D6D6;
+	border-bottom: 1px solid #D6D6D6;
+	background: #E1E1E1;
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+#iTap_menus ul li{
+    display:inline-block;
+    position: relative;
+}
+#iTap_menus ul li a{
+    text-decoration:none;
+    padding:10px 20px;
+    font-size: 14px;
+}
+#iTap_menus div.arrow-top {
+	height: 2px;
+	position: absolute;
+	margin: 0 auto;
+	left: 50%;
+	border-bottom: 10px solid #EFEFEF;
+	bottom: -1px;
+	margin-left: -7px;
+}
+#iTap_menus ul li a, #scheduleContent ul li a, #objParamContent ul li a, #testDataContent ul li a, #reportContent ul li a {
+ 	color: #808080;
+}
+
+/********************* DASHBOARD **********************/
+
+#mainContainer {
+	background: #efefef;
+	padding: 44px 0 10px 0;
+	overflow-y: auto;
+	overflow-x: hidden; 
+}
+#itap_content {
+	background: #efefef;
+	height: 100%;
+}
+#landingPage{
+	height: 100%;
+	padding: 40px 0 10px 0;
+}
+#dashboard h2 {
+	color: #808080;
+	font-weight: normal;
+	font-size: 18px;
+	margin: 0;
+	padding: 15px 20px;
+}
+#dashboard  div.floatright{
+	padding: 0 5px;
+}
+/*** Admin Settings ***/
+.dropdown dd, .dropdown dt, .dropdown ul { 
+	margin:0px; 
+	padding:0px; 
+}
+.dropdown dd { 
+	position:relative; 
+}
+.dropdown a, .dropdown a:visited { 
+    color:#000; 
+    text-decoration:none; 
+    outline:none;
+}
+#settingsIcon{
+	max-height: 30px;
+	max-width: 30px;
+}
+#dashboard .floatright span {
+	font-size: 1.4em;
+	color: #0084E3;
+	vertical-align: middle;
+}
+#dashboard .floatright span.arrow-bottom{
+	float: right;
+	margin-top: 12px;
+}
+.dropdown a:hover{ 
+	color:#000;
+}
+.dropdown dt a:hover, .dropdown dt a:focus {
+    color:#000; 
+}
+.dropdown dt a {
+    display:block; 
+    padding-right:20px;
+    width:92%;
+}
+.dropdown dt a span {
+    cursor: pointer; 
+    display:inline-block; 
+    font-size:13px
+}
+.dropdown dd ul { 
+    background:#e3e3e3 none repeat scroll 0 0; 
+    border:1px solid #cdcdcd; 
+    color:#000; 
+    display:none;
+    left:0px; 
+    padding:5px 0px; 
+    position:absolute; 
+    top:2px; 
+    width:auto; 
+    min-width:170px; 
+    list-style:none;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 1);
+	-moz-box-shadow:   0px 0px 15px 0px rgba(50, 50, 50, 1);
+	box-shadow:  0px 0px 15px 0px rgba(50, 50, 50, 1);
+}
+.dropdown span.value { 
+	display:none;
+}
+.dropdown dd ul li a { 
+	padding:5px; 
+	display:block;
+	border-bottom:1px solid #cdcdcd;
+	height:25px;
+	line-height:2.5em;
+	text-align:center;
+}
+.dropdown dd ul li a:hover { 
+	background-color:#dadada;
+}
+     
+.dropdown dd ul li:last-child a {
+  border-bottom:none;
+}
+/*** Chart ***/
+#chart {
+	background: url("../img-isatt/line_chart.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 330px;
+    width: 100%;
+    margin-left: 20px;
+}
+/*** Application ***/
+#application{
+	height: 40px;
+	padding: 0 20px;
+}
+#application h2{
+	height: 35px;
+	padding: 10px 0 0 0;
+	line-height: 40px;
+	border-bottom: 1px solid #CDCDCD;
+}
+.applDiv_container{
+	margin-top: 5px;
+}
+#application > div > div {
+	width: 25%;
+	float: left;
+}
+.applDiv{
+	border: 1px solid #e6e6e6;
+	margin: 5px 5px;
+	background: none repeat scroll 0 0 #E8E8E8;
+}
+.applDiv input{
+	width: 75%;
+	height: 45px;
+	background: none repeat scroll 0 0 #E8E8E8;
+	border: none;
+	padding-left: 5px;
+	font-size: 14px;
+}
+.applDiv a{
+	float: right;
+	margin-right: 12px;
+}
+.divider{
+	display:inline-block;
+	border-left:1px solid #c8c8c8;
+	vertical-align:top;
+	height:45px
+}
+.app_edit_icon{
+	max-width: 30px;
+	max-height: 30px;
+	margin-left: 10px;
+	margin-top: 7px;
+}
+
+/********************* OVERVIEW **********************/
+
+.sectionHeader {
+	margin: 2em 1.8em 0 1.8em !important;
+}
+
+/********************* FUNCTIONS & PARAMETERS **********************/
+
+.test_functions_panel,.test_features_panel,.test_screens_panel {
+	border-bottom: 1px solid #ccc;
+}
+.sectionHeader h3 {
+	color: #282828;
+	font-weight: bold;
+}
+.test_functions_panel .sectionHeader h3.floatleft a,.test_features_panel .sectionHeader h3.floatleft a,
+.test_screens_panel .sectionHeader h3.floatleft a {
+	color: #000;
+}
+#function_proceed,#feature_proceed,#screen_proceed {
+	margin: 0 0 0 2em;
+	font-weight: normal;
+	color: #CCC;
+}
+.countBlueRnd {
+	background: #0099FF;
+	border: #fff;
+	color: #fff;
+}
+.countRed,.countBlue,.countGray,.countWhite,.countBlueRnd {
+	/*background: #FF0000;
+	border-radius: 20px;
+	color: #FFF;
+	margin: 0 5px;
+    padding: 5px 15px;*/
+}
+.countGray,.countWhite,.countBlueRnd {
+	background: transparent;
+    padding: 8px 12px;
+    border: 1px solid #d6d6d6;
+    cursor: pointer;
+    color: #000;	
+}
+.palebutton {
+	background-color: #e5e5e5;
+    border:1px solid #ccc;
+    border-radius: 8px 8px 8px 8px;
+    color: #FFF;
+    font-size: 16px;
+    padding: 5px 20px;
+    margin: 2em 2em 2em 0;
+}
+
+/********************* OBJECTS & PARAMETERS **********************/
+
+.navBgSchedule, .navBgParams, .navBgData, .navTestData, .navBgReport{
+	margin: -4.3em 0 0 35em;
+}
+#scheduleContent ul li,#objParamContent ul li,#testDataContent ul li ,
+#reportContent ul li{
+	display: inline-block;
+	text-align: center;
+	font-size: 15px;
+	margin: 1% 2% -1px 6%;
+}
+.blueBar {
+	border: 2px solid #0098E9;
+	margin-top: 5px;
+}
+
+#objContainer,#paramContainer,#conditionContainer,#identifierContainer,#allTestDataContainer,
+#lastrunsContainer,#currentweekContainer,#dateContainer,#allreportContainer{
+	position: relative;
+	padding: 0 2%;
+}
+.objPanel,.paramPanel,.identifierPanel,.conditionPanel {
+    background: #e8e8e8;
+    border: 1px solid #ccc;          
+    display: inline-block;       
+    margin: 0.5% 0.3% 0.3%;
+    width: 24%;
+}
+.objHeader {
+	font-size: 1.25em;
+	padding: 2%;
+	font-size: 1.25em;
+	text-overflow: ellipsis;
+	padding: 2%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.objPanel .objHeader,.identifierPanel .objHeader,.paramPanel .objHeader,.conditionPanel .objHeader{
+	cursor: pointer;
+}
+.objInfo {
+	padding: 2%;
+}
+.formLeftContent label,.formRightContent label,p,label {
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 6px;
+}
+
+/********************* TEST CASES **********************/
+
+#sidebar {
+	width: 20%;
+	background: #D6D6D6;
+	float: left;
+	height: 100%;
+	color: #000;
+	position: fixed;
+}
+#rightContentWrapper{
+	float: right;
+	width: 80%;
+	height: 100%;
+	left: 20%;
+}
+/*** Accordion ***/
+#accordion h3 {
+    outline: none;
+    padding: 10px;
+    margin-bottom: 0;
+}
+#accordion h3 a{
+	padding-left: 10px;
+	color: #000;
+	font-weight: normal;
+	font-size: 14px;
+}
+#accordion ul {
+	padding: 0;
+	max-height: 675px;
+	margin: 0;
+	overflow-y: auto;
+}
+#accordion ul li{
+	margin: 0 10px 10px;
+	padding-left: 26px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#accordion ul li a{
+	display: block;
+	font-size: 12px;
+}
+#accordion h3 a:active{
+	color: #000;
+}
+.search_item{
+	padding-left: 10px;
+	margin-bottom: 10px;
+	padding-right: 10px;
+}
+/* Accordion Bubbles */
+.bubble{
+	width: 36px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	border-radius: 15px;
+	margin-right: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.redbubble{
+	background: #ED0000;
+	color: #fff;
+}
+.graybubble{
+	background: #999;
+	color: #282828;
+}
+#suites_accordion, #scenarios_accordion{
+	margin-top: 0;
+}
+/* Accordion Arrows */
+.arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 8px solid #666;
+	float: left;
+    cursor: pointer;
+}
+.arrow-bottom {
+	float: left;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #666;
+	margin-top: 4px;
+    cursor: pointer;
+}
+.search_item input{
+	background: url("../imgITAP/search_black.png") 0px -4px no-repeat #B7B7B7;
+	border: 1px solid #B7B7B7;
+	padding-left: 25px;
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+	padding-right: 10px;
+	border-radius: 20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+::-webkit-input-placeholder {
+   color: #797979;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #797979;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #797979;  
+}
+
+:-ms-input-placeholder {  
+   color: #797979;  
+}
+/*** Right side contents ***/
+.rightContent header h1{
+	padding: 0 20px;
+}
+.test_plans_panel h3, .test_suites_panel h3, .test_scenarios_panel h3, .test_case_panel h3{
+	padding: 0 20px;
+}
+.seach_plus_minus{
+	margin: 0.8em 0;
+	padding-right: 20px;
+}
+/*** Odd/Even color table row ***/
+.evenrow {
+	background-color: #DBDBDB;
+}
+.oddrow {
+	background-color: transparent;
+}
+#test_plan_table_contents{
+	/* max-height: 155px;
+	overflow: hidden;
+	display: block; */
+}
+#test_plan_table_contents tbody, #test_suite_table_contents tbody, #test_scenarios_table_contents tbody{
+	display: block;
+	width: 100%;
+	max-height: 155px;
+	overflow: hidden;
+}
+#test_cases_table_contents tbody{
+	display: block;
+	width: 100%;
+	max-height: 155px;
+	overflow: hidden;
+}
+/*#testCaseContent table thead tr{
+	background: transparent !important;
+}
+#testCaseContent table tr:nth-child(even) {
+    background: #DBDBDB;
+    border-bottom: 1px solid #bfbfbf;
+	border-top: 1px solid #bfbfbf;
+}
+#testCaseContent table tr:nth-child(odd) {
+    background: transparent;
+}*/
+table th:first-child ,table td:first-child, table th:nth-child(2) , table td:nth-child(2){
+    /*padding-left: 5px;*/ /* removed this as a part of Test cases fix to fix the names/headers in the table */
+    text-align: left;
+}
+.table_name {
+	width: 15%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 100px;
+	white-space: nowrap;
+	padding-left: 40px;
+}
+.table_check {
+	width: 4%;
+	text-align: right;
+	padding-right: 40px;
+	padding-left: 20px;
+}
+.tablePlan,.tableScenario,.tableSuite,.tableCase,.tableFunction,.tableFeature,.tableScreen,
+#planUp,#suiteUp,#scenarioUp,#caseUp,#funcUp,#featureUp,#screenUp{
+    background: none repeat scroll 0 0 #E2E2E2;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 2px solid #CCCCCC;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	border-bottom-width: 2px;
+	padding-bottom: 10px;
+}
+.test_plans_panel .table_desc {
+	width: 77%;
+	max-width: 100px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.test_suites_panel .table_desc,.test_scenarios_panel .table_desc,.test_case_panel .table_desc {
+	width: 71%;
+	max-width: 100px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.description_hovered{
+	white-space: normal !important;
+	-webkit-transition: all 2s;
+}
+.test_case_panel .flipCaseContainer .table_name{
+	width: 35%;
+}
+.test_case_panel .flipCaseContainer .table_desc{
+	width: 51%;
+}
+.table_suite {
+	width: 4%;
+	text-align: center;
+}
+.table_plan, .table_scenario {
+	width: 5%;
+	text-align: center;
+}
+#planUp .greybutton, #suiteUp .greybutton, #scenarioUp .greybutton, #caseUp .greybutton{
+	margin-right: 10px;
+}
+/********************* TEST DATA **********************/
+
+/* Styles for Test Data here */
+
+/********************* SCHEDULER **********************/
+
+/* Styles for Scheduler here */
+
+/********************* REPORTS **********************/
+
+/* Styles for Reports here */
+
+/**** Search, Plus, Minus ****/
+
+.icon_lightBG {
+	background : url("../imgITAP/iTap_icons1.png") no-repeat scroll 0 0 transparent;
+	margin-right: 15px;
+    padding: 15px;
+}
+
+.minus{
+  background-position: -60px 0;
+}
+
+.plus{
+  background-position: -30px 0;
+}
+.searchField {
+    border: 0 none;
+    font-size: 12px;
+    padding: 5px 0;
+    width: 138px;
+}
+.activeSearch {
+    background-color: #FFFFFF;
+    background-position: 0 -2px;
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    padding: 0 0 0 30px;
+    width: 150px;
+    border-radius: 20px;
+    border: 1px solid rgb(216, 209, 209);
+    -webkit-box-shadow: 0px 0px 11px rgba(105, 94, 94, 0.75);
+}
+
+/************** END: MAIN.CSS *****************/ 
+
+
+
+#contentArea h3, h4 {
+	margin: 0;
+}
+
+.accordionLink a:first-child {
+	/*margin-left: -5px !important;*/
+}
+
+#accordion .ui-accordion-content {
+	/*max-height: 200px !important;
+	overflow-y:auto;*/
+}
+
+#accordion h3  a:focus {
+	outline:none !important;
+}
+
+.count {
+	/*background: #ABABAB;
+	color : #282828;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 20px;
+	padding: 5px 15px;*/
+}
+
+
+
+.countRed,.count {
+	/*padding: 5px 5px;
+	text-align: center;
+	width: 45px;*/	
+}
+
+.counter {
+	 /*margin: 0% 3% 3% 7%;*/
+}
+
+.blueButton,.greybutton {
+    background-color: #0099FF;
+    border:1px solid #0099FF;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3),0 1px 0 rgba(255, 255, 255, 0.4) inset;
+    color: #00FFFF;
+    font-size: 16px;
+    padding: 5px 20px;
+}
+
+#addscenarioData {
+	padding: 5px 6px;
+}
+
+.greybutton {
+    background-color: #F6F6F6;
+    border: 1px solid #CCCCCC;
+    color: #000000;
+}
+
+.formLeftContent {
+	width: 65%;
+}
+
+.addingTests > form > .floatright,.updateTests > form > .floatright{
+	margin-right:2.5%;
+}
+
+.formRightContent > div > .floatright{
+	margin-right: -15px;
+}
+
+div.tableScenario > form > div.formLeftContent,div.tableSuite > form > div.formLeftContent,
+div.tableCase > form > div.formLeftContent,div#caseUp > form > div.formLeftContent,
+div#suiteUp > form > div.formLeftContent,div#scenarioUp > form > div.formLeftContent{
+	width: 33%;
+}
+
+.marginLeftRight{
+	margin : 0 2.4%;
+}
+
+.create_New_Plan .formRightContent,.create_New_Suite .formRightContent,.create_New_Suite1 .formRightContent,
+.create_New_Scenario .formRightContent,.create_New_Case .formRightContent,
+.create_New_Steps .formRightContent {
+    width: 29%;
+    margin-left: 5%;
+}
+
+.formRightContent {
+    width: 30%;
+}
+
+.chosen-container-single .chosen-single div b {
+	border-top: 10px solid #888;
+	border-right: 7px solid transparent;
+	border-left: 7px solid transparent;
+	cursor: pointer;
+	margin: 12px 0 0 3px;
+	width: 0 !important;
+}
+
+.chosen-container-single .chosen-single span {
+	padding: 5px 0 !important;
+}
+
+.name, .chosen-container-single .chosen-single,#hrs,#mins,#sec,.datepicker,.agent,.agent1 {
+	height: 30px !important;
+    border:1px solid #ccc;
+   	margin: 1% 0 2% 0;
+    padding-left: 1%;
+}
+
+.name {
+	width: 97%;
+}
+
+.chosen-container {
+	width: 100% !important;
+}
+
+.description {
+	border:1px solid #ccc;
+	height: 91px;
+    width: 97%;
+    margin: 15px 0 0 0;
+    padding-left:1%;
+}
+
+.linkedSuites,.linkedPlans,.linkedScenarios,.linkedCases,.linkedSteps,.linkedScreens,.linkedFeatures,.linkedObjects {
+	background: none repeat scroll 0 0 white;
+	border: 1px solid #CCC;
+	height: 182px;
+	margin: 0px 0px 10px 0;
+	overflow-y: auto;
+	resize: none;
+}
+
+.linkedSuites > ul,.linkedPlans > ul,.linkedScenarios > ul,.linkedCases > ul,.linkedSteps > ul,.linkedFeatures > ul,.linkedFunctions > ul,.linkedObjects > ul {
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+
+
+.linkedSuites .blueBubble,.linkedPlans .blueBubble,.linkedScenarios .blueBubble,
+.linkedCases .blueBubble,.linkedSteps .blueBubble {
+	background: none repeat scroll 0 0 #0099FF;
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px 10px 0 -22px;
+    padding: 0 12px 0 0;
+}
+
+#add {
+    margin-right: 1em;
+}
+
+div span.blueBubble {
+	height: 12px;
+}
+
+.create_New_Plan,.create_New_Suite,.create_New_Suite1,.create_New_Scenario,.create_New_Case,.testStep_HTTP,
+.testStep_Java,.testStep_JUnit,.create_New_Steps,.create_New_Feature,.create_New_Screen,.create_New_Object {
+	background: none repeat scroll 0 0 #EBEBEB;
+	border-radius: 5px 5px 5px 5px;
+    box-shadow: 5px 0 25px black;
+	-webkit-box-shadow: 5px 0 25px black;
+	-moz-box-shadow: 5px 0 25px black;
+    display: block;
+	left: 50%;
+    overflow: hidden;
+    position: absolute;
+	top: 50%;
+    width: 810px;
+    z-index: 1150;
+    
+	
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.create_New_Plan h3,.create_New_Suite h3,.create_New_Suite1 h3,.create_New_Scenario h3,.create_New_Case h3,
+.testStep_HTTP h3,.testStep_Java h3,.testStep_JUnit h3,.create_New_Steps h3,
+.create_New_Feature h3,.create_New_Screen h3,.create_New_Object h3{
+	color: #808080;
+	margin: 20px 30px 0 20px;
+}
+
+.available, .toBeLinked {
+    width: 28%;
+}
+
+.available div:not(.clear){
+	height: 400px;
+    overflow-y: auto;
+}
+
+.available .greybutton,.Link_New_Suite,.Link_New_Plan,.Link_New_Scenario,.Link_New_Case,.Link_New_Steps,.Link_New_Feature {
+	margin: 1em 0 0 0;
+	width: 100%;
+	padding: 0.5em 0;
+}
+
+.available div >  ul li a, .toBeLinked div > ul li a{
+	color : #000;
+}
+
+.available > div  ul,.toBeLinked  > div ul {
+	padding-left: 11%;
+}
+
+.available div:not(.clear),.toBeLinked div:not(.clear),.newSuite div {
+	border: 2px solid #bbb;
+	background: none repeat scroll 0 0 #FFFFFF;
+	margin: 1em 0 0 0;
+}
+
+.available label, .toBeLinked label, .newSuite label{
+	font-size: 13px;
+    font-weight: bold;
+}
+
+.toBeLinked div:not(.clear){
+	height: 400px;
+	overflow-y: auto;
+}
+
+.arrowLeft,.arrowRight {
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid #CCCCCC;
+    border-top: 25px solid transparent;
+    cursor: pointer;
+    height: 0;
+    margin: 23% 2% 0 2%;
+    width: 0;
+}
+
+.arrowRight {
+    border-right: 25px solid #CCCCCC;
+    border-left: none;
+    margin: 29% 2% 0% -5%;
+}
+
+.create_New_Plan form >  div.newSuite,.create_New_Suite form >  div.newSuite,
+.create_New_Suite1 form >  div.newSuite,
+.create_New_Scenario form >  div.newSuite,.create_New_Case form >  div.newSuite,
+.create_New_Steps form >  div.newSuite {
+    margin: 10em 5em 4em;
+    width: 27.5%;
+}
+
+.newSuite div {
+	/* margin: 2em 0 0; */
+	border: none;
+	background: none;
+}
+
+.create_New_Plan form > div:last-child,.create_New_Suite form > div:last-child,
+.create_New_Suite1 form > div:last-child,
+.create_New_Scenario form > div:last-child,.create_New_Case form > div:last-child,
+.create_New_Steps form > div:last-child,.create_New_Feature form > div:last-child,
+.create_New_Screen form > div:last-child,.create_New_Object form > div:last-child{
+    margin-left: 37%;
+	padding: 0 0 2% 0;
+}
+
+#add {
+    margin-right: 1em;
+}
+
+.icon_darkBG {
+	background: url("../imgITAP/iTap_icons2_darkBG.png") no-repeat scroll 0 0 transparent;
+    padding: 7px 15px;
+}
+
+.addWhite{
+ 	background-position: -90px 0;
+}
+ 
+.filterWhite{
+ 	background-position: -60px 0;
+}
+
+.search_list a {
+	background: url("../imgITAP/search_black.png") no-repeat scroll 2px 0px #ccc;
+	border-radius: 20px;
+	border: 1px solid #ededed;
+	height: 15px;
+	display: block;
+	width: 85%;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+.search_list input {
+	background: #ccc;
+	border: none;
+	margin-left: 22px;
+}
+ 
+.search_list input:focus,.activeSearch input:focus
+{
+	outline: none;
+}
+
+.search_list
+{
+	/*margin-left: -7%;*/
+}
+
+.search_list ~ li a{
+	/*width: 100%;
+	display: block;
+	margin-left: -3%;
+	padding: 5px 0 3px 0;*/
+}
+
+table,.scrollTable table, .demoTable table{
+	width: 100%;
+	table-layout: fixed;
+}
+
+.scrollTable table,.scrollTable_schedule {
+	background: #efefef; /* Old browsers */
+	background: -moz-linear-gradient(left, #efefef 0%, #bfbfbf 50%, #efefef 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#efefef), color-stop(50%,#bfbfbf), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #efefef 0%,#bfbfbf 50%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #efefef 0%,#bfbfbf 50%,#efefef 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #efefef 0%,#bfbfbf 50%,#efefef 100%); /* IE10+ */
+	background: linear-gradient(to right, #efefef 0%,#bfbfbf 50%,#efefef 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#efefef',GradientType=1 ); /* IE6-9 */
+}
+
+
+
+.create_New_Plan .search,.create_New_Suite .search,.create_New_Suite1 .search,
+.create_New_Scenario .search,
+.create_New_Case .search,.create_New_Steps .search{
+	 background-position: 0 -3px;
+}
+
+.create_New_Plan textarea,.create_New_Suite textarea,.create_New_Suite1 textarea,.create_New_Scenario textarea,
+.create_New_Case textarea,.create_New_Steps textarea{
+	height: 115px; 
+}
+
+.selected
+{
+	background: #ccc;
+	margin-right: 20px;
+}
+
+.create_New_Plan form > div:first-child,.create_New_Suite form > div:first-child,
+.create_New_Suite1 form > div:first-child,
+.create_New_Scenario form > div:first-child,.create_New_Case form > div:first-child,
+.create_New_Steps form > div:first-child,.create_New_Feature form > div:first-child,
+.create_New_Screen form > div:first-child,.create_New_Object form > div:first-child {
+	padding: 2em;
+}
+
+.create_New_Plan .icon_lightBG,.create_New_Suite .icon_lightBG,.create_New_Suite1 .icon_lightBG,
+.create_New_Scenario .icon_lightBG,
+.create_New_Case .icon_lightBG,.create_New_Steps .icon_lightBG {
+	margin: -2% 0;
+}
+
+.seperator_bottom {
+	border-bottom: 1px solid #ccc;
+	margin: 1.5em 0;
+}
+
+.testStep_HTTP {
+	/* left: 30%;
+	top: 17%; */
+	width: 50%;
+}
+
+.testStep_HTTP .formLeftContent,.testStep_HTTP .formRightContent{
+	margin: 1% 4% 0 3%;
+	width: 43%;
+}
+
+.testStep_HTTP > form > .floatright, .testStep_Java > form > .floatright, .testStep_JUnit > form > .floatright{
+	margin-right: 2.5%;
+}
+
+.testStep_Java , .testStep_JUnit {
+	left: 30%;
+	top: 17%;
+	width: 25%;
+}
+.testStep_JUnit{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.testStep_Java {
+	top: 21%;
+}
+
+.testStep_Java .formLeftContent, .testStep_JUnit .formLeftContent{
+	margin: 1% 4% 0 3%;
+	width: auto;
+}
+
+.testStep_HTTP form > div:last-child {
+	margin: 0 0 2% 27%;
+}
+
+.testStep_Java form > div:last-child,
+.testStep_JUnit form > div:last-child {
+	margin: 0 0 2% 10%;
+}
+
+.casebtn {
+	margin: 2em 0 0 0;
+}
+
+.tableSuite .linkedPlans,.tableSuite .linkedScenarios {
+	height: 231px;
+}
+
+.tableCase input[type="radio"] ,.testStep_HTTP input[type="radio"]{
+	margin: 4% 1% 3% 2%;
+}
+
+.create_New_Case .newSuite {
+	height: 500px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/* overflow-y: scroll */
+}
+
+#new_suite_function_chosen, #new_suite_feature_chosen, #new_suite_active_chosen, #new_suite_pos_chosen, #new_suite_cgn_chosen, #new_suite_tag_chosen,#new_suite_tag_chosen,
+#new_suite_runner_chosen, #new_suite_function_chosen > a div, #new_suite_feature_chosen > a div, #new_suite_pos_chosen > a div, #new_suite_cgn_chosen > a div, #new_suite_tag_chosen > a div,
+#new_suite_active_chosen > a div, #new_suite_tag_chosen > a div, #new_suite_runner_chosen > a div
+{
+	margin:0;
+}
+#new_suite_order, #new_suite_active{
+	height: 30px !important;
+	width: 97%;
+	padding-left: 2%;
+}
+
+.available, .toBeLinked, .newSuite{
+	max-height: 500px;	
+	padding-bottom: 12px;
+}
+
+.create_New_Steps .newSuite{
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+/* Features */
+
+/*#iTap_header {
+	border-bottom: 1px solid #ccc;
+	height: 5%;
+	padding: 0 2%
+}*/
+
+
+
+/*#iTap_header .floatright {
+	margin: 2em 3em;
+}*/
+
+#iTap_menus > a {
+	/*margin: 1em 3em;*/
+}
+
+.countWhite {
+	background: #FFF;	
+}
+
+.countBlue {
+	background: #0099FF !important;
+}
+
+#import_popUp {
+	background: none repeat scroll 0 0 #EBEBEB;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 5px 0 25px black;
+	-webkit-box-shadow: 5px 0 25px black;
+	-moz-box-shadow: 5px 0 25px black;
+	display: block;
+	right: 18px;
+	overflow: hidden;
+	position: absolute;
+	top: 82px;
+	width: 21%;
+	z-index: 1150;
+}
+
+#import_popUp .formLeftContent{
+	margin: 1em 2em 0 2em;
+	width: auto;
+}
+
+#import_popUp h3 {
+	color: #808080;
+	margin: 20px 30px 0 20px;
+}
+
+.arrow-top {
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #666;
+	width: 0;
+}
+
+#scheduleContent ul li > div.arrow-top,
+#objParamContent ul li > div.arrow-top {
+	height: 2px;
+	margin: 0 auto;
+	border-bottom: 10px solid #EFEFEF;
+}
+
+.table_screen {
+	width: 7%;
+	text-align: center;
+}
+
+.functions_panel .table_desc,.features_panel .table_desc,.screens_panel .table_desc {
+	width: 75%;
+}
+
+.smartspinner {
+	background: url('#') no-repeat #fff;
+	text-align: center;
+}
+
+#import_popUp form > div:last-child {
+    margin: 0 0 2% 17%;
+}
+
+#import_popUp > .arrow-top{
+	border-bottom: 12px solid #EBEBEB;
+	border-left: 6px solid rgba(0, 0, 0, 0);
+	border-right: 6px solid rgba(0, 0, 0, 0);
+	position: fixed;
+	right: 29px;
+	top: 74px;
+}
+
+.tableFunction .formLeftContent,.tableFeature .formLeftContent,.tableScreen .formLeftContent,
+#funcUp .formLeftContent,#featureUp .formLeftContent,#screenUp .formLeftContent {
+	width: 35%;
+}
+
+.tableFunction .arrowform,.tableFeature .arrowform,.tableScreen .arrowform,
+#funcUp .arrowform,#featureUp .arrowform,#screenUp .arrowform{
+	width: 90%;
+	margin-right: 0 !important;
+	background: #D6D6D6;
+	padding: 1% 3% 3% 3%;
+}
+
+.Link_New_Feature,.Link_New_Screen,.Link_New_Object_Group {
+	margin: 1em 0 0 8em;
+	width: 50%;
+}
+
+.tableFunction .arrowRight,.tableFeature .arrowRight,.tableScreen .arrowRight,
+#funcUp .arrowRight,#featureUp .arrowRight,#screenUp .arrowRight {
+	border-right: 25px solid #d6d6d6;
+	margin: 7% -4% 0 0;
+}
+
+.tableFunction,.tableFeature,.tableScreen,#funcUp,#featureUp,#screenUp {
+	padding: 1% 0 0% 2.4%;
+}
+
+.flipFunctionContainer,.flipFeatureContainer,.flipScreenContainer {
+	display:none;
+}
+
+.linkedFeatures .blueBubble,.linkedFunctions .blueBubble,.linkedObjects .blueBubble {
+	margin: 3px 10px 0 -28px;
+}
+ 
+ .selectedTab {
+ 	color: #000 !important;
+ }
+ 
+ .create_New_Feature,.create_New_Screen,.create_New_Object {
+    left: 35%;
+    top: 15%;
+    width: 41%;
+ }
+ 
+ .create_New_Feature  .available,.create_New_Feature  .toBeLinked ,.create_New_Screen .available,.create_New_Screen  .toBeLinked,
+ .create_New_Object  .available,.create_New_Object  .toBeLinked {
+    width: 44%;
+}
+
+.create_New_Feature form > div:last-child,
+.create_New_Screen form > div:last-child,.create_New_Object form > div:last-child {
+	margin-left: 30%;
+}
+
+/*---------[Table Scrolling]----------*/
+.scrollTable {
+	height: 250px !important;
+    width: 100% !important;
+}
+
+.flipFunctionContainer .slimScrollDiv,.flipFeatureContainer .slimScrollDiv,.flipScreenContainer .slimScrollDiv,
+.flipPlanContainer .slimScrollDiv,.flipSuiteContainer .slimScrollDiv,.flipScenarioContainer .slimScrollDiv,
+.flipCaseContainer .slimScrollDiv {
+	margin-top: -24px;
+	left: 5.5px;
+	border-bottom: 1px solid #f00;
+	border-right: 1px solid #f00;
+    border-radius: 0px 0px 7px 7px;
+}
+
+/*-----[Schedule]----*/
+
+
+.navBgSchedule > .floatright,.navBgParams > .floatright, .navBgData > .floatright, .navTestData > .floatright,
+.navBgReport > .floatright { 
+	margin: -3.5em 0 0 0;
+}
+
+
+
+.tableSchedule .formLeftContent,#scheduleUp .formLeftContent {
+	width: 24%;
+}
+
+.tableSchedule .formLeftContent .name,.tableSchedule .formLeftContent .agent,
+#scheduleUp .formLeftContent .name,#scheduleUp .formLeftContent .agent {
+	width: 90%;
+}
+
+.tableSchedule .formLeftContent .chosen-container,#scheduleUp .formLeftContent .chosen-container {
+	width: 90% !important;	
+}
+
+#hrs,#mins,#sec,.datepicker,.agent,.agent1 {
+	width: 30px;
+	height: 30px;
+}
+
+.datepicker {
+	width: 50%
+}
+
+.agent {
+	width: 30%;
+}
+
+.agent1 {
+	width: 25%;
+}
+
+.greencircle,.redcircle,.greycircle {
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+}
+
+.greencircle {
+	background: #20B62C;
+}
+
+.redcircle{
+	background: #FF2600;
+}
+
+.greycircle {
+	background: #CBCBCB;
+}
+
+
+.schedule_name,.schedule_agent,.schedule_plan,.schedule_frequency,.schedule_status,.schedule_start,.schedule_end,
+.schedule_run,.schedule_Nextrun {
+	width: 11%;
+	padding-left: 5px;
+	text-align: left;
+}
+
+.schedule_status,.schedule_run {
+	width: 5%;	
+}
+
+.schedule_status,.schedule_run,.schedule_start,.schedule_end,.schedule_run,.schedule_Nextrun {
+	text-align:center; 
+    vertical-align:middle;
+}
+
+.singleEdit {
+	height: 175px;
+	width: 100%;
+}
+
+.edit_noselect,.edit_multiselect{
+	width: 100%;
+	margin-top: 0.5%;	
+}
+
+input[type="radio"] {
+	margin: 4% 1% 0 5%;
+}
+
+.edit_multiselect table .agentName,.edit_multiselect table .laneName,.edit_multiselect table .runnerName,
+.edit_multiselect table .cloneNo,.edit_multiselect table .iterations,.edit_multiselect table .ramp,
+.edit_multiselect table .delay,.edit_multiselect table .duration, table .actions {
+	height: 20px;
+	width: 12%;
+	text-align: left;
+}
+
+.tableSchedule,#scheduleUp {
+	background: none repeat scroll 0 0 #E2E2E2;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 2px solid #CCCCCC;
+    padding: 1% 0 1% 2.4%;
+}
+
+.agentName > input,.laneName > input,.runnerName > *,.cloneNo > input,.iterations > input,.delay > input,
+.duration > input,.ramp > input  {
+	width: 93%;
+}
+
+.schbtn {
+	margin-top: 1%;
+}
+
+.ui-datepicker-prev .ui-icon {
+    border-bottom: 8px solid rgba(0, 0, 0, 0);
+    border-right: 8px solid #000000;
+    border-top: 8px solid rgba(0, 0, 0, 0);
+    height: 0;
+    width: 0;
+}
+.ui-datepicker-next .ui-icon {
+    border-bottom: 8px solid rgba(0, 0, 0, 0);
+    border-left: 8px solid #000000;
+    border-top: 8px solid rgba(0, 0, 0, 0);
+    height: 0;
+    width: 0;
+}
+
+td.schedule_frequency {
+	background: url("../imgITAP/icons_repeat.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding-left: 2%;
+}
+
+td.schedule_run {
+	background: url("../imgITAP/icons_RunNow.png") no-repeat scroll 45% 0 rgba(0, 0, 0, 0);
+}
+
+.datepicker {
+	border: 1px solid #aaaaaa;
+	background: #ffffff repeat-x;
+	color: #222222;
+}
+
+.addRow,.removeRow {
+    padding-left:15px;
+    border: 1px solid #ccc;
+    background: #efefef;
+    border-radius: 10px;
+    font-size:2em;
+    padding: 0% 3% 1% 3%;
+    margin: 5%;
+}
+
+/*Schedule --end*/
+
+/* Obj&Param Start */
+
+
+.objectContent > form > div.formLeftContent,.identifierContent > form > div.formLeftContent,
+.conditionContent > form > div.formLeftContent,.paramContent > form > div.formLeftContent,
+#objectUp > form > div.formLeftContent,#identifierUp > form > div.formLeftContent,
+#conditionUp > form > div.formLeftContent,#paramUp > form > div.formLeftContent{
+	width: 17%;
+	margin: 0 2%;
+}
+
+.objectContent > form > div.formLeftContent_obj,.paramContent > form > div.formLeftContent_obj,
+#objectUp > form > div.formLeftContent_obj,#paramUp > form > div.formLeftContent_obj{
+	width: 35%;
+}
+
+.objectContent > form > div.formLeftContent_obj .description,
+.identifierContent > form > div.formLeftContent_obj .description,
+.conditionContent > form > div.formLeftContent_obj .description,
+.paramContent > form > div.formLeftContent_obj .description,
+#objectUp > form > div.formLeftContent_obj .description,
+#identifierUp > form > div.formLeftContent_obj .description,
+#conditionUp > form > div.formLeftContent_obj .description,
+#paramUp > form > div.formLeftContent_obj .description{
+	height: 30px;
+	margin-top: 6px;
+}
+
+.formLeftContent_replace {
+	padding: 0 2%;
+	width: 93%;
+	height: 210px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+td a {
+	color: #01ACFF;
+}
+
+.objectContent,.identifierContent,.paramContent,.conditionContent,#identifierUp,#objectUp,
+#paramUp,#conditionUp {
+	background: none repeat scroll 0 0 #E2E2E2;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 2px solid #CCCCCC;
+    padding: 1% 0 1% 2.4%;
+}
+
+.objbtn {
+	margin: 0 5% 0 0;
+}
+
+.identifierContent > form > div.formLeftContent_obj,.conditionContent > form > div.formLeftContent_obj,
+ #identifierUp > form > div.formLeftContent_obj,#conditionUp > form > div.formLeftContent_obj,{
+	width: 50%;
+}
+
+.identifierContent .identifierbtn,#identifierUp .identifierbtn {
+	margin: 1.7% 0%;
+	width: 14.5%;
+}
+
+.identifierContent .identifierbtn > input, #identifierUp .identifierbtn > input{
+	margin: 0% 3%;
+}
+
+.identifierContent > form > div.formLeftContent_obj,.conditionContent > form > div.formLeftContent_obj ,
+#identifierUp > form > div.formLeftContent_obj,#conditionUp > form > div.formLeftContent_obj{
+	width: 50%;
+}
+
+#identifierUp > form > .floatright{
+	margin-right: 2.5%;
+}
+
+.demoTable tr {
+	background: #EFEFEF;
+	color: #CCC;
+}
+
+#objectUp,#paramUp,#identifierUp,#conditionUp {
+	display: block;
+    position: absolute;
+    top: 0;
+    z-index: 999999;
+    width: 95%;
+}
+
+.arrowdiv {
+	background: transparent;
+	border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #E2E2E2;
+	width: 0;
+	top: -20px;
+	position: absolute;
+}
+
+#newObjGroupTable tr, #newParamsGroupTable tr, #newConditionGroupTable tr, .oldObjGroupTable tr, .oldParamsGroupTable tr, .oldParamsGroupTable tr,
+.oldConditionGroupTable tr{
+	margin: 0;
+}
+#newObjGroupTable tr th, #newObjGroupTable tr td, 
+#newParamsGroupTable tr th, #newParamsGroupTable tr td,  
+.oldConditionGroupTable tr th, .oldConditionGroupTable tr td{
+	width: 23%;
+	text-align: left;
+}
+
+.new_obj_name, .new_obj_desc, .new_obj_type, #newObjGroupTable .chosen-container, 
+.new_param_name, .new_obj_desc,.new_param_desc,.new_param_obj_name, #newParamsGroupTable .chosen-container,
+.new_condition_name, .new_condition_desc, .new_condition_expr, .para_value_new, .value_big_new{
+	width: 90% !important;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+/* Objects nav Group CSS */
+.oldObjGroupTable tr{
+	width: 100%;
+}
+.oldObjGroupTable tr td, .oldObjGroupTable tr th{
+	width: 20%;
+	text-align: left;
+}
+.oldObjGroupTable .chosen-container {
+	width: 90% !important
+}
+.oldObjGroupTable .icon_lightBG.minus, #removeObjFunction{
+	margin: 0;
+}
+#newConditionGroupTable tr th, #newConditionGroupTable tr td{
+	width: 32%;
+	text-align: left;
+}
+
+/* Paramters nav Group CSS */
+.oldParamsGroupTable tr{
+	width: 100%;
+}
+.oldParamsGroupTable tr td, .oldParamsGroupTable tr th{
+	width: 20%;
+	text-align: left;
+}
+.oldParamsGroupTable .chosen-container{
+	width: 90% !important;
+}
+.paramDesc{
+	width: 32% !important;
+}
+.sort_order{
+	width: 24% !important;
+	padding-left: 2%;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+/* Test Data CSS */
+.indicator{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.indicator.green{
+	background: #00CC66;
+}
+.indicator.red{
+	background: #CC3300;
+}
+.indicator.gray{
+	background: #B8B8B8;
+}
+.testData{
+	width: 23%;
+	background: #E1E1E1;
+	line-height: 50px;
+	height: 50px;
+	border: 1px solid #D6D6D6;
+	margin: 5px;
+	padding-left: 15px;
+	cursor: pointer;
+	display: inline-block;
+}
+/* EDIT test data CSS */
+
+#testDataContent .sectionHeader header{
+	/*border: none;*/
+}
+.testDataNav{
+	border-bottom: 1px solid rgb(214,214,214);
+}
+.testDataLinks{
+	width: 34%;
+}
+
+#editableTestDataContainer{
+	width: 95%;
+	clear: both;
+	background: none repeat scroll 0 0 #E2E2E2;
+	position: absolute;
+}
+.testDataContainer{
+	border: 1px solid #d6d6d6;
+	padding: 10px;
+	display: block;
+	height: 100%;
+	clear: both;
+}
+.testDataStaticHeader, .testdata_searchBox{
+	display: inline-block;
+	vertical-align: middle;
+}
+.testDataStaticHeader{
+	margin: 10px 0;
+}
+#newTestDataTable, #editTestData{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 5px 5px;
+}
+#editTestData tr td, #editTestData tr th{
+	width: 20%;
+	padding-left: 5px;
+	text-align: left;
+	height: 34px;
+}
+#editTestData tbody tr td:last-child{
+	background: none;
+	border: none;
+}
+#editableTestDataContainer header{
+	border: none;
+}
+#editableTestDataContainer header h3 {
+	display: inline-block;
+}
+.testStepNameHeader{
+	margin-right: 18%;
+}
+table#newTestDataTable th{
+	min-width: 19%;
+	text-align: left;
+	display: inline-block;
+}
+#editableTestDataContainer table tr{
+	margin: 0;
+	width: 100%;
+}
+table#newTestDataTable tr td{
+	width: 19%;
+	display: inline-block;
+}
+table#newTestDataTable td.test_para_edit{
+	width: 2%;
+}
+#testStepName{
+	height: 30px !important;
+	border: 1px solid #ccc !important;
+	margin: 0  50px 0 0 !important;
+	padding-left: 1% !important;
+	width: 20%;
+}
+#editableTestDataContainer .testStepStatus{
+	margin: 0 !important;
+	padding: 0;
+	margin-right: 8px !important;
+}
+#editableTestDataContainer .inactiveStatus{
+	margin-left: 30px !important;
+}
+.cancel_test_data{
+	margin-right: 24px;
+	margin-top: 20px;
+}
+.save_test_data{
+	margin-right: 20px;
+	color: #fff;
+}
+#newTestDataTable .plus{
+	margin-right: 5px;
+}
+/* New Test Data */
+.newTestData{
+	border: 1px solid rgb(203,203,203);
+	clear: both;
+	padding: 5px;
+	margin-top: 5px;
+	margin-left: 2px;
+	display: inline-block;
+	width: 97%;
+	background: none repeat scroll 0 0 #E2E2E2;
+}
+.new_test_data_desc{
+	width: 90%;
+	height: 30px;
+}
+.new_test_data_select{
+	width: 100%;
+	height: 30px;
+	outline: none;
+	padding: 10px;
+	-webkit-appearance: menulist-button;
+	border: 1px solid rgb(203,203,203);
+}
+.edit_test_data_row{
+	margin-right: 15px;
+}
+.cancel_new_test_data{
+	margin-right: 14px;
+	margin-bottom: 10px;
+}
+.contentEdit{
+	background: #fff;
+	outline: none;
+	border: 1px solid rgb(169,169,169);
+}
+.addNewParamTestDataRow{
+	background: #EFEFEF;
+	color: #CCC;
+	margin-bottom: 20px;
+}
+.newTestData .testDataStaticHeader{
+	margin-left: 3.5%;
+}
+table#newTestDataParamTable{
+	border-collapse: separate;
+	border-spacing: 10px 0px;
+}
+#newTestDataParamTable tr th, #newTestDataParamTable tr td{
+	width: 20%;
+	text-align: left;
+}
+#newTestDataParamTable tr th:nth-child(n), #newTestDataParamTable tr td:nth-child(n){
+	padding-left: 6px;
+}
+
+/*Reports Module*/
+
+.row{
+    width:250px;
+    position:relative;
+    float:left;
+    margin:5px;
+    background: #e2e2e2;
+}
+.innerrow{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    text-align:center;
+}
+.column.one, .column.two{
+    padding:0;
+    border:none;
+    width:50%;
+    float:left;
+}
+.innerrow:last-child{
+    border-top:none;
+}
+.bar{
+    position: absolute;
+    border-right: 1px solid #ccc;
+    height: 39px;
+    left: 50%;
+    padding-left: 50%;
+    margin-left: -50%;
+}
+
+
+.reportPanel {
+	border:1px solid #ccc;
+	width: 10%;
+	display: inline-block;
+	margin: 0.5% 0.3% 0.3%;
+	padding: 1em 0em 1em 0em;
+	font-size: 14px;
+}
+
+.reportPanel span:first-child {
+	border-right: 1px solid #ccc;
+	padding: 9% 25% 1% 7%;
+}
+
+.greenTxt {
+	color: #20B62C;
+}
+
+.greyTxt {
+	color: #9B9B9B;
+}
+
+.reportInfo {
+	padding: 7% 0 0 0;
+	text-align: center;
+}
+
+.reportHeader > span:second-child {
+	padding: 0 0 0 7%;
+}
+
+#dateContainer > form {
+	margin:0 auto;
+	width: 35%;
+}
+
+#dateContainer > form span {
+	font-weight: bold;
+	width: 5%;
+}
+
+#dateContainer > form span > input{
+	width: 27%;
+}
+
+#dateContainer > form > .search {
+	margin-left: 5%;
+}
+#testRunWrapper{
+	border: 1px solid #929292;
+	position: absolute;
+	top: 50%;
+	width: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-moz-box-shadow: 3px 3px 15px 16px #ccc;
+	-webkit-box-shadow: 3px 3px 15px 16px #ccc;
+	box-shadow: 3px 3px 15px 16px #ccc;
+	height: 60%;
+	background: #E8E8E8;
+	border-radius: 10px;
+}
+.cancel_btn{
+	position: absolute;
+	right: 3%;
+	bottom: 5%;
+}
+
+.tableScreen .marginLeftRight >div.floatright,#screenUp .marginLeftRight >div.floatright{
+	margin: 0 0 2% 0;
+}
+
+input[type="file"]{
+	outline:none;
+}
+
+/*Floating Accordion*/
+
+
+.fnform {
+	margin-top: -1%;
+}
+
+/*Settings Links*/
+.desc { 
+	color:#6b6b6b;
+}
+.desc a {
+	color:#0092dd;
+}
+
+.ui-datepicker-calendar tr {
+	display: table-row !important;
+}
+
+.available div >  ul li , .toBeLinked div > ul li {
+	padding: 0 0 1em 0;
+}
+
+#planUp > form {
+	/*padding: 0 3% 0 0;*/
+}

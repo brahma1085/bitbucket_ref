@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- - Application context definition for Data Module business layer. - Contains 
+	bean references to the transaction manager and to the DAOs in - dataAccessContext-local.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+
+	<!-- ========================= GENERAL DEFINITIONS ========================= -->
+
+	<!-- Configurer that replaces ${...} placeholders with values from properties 
+		files -->
+	<!-- (in this case, mail and JDBC related properties) -->
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="classpath:main.properties"></property>
+	</bean>
+
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+
+	<!-- Data module primary business object: default implementation, Note that 
+		this is just a POJO definition in this file: there's no need to use a TransactionFactoryProxyBean 
+		if the class has source-level transaction annotations; the "tx:annotation-driven" 
+		marker will apply transaction advice automatically. -->
+	<bean id="mainService" class="com.sssoft.isatt.data.service.impl.MainServiceImpl">
+		<property name="mapCacheUtility" ref="mapCacheUtility" />
+		<property name="actionsDao" ref="actionsDao" />
+		<property name="agentDetailsDao" ref="agentDetailsDao" />
+		<property name="appFeatureDao" ref="appFeatureDao" />
+		<property name="appFunctionalityDao" ref="appFunctionalityDao" />
+		<property name="applicationDao" ref="applicationDao" />
+		<property name="genericDataDao" ref="genericDataDao" />
+		<property name="runnerDao" ref="runnerDao" />
+		<property name="schedulerDao" ref="schedulerDao" />
+		<property name="schedulerBackupDao" ref="schedulerBackupDao" />
+		<property name="schedulerLaneDetailsDao" ref="schedulerLaneDetailsDao" />
+		<property name="schedulerRunDetailsDao" ref="schedulerRunDetailsDao" />
+		<property name="screenDao" ref="screenDao" />
+		<property name="conditionGroupDao" ref="conditionGroupDao" />
+		<property name="conditionsDao" ref="conditionsDao" />
+		<property name="identifierTypeDao" ref="identifierTypeDao" />
+		<property name="objectGroupDao" ref="objectGroupDao" />
+		<property name="objectsDao" ref="objectsDao" />
+		<property name="objectTypeDao" ref="objectTypeDao" />
+		<property name="paramDao" ref="paramDao" />
+		<property name="paramGroupDao" ref="paramGroupDao" />
+		<property name="testCaseDao" ref="testCaseDao" />
+		<property name="testConditionDataDao" ref="testConditionDataDao" />
+		<property name="testParamDataDao" ref="testParamDataDao" />
+		<property name="testStepDao" ref="testStepDao" />
+		<property name="testSuiteDao" ref="testSuiteDao" />
+		<property name="testScenarioDao" ref="testScenarioDao" />
+		<property name="testPlanDao" ref="testPlanDao" />
+		<property name="testDataDao" ref="testDataDao" />
+		<property name="suiteScenarioMappingDao" ref="suiteScenarioMappingDao" />
+		<property name="scenarioCaseMappingDao" ref="scenarioCaseMappingDao" />
+		<property name="caseStepMappingDao" ref="caseStepMappingDao" />
+		<property name="planSuiteMappingDao" ref="planSuiteMappingDao" />
+		
+		<property name="usersDao" ref="usersDao" />
+		<property name="userRolesDao" ref="userRolesDao" />
+		<property name="usersApplicationMappingDao" ref="usersApplicationMappingDao" />
+		<property name="rolesDao" ref="rolesDao" />
+		
+	</bean>
+
+	<bean id="inputService" class="com.sssoft.isatt.data.service.impl.InputServiceImpl">
+		<property name="conditionGroupDao" ref="conditionGroupDao" />
+		<property name="conditionsDao" ref="conditionsDao" />
+		<property name="identifierTypeDao" ref="identifierTypeDao" />
+		<property name="objectGroupDao" ref="objectGroupDao" />
+		<property name="objectsDao" ref="objectsDao" />
+		<property name="objectTypeDao" ref="objectTypeDao" />
+		<property name="paramDao" ref="paramDao" />
+		<property name="paramGroupDao" ref="paramGroupDao" />
+		<property name="taskDao" ref="taskDao" />
+		<property name="testCaseDao" ref="testCaseDao" />
+		<property name="testConditionDataDao" ref="testConditionDataDao" />
+		<property name="testDataDao" ref="testDataDao" />
+		<property name="testParamDataDao" ref="testParamDataDao" />
+		<property name="testPlanDao" ref="testPlanDao" />
+		<property name="testScenarioDao" ref="testScenarioDao" />
+		<property name="testStepDao" ref="testStepDao" />
+		<property name="testSuiteDao" ref="testSuiteDao" />
+		<property name="suiteScenarioMappingDao" ref="suiteScenarioMappingDao" />
+		<property name="scenarioCaseMappingDao" ref="scenarioCaseMappingDao" />
+		<property name="caseStepMappingDao" ref="caseStepMappingDao" />
+		<property name="planSuiteMappingDao" ref="planSuiteMappingDao" />
+		<property name="replacement_StringsDao" ref="replacement_StringsDao" />
+	</bean>
+
+	<bean id="outputService" class="com.sssoft.isatt.data.service.impl.OutputServiceImpl">
+		<property name="laneResultsDao" ref="laneResultsDao" />
+		<property name="taskResultDao" ref="taskResultDao" />
+		<property name="testCaseResultDao" ref="testCaseResultDao" />
+		<property name="testPlanResultDao" ref="testPlanResultDao" />
+		<property name="testStepResultDao" ref="testStepResultDao" />
+		<property name="testSuiteResultDao" ref="testSuiteResultDao" />
+		<property name="testScenarioResultDao" ref="testScenarioResultDao" />
+		<property name="schedulerRunDetailsDao" ref="schedulerRunDetailsDao" />
+	</bean>
+
+	<bean id="mapCacheUtility" class="com.sssoft.isatt.data.utils.MapCacheUtility" />
+
+	<!-- ========================= ASPECT CONFIGURATION ======================== -->
+
+	<!-- This marker creates the full auto-proxy infrastructure that is necessary 
+		for applying Spring's Transactional annotation (as contained in the PetStoreAnnotationImpl 
+		class). By default, it will refer to the transaction manager bean named "transactionManager". -->
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> <bean 
+		id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+		<property name="dataSource" ref="dataSource" /> </bean> <tx:advice id="txAdvice" 
+		transaction-manager="transactionManager"> <tx:attributes> <tx:method name="select*" 
+		read-only="true" /> <tx:method name="*" /> </tx:attributes> </tx:advice> 
+		<aop:config> <aop:pointcut id="inputServiceMethods" expression="execution(* 
+		com.exilant.tfw.service.*.*(*))" /> <aop:advisor advice-ref="txAdvice" pointcut-ref="inputServiceMethods" 
+		/> </aop:config> -->
+
+</beans>
